@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+	<!-- 画面名 -->
+	<div layout:fragment="title">
+		<h1 class="module-title font-alt mb-0">ユーザー</h1>
+		<h3 class="module-title font-alt mb-0">一覧</h3>
+	</div>
+
+	<!-- 入力部 -->
+	<div layout:fragment="content">
+		<!-- 検索条件 -->
+		<div class="container">
+			<section class="module-extra-small">
+			<form th:action="@{/maintenance/userinfo/list}" th:object="${userInfoForm}" class="form-horizontal" method="post">
+				<div class="form-group">
+					<div class="col-sm-6">
+						<input type="text" th:field="*{searchLastNm}" class="form-control" placeholder="苗字" />
+					</div>
+					<div class="col-sm-6">
+						<input type="text" th:field="*{searchFirstNm}" class="form-control" placeholder="名前" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-6">
+						<input type="text" th:field="*{searchEmail}" class="form-control" placeholder="メールアドレス" />
+					</div>
+					<div class="col-sm-6">
+						<input type="number" th:field="*{searchPhone}" class="form-control" placeholder="電話番号" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<button type="submit" class="btn btn-g btn-circle" name="search">検索</button>
+						<button type="submit" class="btn btn-border-d btn-circle" name="new">新規</button>
+						<input type="hidden" name="crud" value="insert" />
+					</div>
+				</div>
+			</form>
+			</section>
+		</div>
+
+		<!-- 検索結果 -->
+		<div class="main">
+			<section class="module-extra-small">
+				<div class="container">
+					<hr class="divider-w pt-20" />
+					<div class="row  table-responsive">
+						<div th:if="${itemsSize > 0}" class="text-right">検索結果：<label th:text="${itemsSize}"></label>件</div>
+						<table class="table table-striped checkout-table">
+							<tbody>
+								<tr>
+									<th class="col-sm-2 text-center" style="vertical-align:middle" >ユーザーコード</th>
+									<th class="col-sm-2 text-center" style="vertical-align:middle">苗字</th>
+									<th class="col-sm-2 text-center" style="vertical-align:middle">名前</th>
+									<th class="col-sm-2 text-center" style="vertical-align:middle">メールアドレス</th>
+									<th class="col-sm-2 text-center" style="vertical-align:middle">電話番号</th>
+									<th class="col-sm-2 text-center caption-content" colspan="2" style="vertical-align:middle">編集</th>
+								</tr>
+								<tr th:each="item : ${items}">
+									<td th:text="${item.userCd}"><h5 class="product-title font-alt"></h5>1234</td>
+									<td th:text="${item.lastNm}"><h5 class="product-title font-alt"></h5>山田</td>
+									<td th:text="${item.firstNm}"><h5 class="product-title font-alt"></h5>太郎</td>
+									<td th:text="${item.email}"><h5 class="product-title font-alt"></h5>kamagata@aaa.co.jp</td>
+									<td th:text="${item.phone}"><h5 class="product-title font-alt"></h5>090-1111-2222</td>
+									<td class=" text-center">
+										<form th:action="@{/maintenance/userinfo/list}" th:object="${userInfoForm}" class="form-horizontal" method="post">
+											<button class="btn btn-border-d btn-circle btn-sm" type="submit" name="edit" ><i class="fa fa-cog fa-spin"></i> 編集</button>
+											<input type="hidden" name="crud" value="update" />
+											<input type="hidden" name="userCd" th:value="${item.userCd}" />
+										</form>
+									</td>
+									<td class="text-center">
+										<form th:action="@{/maintenance/userinfo/list}" th:object="${genreLgForm}" class="form-horizontal" method="post">
+											<button class="btn btn-d btn-circle btn-sm" type="submit" name="delete" ><i class="fa fa-times"></i> 削除</button>
+											<input type="hidden" name="userCd" th:value="${item.userCd}" />
+										</form>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div layout:fragment="js"></div>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+
+	<!-- 画面名 -->
+	<div layout:fragment="title">
+		<h1 class="module-title font-alt mb-0">小ジャンル</h1>
+		<h3 class="module-title font-alt mb-0">登録・更新</h3>
+	</div>
+
+	<!-- 入力部 -->
+	<div layout:fragment="content">
+		<form th:action="@{/maintenance/genresm/newedit}" th:object="${genreSmForm}" class="form-horizontal" method="post">
+			<div class="form-group" th:classappend="${#fields.hasErrors('genreLgCd')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">大ジャンルコード</h5>
+				<div class="col-sm-9">
+					<select th:id="genreLgCd" th:name="genreLgCd" th:value="*{genreLgCd}" class="form-control" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" >
+						<option th:selected="*{genreLgCd == null}" th:disabled="*{(crud eq 'update') ? 'disabled' : 'false'}" />
+						<option th:each="item : ${genreLgList}"
+								th:value="${item.genreLgCd}"
+								th:selected="${genreSmForm.genreLgCd == item.genreLgCd}"
+								th:text="${item.genreLgCd + '：' + item.genreLgNm}"
+								th:disabled="${(genreSmForm.crud eq 'update') ? (genreSmForm.genreLgCd == item.genreLgCd) ? 'false' : 'disabled' : 'false'}" />
+					</select>
+					<span th:if="${#fields.hasErrors('genreLgCd')}" th:errors="*{genreLgCd}" class="help-block">error!</span>
+					<button type="submit" id="dummy" name="dummy" hidden="hidden"></button>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('genreMdCd')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">中ジャンルコード</h5>
+				<div class="col-sm-9">
+					<select th:id="genreMdCd" th:name="genreMdCd" th:value="*{genreMdCd}" class="form-control" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" >
+						<option th:selected="*{genreMdCd == null}" th:disabled="*{(crud eq 'update') ? 'disabled' : 'false'}" />
+						<option th:each="item : ${genreMdList}"
+								th:value="${item.genreMdCd}"
+								th:selected="${genreSmForm.genreMdCd == item.genreMdCd}"
+								th:text="${item.genreMdCd + '：' + item.genreMdNm}"
+								th:disabled="${(genreSmForm.crud eq 'update') ? (genreSmForm.genreMdCd == item.genreMdCd) ? 'false' : 'disabled' : 'false'}" />
+					</select>
+					<span th:if="${#fields.hasErrors('genreMdCd')}" th:errors="*{genreMdCd}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('genreSmCd')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">小ジャンルコード</h5>
+				<div class="col-sm-9">
+					<input type="text" th:field="*{genreSmCd}" class="form-control" placeholder="小ジャンルコード" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" />
+					<span th:if="${#fields.hasErrors('genreSmCd')}" th:errors="*{genreSmCd}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('genreSmNm')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">小ジャンル名称</h5>
+				<div class="col-sm-9">
+					<input type="text" th:field="*{genreSmNm}" class="form-control" placeholder="小ジャンル名称" />
+					<span th:if="${#fields.hasErrors('genreSmNm')}" th:errors="*{genreSmNm}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('displayOrder')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">表示順</h5>
+				<div class="col-sm-9">
+					<input type="text" th:field="*{displayOrder}" class="form-control" placeholder="表示順" />
+					<span th:if="${#fields.hasErrors('displayOrder')}" th:errors="*{displayOrder}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<input type="submit" class="btn btn-border-d btn-circle btn-sm" name="goToBack" value="戻る" />
+					<input type="submit" class="btn btn-d btn-circle btn-sm" name="regist" value="登録" />
+				</div>
+			</div>
+			<!-- 画面モード(登録or編集) -->
+			<input type="hidden" th:field="*{crud}" />
+			<!-- 前画面入力値保持 -->
+			<input type="hidden" th:field="*{searchGenreLgCd}" />
+			<input type="hidden" th:field="*{searchGenreLgNm}" />
+			<input type="hidden" th:field="*{searchGenreMdCd}" />
+			<input type="hidden" th:field="*{searchGenreMdNm}" />
+			<input type="hidden" th:field="*{searchGenreSmCd}" />
+			<input type="hidden" th:field="*{searchGenreSmNm}" />
+		</form>
+	</div>
+	<div layout:fragment="js">
+		<script src="../../static/js/genreSm.js" th:src="@{/js/genreSm.js}"></script>
+	</div>
+</html>

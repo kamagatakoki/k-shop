@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+	<!-- 画面名 -->
+	<div layout:fragment="title">
+		<h1 class="module-title font-alt mb-0">ユーザー</h1>
+		<h3 class="module-title font-alt mb-0">登録・更新</h3>
+	</div>
+
+	<!-- 入力部 -->
+	<div layout:fragment="content">
+		<!-- 入力部 -->
+		<div class="container">
+			<section class="module-extra-small">
+				<form th:action="@{/maintenance/userinfo/newedit}" th:object="${userInfoForm}" class="form-horizontal" method="post">
+					<div th:if="*{#strings.isEmpty(userCd) == false}" class="form-group" th:classappend="${#fields.hasErrors('userCd')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">ユーザーコード</h5>
+						<div class="col-sm-9">
+							<input type="text" th:field="*{userCd}" class="form-control" value="10" placeholder="ユーザーコード" readonly="readonly" />
+							<span th:if="${#fields.hasErrors('userCd')}" th:errors="*{userCd}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group" th:classappend="${#fields.hasErrors('firstNm')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">名前</h5>
+						<div class="col-sm-9">
+							<input type="text" th:field="*{firstNm}" class="form-control" placeholder="名前" />
+							<span th:if="${#fields.hasErrors('firstNm')}" th:errors="*{firstNm}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group" th:classappend="${#fields.hasErrors('lastNm')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">苗字</h5>
+						<div class="col-sm-9">
+							<input type="text" th:field="*{lastNm}" class="form-control" placeholder="苗字" />
+							<span th:if="${#fields.hasErrors('lastNm')}" th:errors="*{lastNm}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group" th:classappend="${#fields.hasErrors('email')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">メールアドレス</h5>
+						<div class="col-sm-9">
+							<input type="text" th:field="*{email}" class="form-control" placeholder="メールアドレス" />
+							<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group" th:classappend="${#fields.hasErrors('phone')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">電話番号</h5>
+						<div class="col-sm-9">
+							<input type="number" th:field="*{phone}" class="form-control" placeholder="電話番号" />
+							<span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div th:if="*{#strings.isEmpty(userCd)} == true" class="form-group" th:classappend="${#fields.hasErrors('inputPassword')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">パスワード</h5>
+						<div class="col-sm-9">
+							<input type="password" th:field="*{inputPassword}" class="form-control" placeholder="パスワード" />
+							<span th:if="${#fields.hasErrors('inputPassword')}" th:errors="*{inputPassword}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div th:if="*{#strings.isEmpty(userCd)}" class="form-group" th:classappend="${#fields.hasErrors('equalsInputPassword')}? 'has-error has-feedback'">
+						<h5 class="col-sm-3 font-alt mb-0">パスワード(確認用)</h5>
+						<div class="col-sm-9">
+							<input type="password" th:field="*{confirmPassword}" class="form-control" placeholder="パスワード(確認用)" />
+							<span th:if="${#fields.hasErrors('equalsInputPassword')}" th:errors="*{equalsInputPassword}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-9">
+							<input type="submit" class="btn btn-border-d btn-circle btn-sm" name="goToBack" value="戻る" />
+							<input type="submit" class="btn btn-d btn-circle btn-sm" name="regist" value="登録" />
+						</div>
+					</div>
+					<!-- 画面モード(登録or編集) -->
+					<input type="hidden" th:field="*{crud}" />
+					<!-- 前画面入力値保持 -->
+					<input type="hidden" th:field="*{searchFirstNm}" />
+					<input type="hidden" th:field="*{searchLastNm}" />
+					<input type="hidden" th:field="*{searchEmail}" />
+					<input type="hidden" th:field="*{searchPhone}" />
+				</form>
+			</section>
+		</div>
+	</div>
+	<div layout:fragment="js"></div>
+</html>

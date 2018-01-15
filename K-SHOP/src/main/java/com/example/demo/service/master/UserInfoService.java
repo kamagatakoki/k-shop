@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.entity.master.UserInfoEntity;
-import com.example.demo.domain.entity.master.UserInfoRepository;
+import com.example.demo.domain.repository.master.UserInfoRepository;
 import com.example.demo.web.form.master.UserInfoForm;
 
 /**

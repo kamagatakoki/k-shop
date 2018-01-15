@@ -39,6 +39,11 @@
 			</section>
 		</div>
 
+		<!-- エラーメッセージ(削除チェック用) -->
+		<div th:if="${#fields.hasErrors('${genreMdForm.*}')}" class="alert alert-danger">
+			<span th:each="error : ${#fields.errors('${genreMdForm.*}')}" class="error" th:text="${error}" ></span>
+		</div>
+
 		<!-- 検索結果 -->
 		<div class="main">
 			<section class="module-extra-small">

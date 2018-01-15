@@ -8,7 +8,9 @@ import org.springframework.data.jpa.domain.Specifications;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreMdRepository;
+import com.example.demo.domain.repository.master.GenreSmRepository;
 
 /**
  * クラスの説明：大ジャンルテーブル操作サービスクラス
@@ -19,6 +21,12 @@ import com.example.demo.domain.entity.master.GenreLgRepository;
 public class GenreLgService {
 	@Autowired
 	GenreLgRepository genreLgRepository;
+
+	@Autowired
+	GenreMdRepository genreMdRepository;
+
+	@Autowired
+	GenreSmRepository genreSmRepository;
 
 	/**
 	 * メソッドの説明：
@@ -54,6 +62,19 @@ public class GenreLgService {
 	 */
 	public void delete(String genreLgCd) {
 		genreLgRepository.delete(genreLgCd);
+	}
+
+	/**
+	 * メソッドの説明：削除時チェック
+	 * @author kamagata
+	 * @param genreLgCd 大ジャンルコード
+	 * @since 2018/01/15
+	 * @return True:OK False:NG
+	 */
+	public boolean deleteCheck(String genreLgCd) {
+
+		// 中ジャンルに紐つくデータが存在する場合はエラー
+		return genreMdRepository.existsByGenreLgEntityGenreLgCd(genreLgCd);
 	}
 
 }

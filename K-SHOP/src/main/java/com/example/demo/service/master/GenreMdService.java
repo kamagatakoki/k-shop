@@ -9,9 +9,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GenreLgRepository;
 import com.example.demo.domain.entity.master.GenreMdEntity;
-import com.example.demo.domain.entity.master.GenreMdRepository;
+import com.example.demo.domain.repository.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreMdRepository;
+import com.example.demo.domain.repository.master.GenreSmRepository;
 import com.example.demo.web.form.master.GenreMdForm;
 
 /**
@@ -28,6 +29,9 @@ public class GenreMdService {
 
 	@Autowired
 	GenreLgRepository genreLgRepository;
+
+	@Autowired
+	GenreSmRepository genreSmRepository;
 
 	/**
 	 * メソッドの説明：全件検索
@@ -96,5 +100,17 @@ public class GenreMdService {
 	 */
 	public void delete(String genreMdCd) {
 		genreMdRepository.delete(genreMdCd);
+	}
+
+	/**
+	 * メソッドの説明：削除時チェック
+	 * @author kamagata
+	 * @since 2018/01/15
+	 * @param genreMdCd 中ジャンルコード
+	 * @return True:OK False:NG
+	 */
+	public boolean deleteCheck(String genreMdCd) {
+
+		return genreSmRepository.existsByGenreMdEntityGenreMdCd(genreMdCd);
 	}
 }

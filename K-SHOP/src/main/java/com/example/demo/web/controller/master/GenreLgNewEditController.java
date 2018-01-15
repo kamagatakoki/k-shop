@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreLgRepository;
 import com.example.demo.service.master.GenreLgService;
 import com.example.demo.web.form.master.GenreLgForm;
 

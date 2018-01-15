@@ -1,8 +1,10 @@
-package com.example.demo.domain.entity.master;
+package com.example.demo.domain.repository.master;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
+
+import com.example.demo.domain.entity.master.UserInfoEntity;
 
 /**
  * クラスの説明：ユーザーマスタリポジトリー

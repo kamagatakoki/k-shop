@@ -6,6 +6,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreLgRepository;
 import com.example.demo.service.master.GenreLgService;
 import com.example.demo.web.form.master.GenreLgForm;
 
@@ -49,21 +50,7 @@ public class GenreLgListController {
 	ModelAndView list(ModelAndView modelAndView, GenreLgForm genreLgForm) {
 
 		// 検索処理
-		List<GenreLgEntity> genreLEntities = genreLgService.findGenreLg(
-				genreLgForm.getSearchGenreLgCd(),
-				genreLgForm.getSearchGenreLgNm(),
-				new Sort("displayOrder", "genreLgCd"));
-
-		//		List<GenreLgEntity> genreLgEntities2 = genreLgRepository.findAll();
-		//		genreLgEntities2.get(0).setDisplayOrder(3);
-		//		genreLgRepository.flush();
-
-		// 検索結果セット
-		modelAndView.setViewName("master/genrelg_list");
-		modelAndView.addObject("items", genreLEntities);
-		modelAndView.addObject("itemsSize", genreLEntities.size());
-
-		return modelAndView;
+		return search(modelAndView, genreLgForm);
 	}
 
 	/**
@@ -133,16 +120,27 @@ public class GenreLgListController {
 	 * @author kamagata
 	 * @since 2018/01/08
 	 * @param genreLgCd 大ジャンルコード
+	 * @param modelAndView モデル
+	 * @param genreLgForm 大ジャンルフォーム
+	 * @param bindingResult エラー情報
 	 * @return 遷移先URL(一覧)
 	 */
 	@PostMapping(path = "list", params = "delete")
-	String delete(@RequestParam String genreLgCd) {
+	ModelAndView delete(@RequestParam String genreLgCd, ModelAndView modelAndView, GenreLgForm genreLgForm,
+			BindingResult bindingResult) {
+
+		// 中ジャンル存在チェック
+		if (genreLgService.deleteCheck(genreLgCd)) {
+			// 存在する場合はエラー
+			bindingResult.reject("com.example.demo.web.controller.master.deletecheck", "下位ジャンルに紐づくデータがあります。"); //?????????????
+			return search(modelAndView, genreLgForm);
+		}
 
 		// 削除処理
 		genreLgService.delete(genreLgCd);
 
 		// 一覧画面へ
-		return "redirect:/maintenance/genrelg/list";
+		return search(modelAndView, genreLgForm);
 
 	}
 

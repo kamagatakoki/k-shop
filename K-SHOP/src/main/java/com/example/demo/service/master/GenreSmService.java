@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GenreLgRepository;
 import com.example.demo.domain.entity.master.GenreMdEntity;
-import com.example.demo.domain.entity.master.GenreMdRepository;
 import com.example.demo.domain.entity.master.GenreSmEntity;
-import com.example.demo.domain.entity.master.GenreSmRepository;
+import com.example.demo.domain.repository.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreMdRepository;
+import com.example.demo.domain.repository.master.GenreSmRepository;
 import com.example.demo.web.form.master.GenreSmForm;
 
 /**

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.domain.entity.master.GenreLgRepository;
 import com.example.demo.domain.entity.master.UserInfoEntity;
+import com.example.demo.domain.repository.master.GenreLgRepository;
 import com.example.demo.service.master.UserInfoService;
 import com.example.demo.web.form.master.UserInfoForm;
 

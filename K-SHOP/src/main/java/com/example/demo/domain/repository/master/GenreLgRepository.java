@@ -1,7 +1,9 @@
-package com.example.demo.domain.entity.master;
+package com.example.demo.domain.repository.master;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import com.example.demo.domain.entity.master.GenreLgEntity;
 
 /**
  * クラスの説明：大ジャンルテーブルリポジトリ

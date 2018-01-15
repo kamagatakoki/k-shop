@@ -48,15 +48,7 @@ public class GenreSmListController {
 	ModelAndView list(ModelAndView modelAndView, GenreSmForm genreSmForm) {
 
 		// 全件検索
-		List<GenreSmEntity> genreMdEntities = genreSmService
-				.findAll(new Sort("genreLgEntity.genreLgCd", "genreMdEntity.genreMdCd", "displayOrder"));
-
-		// 検索結果セット
-		modelAndView.setViewName("master/genresm_list");
-		modelAndView.addObject("items", genreMdEntities);
-		modelAndView.addObject("itemsSize", genreMdEntities.size());
-
-		return modelAndView;
+		return search(modelAndView, genreSmForm);
 	}
 
 	/**

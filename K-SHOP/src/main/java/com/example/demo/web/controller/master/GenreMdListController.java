@@ -6,6 +6,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,14 +48,7 @@ public class GenreMdListController {
 	ModelAndView list(ModelAndView modelAndView, GenreMdForm genreMdForm) {
 
 		// 全件検索
-		List<GenreMdEntity> genreMdEntities = genreMdService.findAll(new Sort("genreLgEntity.genreLgCd", "displayOrder"));
-
-		// 検索結果セット
-		modelAndView.setViewName("master/genremd_list");
-		modelAndView.addObject("items", genreMdEntities);
-		modelAndView.addObject("itemsSize", genreMdEntities.size());
-
-		return modelAndView;
+		return search(modelAndView, genreMdForm);
 	}
 
 	/**
@@ -138,17 +132,27 @@ public class GenreMdListController {
 	 * メソッドの説明：削除処理
 	 * @author kamagata
 	 * @param genreMdCd 中ジャンルコード
+	 * @param modelAndView モデル
+	 * @param genreMdForm 中ジャンルフォーム
+	 * @param bindingResult エラー情報
 	 * @since 2018/01/08
-	 * @return 遷移先URL(一覧)
+	 * @return ModelAndView 遷移先モデル(一覧)
 	 */
 	@PostMapping(path = "list", params = "delete")
-	String delete(@RequestParam String genreMdCd) {
+	ModelAndView delete(@RequestParam String genreMdCd, ModelAndView modelAndView, GenreMdForm genreMdForm,
+			BindingResult bindingResult) {
+
+		// 小ジャンル存在チェック
+		if (genreMdService.deleteCheck(genreMdCd)) {
+			// 存在する場合はエラー
+			bindingResult.reject("com.example.demo.web.controller.master.deletecheck", "下位ジャンルに紐づくデータがあります。"); //?????????????
+			return search(modelAndView, genreMdForm);
+		}
 
 		// 削除処理
 		genreMdService.delete(genreMdCd);
 
-		// 一覧画面へ
-		return "redirect:/maintenance/genremd/list";
+		return search(modelAndView, genreMdForm);
 
 	}
 }

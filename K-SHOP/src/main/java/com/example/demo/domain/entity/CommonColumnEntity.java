@@ -37,7 +37,7 @@ public class CommonColumnEntity {
 	 * @author kamagata
 	 * @since 2018/01/06
 	 */
-	@Column(nullable = false, insertable = false, updatable = false)
+	@Column(nullable = false, insertable = false, updatable = false, length = 1)
 	@Generated(GenerationTime.ALWAYS)
 	@ColumnDefault("0")
 	private String deleteFlg;
@@ -56,7 +56,7 @@ public class CommonColumnEntity {
 	 * @author kamagata
 	 * @since 2018/01/06
 	 */
-	@Column(updatable = false)
+	@Column(updatable = false, length = 6)
 	@CreatedBy
 	private String insertCd;
 
@@ -74,7 +74,7 @@ public class CommonColumnEntity {
 	 * @author kamagata
 	 * @since 2018/01/06
 	 */
-	@Column(insertable = false)
+	@Column(insertable = false, length = 6)
 	@LastModifiedBy
 	private String updateCd;
 

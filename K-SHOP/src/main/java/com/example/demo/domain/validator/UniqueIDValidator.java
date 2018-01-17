@@ -54,7 +54,8 @@ public class UniqueIDValidator implements ConstraintValidator<Unique, Serializab
 	public boolean isValid(Serializable property, ConstraintValidatorContext cvContext) {
 
 		String query = String.format("FROM %s e WHERE e.%s = :value ", entityClass.getName(), uniqueField);
-		List<?> count = entityManager.createQuery(query).setParameter("value", property).getResultList();
+		List<?> count = entityManager.createQuery(query).setParameter("value", property)
+				.getResultList();
 
 		return count.size() == 0;
 	}

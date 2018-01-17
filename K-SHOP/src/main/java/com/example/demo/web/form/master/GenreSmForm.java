@@ -9,16 +9,19 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.example.demo.domain.entity.master.GenreSmEntity;
 import com.example.demo.domain.validator.Unique;
+import com.example.demo.web.form.CommonForm;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * クラスの説明：小ジャンルマスタフォーム
  * @author kamagata
  * @since 2018/01/14
  */
-@Data
-public class GenreSmForm {
+@Setter
+@Getter
+public class GenreSmForm extends CommonForm {
 
 	/**
 	 * クラスの説明：登録用バリデーショングループ

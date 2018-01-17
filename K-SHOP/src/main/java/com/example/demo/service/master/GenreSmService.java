@@ -14,6 +14,7 @@ import com.example.demo.domain.entity.master.GenreSmEntity;
 import com.example.demo.domain.repository.master.GenreLgRepository;
 import com.example.demo.domain.repository.master.GenreMdRepository;
 import com.example.demo.domain.repository.master.GenreSmRepository;
+import com.example.demo.specifications.CommonSpecifications;
 import com.example.demo.web.form.master.GenreSmForm;
 
 /**
@@ -33,6 +34,9 @@ public class GenreSmService {
 
 	@Autowired
 	GenreSmRepository genreSmRepository;
+
+	@Autowired
+	CommonSpecifications<GenreSmEntity> genreSmSpecifications;
 
 	/**
 	 * メソッドの説明：全件検索
@@ -55,12 +59,14 @@ public class GenreSmService {
 	 */
 	public List<GenreSmEntity> findAllCustom(GenreSmForm genreSmForm, Sort sort) {
 		return genreSmRepository.findAll(Specifications
-				.where(GenreSmSpecifications.genreLgCdContains(genreSmForm.getSearchGenreLgCd()))
-				.and(GenreSmSpecifications.genreMdCdContains(genreSmForm.getSearchGenreMdCd()))
-				.and(GenreSmSpecifications.genreSmCdContains(genreSmForm.getSearchGenreSmCd()))
-				.and(GenreSmSpecifications.genreLgNmContains(genreSmForm.getSearchGenreLgNm()))
-				.and(GenreSmSpecifications.genreMdNmContains(genreSmForm.getSearchGenreMdNm()))
-				.and(GenreSmSpecifications.genreSmNmContains(genreSmForm.getSearchGenreSmNm())), sort);
+				.where(genreSmSpecifications.conditionForEqual("genreLgEntity", "genreLgCd",
+						genreSmForm.getSearchGenreLgCd()))
+				.and(genreSmSpecifications.conditionForStartWith("genreMdEntity", "genreMdCd",
+						genreSmForm.getSearchGenreMdCd()))
+				.and(genreSmSpecifications.conditionForStartWith("genreSmCd", genreSmForm.getSearchGenreSmCd()))
+				.and(genreSmSpecifications.conditionForLike("genreLgEntity", "genreLgNm", genreSmForm.getSearchGenreLgNm()))
+				.and(genreSmSpecifications.conditionForLike("genreMdEntity", "genreMdNm", genreSmForm.getSearchGenreMdNm()))
+				.and(genreSmSpecifications.conditionForLike("genreSmNm", genreSmForm.getSearchGenreSmNm())), sort);
 	}
 
 	/**

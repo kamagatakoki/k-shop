@@ -11,6 +11,7 @@ import com.example.demo.domain.entity.master.GenreLgEntity;
 import com.example.demo.domain.repository.master.GenreLgRepository;
 import com.example.demo.domain.repository.master.GenreMdRepository;
 import com.example.demo.domain.repository.master.GenreSmRepository;
+import com.example.demo.specifications.CommonSpecifications;
 
 /**
  * クラスの説明：大ジャンルテーブル操作サービスクラス
@@ -28,6 +29,9 @@ public class GenreLgService {
 	@Autowired
 	GenreSmRepository genreSmRepository;
 
+	@Autowired
+	CommonSpecifications<GenreLgEntity> genreLgSpecifications;
+
 	/**
 	 * メソッドの説明：
 	 * @author kamagata
@@ -39,8 +43,8 @@ public class GenreLgService {
 	 */
 	public List<GenreLgEntity> findGenreLg(String genreLgCd, String genreLgNm, Sort sort) {
 		return genreLgRepository.findAll(Specifications
-				.where(GenreLgSpecifications.genreLgCdContains(genreLgCd))
-				.and(GenreLgSpecifications.genreLgNmContains(genreLgNm)), sort);
+				.where(genreLgSpecifications.conditionForEqual("genreLgCd", genreLgCd))
+				.and(genreLgSpecifications.conditionForLike("genreLgNm", genreLgNm)), sort);
 	}
 
 	/**

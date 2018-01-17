@@ -13,6 +13,7 @@ import com.example.demo.domain.entity.master.GenreMdEntity;
 import com.example.demo.domain.repository.master.GenreLgRepository;
 import com.example.demo.domain.repository.master.GenreMdRepository;
 import com.example.demo.domain.repository.master.GenreSmRepository;
+import com.example.demo.specifications.CommonSpecifications;
 import com.example.demo.web.form.master.GenreMdForm;
 
 /**
@@ -32,6 +33,9 @@ public class GenreMdService {
 
 	@Autowired
 	GenreSmRepository genreSmRepository;
+
+	@Autowired
+	CommonSpecifications<GenreMdEntity> commonSpecifications;
 
 	/**
 	 * メソッドの説明：全件検索
@@ -54,10 +58,10 @@ public class GenreMdService {
 	 */
 	public List<GenreMdEntity> findAllCustom(GenreMdForm genreMdForm, Sort sort) {
 		return genreMdRepository.findAll(Specifications
-				.where(GenreMdSpecifications.genreLgCdContains(genreMdForm.getSearchGenreLgCd()))
-				.and(GenreMdSpecifications.genreMdCdContains(genreMdForm.getSearchGenreMdCd()))
-				.and(GenreMdSpecifications.genreLgNmContains(genreMdForm.getSearchGenreLgNm()))
-				.and(GenreMdSpecifications.genreMdNmContains(genreMdForm.getSearchGenreMdNm())), sort);
+				.where(commonSpecifications.conditionForEqual("genreLgEntity", "genreLgCd", genreMdForm.getSearchGenreLgCd()))
+				.and(commonSpecifications.conditionForStartWith("genreMdCd", genreMdForm.getSearchGenreMdCd()))
+				.and(commonSpecifications.conditionForLike("genreLgNm", genreMdForm.getSearchGenreLgNm()))
+				.and(commonSpecifications.conditionForLike("genreMdNm", genreMdForm.getSearchGenreMdNm())), sort);
 	}
 
 	/**

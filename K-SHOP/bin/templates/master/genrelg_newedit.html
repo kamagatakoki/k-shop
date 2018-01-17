@@ -16,7 +16,7 @@
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreLgCd')}? 'has-error has-feedback'" >
 				<h5 class="col-sm-3 font-alt mb-0">大ジャンルコード</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{genreLgCd}" class="form-control" value="10" placeholder="大ジャンルコード" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" />
+					<input type="number" th:field="*{genreLgCd}" class="form-control" value="10" placeholder="大ジャンルコード" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" />
 					<span th:if="${#fields.hasErrors('genreLgCd')}" th:errors="*{genreLgCd}" class="help-block">error!</span>
 				</div>
 			</div>

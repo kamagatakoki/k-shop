@@ -1,0 +1,194 @@
+package com.example.demo.web.form.master;
+
+import java.time.LocalDate;
+
+import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
+import com.example.demo.web.form.CommonForm;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * クラスの説明：商品マスタフォーム
+ * @author kamagata
+ * @since 2018/01/17
+ */
+@MappedSuperclass
+@Setter
+@Getter
+public class GoodsForm extends CommonForm {
+
+	/**
+	 * フィールドの説明：商品コード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@Size(min = 10, max = 10)
+	private String goodsCd;
+
+	/**
+	 * フィールドの説明：商品名(メイン)
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@NotEmpty
+	@Size(max = 100)
+	private String goodsNm;
+
+	/**
+	 * フィールドの説明：商品名(サブ)
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@Size(max = 100)
+	private String subGoodsNm;
+
+	/**
+	 * フィールドの説明：大ジャンルコード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@Size(min = 2, max = 2)
+	private String genreLgCd;
+
+	/**
+	 * フィールドの説明：中ジャンルコード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@Size(min = 4, max = 4)
+	private String genreMdCd;
+
+	/**
+	 * フィールドの説明：小ジャンルコード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@Size(min = 6, max = 6)
+	private String genreSmCd;
+
+	/**
+	 * フィールドの説明：入力値発売日
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@NotEmpty
+	private String inputReleaseDt;
+
+	/**
+	 * フィールドの説明：発売日
+	 * @author kamagata
+	 * @since 2018/01/18
+	 */
+	private LocalDate releaseDt;
+
+	/**
+	 * フィールドの説明：商品概要
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@NotEmpty
+	@Size(max = 100)
+	private String overview;
+
+	/**
+	 * フィールドの説明：商品詳細
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@NotEmpty
+	@Size(max = 500)
+	private String detail;
+
+	/**
+	 * フィールドの説明：メーカー
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@NotEmpty
+	@Size(max = 100)
+	private String maker;
+
+	/**
+	 * フィールドの説明：サイズ
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	@NotEmpty
+	@Size(max = 100)
+	private String goodsSize;
+
+	/**
+	 * フィールドの説明：検索条件 商品コード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchGoodsCd;
+
+	/**
+	 * フィールドの説明：検索条件 商品名(メイン)
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchGoodsNm;
+
+	/**
+	 * フィールドの説明：検索条件 商品名(サブ)
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchSubGoodsNm;
+
+	/**
+	 * フィールドの説明：検索条件 大ジャンルコード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchGenreLgCd;
+
+	/**
+	 * フィールドの説明：検索条件 中ジャンルコード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchGenreMdCd;
+
+	/**
+	 * フィールドの説明：検索条件 小ジャンルコード
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchGenreSmCd;
+
+	/**
+	 * フィールドの説明：検索条件 商品概要
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchOverview;
+
+	/**
+	 * フィールドの説明：検索条件 商品詳細
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchDetail;
+
+	/**
+	 * フィールドの説明：検索条件 メーカー
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchMaker;
+
+	/**
+	 * フィールドの説明：検索条件 サイズ
+	 * @author kamagata
+	 * @since 2018/01/17
+	 */
+	private String searchSize;
+}

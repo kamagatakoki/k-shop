@@ -73,11 +73,6 @@ public class GenreLgNewEditController {
 		// エンティティにフォームの内容をコピー
 		GenreLgEntity genreLgEntity = new GenreLgEntity();
 		BeanUtils.copyProperties(genreLgForm, genreLgEntity);
-		//
-		//		Set<ConstraintViolation<GenreLgEntity>> aaa = validator.validate(genreLgEntity);
-		//		if (aaa.isEmpty()) {
-		//			return "master/genrelg_newedit";
-		//		}
 
 		// 更新処理実行
 		genreLgService.update(genreLgEntity);

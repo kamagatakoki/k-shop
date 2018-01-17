@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.entity.master.UserInfoEntity;
 import com.example.demo.domain.repository.master.UserInfoRepository;
+import com.example.demo.specifications.CommonSpecifications;
 import com.example.demo.web.form.master.UserInfoForm;
 
 /**
@@ -22,6 +23,9 @@ import com.example.demo.web.form.master.UserInfoForm;
 public class UserInfoService {
 	@Autowired
 	UserInfoRepository userInfoRepository;
+
+	@Autowired
+	CommonSpecifications<UserInfoEntity> userInfoSpecifications;
 
 	/**
 	 * メソッドの説明：全件検索実行
@@ -43,10 +47,10 @@ public class UserInfoService {
 	 */
 	public List<UserInfoEntity> findAllCustom(UserInfoForm userInfoForm, Sort sort) {
 		return userInfoRepository.findAll(Specifications
-				.where(UserInfoSpecifications.firstNmContains(userInfoForm.getSearchFirstNm()))
-				.and(UserInfoSpecifications.lastNmContains(userInfoForm.getSearchLastNm()))
-				.and(UserInfoSpecifications.emailContains(userInfoForm.getSearchEmail()))
-				.and(UserInfoSpecifications.phoneContains(userInfoForm.getSearchPhone())), sort);
+				.where(userInfoSpecifications.conditionForLike("firstNm", userInfoForm.getSearchFirstNm()))
+				.and(userInfoSpecifications.conditionForLike("lastNm", userInfoForm.getSearchLastNm()))
+				.and(userInfoSpecifications.conditionForLike("email", userInfoForm.getSearchEmail()))
+				.and(userInfoSpecifications.conditionForLike("phone", userInfoForm.getSearchPhone())), sort);
 	}
 
 	/**

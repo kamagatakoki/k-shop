@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.example.demo.domain.entity.CommonColumnEntity;
 import com.example.demo.domain.entity.LocalDateConverter;
@@ -69,6 +70,7 @@ public class GoodsEntity extends CommonColumnEntity implements Serializable {
 	 */
 	@Column(nullable = false)
 	@Convert(converter = LocalDateConverter.class)
+	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate releaseDt;
 
 	/**

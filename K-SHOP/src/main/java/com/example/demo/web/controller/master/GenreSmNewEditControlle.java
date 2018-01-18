@@ -7,10 +7,8 @@ import javax.validation.groups.Default;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -180,21 +178,6 @@ public class GenreSmNewEditControlle {
 		modelAndView.setViewName("master/genresm_newedit"); // 遷移先URLセット
 
 		return modelAndView;
-	}
-
-	/**
-	 * メソッドの説明：
-	 * @author kamagata
-	 * @param modelMap a
-	 * @param genreSmForm a
-	 * @since 2018/01/14
-	 * @return a
-	 */
-	@GetMapping(path = "newedit", params = "test")
-	public String showHtmlResult(final ModelMap modelMap, GenreSmForm genreSmForm) {
-		modelMap.addAttribute("dataCollection", "aaa");
-
-		return "master/genresm_newedit";
 	}
 
 }

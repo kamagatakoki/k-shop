@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.domain.entity.master.GenreLgEntity;
+import com.example.demo.domain.entity.master.GenreMdEntity;
+import com.example.demo.domain.entity.master.GenreSmEntity;
 import com.example.demo.domain.entity.master.GoodsEntity;
 import com.example.demo.service.master.GoodsService;
 import com.example.demo.web.form.master.GoodsForm;
@@ -87,7 +90,22 @@ public class GoodsListController {
 	@PostMapping(path = "list", params = "new")
 	ModelAndView openNew(GoodsForm goodsForm, ModelAndView modelAndView) {
 
+		// 大ジャンルプルダウン要素取得
+		List<GenreLgEntity> genreLgEntities = goodsService.findGenreLgList();
+		goodsForm.setGenreLgCd(goodsForm.getGenreLgCd());
+
+		// 中ジャンルプルダウン要素取得
+		List<GenreMdEntity> genreMdEntities = goodsService.findGenreMdList(goodsForm.getGenreLgCd());
+		goodsForm.setGenreMdCd(goodsForm.getGenreMdCd());
+
+		// 小ジャンルプルダウン要素取得
+		List<GenreSmEntity> genreSmEntities = goodsService.findGenreSmList(goodsForm.getGenreMdCd());
+		goodsForm.setGenreMdCd(goodsForm.getGenreMdCd());
+
 		// モデルセット
+		modelAndView.addObject("genreLgList", genreLgEntities); // 大ジャンルプルダウン要素
+		modelAndView.addObject("genreMdList", genreMdEntities); // 中ジャンルプルダウン要素
+		modelAndView.addObject("genreSmList", genreSmEntities); // 小ジャンルプルダウン要素
 		modelAndView.setViewName("master/goods_newedit"); // 遷移先URLセット
 
 		return modelAndView;
@@ -107,11 +125,29 @@ public class GoodsListController {
 		// 検索処理
 		GoodsEntity goodsEntity = goodsService.findOne(goodsForm.getGoodsCd());
 
+		// 大ジャンルプルダウン要素取得
+		List<GenreLgEntity> genreLgEntities = goodsService.findGenreLgList();
+		goodsForm.setGenreLgCd(goodsEntity.getGenreLgEntity().getGenreLgCd());
+
+		// 中ジャンルプルダウン要素取得
+		List<GenreMdEntity> genreMdEntities = goodsService.findGenreMdList(goodsEntity.getGenreLgEntity().getGenreLgCd());
+		goodsForm.setGenreMdCd(goodsEntity.getGenreMdEntity().getGenreMdCd());
+
+		// 小ジャンルプルダウン要素取得
+		List<GenreSmEntity> genreSmEntities = goodsService.findGenreSmList(goodsEntity.getGenreMdEntity().getGenreMdCd());
+		goodsForm.setGenreMdCd(goodsEntity.getGenreSmEntity().getGenreSmCd());
+
 		// エンティティの内容をフォームにコピー
 		BeanUtils.copyProperties(goodsEntity, goodsForm);
+		goodsForm.setGenreLgCd(goodsEntity.getGenreLgEntity().getGenreLgCd());
+		goodsForm.setGenreMdCd(goodsEntity.getGenreMdEntity().getGenreMdCd());
+		goodsForm.setGenreSmCd(goodsEntity.getGenreSmEntity().getGenreSmCd());
 
 		// モデルセット
-		modelAndView.addObject("genreMdForm", goodsForm); // 商品フォーム
+		modelAndView.addObject("genreLgList", genreLgEntities); // 大ジャンルプルダウン要素
+		modelAndView.addObject("genreMdList", genreMdEntities); // 中ジャンルプルダウン要素
+		modelAndView.addObject("genreSmList", genreSmEntities); // 小ジャンルプルダウン要素
+		modelAndView.addObject("goodsForm", goodsForm); // 商品フォーム
 		modelAndView.setViewName("master/goods_newedit"); // 遷移先URLセット
 
 		return modelAndView;

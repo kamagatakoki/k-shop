@@ -48,14 +48,14 @@
 					<table class="table table-striped checkout-table">
 						<tbody>
 							<tr>
-								<th class="col-sm-2 text-center" style="vertical-align:middle">商品画像コード</th>
-								<th class="col-sm-1 text-center" style="vertical-align:middle">商品コード</th>
-								<th class="col-sm-2 text-center" style="vertical-align:middle">商品名</th>
-								<th class="col-sm-1 text-center" style="vertical-align:middle">ファイル名</th>
-								<th class="col-sm-2 text-center" style="vertical-align:middle">説明</th>
-								<th class="col-sm-1 text-center" style="vertical-align:middle">表示順</th>
-								<th class="col-sm-2 text-center" style="vertical-align:middle; min-width :200px;">画像</th>
-								<th class="col-sm-1 text-center caption-content" style="vertical-align:middle">編集</th>
+								<th class="col-sm-2 text-center">商品画像コード</th>
+								<th class="col-sm-1 text-center">商品コード</th>
+								<th class="col-sm-2 text-center">商品名</th>
+								<th class="col-sm-1 text-center">ファイル名</th>
+								<th class="col-sm-2 text-center">説明</th>
+								<th class="col-sm-1 text-center">表示順</th>
+								<th class="col-sm-2 text-center" style="min-width :200px;">画像</th>
+								<th class="col-sm-1 text-center caption-content">編集</th>
 							</tr>
 							<tr th:each="item : ${items}" style="height:170px">
 								<td th:text="${item.goodsImageCd}"><h5 class="product-title font-alt"></h5>01</td>
@@ -66,7 +66,7 @@
 								<td th:text="${item.displayOrder}"><h5 class="product-title font-alt"></h5>3</td>
 								<td>
 									<a th:href="|#${item.goodsImageCd}|" data-toggle="modal">
-										<img th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageCd})}" style="cursor:pointer" />
+										<img th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageCd})}" style="max-width:200px; cursor:pointer" />
 									</a>
 									<div class="modal fade" th:id="${item.goodsImageCd}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 										<div class="modal-dialog modal-lg modal-middle">

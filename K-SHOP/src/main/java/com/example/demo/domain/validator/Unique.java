@@ -10,6 +10,8 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
+import com.example.demo.domain.entity.CommonColumnEntity;
+
 /**
  * クラスの説明：Uniqueアノテーション定義
  * @author kamagata
@@ -48,7 +50,7 @@ public @interface Unique {
 	/**
 	 * The mapped hibernate/jpa entity class
 	 */
-	Class<?> entity();
+	Class<? extends CommonColumnEntity> entity();
 
 	/**
 	 * The property of the entity we want to validate for uniqueness. Default name is "id"

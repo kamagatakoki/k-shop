@@ -6,6 +6,7 @@ import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.example.demo.web.form.CommonForm;
 
@@ -56,12 +57,26 @@ public class GoodsForm extends CommonForm {
 	private String genreLgCd;
 
 	/**
+	 * フィールドの説明：大ジャンル名称
+	 * @author kamagata
+	 * @since 2018/01/19
+	 */
+	private String genreLgNm;
+
+	/**
 	 * フィールドの説明：中ジャンルコード
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
 	@Size(min = 4, max = 4)
 	private String genreMdCd;
+
+	/**
+	 * フィールドの説明：中ジャンル名称
+	 * @author kamagata
+	 * @since 2018/01/19
+	 */
+	private String genreMdNm;
 
 	/**
 	 * フィールドの説明：小ジャンルコード
@@ -72,18 +87,18 @@ public class GoodsForm extends CommonForm {
 	private String genreSmCd;
 
 	/**
-	 * フィールドの説明：入力値発売日
+	 * フィールドの説明：小ジャンル名称
 	 * @author kamagata
-	 * @since 2018/01/17
+	 * @since 2018/01/19
 	 */
-	@NotEmpty
-	private String inputReleaseDt;
+	private String genreSmNm;
 
 	/**
 	 * フィールドの説明：発売日
 	 * @author kamagata
 	 * @since 2018/01/18
 	 */
+	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate releaseDt;
 
 	/**
@@ -96,6 +111,13 @@ public class GoodsForm extends CommonForm {
 	private String overview;
 
 	/**
+	 * フィールドの説明：表示用商品概要
+	 * @author kamagata
+	 * @since 2018/01/18
+	 */
+	private String displayOverview = "BBBBBBBB";
+
+	/**
 	 * フィールドの説明：商品詳細
 	 * @author kamagata
 	 * @since 2018/01/17
@@ -103,6 +125,13 @@ public class GoodsForm extends CommonForm {
 	@NotEmpty
 	@Size(max = 500)
 	private String detail;
+
+	/**
+	 * フィールドの説明：表示用商品詳細
+	 * @author kamagata
+	 * @since 2018/01/18
+	 */
+	private String displayDetail;
 
 	/**
 	 * フィールドの説明：メーカー
@@ -190,5 +219,5 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	private String searchSize;
+	private String searchGoodsSize;
 }

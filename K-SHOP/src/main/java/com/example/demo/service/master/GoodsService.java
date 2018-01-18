@@ -9,7 +9,13 @@ import org.springframework.data.jpa.domain.Specifications;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.demo.domain.entity.master.GenreLgEntity;
+import com.example.demo.domain.entity.master.GenreMdEntity;
+import com.example.demo.domain.entity.master.GenreSmEntity;
 import com.example.demo.domain.entity.master.GoodsEntity;
+import com.example.demo.domain.repository.master.GenreLgRepository;
+import com.example.demo.domain.repository.master.GenreMdRepository;
+import com.example.demo.domain.repository.master.GenreSmRepository;
 import com.example.demo.domain.repository.master.GoodsRepository;
 import com.example.demo.specifications.CommonSpecifications;
 import com.example.demo.web.form.master.GoodsForm;
@@ -25,6 +31,15 @@ public class GoodsService implements Serializable {
 
 	@Autowired
 	GoodsRepository goodsRepository;
+
+	@Autowired
+	GenreLgRepository genreLgRepository;
+
+	@Autowired
+	GenreMdRepository genreMdRepository;
+
+	@Autowired
+	GenreSmRepository genreSmRepository;
 
 	@Autowired
 	CommonSpecifications<GoodsEntity> goodsSpecifications;
@@ -50,16 +65,60 @@ public class GoodsService implements Serializable {
 	 */
 	public List<GoodsEntity> findAllCustom(GoodsForm goodsForm, Sort sort) {
 		return goodsRepository.findAll(Specifications
-				.where(goodsSpecifications.conditionForStartWith("goodsCd", goodsForm.getGoodsCd()))
-				.and(goodsSpecifications.conditionForLike("goodsNm", goodsForm.getGoodsNm()))
-				.and(goodsSpecifications.conditionForLike("subGoodsNm", goodsForm.getSubGoodsNm()))
-				.and(goodsSpecifications.conditionForStartWith("genreLgEntity", "genreLgCd", goodsForm.getGenreLgCd()))
-				.and(goodsSpecifications.conditionForStartWith("genreMdEntity", "genreMdCd", goodsForm.getGenreMdCd()))
-				.and(goodsSpecifications.conditionForStartWith("genreSmEntity", "genreSmCd", goodsForm.getGenreSmCd()))
-				.and(goodsSpecifications.conditionForLike("overview", goodsForm.getOverview()))
-				.and(goodsSpecifications.conditionForLike("detail", goodsForm.getDetail()))
-				.and(goodsSpecifications.conditionForLike("maker", goodsForm.getMaker()))
-				.and(goodsSpecifications.conditionForEqual("goodsSize", goodsForm.getGoodsSize())), sort);
+				.where(goodsSpecifications.conditionForStartWith("goodsCd", goodsForm.getSearchGoodsCd()))
+				.and(goodsSpecifications.conditionForLike("goodsNm", goodsForm.getSearchGoodsNm()))
+				.and(goodsSpecifications.conditionForLike("subGoodsNm", goodsForm.getSearchSubGoodsNm()))
+				.and(goodsSpecifications.conditionForStartWith("genreLgEntity", "genreLgCd", goodsForm.getSearchGenreLgCd()))
+				.and(goodsSpecifications.conditionForStartWith("genreMdEntity", "genreMdCd", goodsForm.getSearchGenreMdCd()))
+				.and(goodsSpecifications.conditionForStartWith("genreSmEntity", "genreSmCd", goodsForm.getSearchGenreSmCd()))
+				.and(goodsSpecifications.conditionForLike("overview", goodsForm.getSearchOverview()))
+				.and(goodsSpecifications.conditionForLike("detail", goodsForm.getSearchDetail()))
+				.and(goodsSpecifications.conditionForLike("maker", goodsForm.getSearchMaker()))
+				.and(goodsSpecifications.conditionForEqual("goodsSize", goodsForm.getSearchGoodsSize())), sort);
+	}
+
+	/**
+	 * メソッドの説明：大ジャンル要素取得
+	 * @author kamagata
+	 * @since 2018/01/18
+	 * @return List<GenreLgEntity> 大ジャンルエンティティのリスト
+	 */
+	public List<GenreLgEntity> findGenreLgList() {
+		return genreLgRepository.findAll(new Sort("displayOrder"));
+	}
+
+	/**
+	 * メソッドの説明：中ジャンル要素取得
+	 * @author kamagata
+	 * @param genreLgCd 大ジャンルコード
+	 * @since 2018/01/18
+	 * @return List<GenreMdEntity> 中ジャンルエンティティのリスト
+	 */
+	public List<GenreMdEntity> findGenreMdList(String genreLgCd) {
+		return genreMdRepository.findByGenreLgEntityGenreLgCd(genreLgCd, new Sort("displayOrder"));
+	}
+
+	/**
+	 * メソッドの説明：小ジャンル要素取得
+	 * @author kamagata
+	 * @param genreMdCd 中ジャンルコード
+	 * @since 2018/01/18
+	 * @return List<GenreSmEntity> 小ジャンルエンティティのリスト
+	 */
+	public List<GenreSmEntity> findGenreSmList(String genreMdCd) {
+		return genreSmRepository.findByGenreMdEntityGenreMdCd(genreMdCd, new Sort("displayOrder"));
+	}
+
+	/**
+	 * メソッドの説明：大ジャンル、中ジャンルの組み合わせ存在チェック
+	 * @author kamagata
+	 * @param genreLgCd 大ジャンルコード
+	 * @param genreMdCd 中ジャンルコード
+	 * @since 2018/01/18
+	 * @return List<GenreSmEntity> 小ジャンルエンティティのリスト
+	 */
+	public boolean existsByGenreLgCdAndGenreMdCd(String genreLgCd, String genreMdCd) {
+		return genreMdRepository.existsByGenreLgEntityGenreLgCdAndGenreMdCd(genreLgCd, genreMdCd);
 	}
 
 	/**

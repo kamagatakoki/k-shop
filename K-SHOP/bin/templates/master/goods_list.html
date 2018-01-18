@@ -49,7 +49,7 @@
 						<input type="text" th:field="*{searchMaker}" class="form-control" placeholder="メーカー" />
 					</div>
 					<div class="col-sm-6">
-						<input type="text" th:field="*{searchSize}" class="form-control" placeholder="サイズ" />
+						<input type="text" th:field="*{searchGoodsSize}" class="form-control" placeholder="サイズ" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -64,7 +64,6 @@
 		</div>
 
 		<!-- 検索結果 -->
-		<div class="main">
 		<section class="module-extra-small">
 			<div class="container">
 				<hr class="divider-w pt-20" />
@@ -92,12 +91,54 @@
 								<td th:text="${item.goodsCd}"><h5 class="product-title font-alt"></h5>1234567890</td>
 								<td th:text="${item.goodsNm}"><h5 class="product-title font-alt"></h5>商品名(正)</td>
 								<td th:text="${item.subGoodsNm}"><h5 class="product-title font-alt">商品名(副)</h5></td>
-								<td th:text="${item.genreLgEntity.genreLgCd}"><h5 class="product-title font-alt">大ジャンル</h5></td>
-								<td th:text="${item.genreMdEntity.genreMdCd}"><h5 class="product-title font-alt">中ジャンル</h5></td>
-								<td th:text="${item.genreSmEntity.genreSmCd}"><h5 class="product-title font-alt">小ジャンル</h5></td>
+								<td>
+									<a th:text="${item.genreLgEntity.genreLgCd}"></a>
+									<br/>
+									<a th:text="${item.genreLgEntity.genreLgNm}"></a>
+								</td>
+								<td>
+									<a th:text="${item.genreMdEntity.genreMdCd}"></a>
+									<br/>
+									<a th:text="${item.genreMdEntity.genreMdNm}"></a>
+								</td>
+								<td>
+									<a th:text="${item.genreSmEntity.genreSmCd}"></a>
+									<br/>
+									<a th:text="${item.genreSmEntity.genreSmNm}"></a>
+								</td>
 								<td th:text="${item.releaseDt}"><h5 class="product-title font-alt">発売日</h5></td>
-								<td th:text="${item.overview}"><h5 class="product-title font-alt">概要</h5></td>
-								<td th:text="${item.detail}"><h5 class="product-title font-alt">詳細</h5></td>
+								<td>
+									<a th:href="|#${item.goodsCd}-overview|" data-toggle="modal">……</a>
+									<div class="modal fade" th:id="|${item.goodsCd}-overview|" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title">商品概要</h4>
+												 	<div class="modal-body">
+												 		<pre th:text="${item.overview}"></pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<a th:href="|#${item.goodsCd}-detail|" data-toggle="modal">……</a>
+									<div class="modal fade" th:id="|${item.goodsCd}-detail|" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title">商品詳細</h4>
+												 	<div class="modal-body">
+														<pre th:text="${item.detail}"></pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
 								<td th:text="${item.maker}"><h5 class="product-title font-alt">メーカー</h5></td>
 								<td th:text="${item.goodsSize}"><h5 class="product-title font-alt">商品サイズ</h5></td>
 								<td class=" text-center" style="vertical-align:middle">
@@ -118,6 +159,5 @@
 			</div>
 		</section>
 		</div>
-	</div>
 	<div layout:fragment="js"></div>
 </html>

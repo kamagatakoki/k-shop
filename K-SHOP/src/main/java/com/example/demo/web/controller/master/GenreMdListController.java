@@ -145,7 +145,7 @@ public class GenreMdListController {
 		// 小ジャンル存在チェック
 		if (genreMdService.deleteCheck(genreMdCd)) {
 			// 存在する場合はエラー
-			bindingResult.reject("com.example.demo.web.controller.master.deletecheck", "下位ジャンルに紐づくデータがあります。"); //?????????????
+			bindingResult.reject("com.example.demo.web.controller.master.deletecheck");
 			return search(modelAndView, genreMdForm);
 		}
 

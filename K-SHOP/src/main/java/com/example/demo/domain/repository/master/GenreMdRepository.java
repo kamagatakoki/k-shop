@@ -36,4 +36,14 @@ public interface GenreMdRepository extends JpaRepository<GenreMdEntity, String>,
 	 */
 	public boolean existsByGenreLgEntityGenreLgCd(String genreLgCd);
 
+	/**
+	 * メソッドの説明：大ジャンル中ジャンルコード存在チェック
+	 * @author kamagata
+	 * @since 2018/01/15
+	 * @param genreLgCd 大ジャンルコード
+	 * @param GenreMdCd 中ジャンルコード
+	 * @return True:存在する False:存在しない
+	 */
+	public boolean existsByGenreLgEntityGenreLgCdAndGenreMdCd(String genreLgCd, String GenreMdCd);
+
 }

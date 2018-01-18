@@ -31,44 +31,62 @@
 				</div>
 			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreLgCd')}? 'has-error has-feedback'">
-				<h5 class="col-sm-3 font-alt mb-0">大ジャンル</h5>
+				<h5 class="col-sm-3 font-alt mb-0">大ジャンルコード</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{genreLgCd}" class="form-control" placeholder="大ジャンル" />
+					<select th:id="genreLgCd" th:name="genreLgCd" th:value="*{genreLgCd}" class="form-control">
+						<option th:selected="*{genreLgCd == null}" />
+						<option th:each="item : ${genreLgList}"
+								th:value="${item.genreLgCd}"
+								th:selected="${goodsForm.genreLgCd == item.genreLgCd}"
+								th:text="${item.genreLgCd + '：' + item.genreLgNm}" />
+					</select>
 					<span th:if="${#fields.hasErrors('genreLgCd')}" th:errors="*{genreLgCd}" class="help-block">error!</span>
 				</div>
 			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreMdCd')}? 'has-error has-feedback'">
-				<h5 class="col-sm-3 font-alt mb-0">中ジャンル</h5>
+				<h5 class="col-sm-3 font-alt mb-0">中ジャンルコード</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{genreMdCd}" class="form-control" placeholder="中ジャンル" />
+					<select th:id="genreMdCd" th:name="genreMdCd" th:value="*{genreMdCd}" class="form-control">
+						<option th:selected="*{genreMdCd == null}" />
+						<option th:each="item : ${genreMdList}"
+								th:value="${item.genreMdCd}"
+								th:selected="${goodsForm.genreMdCd == item.genreMdCd}"
+								th:text="${item.genreMdCd + '：' + item.genreMdNm}"/>
+					</select>
 					<span th:if="${#fields.hasErrors('genreMdCd')}" th:errors="*{genreMdCd}" class="help-block">error!</span>
 				</div>
 			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreSmCd')}? 'has-error has-feedback'">
-				<h5 class="col-sm-3 font-alt mb-0">小ジャンル</h5>
+				<h5 class="col-sm-3 font-alt mb-0">小ジャンルコード</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{genreSmCd}" class="form-control" placeholder="小ジャンル" />
+					<select th:id="genreMdCd" th:name="genreSmCd" th:value="*{genreSmCd}" class="form-control">
+						<option th:selected="*{genreSmCd == null}" />
+						<option th:each="item : ${genreSmList}"
+								th:value="${item.genreSmCd}"
+								th:selected="${goodsForm.genreSmCd == item.genreSmCd}"
+								th:text="${item.genreSmCd + '：' + item.genreSmNm}"/>
+					</select>
 					<span th:if="${#fields.hasErrors('genreSmCd')}" th:errors="*{genreSmCd}" class="help-block">error!</span>
 				</div>
 			</div>
-			<div class="form-group" th:classappend="${#fields.hasErrors('inputReleaseDt')}? 'has-error has-feedback'">
+			<div class="form-group" th:classappend="${#fields.hasErrors('releaseDt')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">発売日</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{inputReleaseDt}" class="form-control" placeholder="発売日" />
-					<span th:if="${#fields.hasErrors('inputReleaseDt')}" th:errors="*{inputReleaseDt}" class="help-block">error!</span>
+					<input type="text" th:field="*{releaseDt}" class="form-control" placeholder="yyyy/mm/dd" />
+					<span th:if="${#fields.hasErrors('releaseDt')}" th:errors="*{releaseDt}" class="help-block">error!</span>
 				</div>
 			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('overview')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">概要</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{overview}" class="form-control" placeholder="概要" />
+					<textarea th:field="*{overview}" class="form-control" placeholder="概要" rows="5" ></textarea>
 					<span th:if="${#fields.hasErrors('overview')}" th:errors="*{overview}" class="help-block">error!</span>
 				</div>
 			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('detail')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">詳細</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{detail}" class="form-control" placeholder="詳細" />
+					<textarea th:field="*{detail}" class="form-control" placeholder="詳細" rows="10" ></textarea>
 					<span th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" class="help-block">error!</span>
 				</div>
 			</div>
@@ -92,6 +110,8 @@
 					<input type="submit" class="btn btn-d btn-circle btn-sm" name="regist" value="登録" />
 				</div>
 			</div>
+			<!-- プルダウン変更用隠しボタン -->
+			<button type="submit" id="dummy" name="dummy" hidden="hidden"></button>
 			<!-- 画面モード(登録or編集) -->
 			<input type="hidden" th:field="*{crud}" />
 			<!-- 前画面入力値保持 -->
@@ -104,7 +124,7 @@
 			<input type="hidden" th:field="*{searchOverview}" />
 			<input type="hidden" th:field="*{searchDetail}" />
 			<input type="hidden" th:field="*{searchMaker}" />
-			<input type="hidden" th:field="*{searchSize}" />
+			<input type="hidden" th:field="*{searchGoodsSize}" />
 		</form>
 	</div>
 	<div layout:fragment="js">

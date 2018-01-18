@@ -2,7 +2,9 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
@@ -24,6 +26,20 @@ public class KShopApplication {
 	@Bean
 	public AuditorAware<String> auditorAware() {
 		return () -> "user";
+	}
+
+	/**
+	 * メソッドの説明：メッセージファイル読み込み
+	 * @author kamagata
+	 * @since 2018/01/19
+	 * @return MessageSource メッセージソース
+	 */
+	@Bean
+	public MessageSource messageSource() {
+		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+		messageSource.setBasenames("application-messages");
+		messageSource.setDefaultEncoding("UTF-8");
+		return messageSource;
 	}
 
 	/**

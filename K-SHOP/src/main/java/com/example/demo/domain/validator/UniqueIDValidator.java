@@ -8,6 +8,8 @@ import javax.persistence.PersistenceContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+import com.example.demo.domain.entity.CommonColumnEntity;
+
 /**
  * クラスの説明：一意チェックバリデーター
  * @author kamagata
@@ -16,7 +18,7 @@ import javax.validation.ConstraintValidatorContext;
 public class UniqueIDValidator implements ConstraintValidator<Unique, Serializable> {
 
 	private EntityManager entityManager;
-	private Class<?> entityClass; // エンティティクラス
+	private Class<? extends CommonColumnEntity> entityClass; // エンティティクラス
 	private String uniqueField; // 一意チェックカラム
 
 	/**

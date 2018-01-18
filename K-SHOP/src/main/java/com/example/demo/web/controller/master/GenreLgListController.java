@@ -132,7 +132,7 @@ public class GenreLgListController {
 		// 中ジャンル存在チェック
 		if (genreLgService.deleteCheck(genreLgCd)) {
 			// 存在する場合はエラー
-			bindingResult.reject("com.example.demo.web.controller.master.deletecheck", "下位ジャンルに紐づくデータがあります。"); //?????????????
+			bindingResult.reject("com.example.demo.web.controller.master.deletecheck");
 			return search(modelAndView, genreLgForm);
 		}
 

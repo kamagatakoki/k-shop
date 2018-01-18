@@ -38,6 +38,7 @@ dependencies {
 	compile('org.webjars:bootstrap:3.3.7')
 	compile('org.springframework.boot:spring-boot-devtools')
 	compile('commons-io:commons-io:2.4')
+	compile('org.thymeleaf.extras:thymeleaf-extras-java8time')
 	compile files('lib/ojdbc6.jar')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly('org.projectlombok:lombok')

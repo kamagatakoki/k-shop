@@ -1,13 +1,11 @@
 package com.example.demo.domain.entity.master;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -56,13 +54,5 @@ public class GenreLgEntity extends CommonColumnEntity implements Serializable {
 	 */
 	@Column(nullable = false, length = 3)
 	private Integer displayOrder;
-
-	/**
-	 * フィールドの説明：リレーション設定
-	 * @author kamagata
-	 * @since 2018/01/14
-	 */
-	@OneToMany(mappedBy = "genreLgCd")
-	private List<GenreLgEntity> genreLgEntities;
 
 }

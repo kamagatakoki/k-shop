@@ -37,15 +37,18 @@ public class GoodsImageListController {
 	/**
 	 * メソッドの説明：初期表示処理
 	 * @author kamagata
+	 * @param goodsCd 商品コード
 	 * @since 2018/01/16
 	 * @param modelAndView モデル
 	 * @param goodsImageForm 商品画像フォーム
 	 * @return 遷移先モデル(一覧)
 	 */
 	@GetMapping(path = "list")
-	ModelAndView list(ModelAndView modelAndView, GoodsImageForm goodsImageForm) {
+	ModelAndView list(@RequestParam(name = "goodsCd", required = false) String goodsCd, ModelAndView modelAndView,
+			GoodsImageForm goodsImageForm) {
 
-		// 全件検索
+		// 検索
+		goodsImageForm.setSearchGoodsCd(goodsCd);
 		return search(modelAndView, goodsImageForm);
 	}
 

@@ -21,7 +21,7 @@
 					<div class="col-sm-6">
 						<input type="text" th:field="*{searchGoodsNm}" class="form-control" placeholder="商品名(正)" />
 					</div>
-					<div class="col-sm-6">
+						<div class="col-sm-6">
 						<input type="text" th:field="*{searchSubGoodsNm}" class="form-control" placeholder="商品名(副)" />
 					</div>
 				</div>
@@ -88,23 +88,22 @@
 						</thead>
 						<tbody>
 							<tr th:each="item : ${items}">
-								<td th:text="${item.goodsCd}"><h5 class="product-title font-alt"></h5>1234567890</td>
+								<td>
+									<a th:text="${item.goodsCd}" th:href="@{/maintenance/goodsimage/list/(goodsCd=${item.goodsCd})}"></a>
+								</td>
 								<td th:text="${item.goodsNm}"><h5 class="product-title font-alt"></h5>商品名(正)</td>
 								<td th:text="${item.subGoodsNm}"><h5 class="product-title font-alt">商品名(副)</h5></td>
 								<td>
 									<a th:text="${item.genreLgEntity.genreLgCd}"></a>
-									<br/>
-									<a th:text="${item.genreLgEntity.genreLgNm}"></a>
+									<p th:text="${item.genreLgEntity.genreLgNm}"></p>
 								</td>
 								<td>
-									<a th:text="${item.genreMdEntity.genreMdCd}"></a>
-									<br/>
-									<a th:text="${item.genreMdEntity.genreMdNm}"></a>
+									<p th:text="${item.genreMdEntity.genreMdCd}"></p>
+									<p th:text="${item.genreMdEntity.genreMdNm}"></p>
 								</td>
 								<td>
-									<a th:text="${item.genreSmEntity.genreSmCd}"></a>
-									<br/>
-									<a th:text="${item.genreSmEntity.genreSmNm}"></a>
+									<p th:text="${item.genreSmEntity.genreSmCd}"></p>
+									<p th:text="${item.genreSmEntity.genreSmNm}"></p>
 								</td>
 								<td th:text="${item.releaseDt}"><h5 class="product-title font-alt">発売日</h5></td>
 								<td>
@@ -143,12 +142,17 @@
 								<td th:text="${item.goodsSize}"><h5 class="product-title font-alt">商品サイズ</h5></td>
 								<td class=" text-center" style="vertical-align:middle">
 									<form th:action="@{/maintenance/goods/list}" th:object="${goodsForm}" class="form-horizontal" method="post">
-										<button class="btn btn-border-d btn-circle btn-sm" type="submit" name="edit" ><i class="fa fa-cog fa-spin"></i> 編集</button>
+										<button class="btn btn-border-d btn-circle btn-sm" type="submit" name="edit" ><i class="fa fa-cog fa-spin"></i> 　編集　</button>
 										<input type="hidden" name="crud" value="update" />
 										<input type="hidden" name="goodsCd" th:value="${item.goodsCd}" />
 									</form>
 									<form th:action="@{/maintenance/goods/list}" th:object="${goodsForm}" class="form-horizontal" method="post">
-										<button class="btn btn-d btn-circle btn-sm" type="submit" name="delete" ><i class="fa fa-times"></i> 削除</button>
+										<button class="btn btn-d btn-circle btn-sm" type="submit" name="delete" ><i class="fa fa-times"></i> 　削除　</button>
+										<input type="hidden" name="goodsCd" th:value="${item.goodsCd}" />
+									</form>
+									<form th:action="@{/maintenance/goodsimage/newedit}" th:object="${goodsForm}" class="form-horizontal" method="get">
+										<button class="btn btn-g btn-circle btn-sm" type="submit" name="new" ><i class="fa fa-fw">&#xF030;</i> 画像登録</button>
+										<input type="hidden" name="crud" value="insert" />
 										<input type="hidden" name="goodsCd" th:value="${item.goodsCd}" />
 									</form>
 								</td>

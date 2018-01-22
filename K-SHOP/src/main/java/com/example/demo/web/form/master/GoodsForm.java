@@ -3,6 +3,7 @@ package com.example.demo.web.form.master;
 import java.time.LocalDate;
 
 import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -53,7 +54,7 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	@Size(min = 2, max = 2)
+	@NotEmpty
 	private String genreLgCd;
 
 	/**
@@ -68,7 +69,7 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	@Size(min = 4, max = 4)
+	@NotEmpty
 	private String genreMdCd;
 
 	/**
@@ -83,7 +84,7 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	@Size(min = 6, max = 6)
+	@NotEmpty
 	private String genreSmCd;
 
 	/**
@@ -98,6 +99,7 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/18
 	 */
+	@NotNull
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate releaseDt;
 
@@ -115,7 +117,7 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/18
 	 */
-	private String displayOverview = "BBBBBBBB";
+	private String displayOverview;
 
 	/**
 	 * フィールドの説明：商品詳細
@@ -143,7 +145,7 @@ public class GoodsForm extends CommonForm {
 	private String maker;
 
 	/**
-	 * フィールドの説明：サイズ
+	 * フィールドの説明：商品サイズ
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */

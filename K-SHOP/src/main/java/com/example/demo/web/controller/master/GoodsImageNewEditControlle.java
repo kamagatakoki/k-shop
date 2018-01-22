@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -142,4 +143,23 @@ public class GoodsImageNewEditControlle {
 
 		return modelAndView;
 	}
+
+	/**
+	 * メソッドの説明：商品一覧から遷移
+	 * @author kamagata
+	 * @since 2018/01/21
+	 * @param goodsImageForm 商品画像フォーム
+	 * @param modelAndView モデルビュー
+	 * @return ModelAndView モデルビュー
+	 */
+	@GetMapping(path = "newedit", params = "new")
+	ModelAndView newImage(GoodsImageForm goodsImageForm, ModelAndView modelAndView) {
+
+		// モデルセット
+
+		modelAndView.setViewName("master/goodsimage_newedit"); // 遷移先URLセット
+
+		return modelAndView;
+	}
+
 }

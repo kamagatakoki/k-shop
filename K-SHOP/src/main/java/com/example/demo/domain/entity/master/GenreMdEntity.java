@@ -1,8 +1,5 @@
 package com.example.demo.domain.entity.master;
 
-import java.io.Serializable;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -10,7 +7,6 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -34,7 +30,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Table(name = "GENRE_MD")
 @EntityListeners(AuditingEntityListener.class)
-public class GenreMdEntity extends CommonColumnEntity implements Serializable {
+public class GenreMdEntity extends CommonColumnEntity {
 
 	/**
 	 * フィールドの説明：中ジャンルコード
@@ -69,13 +65,5 @@ public class GenreMdEntity extends CommonColumnEntity implements Serializable {
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "genreLgCd")
 	private GenreLgEntity genreLgEntity;
-
-	/**
-	 * フィールドの説明：リレーション設定
-	 * @author kamagata
-	 * @since 2018/01/15
-	 */
-	@OneToMany(mappedBy = "genreSmCd")
-	private List<GenreSmEntity> genreSmEntities;
 
 }

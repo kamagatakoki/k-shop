@@ -1,6 +1,5 @@
 package com.example.demo.service.master;
 
-import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specifications;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.entity.master.GenreLgEntity;
 import com.example.demo.domain.entity.master.GenreMdEntity;
@@ -27,7 +27,7 @@ import com.example.demo.web.form.master.GoodsForm;
  */
 @Service
 @Transactional
-public class GoodsService implements Serializable {
+public class GoodsService {
 
 	@Autowired
 	GoodsRepository goodsRepository;
@@ -153,4 +153,34 @@ public class GoodsService implements Serializable {
 		goodsRepository.delete(goodsCd);
 	}
 
+	/**
+	 * メソッドの説明：ModelAndViewセット(各種プルダウン要素セット含む)
+	 * @author kamagata
+	 * @since 2018/01/21
+	 * @param modelAndView モデルビュー
+	 * @param goodsForm 商品フォーム
+	 * @param transitionUrl 遷移先URL
+	 * @return ModelAndView モデルビュー
+	 */
+	public ModelAndView setModelAndView(ModelAndView modelAndView, GoodsForm goodsForm, String transitionUrl) {
+
+		// 大ジャンルプルダウン要素取得
+		List<GenreLgEntity> genreLgEntities = findGenreLgList();
+
+		// 中ジャンルプルダウン要素取得
+		List<GenreMdEntity> genreMdEntities = findGenreMdList(goodsForm.getGenreLgCd());
+
+		// 小ジャンルプルダウン要素取得
+		List<GenreSmEntity> genreSmEntities = findGenreSmList(goodsForm.getGenreMdCd());
+
+		// モデルセット
+		modelAndView.addObject("genreLgSelectItems", genreLgEntities); // 大ジャンルプルダウン要素
+		modelAndView.addObject("genreMdSelectItems", genreMdEntities); // 中ジャンルプルダウン要素
+		modelAndView.addObject("genreSmSelectItems", genreSmEntities); // 小ジャンルプルダウン要素
+		modelAndView.addObject("goodsForm", goodsForm); // 商品フォーム
+		modelAndView.setViewName(transitionUrl); // 遷移先URLセット
+
+		return modelAndView;
+
+	}
 }

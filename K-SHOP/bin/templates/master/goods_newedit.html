@@ -33,12 +33,8 @@
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreLgCd')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">大ジャンルコード</h5>
 				<div class="col-sm-9">
-					<select th:id="genreLgCd" th:name="genreLgCd" th:value="*{genreLgCd}" class="form-control">
-						<option th:selected="*{genreLgCd == null}" />
-						<option th:each="item : ${genreLgList}"
-								th:value="${item.genreLgCd}"
-								th:selected="${goodsForm.genreLgCd == item.genreLgCd}"
-								th:text="${item.genreLgCd + '：' + item.genreLgNm}" />
+					<select id="genreLgCd" name="genreLgCd" class="form-control">
+						<option  th:substituteby="common_select::genreLgSelectBody" th:fragment="genreLgSelect"></option>
 					</select>
 					<span th:if="${#fields.hasErrors('genreLgCd')}" th:errors="*{genreLgCd}" class="help-block">error!</span>
 				</div>
@@ -46,12 +42,8 @@
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreMdCd')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">中ジャンルコード</h5>
 				<div class="col-sm-9">
-					<select th:id="genreMdCd" th:name="genreMdCd" th:value="*{genreMdCd}" class="form-control">
-						<option th:selected="*{genreMdCd == null}" />
-						<option th:each="item : ${genreMdList}"
-								th:value="${item.genreMdCd}"
-								th:selected="${goodsForm.genreMdCd == item.genreMdCd}"
-								th:text="${item.genreMdCd + '：' + item.genreMdNm}"/>
+					<select id="genreMdCd" name="genreMdCd" class="form-control">
+						<option  th:substituteby="common_select::genreMdSelectBody" th:fragment="genreMdSelect"></option>
 					</select>
 					<span th:if="${#fields.hasErrors('genreMdCd')}" th:errors="*{genreMdCd}" class="help-block">error!</span>
 				</div>
@@ -59,12 +51,8 @@
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreSmCd')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">小ジャンルコード</h5>
 				<div class="col-sm-9">
-					<select th:id="genreMdCd" th:name="genreSmCd" th:value="*{genreSmCd}" class="form-control">
-						<option th:selected="*{genreSmCd == null}" />
-						<option th:each="item : ${genreSmList}"
-								th:value="${item.genreSmCd}"
-								th:selected="${goodsForm.genreSmCd == item.genreSmCd}"
-								th:text="${item.genreSmCd + '：' + item.genreSmNm}"/>
+					<select th:id="genreSmCd" th:name="genreSmCd" class="form-control">
+						<option  th:substituteby="common_select::genreSmSelectBody" th:fragment="genreSmSelect"></option>
 					</select>
 					<span th:if="${#fields.hasErrors('genreSmCd')}" th:errors="*{genreSmCd}" class="help-block">error!</span>
 				</div>

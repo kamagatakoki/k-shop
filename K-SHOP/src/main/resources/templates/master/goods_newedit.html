@@ -9,27 +9,6 @@
 	<!-- 入力部 -->
 	<div layout:fragment="content">
 		<form th:action="@{/maintenance/goods/newedit}" th:object="${goodsForm}" class="form-horizontal" method="post" enctype="multipart/form-data">
-			<div class="form-group" th:classappend="${#fields.hasErrors('goodsCd')}? 'has-error has-feedback'">
-				<h5 class="col-sm-3 font-alt mb-0">商品コード</h5>
-				<div class="col-sm-9">
-					<input type="number" th:field="*{goodsCd}" class="form-control" placeholder="商品コード" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" />
-					<span th:if="${#fields.hasErrors('goodsCd')}" th:errors="*{goodsCd}" class="help-block">error!</span>
-				</div>
-			</div>
-			<div class="form-group" th:classappend="${#fields.hasErrors('goodsNm')}? 'has-error has-feedback'">
-				<h5 class="col-sm-3 font-alt mb-0">商品名(正)</h5>
-				<div class="col-sm-9">
-					<input type="text" th:field="*{goodsNm}" class="form-control" placeholder="商品名(正)" />
-					<span th:if="${#fields.hasErrors('goodsNm')}" th:errors="*{goodsNm}" class="help-block">error!</span>
-				</div>
-			</div>
-			<div class="form-group" th:classappend="${#fields.hasErrors('subGoodsNm')}? 'has-error has-feedback'">
-				<h5 class="col-sm-3 font-alt mb-0">商品名(副)</h5>
-				<div class="col-sm-9">
-					<input type="text" th:field="*{subGoodsNm}" class="form-control" placeholder="商品名(副)" />
-					<span th:if="${#fields.hasErrors('subGoodsNm')}" th:errors="*{subGoodsNm}" class="help-block">error!</span>
-				</div>
-			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('genreLgCd')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">大ジャンルコード</h5>
 				<div class="col-sm-9">
@@ -55,6 +34,27 @@
 						<option  th:substituteby="common_select::genreSmSelectBody" th:fragment="genreSmSelect"></option>
 					</select>
 					<span th:if="${#fields.hasErrors('genreSmCd')}" th:errors="*{genreSmCd}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('goodsCd')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">商品コード</h5>
+				<div class="col-sm-9">
+					<input type="number" th:field="*{goodsCd}" class="form-control" placeholder="商品コード(10桁)" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" />
+					<span th:if="${#fields.hasErrors('goodsCd')}" th:errors="*{goodsCd}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('goodsNm')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">商品名(正)</h5>
+				<div class="col-sm-9">
+					<input type="text" th:field="*{goodsNm}" class="form-control" placeholder="商品名(正)" />
+					<span th:if="${#fields.hasErrors('goodsNm')}" th:errors="*{goodsNm}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('subGoodsNm')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">商品名(副)</h5>
+				<div class="col-sm-9">
+					<input type="text" th:field="*{subGoodsNm}" class="form-control" placeholder="商品名(副)" />
+					<span th:if="${#fields.hasErrors('subGoodsNm')}" th:errors="*{subGoodsNm}" class="help-block">error!</span>
 				</div>
 			</div>
 			<div class="form-group" th:classappend="${#fields.hasErrors('releaseDt')}? 'has-error has-feedback'">
@@ -88,7 +88,12 @@
 			<div class="form-group" th:classappend="${#fields.hasErrors('goodsSize')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">商品サイズ</h5>
 				<div class="col-sm-9">
-					<input type="text" th:field="*{goodsSize}" class="form-control" placeholder="商品サイズ" />
+					<select th:field="*{goodsSize}" class="form-control">
+						<option value=""></option>
+						<option th:each="item : ${T(com.example.demo.domain.enumeration.GoodsSize).values()}"
+								th:value="${item.getValue()}"
+								th:text="${item.getText()}" />
+					</select>
 					<span th:if="${#fields.hasErrors('goodsSize')}" th:errors="*{goodsSize}" class="help-block">error!</span>
 				</div>
 			</div>

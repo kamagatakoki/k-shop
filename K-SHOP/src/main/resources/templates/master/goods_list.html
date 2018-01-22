@@ -139,7 +139,7 @@
 									</div>
 								</td>
 								<td th:text="${item.maker}"><h5 class="product-title font-alt">メーカー</h5></td>
-								<td th:text="${item.goodsSize}"><h5 class="product-title font-alt">商品サイズ</h5></td>
+								<td th:text="${T(com.example.demo.domain.enumeration.GoodsSize).getText(item.goodsSize)}" ><h5 class="product-title font-alt">商品サイズ</h5></td>
 								<td class=" text-center" style="vertical-align:middle">
 									<form th:action="@{/maintenance/goods/list}" th:object="${goodsForm}" class="form-horizontal" method="post">
 										<button class="btn btn-border-d btn-circle btn-sm" type="submit" name="edit" ><i class="fa fa-cog fa-spin"></i> 　編集　</button>

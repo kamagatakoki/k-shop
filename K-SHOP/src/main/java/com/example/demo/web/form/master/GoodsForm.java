@@ -9,6 +9,8 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.example.demo.domain.entity.master.GoodsEntity;
+import com.example.demo.domain.validator.Unique;
 import com.example.demo.web.form.CommonForm;
 
 import lombok.Getter;
@@ -29,6 +31,7 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
+	@Unique(entity = GoodsEntity.class, property = "goodsCd", groups = Insert.class)
 	@Size(min = 10, max = 10)
 	private String goodsCd;
 
@@ -150,7 +153,6 @@ public class GoodsForm extends CommonForm {
 	 * @since 2018/01/17
 	 */
 	@NotEmpty
-	@Size(max = 100)
 	private String goodsSize;
 
 	/**
@@ -222,4 +224,5 @@ public class GoodsForm extends CommonForm {
 	 * @since 2018/01/17
 	 */
 	private String searchGoodsSize;
+
 }

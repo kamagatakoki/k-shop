@@ -15,7 +15,7 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
-group = 'com.example'
+//group = 'com.example'
 //version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 archivesBaseName = 'k-shop'
@@ -40,6 +40,7 @@ dependencies {
 	compile('commons-io:commons-io:2.4')
 	compile('org.thymeleaf.extras:thymeleaf-extras-java8time')
 	compile('com.google.code.gson:gson:2.2.4')
+	compile('com.google.guava:guava:21.0')
 	compile files('lib/ojdbc6.jar')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly('org.projectlombok:lombok')
@@ -47,3 +48,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
 }
+
+ext['thymeleaf.version'] = '3.0.7.RELEASE'
+ext['thymeleaf-layout-dialect.version'] = '2.2.2'
+

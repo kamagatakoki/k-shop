@@ -1,4 +1,4 @@
-package com.example.demo.domain.constant;
+package com.example.demo.domain.enumeration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,30 +10,47 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum GoodsSize implements Values {
+public enum GoodsSize {
 
 	/**
 	 * フィールドの説明：Sサイズ
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	S("1", "Sサイズ"),
+	S("1", "S"),
 
 	/**
 	 * フィールドの説明：Mサイズ
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	M("1", "Mサイズ"),
+	M("2", "M"),
 
 	/**
 	 * フィールドの説明：Lサイズ
 	 * @author kamagata
 	 * @since 2018/01/17
 	 */
-	L("1", "Lサイズ");
+	L("3", "L");
 
 	private final String value;
 	private final String text;
+
+	/**
+	 * メソッドの説明：値から表示名を取得
+	 * @author kamagata
+	 * @since 2018/01/23
+	 * @param param 値
+	 * @return 表示名
+	 */
+	public static String getText(String param) {
+		for (GoodsSize e : values()) {
+			if (e.getValue().equals(param)) {
+				return e.getText();
+			}
+		}
+
+		return null;
+	}
 
 }

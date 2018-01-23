@@ -5,10 +5,13 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -47,14 +50,6 @@ public class GoodsImageEntity extends CommonColumnEntity implements Serializable
 	private Integer goodsImageCd;
 
 	/**
-	 * フィールドの説明：商品コード
-	 * @author kamagata
-	 * @since 2018/01/16
-	 */
-	@Column(nullable = false, length = 10)
-	private String goodsCd;
-
-	/**
 	 * フィールドの説明：ファイル名
 	 * @author kamagata
 	 * @since 2018/01/16
@@ -86,5 +81,14 @@ public class GoodsImageEntity extends CommonColumnEntity implements Serializable
 	 */
 	@Column(nullable = false, length = 2)
 	private Integer displayOrder;
+
+	/**
+	 * フィールドの説明：商品マスタエンティティ
+	 * @author kamagata
+	 * @since 2018/01/23
+	 */
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
+	@JoinColumn(name = "goodsCd")
+	private GoodsEntity goodsEntity;
 
 }

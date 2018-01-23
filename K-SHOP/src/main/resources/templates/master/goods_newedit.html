@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout_maintenance">
 	<!-- 画面名 -->
 	<div layout:fragment="title">
 		<h1 class="module-title font-alt mb-0">商品</h1>
@@ -121,6 +121,6 @@
 		</form>
 	</div>
 	<div layout:fragment="js">
-		<script src="../../static/js/goods.js" th:src="@{/js/goods.js}"></script>
+		<script th:src="@{/js/maintenance/goods.js}"></script>
 	</div>
 </html>

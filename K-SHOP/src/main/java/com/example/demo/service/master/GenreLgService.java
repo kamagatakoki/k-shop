@@ -33,7 +33,18 @@ public class GenreLgService {
 	CommonSpecifications<GenreLgEntity> genreLgSpecifications;
 
 	/**
-	 * メソッドの説明：
+	 * メソッドの説明：大ジャンルマスタ全件検索
+	 * @author kamagata
+	 * @param sort ソート
+	 * @since 2018/01/23
+	 * @return List<GenreLgEntity> ジャンルテーブルエンティティのリスト
+	 */
+	public List<GenreLgEntity> findAll(Sort sort) {
+		return genreLgRepository.findAll(sort);
+	}
+
+	/**
+	 * メソッドの説明：大ジャンルコード、名称から検索
 	 * @author kamagata
 	 * @since 2018/01/06
 	 * @param genreLgCd 大ジャンルコード

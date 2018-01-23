@@ -112,7 +112,7 @@ public class GoodsForm extends CommonForm {
 	 * @since 2018/01/17
 	 */
 	@NotEmpty
-	@Size(max = 100)
+	@Size(max = 500)
 	private String overview;
 
 	/**
@@ -128,7 +128,7 @@ public class GoodsForm extends CommonForm {
 	 * @since 2018/01/17
 	 */
 	@NotEmpty
-	@Size(max = 500)
+	@Size(max = 2000)
 	private String detail;
 
 	/**

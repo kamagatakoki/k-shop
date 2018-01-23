@@ -66,7 +66,7 @@ public class GoodsImageListController {
 		// 検索実行
 		List<GoodsImageEntity> goodsImageEntities = goodsImageService.findAllCustom(
 				goodsImageForm,
-				new Sort("goodsCd", "displayOrder"));
+				new Sort("goodsEntity.goodsCd", "displayOrder"));
 
 		// 遷移先画面・検索条件セット
 		modelAndView.setViewName("master/goodsimage_list");

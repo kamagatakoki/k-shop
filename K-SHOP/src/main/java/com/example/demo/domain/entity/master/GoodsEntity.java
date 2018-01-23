@@ -2,6 +2,7 @@ package com.example.demo.domain.entity.master;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Convert;
@@ -11,6 +12,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -132,4 +134,11 @@ public class GoodsEntity extends CommonColumnEntity implements Serializable {
 	@JoinColumn(name = "genreSmCd")
 	private GenreSmEntity genreSmEntity;
 
+	/**
+	 * フィールドの説明：商品画像エンティティ(外部キー)
+	 * @author kamagata
+	 * @since 2018/01/23
+	 */
+	@OneToMany(mappedBy = "goodsEntity")
+	private List<GoodsImageEntity> goodsImageEntities;
 }

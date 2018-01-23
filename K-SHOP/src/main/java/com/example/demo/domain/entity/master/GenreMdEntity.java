@@ -1,5 +1,7 @@
 package com.example.demo.domain.entity.master;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -7,6 +9,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -65,5 +68,13 @@ public class GenreMdEntity extends CommonColumnEntity {
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "genreLgCd")
 	private GenreLgEntity genreLgEntity;
+
+	/**
+	 * フィールドの説明：紐付く小ジャンルエンティティのリスト
+	 * @author kamagata
+	 * @since 2018/01/23
+	 */
+	@OneToMany(mappedBy = "genreMdEntity")
+	private List<GenreSmEntity> genreSmEntities;
 
 }

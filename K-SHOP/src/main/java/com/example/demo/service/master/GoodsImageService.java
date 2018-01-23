@@ -55,7 +55,7 @@ public class GoodsImageService implements Serializable {
 	public List<GoodsImageEntity> findAllCustom(GoodsImageForm goodsImageForm, Sort sort) {
 		return goodsImageRepository.findAll(Specifications
 				.where(goodsImageSpecifications.conditionForEqual("goodsImageCd", goodsImageForm.getSearchGoodsImageCd()))
-				.and(goodsImageSpecifications.conditionForLike("goodsCd", goodsImageForm.getSearchGoodsCd()))
+				.and(goodsImageSpecifications.conditionForLike("goodsEntity", "goodsCd", goodsImageForm.getSearchGoodsCd()))
 				.and(goodsImageSpecifications.conditionForLike("fileNm", goodsImageForm.getSearchFileNm()))
 				.and(goodsImageSpecifications.conditionForLike("description", goodsImageForm.getSearchDescription())), sort);
 	}
@@ -121,6 +121,17 @@ public class GoodsImageService implements Serializable {
 			// ファイルクローズ
 			IOUtils.closeQuietly(is);
 		}
+	}
+
+	/**
+	 * メソッドの説明：商品コード検索
+	 * @author kamagata
+	 * @since 2018/01/23
+	 * @param goodsCd 商品コード
+	 * @return List<GoodsImageEntity> 商品画像エンティティのリスト
+	 */
+	public List<GoodsImageEntity> findByGoodsCd(String goodsCd) {
+		return goodsImageRepository.findByGoodsEntityGoodsCd(goodsCd);
 	}
 
 }

@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.example.demo.domain.entity.master.GoodsEntity;
 import com.example.demo.domain.entity.master.GoodsImageEntity;
 import com.example.demo.service.master.GoodsImageService;
 import com.example.demo.web.form.master.GoodsImageForm;
@@ -92,7 +93,9 @@ public class GoodsImageNewEditControlle {
 
 		// エンティティにフォームの内容をコピー
 		GoodsImageEntity goodsImageEntity = new GoodsImageEntity();
+		goodsImageEntity.setGoodsEntity(new GoodsEntity());
 		BeanUtils.copyProperties(goodsImageForm, goodsImageEntity);
+		goodsImageEntity.getGoodsEntity().setGoodsCd(goodsImageForm.getGoodsCd());
 		goodsImageEntity.setFileNm(new File(goodsImageForm.getInputFilePath()).getName()); // ファイルパスからファイル名のみをセット
 
 		// 更新処理実行

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout_shop">
+
+	<div layout:fragment="content">
+		<!-- キャンペーン -->
+		<section class="home-section bg-dark-30" id="home" data-background="image/top-background.jpg">
+			<div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=OO16ufd4EhE', containment:'.home-section', startAt:30, mute:true, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
+			<div class="video-controls-box">
+				<div class="container">
+					<div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
+				</div>
+			</div>
+			<div class="titan-caption">
+				<div class="caption-content">
+					<div class="font-alt mb-30 titan-title-size-1">SALE</div>
+					<div class="font-alt mb-40 titan-title-size-4">全品無料</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 商品一覧 -->
+		<div class="showcase-page">
+			<section class="module-medium" id="demos">
+				<div class="container">
+					<div class="row multi-columns-row">
+						<div th:each="item : ${items}" class="col-md-4 col-sm-6 col-xs-12">
+							<a class="content-box" th:href="@{/shop/goodsdetail/{goodsCd}(goodsCd=${item.goodsCd})}">
+								<div class="content-box-image">
+									<img th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageEntities[0].goodsImageCd})}">
+								</div>
+								<h3 class="content-box-title font-serif">[[${item.goodsNm}]]</h3>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div layout:fragment="js"></div>
+</html>

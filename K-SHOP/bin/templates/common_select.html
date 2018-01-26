@@ -7,30 +7,30 @@
 </head>
 <body>
 	<select id="genreLgCd" name="genreLgCd" class="form-control">
-		<option th:fragment="genreLgSelectBody" th:selected="*{genreLgCd == null}" />
+		<option th:fragment="genreLgSelectBody" th:selected="*{genreLgCd == null}" ></option>
 		<option th:fragment="genreLgSelectBody"
 				th:each="item : ${genreLgSelectItems}"
 				th:value="${item.genreLgCd}"
 				th:selected="*{genreLgCd} == ${item.genreLgCd}"
-				th:text="${item.genreLgCd + '：' + item.genreLgNm}"/>
+				th:text="${item.genreLgCd + '：' + item.genreLgNm}"></option>
 	</select>
 
 	<select id="genreMdCd" name="genreMdCd" class="form-control">
-		<option th:fragment="genreMdSelectBody" th:selected="*{genreMdCd == null}" />
+		<option th:fragment="genreMdSelectBody" th:selected="*{genreMdCd == null}" ></option>
 		<option th:fragment="genreMdSelectBody"
 				th:each="item : ${genreMdSelectItems}"
 				th:value="${item.genreMdCd}"
 				th:selected="*{genreMdCd} == ${item.genreMdCd}"
-				th:text="${item.genreMdCd + '：' + item.genreMdNm}"/>
+				th:text="${item.genreMdCd + '：' + item.genreMdNm}"></option>
 	</select>
 
  	<select id="genreSmCd" name="genreSmCd" class="form-control">
-		<option th:fragment="genreSmSelectBody" th:selected="*{genreSmCd == null}" />
+		<option th:fragment="genreSmSelectBody" th:selected="*{genreSmCd == null}" ></option>
 		<option th:fragment="genreSmSelectBody"
 				th:each="item : ${genreSmSelectItems}"
 				th:value="${item.genreSmCd}"
 				th:selected="*{genreSmCd} == ${item.genreSmCd}"
-				th:text="${item.genreSmCd + '：' + item.genreSmNm}"/>
+				th:text="${item.genreSmCd + '：' + item.genreSmNm}"></option>
 	</select>
 </body>
 </html>

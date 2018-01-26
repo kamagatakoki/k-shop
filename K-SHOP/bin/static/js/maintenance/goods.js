@@ -8,7 +8,7 @@ $(function() {
 	        type: "GET",
 	        // data部分がformにセットされる。
 	        data: {
-	        	genreLgCd: genreLgCd.value,
+	        	genreLgCd: $('#genreLgCd').val(),
 	        	fragment:"master/goods_newedit::genreMdSelect"
 	        },
 	        dataType: "html",
@@ -16,6 +16,8 @@ $(function() {
 	            $("#genreMdCd").html(data);
 	        }
 	    });
+
+	    $("#genreSmCd").children().remove();
 	});
 
 	// 中ジャンルコード変更時のイベント
@@ -26,7 +28,7 @@ $(function() {
 	        type: "GET",
 	        // data部分がformにセットされる。
 	        data: {
-	        	genreMdCd: genreMdCd.value,
+	        	genreMdCd: $('#genreMdCd').val(),
 	        	fragment: "master/goods_newedit::genreSmSelect"
 	        },
 	        dataType: "html",

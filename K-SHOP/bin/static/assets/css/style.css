@@ -2772,6 +2772,9 @@ Google map
   /* Navbar */
   .navbar-custom {
     letter-spacing: 0;
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
   }
   /* Headers */
   .titan-title-size-3 {
@@ -2802,6 +2805,9 @@ Google map
     letter-spacing: 3px;
     margin-top: 1px;
     margin-bottom: 0;
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
   }
   .navbar-custom li > a:hover {
     background: rgba(255, 255, 255, 0.1) !important;

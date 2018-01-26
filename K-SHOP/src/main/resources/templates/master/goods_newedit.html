@@ -92,7 +92,7 @@
 						<option value=""></option>
 						<option th:each="item : ${T(com.example.demo.domain.enumeration.GoodsSize).values()}"
 								th:value="${item.getValue()}"
-								th:text="${item.getText()}" />
+								th:text="${item.getText()}" ></option>
 					</select>
 					<span th:if="${#fields.hasErrors('goodsSize')}" th:errors="*{goodsSize}" class="help-block">error!</span>
 				</div>

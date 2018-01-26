@@ -8,7 +8,7 @@
 				<div class="col-sm-6 mb-sm-40">
 					<img id="mainDisplay" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${mainDisplayImage.goodsImageCd})}"/>
 					<ul class="product-gallery">
-						<li th:each="item, stat : ${subDisplayImage}">
+						<li th:each="item : ${subDisplayImage}">
 							<img id="subDisplay" th:data-cd="${item.goodsImageCd}" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageCd})}">
 						</li>
 					</ul>

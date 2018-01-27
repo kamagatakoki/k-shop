@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.example.demo.domain.entity.CommonColumnEntity;
+import com.example.demo.domain.entity.common.CommonColumnEntity;
 
 /**
  * クラスの説明：Uniqueアノテーション定義

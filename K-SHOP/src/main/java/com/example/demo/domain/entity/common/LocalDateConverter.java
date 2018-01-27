@@ -1,4 +1,4 @@
-package com.example.demo.domain.entity;
+package com.example.demo.domain.entity.common;
 
 import java.sql.Date;
 import java.time.LocalDate;

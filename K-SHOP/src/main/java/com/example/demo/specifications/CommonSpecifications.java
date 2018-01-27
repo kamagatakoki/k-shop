@@ -4,7 +4,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.example.demo.domain.entity.CommonColumnEntity;
+import com.example.demo.domain.entity.common.CommonColumnEntity;
 
 /**
  * クラスの説明：共通Specifications

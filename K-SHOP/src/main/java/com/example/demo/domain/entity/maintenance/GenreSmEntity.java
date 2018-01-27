@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.domain.entity.CommonColumnEntity;
+import com.example.demo.domain.entity.common.CommonColumnEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.example.demo.domain.entity.CommonColumnEntity;
+import com.example.demo.domain.entity.common.CommonColumnEntity;
 
 /**
  * クラスの説明：一意チェックバリデーター

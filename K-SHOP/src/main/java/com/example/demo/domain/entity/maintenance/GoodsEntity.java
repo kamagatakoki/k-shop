@@ -20,8 +20,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.domain.entity.CommonColumnEntity;
-import com.example.demo.domain.entity.LocalDateConverter;
+import com.example.demo.domain.entity.common.CommonColumnEntity;
+import com.example.demo.domain.entity.common.LocalDateConverter;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

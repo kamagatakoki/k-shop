@@ -1883,8 +1883,8 @@ Google map
 }
 
 .work-item {
-  width: 50%;
-  float: left;
+  /*width: 50%;*/
+  /*float: left;*/
   margin: 0;
 }
 
@@ -1918,7 +1918,7 @@ Google map
 .work-image img {
   display: block;
   overflow: hidden;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .work-image:after {
@@ -2790,7 +2790,7 @@ Google map
   .container .works-grid-3 .work-item,
   .works-grid-4 .work-item,
   .works-grid-5 .work-item {
-    width: 50%;
+    /*width: 50%;*/
   }
   /* Half-image */
   .side-image {

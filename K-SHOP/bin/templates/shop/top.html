@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout_shop">
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="common/layout_shop">
 
 	<div layout:fragment="content">
 		<!-- キャンペーン -->
-		<section class="home-section bg-dark-30" id="home" data-background="image/top-background.jpg">
+		<section class="home-section bg-dark-30" id="home" th:data-background="@{image/top-background.jpg}">
 			<div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=OO16ufd4EhE', containment:'.home-section', startAt:30, mute:true, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
-			<div class="video-controls-box">
-				<div class="container">
-					<div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
-				</div>
-			</div>
 			<div class="titan-caption">
 				<div class="caption-content">
 					<div class="font-alt mb-30 titan-title-size-1">SALE</div>
@@ -19,22 +14,98 @@
 		</section>
 
 		<!-- 商品一覧 -->
-		<div class="showcase-page">
-			<section class="module-small" id="demos">
-				<div class="container">
-					<div class="multi-columns-row">
-						<div th:each="item : ${items}" class="col-md-4 col-sm-6 col-xs-12">
-							<a class="content-box" th:href="@{/shop/goodsdetail/{goodsCd}(goodsCd=${item.goodsCd})}">
-								<div class="content-box-image">
-									<img th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageEntities[0].goodsImageCd})}">
+		<section class="module">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="row multi-columns-row post-columns">
+							<div th:each="item : ${items}" class="col-sm-6 col-md-4 col-lg-4">
+								<div class="post" style="max-height: 450px;">
+									<div class="post-thumbnail work-item marketing photography">
+										<a th:href="@{/shop/goodsdetail/{goodsCd}(goodsCd=${item.goodsCd})}">
+											<div class="work-image">
+												<img class="shoptop-image" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageEntities[0].goodsImageCd})}"/>
+											</div>
+											<div class="work-caption font-alt">
+												<h4 class="work-title">詳細へ</h4>
+											</div>
+										</a>
+									</div>
+									<div class="post-header font-alt">
+										<h2 class="post-title"><a href="#">[[${item.goodsNm}]]</a></h2>
+										<div class="post-meta">[[${item.subGoodsNm}]]</div>
+									</div>
+									<div class="post-entry">
+										<p>[[${item.overview}]]</p>
+									</div>
 								</div>
-								<h3 class="content-box-title font-serif">[[${item.goodsNm}]]</h3>
-							</a>
+							</div>
 						</div>
+						<div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
 					</div>
+							<div class="col-sm-4 col-md-3 col-md-offset-1 sidebar">
+								<div class="widget">
+									<form role="form">
+										<div class="search-box">
+											<input class="form-control" type="text" placeholder="Search..."/>
+											<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+										</div>
+									</form>
+								</div>
+								<div class="widget">
+									<h5 class="widget-title font-alt">Blog Categories</h5>
+									<ul class="icon-list">
+										<li><a href="#">Photography - 7</a></li>
+										<li><a href="#">Web Design - 3</a></li>
+										<li><a href="#">Illustration - 12</a></li>
+										<li><a href="#">Marketing - 1</a></li>
+										<li><a href="#">Wordpress - 16</a></li>
+									</ul>
+								</div>
+								<div class="widget">
+									<h5 class="widget-title font-alt">Popular Posts</h5>
+									<ul class="widget-posts">
+										<li class="clearfix">
+											<div class="widget-posts-image"><a href="#"><img src="assets/images/rp-3.jpg" alt="Post Thumbnail"/></a></div>
+											<div class="widget-posts-body">
+												<div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
+												<div class="widget-posts-meta">23 january</div>
+											</div>
+										</li>
+										<li class="clearfix">
+											<div class="widget-posts-image"><a href="#"><img src="assets/images/rp-4.jpg" alt="Post Thumbnail"/></a></div>
+											<div class="widget-posts-body">
+												<div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
+												<div class="widget-posts-meta">15 February</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="widget">
+									<h5 class="widget-title font-alt">Tag</h5>
+									<div class="tags font-serif"><a href="#" rel="tag">Blog</a><a href="#" rel="tag">Photo</a><a href="#" rel="tag">Video</a><a href="#" rel="tag">Image</a><a href="#" rel="tag">Minimal</a><a href="#" rel="tag">Post</a><a href="#" rel="tag">Theme</a><a href="#" rel="tag">Ideas</a><a href="#" rel="tag">Tags</a><a href="#" rel="tag">Bootstrap</a><a href="#" rel="tag">Popular</a><a href="#" rel="tag">English</a>
+									</div>
+								</div>
+								<div class="widget">
+									<h5 class="widget-title font-alt">Text</h5>The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.
+								</div>
+								<div class="widget">
+									<h5 class="widget-title font-alt">Recent Comments</h5>
+									<ul class="icon-list">
+										<li>Maria on <a href="#">Designer Desk Essentials</a></li>
+										<li>John on <a href="#">Realistic Business Card Mockup</a></li>
+										<li>Andy on <a href="#">Eco bag Mockup</a></li>
+										<li>Jack on <a href="#">Bottle Mockup</a></li>
+										<li>Mark on <a href="#">Our trip to the Alps</a></li>
+									</ul>
+								</div>
+							</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
+
+
+
 	</div>
 	<div layout:fragment="js"></div>
 </html>

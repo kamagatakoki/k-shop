@@ -9,7 +9,7 @@ $(function() {
 	        // data部分がformにセットされる。
 	        data: {
 	        	genreLgCd: $('#genreLgCd').val(),
-	        	fragment:"master/goods_newedit::genreMdSelect"
+	        	fragment:"maintenance/goods_newedit::genreMdSelect"
 	        },
 	        dataType: "html",
 	        success: function(data){
@@ -29,7 +29,7 @@ $(function() {
 	        // data部分がformにセットされる。
 	        data: {
 	        	genreMdCd: $('#genreMdCd').val(),
-	        	fragment: "master/goods_newedit::genreSmSelect"
+	        	fragment: "maintenance/goods_newedit::genreSmSelect"
 	        },
 	        dataType: "html",
 	        success: function(data){

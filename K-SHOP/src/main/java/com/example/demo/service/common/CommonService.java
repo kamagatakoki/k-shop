@@ -7,13 +7,13 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GenreMdEntity;
-import com.example.demo.domain.entity.master.GenreSmEntity;
-import com.example.demo.domain.repository.master.GenreLgRepository;
-import com.example.demo.domain.repository.master.GenreMdRepository;
-import com.example.demo.domain.repository.master.GenreSmRepository;
-import com.example.demo.domain.repository.master.GoodsRepository;
+import com.example.demo.domain.entity.maintenance.GenreLgEntity;
+import com.example.demo.domain.entity.maintenance.GenreMdEntity;
+import com.example.demo.domain.entity.maintenance.GenreSmEntity;
+import com.example.demo.domain.repository.maintenance.GenreLgRepository;
+import com.example.demo.domain.repository.maintenance.GenreMdRepository;
+import com.example.demo.domain.repository.maintenance.GenreSmRepository;
+import com.example.demo.domain.repository.maintenance.GoodsRepository;
 
 /**
  * クラスの説明：商品マスタサービス

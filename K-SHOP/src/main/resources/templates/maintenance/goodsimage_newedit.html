@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="common/layout_maintenance">
+	<!-- 画面名 -->
+	<div layout:fragment="title">
+		<h1 class="module-title font-alt mb-0">商品画像</h1>
+		<h3 class="module-title font-alt mb-0">登録・更新</h3>
+	</div>
+
+	<!-- 入力部 -->
+	<div layout:fragment="content">
+		<form th:action="@{/maintenance/goodsimage/newedit}" th:object="${goodsImageForm}" class="form-horizontal" method="post" enctype="multipart/form-data">
+			<div th:if="*{crud eq 'update'}" class="form-group" th:classappend="${#fields.hasErrors('goodsImageCd')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">商品画像コード</h5>
+				<div class="col-sm-9">
+					<input type="number" th:field="*{goodsImageCd}" class="form-control" placeholder="商品画像コード" th:readonly="*{(crud eq 'update') ? 'readonly' : 'false'}" />
+					<span th:if="${#fields.hasErrors('goodsImageCd')}" th:errors="*{goodsImageCd}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('goodsCd')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">商品コード</h5>
+				<div class="col-sm-9">
+					<input type="number" th:field="*{goodsCd}" class="form-control" placeholder="商品コード" />
+					<span th:if="${#fields.hasErrors('goodsCd')}" th:errors="*{goodsCd}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('description')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">説明</h5>
+				<div class="col-sm-9">
+					<input type="text" th:field="*{description}" class="form-control" placeholder="説明" />
+					<span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group" th:classappend="${#fields.hasErrors('displayOrder')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">表示順</h5>
+				<div class="col-sm-9">
+					<input type="number" th:field="*{displayOrder}" class="form-control" placeholder="表示順" />
+					<span th:if="${#fields.hasErrors('displayOrder')}" th:errors="*{displayOrder}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div th:if="*{crud eq 'insert'}" class="form-group" th:classappend="${#fields.hasErrors('inputFilePath')}? 'has-error has-feedback'">
+				<h5 class="col-sm-3 font-alt mb-0">画像</h5>
+				<div class="col-sm-9">
+						<input id="uploadFile" name="uploadFile" type="file" style="display:none" />
+						<div class="input-group">
+						  <input type="text" th:field="*{inputFilePath}" class="form-control" placeholder="select file..." />
+						  <span class="input-group-btn"><button type="button" class="btn btn-d btn-round" onclick="$('input[id=uploadFile]').click();">Browse</button></span>
+						</div>
+					<span th:if="${#fields.hasErrors('inputFilePath')}" th:errors="*{inputFilePath}" class="help-block">error!</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<input type="submit" class="btn btn-border-d btn-circle btn-sm" name="goToBack" value="戻る" />
+					<input type="submit" class="btn btn-d btn-circle btn-sm" name="regist" value="登録" />
+				</div>
+			</div>
+			<!-- 画面モード(登録or編集) -->
+			<input type="hidden" th:field="*{crud}" />
+			<!-- 前画面入力値保持 -->
+			<input type="hidden" th:field="*{searchGoodsImageCd}" />
+			<input type="hidden" th:field="*{searchGoodsCd}" />
+			<input type="hidden" th:field="*{searchFileNm}" />
+			<input type="hidden" th:field="*{searchDescription}" />
+		</form>
+	</div>
+	<div layout:fragment="js">
+		<script th:src="@{/js/maintenance/goodsImage.js}"></script>
+	</div>
+</html>

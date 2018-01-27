@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout_shop">
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="common/layout_shop">
 
 	<div layout:fragment="content">
 		<section class="module-medium">
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-6 mb-sm-40">
-					<img id="mainDisplay" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${mainDisplayImage.goodsImageCd})}"/>
+					<img class="main-goods-image" id="mainDisplay" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${mainDisplayImage.goodsImageCd})}"/>
 					<ul class="product-gallery">
 						<li th:each="item : ${subDisplayImage}">
 							<img id="subDisplay" th:data-cd="${item.goodsImageCd}" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageCd})}">
@@ -16,7 +16,7 @@
 				<div class="col-sm-6">
 				<div class="row">
 					<div class="col-sm-12">
-					<h1 class="product-title font-alt">[[${goods.goodsNm}]]</h1>
+					<h3 class="product-title font-alt">[[${goods.goodsNm}]]</h3>
 					</div>
 				</div>
 				<div class="row mb-20">

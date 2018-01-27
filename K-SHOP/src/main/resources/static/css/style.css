@@ -6,3 +6,13 @@
 .error-messages {
 	color: #b94a48;
 }
+
+.shoptop-image {
+	max-height: 350px;
+}
+
+@media (max-width: 467px) {
+	.main-goods-image {
+		max-height:280px;
+	}
+}

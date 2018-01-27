@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.domain.entity.master.GenreLgEntity;
-import com.example.demo.domain.entity.master.GoodsEntity;
-import com.example.demo.domain.entity.master.GoodsImageEntity;
-import com.example.demo.service.master.GenreLgService;
-import com.example.demo.service.master.GoodsImageService;
-import com.example.demo.service.master.GoodsService;
+import com.example.demo.domain.entity.maintenance.GenreLgEntity;
+import com.example.demo.domain.entity.maintenance.GoodsEntity;
+import com.example.demo.domain.entity.maintenance.GoodsImageEntity;
+import com.example.demo.service.maintenance.GenreLgService;
+import com.example.demo.service.maintenance.GoodsImageService;
+import com.example.demo.service.maintenance.GoodsService;
 
 /**
  * クラスの説明：ショップ　商品詳細画面コントローラー

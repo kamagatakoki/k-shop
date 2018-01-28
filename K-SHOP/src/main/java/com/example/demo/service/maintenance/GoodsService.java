@@ -2,6 +2,10 @@ package com.example.demo.service.maintenance;
 
 import java.util.List;
 
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.Root;
+import javax.persistence.criteria.Subquery;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specifications;
@@ -13,9 +17,11 @@ import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.domain.entity.maintenance.GenreMdEntity;
 import com.example.demo.domain.entity.maintenance.GenreSmEntity;
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
+import com.example.demo.domain.entity.maintenance.GoodsImageEntity;
 import com.example.demo.domain.repository.maintenance.GenreLgRepository;
 import com.example.demo.domain.repository.maintenance.GenreMdRepository;
 import com.example.demo.domain.repository.maintenance.GenreSmRepository;
+import com.example.demo.domain.repository.maintenance.GoodsImageRepository;
 import com.example.demo.domain.repository.maintenance.GoodsRepository;
 import com.example.demo.specifications.CommonSpecifications;
 import com.example.demo.web.form.maintenance.GoodsForm;
@@ -40,6 +46,9 @@ public class GoodsService {
 
 	@Autowired
 	GenreSmRepository genreSmRepository;
+
+	@Autowired
+	GoodsImageRepository goodsImageRepository;
 
 	@Autowired
 	CommonSpecifications<GoodsEntity> goodsSpecifications;
@@ -78,14 +87,93 @@ public class GoodsService {
 	}
 
 	/**
-	 * メソッドの説明：小ジャンルコードによる検索
+	 * メソッドの説明：小ジャンルコードによる検索 商品画像は表示順の最初のデータを取得
 	 * @author kamagata
 	 * @since 2018/01/27
-	 * @param genreSmCd 小ジャンルコード
+	 * @param genreSmCd 中ジャンルコード
 	 * @return List<GoodsEntity> 商品エンティティのリスト
 	 */
 	public List<GoodsEntity> findByGenreSmCd(String genreSmCd) {
-		return goodsRepository.findByGenreSmEntityGenreSmCd(genreSmCd, new Sort("goodsCd", "goodsImageEntities.goodsImageCd"));
+
+		return goodsRepository.findAll((root, query, cb) -> {
+
+			// 商品画像、小ジャンルとJoin
+			Join<GoodsEntity, GoodsImageEntity> joinGoodsImage = root.join("goodsImageEntities");
+			Join<GoodsEntity, GenreSmEntity> joinGenreSm = root.join("genreSmEntity");
+
+			// サブクエリ
+			Subquery<Integer> subquery = query.subquery(Integer.class);
+			Root<GoodsImageEntity> subqueryRoot = subquery.from(GoodsImageEntity.class);
+			subquery.select(cb.min(subqueryRoot.get("displayOrder")))
+					.where(cb.equal(subqueryRoot.get("goodsEntity").get("goodsCd"),
+							joinGoodsImage.get("goodsEntity").get("goodsCd")));
+
+			return query
+					.where(cb.equal(joinGoodsImage.get("displayOrder"), subquery),
+							cb.equal(joinGenreSm.get("genreSmCd"), genreSmCd))
+					.getRestriction();
+
+		});
+	}
+
+	/**
+	 * メソッドの説明：中ジャンルコードによる検索 商品画像は表示順の最初のデータを取得
+	 * @author kamagata
+	 * @since 2018/01/27
+	 * @param genreMdCd 中ジャンルコード
+	 * @return List<GoodsEntity> 商品エンティティのリスト
+	 */
+	public List<GoodsEntity> findByGenreMdCd(String genreMdCd) {
+
+		return goodsRepository.findAll((root, query, cb) -> {
+
+			// 商品画像、中ジャンルとJoin
+			Join<GoodsEntity, GoodsImageEntity> joinGoodsImage = root.join("goodsImageEntities");
+			Join<GoodsEntity, GenreSmEntity> joinGenreMd = root.join("genreMdEntity");
+
+			// サブクエリ
+			Subquery<Integer> subquery = query.subquery(Integer.class);
+			Root<GoodsImageEntity> subqueryRoot = subquery.from(GoodsImageEntity.class);
+			subquery.select(cb.min(subqueryRoot.get("displayOrder")))
+					.where(cb.equal(subqueryRoot.get("goodsEntity").get("goodsCd"),
+							joinGoodsImage.get("goodsEntity").get("goodsCd")));
+
+			return query
+					.where(cb.equal(joinGoodsImage.get("displayOrder"), subquery),
+							cb.equal(joinGenreMd.get("genreMdCd"), genreMdCd))
+					.getRestriction();
+
+		});
+	}
+
+	/**
+	 * メソッドの説明：大ジャンルコードによる検索 商品画像は表示順の最初のデータを取得
+	 * @author kamagata
+	 * @since 2018/01/27
+	 * @param genreLgCd 大ジャンルコード
+	 * @return List<GoodsEntity> 商品エンティティのリスト
+	 */
+	public List<GoodsEntity> findByGenreLgCd(String genreLgCd) {
+
+		return goodsRepository.findAll((root, query, cb) -> {
+
+			// 商品画像、大ジャンルとJoin
+			Join<GoodsEntity, GoodsImageEntity> joinGoodsImage = root.join("goodsImageEntities");
+			Join<GoodsEntity, GenreSmEntity> joinGenreLg = root.join("genreLgEntity");
+
+			// サブクエリ
+			Subquery<Integer> subquery = query.subquery(Integer.class);
+			Root<GoodsImageEntity> subqueryRoot = subquery.from(GoodsImageEntity.class);
+			subquery.select(cb.min(subqueryRoot.get("displayOrder")))
+					.where(cb.equal(subqueryRoot.get("goodsEntity").get("goodsCd"),
+							joinGoodsImage.get("goodsEntity").get("goodsCd")));
+
+			return query
+					.where(cb.equal(joinGoodsImage.get("displayOrder"), subquery),
+							cb.equal(joinGenreLg.get("genreLgCd"), genreLgCd))
+					.getRestriction();
+
+		});
 	}
 
 	/**

@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -145,6 +146,7 @@ public class GoodsEntity extends CommonColumnEntity implements Serializable {
 	 * @author kamagata
 	 * @since 2018/01/23
 	 */
-	@OneToMany(mappedBy = "goodsEntity")
+	@OneToMany(mappedBy = "goodsEntity", fetch = FetchType.EAGER)
+	@OrderBy("displayOrder")
 	private List<GoodsImageEntity> goodsImageEntities;
 }

@@ -70,20 +70,26 @@
 		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="maintenance_menu.html" th:href="@{/}">K-SHOP</a>
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="maintenance_menu.html" th:href="@{/}">K-SHOP</a>
 				</div>
-				<div id="custom-collapse">
-					<ul class="nav navbar-nav">
-						<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ジャンル</a>
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-fw">&#xf06b;</i>ジャンル</a>
 							<ul class="dropdown-menu">
 								<li th:each="genreLgItem : ${genreLgItemList}" class="dropdown">
-									<a th:href="@{/{genreLgCd}(genreLgCd=${genreLgItem.genreLgCd})}" th:text="${genreLgItem.genreLgNm}" class="dropdown-toggle" data-toggle="dropdown"></a>
+									<a th:href="@{/{genreCd}(genreCd=${genreLgItem.genreLgCd})}" th:text="${genreLgItem.genreLgNm}" class="dropdown-toggle" data-toggle="dropdown"></a>
 									<ul class="dropdown-menu">
 										<li th:each="genreMdItem : ${genreLgItem.genreMdEntities}" class="dropdown" >
-											<a th:href="@{/{genreMdCd}(genreMdCd=${genreMdItem.genreMdCd})}" th:text="${genreMdItem.genreMdNm}" class="dropdown-toggle" data-toggle="dropdown"></a>
+											<a th:href="@{/{genreCd}(genreCd=${genreMdItem.genreMdCd})}" th:text="${genreMdItem.genreMdNm}" class="dropdown-toggle" data-toggle="dropdown"></a>
 											<ul class="dropdown-menu">
 												<li th:each="genreSmItem : ${genreMdItem.genreSmEntities}" class="dropdown" >
-													<a th:href="@{/{genreSmCd}(genreSmCd=${genreSmItem.genreSmCd})}" th:text="${genreSmItem.genreSmNm}"></a>
+													<a th:href="@{/{genreCd}(genreCd=${genreSmItem.genreSmCd})}" th:text="${genreSmItem.genreSmNm}"></a>
 													<input type="hidden" value="${genreSmItem.genreSmCd}"></input>
 												</li>
 											</ul>
@@ -93,9 +99,17 @@
 							</ul>
 						</li>
 					</ul>
-				</div>
-				<div class="collapse navbar-collapse" id="custom-collapse" style="margin-left:900px;">
-					<a class="navbar-brand" href="maintenance_menu.html" th:href="@{/maintenance}">MAINTENANCE</a>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a th:href="@{/}"><i class="fa fa-fw">&#xF07A;</i>カート</a>
+						</li>
+						<li class="dropdown">
+							<a th:href="@{/}"><i class="fa fa-fw">&#xf044;</i>注文履歴</a>
+						</li>
+						<li class="dropdown">
+							<a th:href="@{/}"><i class="fa fa-fw">&#xf007;</i>お客様情報</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>

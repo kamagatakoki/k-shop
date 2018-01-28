@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.stereotype.Component;
@@ -70,6 +72,7 @@ public class GenreSmEntity extends CommonColumnEntity implements Serializable {
 	@Autowired
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "genreLgCd")
+	@Fetch(FetchMode.JOIN)
 	private GenreLgEntity genreLgEntity;
 
 	/**
@@ -80,6 +83,7 @@ public class GenreSmEntity extends CommonColumnEntity implements Serializable {
 	@Autowired
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "genreMdCd")
+	@Fetch(FetchMode.JOIN)
 	private GenreMdEntity genreMdEntity;
 
 }

@@ -30,6 +30,9 @@ public class TopController {
 	@Autowired
 	GoodsService goodsService;
 
+	@Autowired
+	List<GoodsEntity> goodsEntities;
+
 	private List<GenreLgEntity> genreLgEntities;
 
 	/**
@@ -60,14 +63,31 @@ public class TopController {
 	 * @author kamagata
 	 * @since 2018/01/27
 	 * @param modelAndView モデル
-	 * @param genreSmCd 小ジャンルコード
+	 * @param genreCd ジャンルコード(大、中、小いずれか)
 	 * @return ModelAndView モデルビュー
 	 */
-	@GetMapping(path = "/{genreSmCd}")
-	ModelAndView searchGenreSmCd(ModelAndView modelAndView, @PathVariable String genreSmCd) {
+	@GetMapping(path = "/{genreCd}")
+	ModelAndView searchGenreSmCd(ModelAndView modelAndView, @PathVariable String genreCd) {
 
 		// 商品情報取得
-		List<GoodsEntity> goodsEntities = goodsService.findByGenreSmCd(genreSmCd);
+
+		switch (genreCd.length()) {
+		case 2:
+			// 大ジャンル検索
+			goodsEntities = goodsService.findByGenreLgCd(genreCd);
+			break;
+
+		case 4:
+			// 中ジャンル検索
+			goodsEntities = goodsService.findByGenreMdCd(genreCd);
+			break;
+
+		case 6:
+			// 小ジャンル検索
+			goodsEntities = goodsService.findByGenreSmCd(genreCd);
+			break;
+
+		}
 
 		// 遷移先画面
 		genreLgEntities = genreLgService.findAll(new Sort("displayOrder"));

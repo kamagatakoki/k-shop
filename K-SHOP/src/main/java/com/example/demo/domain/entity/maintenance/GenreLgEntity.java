@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.stereotype.Component;
 
@@ -65,5 +67,6 @@ public class GenreLgEntity extends CommonColumnEntity implements Serializable {
 	 * @since 2018/01/23
 	 */
 	@OneToMany(mappedBy = "genreLgEntity")
+	@Fetch(FetchMode.SUBSELECT)
 	private List<GenreMdEntity> genreMdEntities;
 }

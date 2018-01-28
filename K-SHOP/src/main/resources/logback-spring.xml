@@ -4,7 +4,7 @@
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
 	<!-- log4jdbc-log4j2 -->
-	<logger name="jdbc.sqlonly"        level="INFO"/>
+	<logger name="jdbc.sqlonly"        level="WARN"/>
 	<logger name="jdbc.sqltiming"      level="WARN"/>
 	<logger name="jdbc.audit"          level="WARN"/>
 	<logger name="jdbc.resultset"      level="WARN"/>

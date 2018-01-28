@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
-import com.example.demo.domain.entity.maintenance.GoodsImageEntity;
 import com.example.demo.service.maintenance.GenreLgService;
 import com.example.demo.service.maintenance.GoodsImageService;
 import com.example.demo.service.maintenance.GoodsService;
@@ -53,12 +52,11 @@ public class GoodsDetailController {
 
 		// 商品情報取得
 		GoodsEntity goodsEntity = goodsService.findOne(goodsCd);
-		List<GoodsImageEntity> goodsImageEntities = goodsImageService.findByGoodsCd(goodsCd);
 
 		// 遷移先画面
 		modelAndView.addObject("genreLgItemList", genreLgEntities);
-		modelAndView.addObject("mainDisplayImage", goodsImageEntities.get(0));
-		modelAndView.addObject("subDisplayImage", goodsImageEntities);
+		modelAndView.addObject("mainDisplayImage", goodsEntity.getGoodsImageEntities().get(0));
+		modelAndView.addObject("subDisplayImage", goodsEntity.getGoodsImageEntities());
 		modelAndView.addObject("goods", goodsEntity);
 		modelAndView.setViewName("shop/goods_detail");
 

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
+import com.example.demo.service.common.LoginUserDetails;
 import com.example.demo.service.maintenance.GenreLgService;
 import com.example.demo.service.maintenance.GoodsService;
 
@@ -40,16 +42,20 @@ public class TopController {
 	 * @author kamagata
 	 * @since 2018/01/27
 	 * @param modelAndView モデルビュー
+	 * @param loginUserDetails ログイン情報
 	 * @return ModelAndView モデルビュー
 	 */
 	@GetMapping(path = "/")
-	ModelAndView list(ModelAndView modelAndView) {
+	ModelAndView list(ModelAndView modelAndView, @AuthenticationPrincipal LoginUserDetails loginUserDetails) {
 
 		// 商品情報取得
 		List<GoodsEntity> goodsEntities = goodsService.findAll(new Sort("goodsCd"));
 
-		// 遷移先画面
+		// ジャンル情報取得
 		genreLgEntities = genreLgService.findAll(new Sort("displayOrder"));
+
+		// 遷移先画面
+		modelAndView.addObject("loginUserDetails", loginUserDetails);
 		modelAndView.addObject("genreLgItemList", genreLgEntities);
 		modelAndView.addObject("items", goodsEntities);
 		modelAndView.setViewName("shop/top");
@@ -66,11 +72,10 @@ public class TopController {
 	 * @param genreCd ジャンルコード(大、中、小いずれか)
 	 * @return ModelAndView モデルビュー
 	 */
-	@GetMapping(path = "/{genreCd}")
+	@GetMapping(path = "/shop/{genreCd}")
 	ModelAndView searchGenreSmCd(ModelAndView modelAndView, @PathVariable String genreCd) {
 
-		// 商品情報取得
-
+		// 商品情報取得 パラメータの桁数でどのジャンルで検索するか判断する
 		switch (genreCd.length()) {
 		case 2:
 			// 大ジャンル検索

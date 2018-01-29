@@ -40,11 +40,11 @@
 			<div th:if="*{crud eq 'insert'}" class="form-group" th:classappend="${#fields.hasErrors('inputFilePath')}? 'has-error has-feedback'">
 				<h5 class="col-sm-3 font-alt mb-0">画像</h5>
 				<div class="col-sm-9">
-						<input id="uploadFile" name="uploadFile" type="file" style="display:none" />
-						<div class="input-group">
-						  <input type="text" th:field="*{inputFilePath}" class="form-control" placeholder="select file..." />
-						  <span class="input-group-btn"><button type="button" class="btn btn-d btn-round" onclick="$('input[id=uploadFile]').click();">Browse</button></span>
-						</div>
+					<input id="uploadFile" name="uploadFile" type="file" style="display:none" />
+					<div class="input-group">
+						<input type="text" th:field="*{inputFilePath}" class="form-control" placeholder="select file..." />
+						<span class="input-group-btn"><button type="button" class="btn btn-d btn-round" onclick="$('input[id=uploadFile]').click();">Browse</button></span>
+					</div>
 					<span th:if="${#fields.hasErrors('inputFilePath')}" th:errors="*{inputFilePath}" class="help-block">error!</span>
 				</div>
 			</div>

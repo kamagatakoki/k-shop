@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Where;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -142,11 +143,20 @@ public class GoodsEntity extends CommonColumnEntity implements Serializable {
 	private GenreSmEntity genreSmEntity;
 
 	/**
+	 * フィールドの説明：商品価格エンティティ
+	 * @author kamagata
+	 * @since 2018/01/29
+	 */
+	@OneToMany(mappedBy = "goodsEntityForGoodsPrice")
+	@Where(clause = "1 = 1")
+	private List<GoodsPriceEntity> goodsPriceEntities;
+
+	/**
 	 * フィールドの説明：商品画像エンティティ(外部キー)
 	 * @author kamagata
 	 * @since 2018/01/23
 	 */
-	@OneToMany(mappedBy = "goodsEntity", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "goodsEntity")
 	@OrderBy("displayOrder")
 	private List<GoodsImageEntity> goodsImageEntities;
 }

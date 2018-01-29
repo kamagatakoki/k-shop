@@ -1,4 +1,4 @@
-package com.example.demo.web.controller.maintenance;
+package com.example.demo.web.controller.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +15,7 @@ import com.example.demo.service.maintenance.GoodsImageService;
  * @since 2018/01/17
  */
 @RestController
-@RequestMapping("/maintenance/goodsimage")
+@RequestMapping("/common/goodsimage")
 public class GoodsImageDisplayController {
 
 	@Autowired

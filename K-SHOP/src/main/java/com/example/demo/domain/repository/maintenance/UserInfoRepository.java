@@ -14,4 +14,12 @@ import com.example.demo.domain.entity.maintenance.UserInfoEntity;
 @Repository
 public interface UserInfoRepository extends JpaRepository<UserInfoEntity, Integer>, JpaSpecificationExecutor<UserInfoEntity> {
 
+	/**
+	 * メソッドの説明：メールアドレス検索(完全一致)
+	 * @author kamagata
+	 * @since 2018/01/29
+	 * @param email メールアドレス
+	 * @return UserInfoEntity
+	 */
+	public UserInfoEntity findByEmail(String email);
 }

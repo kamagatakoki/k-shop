@@ -36,14 +36,6 @@ public class GoodsDetailController {
 
 	private List<GenreLgEntity> genreLgEntities;
 
-	/**
-	 * コンストラクタの説明：
-	 * @author kamagata
-	 * @since 2018/01/23
-	 */
-	public GoodsDetailController() {
-	}
-
 	@GetMapping(path = "/{goodsCd}")
 	ModelAndView list(ModelAndView modelAndView, @PathVariable String goodsCd) {
 

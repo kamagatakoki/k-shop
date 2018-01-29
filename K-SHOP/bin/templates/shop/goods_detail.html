@@ -6,10 +6,10 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-6 mb-sm-40">
-					<img class="main-goods-image" id="mainDisplay" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${mainDisplayImage.goodsImageCd})}"/>
+					<img class="main-goods-image" id="mainDisplay" th:src="@{/common/goodsimage/{goodsImageCd}(goodsImageCd=${mainDisplayImage.goodsImageCd})}"/>
 					<ul class="product-gallery">
 						<li th:each="item : ${subDisplayImage}">
-							<img id="subDisplay" th:data-cd="${item.goodsImageCd}" th:src="@{/maintenance/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageCd})}">
+							<img id="subDisplay" th:data-cd="${item.goodsImageCd}" th:src="@{/common/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageCd})}">
 						</li>
 					</ul>
 				</div>

@@ -58,7 +58,7 @@ public class CommonColumnEntity {
 	 */
 	@Column(updatable = false, length = 6)
 	@CreatedBy
-	private String insertCd;
+	private Integer insertCd;
 
 	/**
 	 * フィールドの説明：更新日
@@ -76,6 +76,6 @@ public class CommonColumnEntity {
 	 */
 	@Column(insertable = false, length = 6)
 	@LastModifiedBy
-	private String updateCd;
+	private Integer updateCd;
 
 }

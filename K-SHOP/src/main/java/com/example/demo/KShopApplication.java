@@ -30,8 +30,8 @@ public class KShopApplication {
 	 * @return ログイン者
 	 */
 	@Bean
-	public AuditorAware<String> auditorAware() {
-		return () -> "user";
+	public AuditorAware<Integer> auditorAware() {
+		return new SpringSecurityAuditorAware();
 	}
 
 	/**

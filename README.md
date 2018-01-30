@@ -12,3 +12,10 @@
 > 言語・フレームワーク・ライブラリ
 * Java 1.8
 * Spring Boot 1.5.9 (Spring MVC 4.3)
+* Spring Data JPA
+* Spring Security
+* Bootstrap 3.3.7
+* jQuery 1.11.1
+* Thymeleaf
+* lombok
+* 

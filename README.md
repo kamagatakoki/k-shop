@@ -16,6 +16,19 @@
 * Spring Security
 * Bootstrap 3.3.7
 * jQuery 1.11.1
-* Thymeleaf
+* Thymeleaf 3.0.7
 * lombok
-* 
+* Spring boot devtools
+
+### 環境構成
+> Webサーバ
+* IIS 8.5
+
+> APサーバ(Webサーバと同居)
+* Apache Tomcat 8.5
+
+> DBサーバ
+* Oracle 11g
+
+
+

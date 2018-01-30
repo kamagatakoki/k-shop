@@ -1,6 +1,6 @@
 # K-SHOP(仮想ECサイト)
 
-> 以下のURLで稼働しております。<br>
+> 2018/01から作り始めた為未完成ですが、以下のURLで稼働しております。<br>
 > ※実際には販売はしておりません。<br>
 > ※自宅PCをWEBサーバーとしているため、夜間等一時使えない場合があります。<br>
 
@@ -11,20 +11,20 @@
 
 > 言語・フレームワーク・ライブラリ
 * Java 1.8
-* Spring Boot 1.5.9 (Spring MVC 4.3)
-* Spring Data JPA(Hibernate)
-* Spring Security
+* Spring Boot 1.5.9 (Spring MVC 4.3.13)
+* Spring Data JPA(Hibernate) 1.11.9
+* Spring Security 4.2.3
 * Bootstrap 3.3.7
 * jQuery 1.11.1
 * Thymeleaf 3.0.7
-* lombok
-* Spring boot devtools
+* lombok 1.16.18
+* Spring boot devtools 1.5.9
 
 > ビルドツール
-* Gradle
+* Gradle 4.5
 
 > テストツール
-* Junit
+* Junit 4.12
 
 ### 環境構成
 > Webサーバ

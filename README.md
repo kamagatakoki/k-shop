@@ -20,6 +20,9 @@
 * lombok
 * Spring boot devtools
 
+> ビルドツール
+* Gradle
+
 > テストツール
 * Junit
 

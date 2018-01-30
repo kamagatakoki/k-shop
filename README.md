@@ -10,5 +10,5 @@
 ### プログラム構成
 
 > 言語・フレームワーク・ライブラリ
-Java 1.8
-Spring Boot 1.5.9 (Spring MVC 4.3)
+* Java 1.8
+* Spring Boot 1.5.9 (Spring MVC 4.3)

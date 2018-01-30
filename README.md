@@ -20,6 +20,9 @@
 * lombok
 * Spring boot devtools
 
+> テストツール
+* Junit
+
 ### 環境構成
 > Webサーバ
 * IIS 8.5

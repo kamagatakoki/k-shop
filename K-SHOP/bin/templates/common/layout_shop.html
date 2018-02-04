@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<html lang="ja" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+							xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+							xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}" />
 
@@ -100,22 +102,19 @@
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li th:if="${loginUserDetails != null}">
-							<a>[[${loginUserDetails.username}]]さん</a>
-						</li>
 						<li>
 							<a th:href="@{/shop/cart/}"><i class="fa  fa-shopping-cart"></i>カート</a>
 						</li>
-						<li>
+						<li sec:authorize="isAuthenticated()">
 							<a th:href="@{/}"><i class="fa  fa-edit"></i>注文履歴</a>
 						</li>
-						<li>
-							<a th:href="@{/}"><i class="fa  fa-user"></i>お客様情報</a>
+						<li sec:authorize="isAuthenticated()">
+							<a th:href="@{/}"><i class="fa  fa-user"></i><span sec:authentication="principal.username"></span>さん</a>
 						</li>
-						<li th:if="${loginUserDetails == null}">
+						<li sec:authorize="!isAuthenticated()">
 							<a th:href="@{/common/login/}"><i class="fa  fa-sign-in"></i>login</a>
 						</li>
-						<li th:if="${loginUserDetails != null}">
+						<li sec:authorize="isAuthenticated()">
 							<a href="javascript:formLogout.submit()">
 								<form id="formLogout" name="formLogout" method="post" th:action="@{/logout}">
 									<i class="fa fa-sign-out"></i>logout

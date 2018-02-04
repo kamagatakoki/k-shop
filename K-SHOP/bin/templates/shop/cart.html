@@ -12,48 +12,72 @@
 				<hr class="divider-w pt-20">
 
 				<section class="module">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-4"><img src="assets/images/section-1.jpg" alt="Title of Image"/></div>
+					<form th:action="@{/shop/cart/delete}" th:object="${cartForm}" class="form-horizontal" method="post">
+						<h2 th:if="${#lists.size(cartDetailList)} == 0" class="module-title font-alt">カートに商品はありません。</h2>
+						<div th:each="item, stat : ${cartDetailList}" class="row menu">
+							<div class="col-xs-4 align-center">
+								<img class="cart" th:src="@{/common/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsEntity.goodsImageEntities[0].goodsImageCd})}"/>
+							</div>
 							<div class="col-xs-8">
 								<div class="work-details">
-									<h4 class="work-details-title font-alt">商品名</h4>
-									<h6 class="work-details-title font-alt">サブ</h6>
-
+									<h4 class="work-details-title font-alt">[[${item.goodsEntity.goodsNm}]]</h4>
+									<h6 class="work-details-title font-alt">[[${item.goodsEntity.subGoodsNm}]]</h6>
 									<ul>
-										<li><strong>価格: </strong><span class="font-serif pl-10"><i class="fa fa-fw">&#xf157;</i>1,000</span></li>
-										<li><strong>数量: </strong><span class="font-serif pl-10"><input type="number" class="" /></span></li>
-										<li class="pt-20"><a href="#" title="Remove"><i class="fa fa-fw">&#xf014;</i><strong>削除</strong></a></li>
+										<li>
+											<strong>価格: </strong>
+											<span class="font-serif pl-5"><i class="fa fa-fw">&#xf157;</i>1,000</span>
+										</li>
+										<li>
+											<strong>数量: </strong>
+											<select id="quantity" name="quantity" class="form-control-shop">
+												<option th:selected="1 == ${item.quantity}">1</option>
+												<option th:selected="2 == ${item.quantity}">2</option>
+												<option th:selected="3 == ${item.quantity}">3</option>
+												<option th:selected="4 == ${item.quantity}">4</option>
+												<option th:selected="5 == ${item.quantity}">5</option>
+												<option th:selected="6 == ${item.quantity}">6</option>
+												<option th:selected="7 == ${item.quantity}">7</option>
+												<option th:selected="8 == ${item.quantity}">8</option>
+												<option th:selected="9 == ${item.quantity}">9</option>
+												<option th:selected="10 == ${item.quantity}">10</option>
+											</select>
+										</li>
+										<li>
+											<a th:href="@{/shop/cart/delete/{cartDetailCd}(cartDetailCd=${item.cartDetailCd})}">
+												<button class="btn btn-sm btn-round btn-g" type="button">
+													<i class="fa fa-fw">&#xf014;</i><strong>削除</strong>
+												</button>
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-					</div>
-				</section>
-
-				<div class="row mt-70">
-					<div class="col-sm-5 col-sm-offset-7">
-						<div class="shop-Cart-totalbox">
-							<table class="table table-striped table-border checkout-table">
-								<tbody>
-									<tr>
-										<th>小計 :</th>
-										<td>£40.00</td>
-									</tr>
-									<tr>
-										<th>消費税 :</th>
-										<td>£2.00</td>
-									</tr>
-									<tr class="shop-Cart-totalprice">
-										<th>合計 :</th>
-										<td>£42.00</td>
-									</tr>
-								</tbody>
-							</table>
-							<button class="btn btn-lg btn-block btn-round btn-d" type="submit">レジへ進む</button>
+						<div th:if="${#lists.size(cartDetailList)} > 0" class="row mt-70">
+							<div class="col-sm-5 col-sm-offset-7">
+								<div class="shop-Cart-totalbox">
+									<table class="table table-striped table-border checkout-table">
+										<tbody>
+											<tr>
+												<th>小計 :</th>
+												<td>£40.00</td>
+											</tr>
+											<tr>
+												<th>消費税 :</th>
+												<td>£2.00</td>
+											</tr>
+											<tr class="shop-Cart-totalprice">
+												<th>合計 :</th>
+												<td>£42.00</td>
+											</tr>
+										</tbody>
+									</table>
+									<button class="btn btn-lg btn-block btn-round btn-d" type="submit">レジへ進む</button>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
+					</form>
+				</section>
 			</div>
 		</section>
 	</div>

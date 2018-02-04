@@ -1,8 +1,13 @@
 package com.example.demo;
 
+import java.util.Collections;
+
+import javax.servlet.SessionTrackingMode;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -46,6 +51,24 @@ public class KShopApplication {
 		messageSource.setBasenames("application-messages");
 		messageSource.setDefaultEncoding("UTF-8");
 		return messageSource;
+	}
+
+	/**
+	 * メソッドの説明：Cookie定義
+	 * @author kamagata
+	 * @since 2018/02/02
+	 * @return ServletContextInitializer
+	 */
+	@Bean
+	public ServletContextInitializer servletContextInitializer() {
+
+		ServletContextInitializer servletContextInitializer = servletContext -> {
+			servletContext.getSessionCookieConfig().setHttpOnly(true);
+			servletContext.getSessionCookieConfig().setSecure(false);
+			servletContext.setSessionTrackingModes(
+					Collections.singleton(SessionTrackingMode.COOKIE));
+		};
+		return servletContextInitializer;
 	}
 
 	/**

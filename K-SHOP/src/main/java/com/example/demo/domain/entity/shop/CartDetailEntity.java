@@ -47,7 +47,7 @@ public class CartDetailEntity extends CommonColumnEntity implements Serializable
 	@Column(nullable = false, length = 10)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CART_DETAIL_GEN")
 	@SequenceGenerator(name = "SEQ_CART_DETAIL_GEN", sequenceName = "SEQ_CART_DETAIL", allocationSize = 1)
-	private String cartDetailCd;
+	private Integer cartDetailCd;
 
 	/**
 	 * フィールドの説明：商品マスタエンティティ
@@ -66,5 +66,13 @@ public class CartDetailEntity extends CommonColumnEntity implements Serializable
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "cartHeadCd")
 	private CartHeadEntity cartHeadEntity;
+
+	/**
+	 * フィールドの説明：数量
+	 * @author kamagata
+	 * @since 2018/02/04
+	 */
+	@Column(nullable = false, length = 4)
+	private Integer quantity;
 
 }

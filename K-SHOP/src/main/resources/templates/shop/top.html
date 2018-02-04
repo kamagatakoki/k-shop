@@ -16,33 +16,31 @@
 		<!-- 商品一覧 -->
 		<section class="module">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="row multi-columns-row post-columns">
-							<div th:each="item : ${items}" class="col-sm-6 col-md-4 col-lg-4">
-								<div class="post" style="max-height: 450px;">
-									<div class="post-thumbnail work-item marketing photography">
-										<a th:href="@{/shop/goodsdetail/{goodsCd}(goodsCd=${item.goodsCd})}">
-											<div class="work-image">
-												<img class="shoptop-image" th:src="@{/common/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageEntities[0].goodsImageCd})}"/>
-											</div>
-											<div class="work-caption font-alt">
-												<h4 class="work-title">詳細へ</h4>
-											</div>
-										</a>
-									</div>
-									<div class="post-header font-alt">
-										<h2 class="post-title"><a href="#">[[${item.goodsNm}]]</a></h2>
-										<div class="post-meta">[[${item.subGoodsNm}]]</div>
-									</div>
-									<div class="post-entry">
-										<p>[[${item.overview}]]</p>
-									</div>
+				<div class="col-sm-8">
+					<div class=" multi-columns-row post-columns">
+						<div th:each="item : ${items}" class="col-sm-6 col-md-4 col-lg-4 column">
+							<div class="post">
+								<div class="post-thumbnail work-item marketing photography">
+									<a th:href="@{/shop/goodsdetail/{goodsCd}(goodsCd=${item.goodsCd})}">
+										<div class="work-image">
+											<img class="shoptop-image" th:src="@{/common/goodsimage/{goodsImageCd}(goodsImageCd=${item.goodsImageEntities[0].goodsImageCd})}"/>
+										</div>
+										<div class="work-caption font-alt">
+											<h4 class="work-title">詳細へ</h4>
+										</div>
+									</a>
+								</div>
+								<div class="post-header font-alt">
+									<h2 class="post-title"><a href="#">[[${item.goodsNm}]]</a></h2>
+									<div class="post-meta">[[${item.subGoodsNm}]]</div>
+								</div>
+								<div class="post-entry">
+									<p>[[${item.overview}]]</p>
 								</div>
 							</div>
 						</div>
-						<div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
 					</div>
+				</div>
 							<div class="col-sm-4 col-md-3 col-md-offset-1 sidebar">
 								<div class="widget">
 									<form role="form">
@@ -101,7 +99,6 @@
 								</div>
 							</div>
 				</div>
-			</div>
 		</section>
 
 

@@ -47,14 +47,21 @@ public class CartHeadEntity extends CommonColumnEntity implements Serializable {
 	@Column(nullable = false, length = 10)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CART_HEAD_GEN")
 	@SequenceGenerator(name = "SEQ_CART_HEAD_GEN", sequenceName = "SEQ_CART_HEAD", allocationSize = 1)
-	private String cartHeadCd;
+	private Integer cartHeadCd;
+
+	/**
+	 * フィールドの説明：セッションID
+	 * @author kamagata
+	 * @since 2018/02/02
+	 */
+	private String sessionId;
 
 	/**
 	 * フィールドの説明：ユーザー情報エンティティ
 	 * @author kamagata
 	 * @since 2018/01/29
 	 */
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER, optional = true)
 	@JoinColumn(name = "userCd")
 	private UserInfoEntity userInfoEntity;
 

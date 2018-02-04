@@ -3,7 +3,6 @@ package com.example.demo.web.form.maintenance;
 import java.time.LocalDate;
 
 import javax.persistence.MappedSuperclass;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -102,7 +101,6 @@ public class GoodsForm extends CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/18
 	 */
-	@NotNull
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate releaseDt;
 

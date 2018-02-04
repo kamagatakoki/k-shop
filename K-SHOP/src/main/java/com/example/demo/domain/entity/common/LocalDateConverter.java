@@ -23,7 +23,7 @@ public class LocalDateConverter implements AttributeConverter<LocalDate, Date> {
 	 */
 	@Override
 	public Date convertToDatabaseColumn(LocalDate localDate) {
-		return Date.valueOf(localDate);
+		return localDate == null ? null : Date.valueOf(localDate);
 	}
 
 	/** オーバーライドの説明：DBからエンティティ取得時にjava.time.LocalDateに変換する
@@ -35,7 +35,7 @@ public class LocalDateConverter implements AttributeConverter<LocalDate, Date> {
 	 */
 	@Override
 	public LocalDate convertToEntityAttribute(Date date) {
-		return date.toLocalDate();
+		return date == null ? null : date.toLocalDate();
 	}
 
 }

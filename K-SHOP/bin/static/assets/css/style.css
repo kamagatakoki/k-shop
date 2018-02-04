@@ -370,6 +370,10 @@ a,
   padding-bottom: 140px !important;
 }
 
+.pl-5 {
+  padding-left: 5px !important;
+}
+
 .pl-10 {
   padding-left: 10px !important;
 }
@@ -396,6 +400,10 @@ a,
 
 .mt-0 {
   margin-top: 0 !important;
+}
+
+.mt-5 {
+  margin-top: 5px !important;
 }
 
 .mt-10 {
@@ -464,6 +472,42 @@ a,
 
 .mb-80 {
   margin-bottom: 80px !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
+}
+
+.ml-20 {
+  margin-left: 20px !important;
+}
+
+.ml-30 {
+  margin-left: 30px !important;
+}
+
+.ml-40 {
+  margin-left: 40px !important;
+}
+
+.ml-50 {
+  margin-left: 50px !important;
+}
+
+.ml-60 {
+  margin-left: 60px !important;
+}
+
+.ml-70 {
+  margin-left: 70px !important;
+}
+
+.ml-80 {
+  margin-left: 80px !important;
 }
 
 @media only screen and (max-width: 991px) {
@@ -835,13 +879,24 @@ a,
   font-family: "Roboto Condensed", sans-serif;
   /*text-transform: uppercase;*/
   letter-spacing: 2px;
-  font-size: 11px;
+  font-size: 16px;
   height: 33px;
   border: 1px solid #EAEAEA;
   border-radius: 2px;
   transition: all 0.4s ease-in-out 0s;
 }
 
+.form-control-shop {
+  font-family: "Roboto Condensed", sans-serif;
+  /*text-transform: uppercase;*/
+  letter-spacing: 2px;
+  font-size: 16px;
+  height: 33px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out 0s;
+  transform: scale(0.8);
+}
 .form-control:focus {
   border-color: #CACACA;
 }
@@ -1730,7 +1785,7 @@ Google map
 	Restaurant Menu
 --------------------------------------------------------------*/
 .menu {
-  border-bottom: 1px dotted #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   padding: 0 0 10px;
   margin: 0 0 20px;
 }
@@ -2040,7 +2095,7 @@ Google map
 
 .work-details-title {
   color: #111;
-  margin: 0 0 20px;
+  /*margin: 0 0 20px;*/
 }
 
 .work-details ul {
@@ -2050,9 +2105,15 @@ Google map
 }
 
 .work-details ul > li {
-  border-bottom: 1px dotted #c2c2c2;
+  /*border-bottom: 1px dotted #c2c2c2;*/
   padding: 0 0 5px;
   margin: 0 0 5px;
+  letter-spacing: 2px;
+}
+
+.work-details ul > li > select {
+	width: 100px;
+	display: inline;
 }
 
 /*--------------------------------------------------------------
@@ -2236,8 +2297,21 @@ Google map
 }
 
 /* Post columns */
-.post-columns .post {
-  margin: 0 0 60px;
+@media only screen and (max-width: 480px) {
+	.post-columns .post {
+	  margin: 0 0 30px;
+	}
+
+	.post-columns .column {
+		height: auto;
+	}
+}
+
+@media only screen and (min-width: 481px) {
+	.post-columns .post {
+	  margin: 0 0 30px;
+	  height: 450px;
+	}
 }
 
 .post-columns .post-header {
@@ -2744,6 +2818,14 @@ Google map
 }
 
 /*--------------------------------------------------------------
+	カート
+--------------------------------------------------------------*/
+.cart {
+	max-height: 200px;
+}
+
+
+/*--------------------------------------------------------------
 	Responsive Styles - Media Queries
 --------------------------------------------------------------*/
 @media (min-width: 768px) {
@@ -2978,6 +3060,31 @@ Google map
   .works-grid-3 .work-item,
   .works-grid-4 .work-item,
   .works-grid-5 .work-item {
-    width: 100%;
+    width: 50%;
   }
+}
+
+.error-input {
+	border-color: #b94a48;
+	margin-left: 5px;
+}
+
+.error-messages {
+	color: #b94a48;
+}
+
+.shoptop-image {
+	max-height: 350px;
+}
+
+@media (max-width: 467px) {
+	.main-goods-image {
+		max-height:280px;
+	}
+}
+
+@media (min-width: 468px) {
+	.main-goods-image {
+		height:450px;
+	}
 }

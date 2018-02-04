@@ -24,7 +24,8 @@ public class SpringSecurityAuditorAware implements AuditorAware<Integer> {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-		if (authentication == null || !authentication.isAuthenticated()) {
+		if (authentication == null || !authentication.isAuthenticated()
+				|| authentication.getPrincipal().equals("anonymousUser")) {
 			return null;
 		}
 

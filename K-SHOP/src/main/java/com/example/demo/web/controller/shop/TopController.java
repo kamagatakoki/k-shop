@@ -61,23 +61,7 @@ public class TopController {
 	ModelAndView searchGenreSmCd(ModelAndView modelAndView, @PathVariable String genreCd) {
 
 		// 商品情報取得 パラメータの桁数でどのジャンルで検索するか判断する
-		switch (genreCd.length()) {
-		case 2:
-			// 大ジャンル検索
-			goodsEntities = goodsService.findByGenreLgCd(genreCd);
-			break;
-
-		case 4:
-			// 中ジャンル検索
-			goodsEntities = goodsService.findByGenreMdCd(genreCd);
-			break;
-
-		case 6:
-			// 小ジャンル検索
-			goodsEntities = goodsService.findByGenreSmCd(genreCd);
-			break;
-
-		}
+		goodsEntities = goodsService.findBySomeGenreCd(genreCd);
 
 		// 遷移先画面
 		modelAndView.addObject("items", goodsEntities);

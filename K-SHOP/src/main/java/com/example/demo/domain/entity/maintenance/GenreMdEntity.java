@@ -76,7 +76,7 @@ public class GenreMdEntity extends CommonColumnEntity {
 	@Autowired
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "genreLgCd")
-	@Fetch(FetchMode.JOIN)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private GenreLgEntity genreLgEntity;
 
 	/**
@@ -86,6 +86,7 @@ public class GenreMdEntity extends CommonColumnEntity {
 	 */
 	@OneToMany(mappedBy = "genreMdEntity")
 	@LazyCollection(LazyCollectionOption.FALSE)
+	@Fetch(FetchMode.JOIN)
 	@OrderBy("displayOrder")
 	private List<GenreSmEntity> genreSmEntities;
 

@@ -1,5 +1,6 @@
 package com.example.demo.service.maintenance;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.criteria.Join;
@@ -87,13 +88,41 @@ public class GoodsService {
 	}
 
 	/**
+	 * メソッドの説明：指定されたジャンルコード(大or中or小)で検索
+	 * @author kamagata
+	 * @since 2018/02/06
+	 * @param genreCd ジャンルコード(大or中or小)
+	 * @return List<GoodsEntity> 商品エンティティのリスト
+	 */
+	public List<GoodsEntity> findBySomeGenreCd(String genreCd) {
+
+		// 商品情報取得 パラメータの桁数でどのジャンルで検索するか判断する
+		switch (genreCd.length()) {
+		case 2:
+			// 大ジャンル検索
+			return findByGenreLgCd(genreCd);
+
+		case 4:
+			// 中ジャンル検索
+			return findByGenreMdCd(genreCd);
+
+		case 6:
+			// 小ジャンル検索
+			return findByGenreSmCd(genreCd);
+
+		}
+
+		return new ArrayList<>();
+	}
+
+	/**
 	 * メソッドの説明：小ジャンルコードによる検索 商品画像は表示順の最初のデータを取得
 	 * @author kamagata
 	 * @since 2018/01/27
 	 * @param genreSmCd 中ジャンルコード
 	 * @return List<GoodsEntity> 商品エンティティのリスト
 	 */
-	public List<GoodsEntity> findByGenreSmCd(String genreSmCd) {
+	private List<GoodsEntity> findByGenreSmCd(String genreSmCd) {
 
 		return goodsRepository.findAll((root, query, cb) -> {
 
@@ -123,7 +152,7 @@ public class GoodsService {
 	 * @param genreMdCd 中ジャンルコード
 	 * @return List<GoodsEntity> 商品エンティティのリスト
 	 */
-	public List<GoodsEntity> findByGenreMdCd(String genreMdCd) {
+	private List<GoodsEntity> findByGenreMdCd(String genreMdCd) {
 
 		return goodsRepository.findAll((root, query, cb) -> {
 
@@ -153,7 +182,7 @@ public class GoodsService {
 	 * @param genreLgCd 大ジャンルコード
 	 * @return List<GoodsEntity> 商品エンティティのリスト
 	 */
-	public List<GoodsEntity> findByGenreLgCd(String genreLgCd) {
+	private List<GoodsEntity> findByGenreLgCd(String genreLgCd) {
 
 		return goodsRepository.findAll((root, query, cb) -> {
 

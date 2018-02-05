@@ -39,7 +39,7 @@ public interface GoodsRepository
 	@Query("SELECT DISTINCT g FROM GoodsEntity g "
 			+ "JOIN FETCH g.goodsImageEntities "
 			+ "JOIN FETCH g.genreLgEntity "
-			+ "JOIN FETCH g.genreSmEntity "
+			+ "JOIN FETCH g.genreMdEntity "
 			+ "JOIN FETCH g.genreSmEntity")
 	public List<GoodsEntity> findAll(Sort sort);
 }

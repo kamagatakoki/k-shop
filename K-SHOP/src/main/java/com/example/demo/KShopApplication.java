@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.domain.Sort;
@@ -20,7 +21,7 @@ import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.service.maintenance.GenreLgService;
 
 /**
- * クラスの説明：デフォルト
+ * クラスの説明：Bean定義
  * @author kamagata
  * @since 2018/01/12
  */
@@ -81,6 +82,7 @@ public class KShopApplication {
 	 * @return List<GenreLgEntity> 大ジャンルエンティティリスト(子・孫要素に中・小ジャンル)
 	 */
 	@Bean
+	@Scope("application")
 	public List<GenreLgEntity> getHeaderGenreInfo() {
 		return genreLgService.findAll(new Sort("displayOrder"));
 	}

@@ -11,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,7 +72,7 @@ public class GenreSmEntity extends CommonColumnEntity implements Serializable {
 	@Autowired
 	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	@JoinColumn(name = "genreLgCd")
-	@Fetch(FetchMode.JOIN)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private GenreLgEntity genreLgEntity;
 
 	/**

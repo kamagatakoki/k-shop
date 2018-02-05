@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Fetch;
@@ -68,5 +69,7 @@ public class GenreLgEntity extends CommonColumnEntity implements Serializable {
 	 */
 	@OneToMany(mappedBy = "genreLgEntity")
 	@Fetch(FetchMode.SUBSELECT)
+	@OrderBy("displayOrder")
 	private List<GenreMdEntity> genreMdEntities;
+
 }

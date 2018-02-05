@@ -1,12 +1,9 @@
 package com.example.demo.web.controller.shop;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -19,12 +16,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
 import com.example.demo.domain.entity.shop.CartDetailEntity;
 import com.example.demo.domain.entity.shop.CartHeadEntity;
 import com.example.demo.service.common.LoginUserDetails;
-import com.example.demo.service.maintenance.GenreLgService;
 import com.example.demo.service.maintenance.GoodsService;
 import com.example.demo.service.shop.CartService;
 import com.example.demo.web.CartSession;
@@ -40,9 +35,6 @@ import com.example.demo.web.form.shop.GoodsDetailForm;
 public class GoodsDetailController {
 
 	@Autowired
-	GenreLgService genreLgService;
-
-	@Autowired
 	GoodsService goodsService;
 
 	@Autowired
@@ -56,13 +48,8 @@ public class GoodsDetailController {
 		return new GoodsDetailForm();
 	}
 
-	private List<GenreLgEntity> genreLgEntities;
-
 	@GetMapping(path = "/{goodsCd}")
 	ModelAndView list(GoodsDetailForm goodsDetailForm, ModelAndView modelAndView, @PathVariable String goodsCd) {
-
-		// ヘッダー情報取得
-		genreLgEntities = genreLgService.findAll(new Sort("displayOrder"));
 
 		// 商品情報取得
 		GoodsEntity goodsEntity = goodsService.findOne(goodsCd);
@@ -71,7 +58,6 @@ public class GoodsDetailController {
 		BeanUtils.copyProperties(goodsEntity, goodsDetailForm);
 
 		// 遷移先画面
-		modelAndView.addObject("genreLgItemList", genreLgEntities);
 		modelAndView.addObject("goodsDetailForm", goodsDetailForm); // 商品詳細フォーム
 		modelAndView.setViewName("shop/goods_detail");
 
@@ -85,12 +71,8 @@ public class GoodsDetailController {
 			@CookieValue(name = "JSESSIONID", required = false) String sessionId,
 			@AuthenticationPrincipal LoginUserDetails loginUserDetails) {
 
-		// ヘッダー情報取得
-		genreLgEntities = genreLgService.findAll(new Sort("displayOrder"));
-
 		// エラーがあれば中断
 		if (bindingResult.hasErrors()) {
-			modelAndView.addObject("genreLgList", genreLgEntities); // 大ジャンルプルダウン要素
 			modelAndView.addObject("goodsDetailForm", goodsDetailForm); // 商品詳細フォーム
 			modelAndView.setViewName("shop/goods_detail"); // 遷移先URLセット
 			return modelAndView;

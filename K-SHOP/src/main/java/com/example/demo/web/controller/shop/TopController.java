@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
-import com.example.demo.service.maintenance.GenreLgService;
 import com.example.demo.service.maintenance.GoodsService;
 
 /**
@@ -25,15 +23,10 @@ import com.example.demo.service.maintenance.GoodsService;
 public class TopController {
 
 	@Autowired
-	GenreLgService genreLgService;
-
-	@Autowired
 	GoodsService goodsService;
 
 	@Autowired
 	List<GoodsEntity> goodsEntities;
-
-	private List<GenreLgEntity> genreLgEntities;
 
 	/**
 	 * メソッドの説明：トップ画面表示
@@ -48,11 +41,7 @@ public class TopController {
 		// 商品情報取得
 		List<GoodsEntity> goodsEntities = goodsService.findAll(new Sort("goodsCd"));
 
-		// ジャンル情報取得
-		genreLgEntities = genreLgService.findAll(new Sort("displayOrder"));
-
 		// 遷移先画面
-		modelAndView.addObject("genreLgItemList", genreLgEntities);
 		modelAndView.addObject("items", goodsEntities);
 		modelAndView.setViewName("shop/top");
 
@@ -91,8 +80,6 @@ public class TopController {
 		}
 
 		// 遷移先画面
-		genreLgEntities = genreLgService.findAll(new Sort("displayOrder"));
-		modelAndView.addObject("genreLgItemList", genreLgEntities);
 		modelAndView.addObject("items", goodsEntities);
 		modelAndView.setViewName("shop/top");
 

@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.Collections;
+import java.util.List;
 
 import javax.servlet.SessionTrackingMode;
 
@@ -12,8 +13,10 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.data.domain.AuditorAware;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.service.maintenance.GenreLgService;
 
 /**
@@ -69,6 +72,17 @@ public class KShopApplication {
 					Collections.singleton(SessionTrackingMode.COOKIE));
 		};
 		return servletContextInitializer;
+	}
+
+	/**
+	 * メソッドの説明：全ジャンル情報取得(ヘッダー用)
+	 * @author kamagata
+	 * @since 2018/02/06
+	 * @return List<GenreLgEntity> 大ジャンルエンティティリスト(子・孫要素に中・小ジャンル)
+	 */
+	@Bean
+	public List<GenreLgEntity> getHeaderGenreInfo() {
+		return genreLgService.findAll(new Sort("displayOrder"));
 	}
 
 	/**

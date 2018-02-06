@@ -66,7 +66,9 @@ public class GoodsDetailController {
 	}
 
 	@PostMapping(path = "/addcart")
-	ModelAndView addCart(@Validated GoodsDetailForm goodsDetailForm, BindingResult bindingResult,
+	ModelAndView addCart(
+			@Validated GoodsDetailForm goodsDetailForm,
+			BindingResult bindingResult,
 			ModelAndView modelAndView, HttpSession httpSession,
 			@CookieValue(name = "JSESSIONID", required = false) String sessionId,
 			@AuthenticationPrincipal LoginUserDetails loginUserDetails) {

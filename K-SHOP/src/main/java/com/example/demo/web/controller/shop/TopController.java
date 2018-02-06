@@ -50,7 +50,7 @@ public class TopController {
 	}
 
 	/**
-	 * メソッドの説明：小ジャンル検索
+	 * メソッドの説明：ジャンル検索
 	 * @author kamagata
 	 * @since 2018/01/27
 	 * @param modelAndView モデル
@@ -58,7 +58,7 @@ public class TopController {
 	 * @return ModelAndView モデルビュー
 	 */
 	@GetMapping(path = "/shop/{genreCd}")
-	ModelAndView searchGenreSmCd(ModelAndView modelAndView, @PathVariable String genreCd) {
+	ModelAndView searchGenreCd(ModelAndView modelAndView, @PathVariable String genreCd) {
 
 		// 商品情報取得 パラメータの桁数でどのジャンルで検索するか判断する
 		goodsEntities = goodsService.findBySomeGenreCd(genreCd);

@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +35,17 @@ public class GoodsListController {
 	@ModelAttribute
 	GoodsForm setUpForm() {
 		return new GoodsForm();
+	}
+
+	/**
+	 * メソッドの説明：初期処理　入力値をtrimし、空の場合はNULLでformに格納する
+	 * @author kamagata
+	 * @since 2018/02/12
+	 * @param binder バインダー
+	 */
+	@InitBinder
+	public void InitBinder(WebDataBinder binder) {
+		binder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
 	}
 
 	/**

@@ -16,7 +16,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import lombok.Data;
 
 /**
- * クラスの説明：共通カラムエンティティa
+ * クラスの説明：共通カラムエンティティ
  * @author kamagata
  * @since 2018/01/09
  */

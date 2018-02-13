@@ -3,8 +3,8 @@ package com.example.sample.domain.model.maintenance;
 import java.io.Serializable;
 import java.util.Date;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -14,7 +14,7 @@ import lombok.Data;
  * @mbg.generated do_not_delete_during_merge
  */
 @Data
-@Builder
+@NoArgsConstructor
 public class GenreMd implements Serializable {
 	/**
 	 *
@@ -51,6 +51,8 @@ public class GenreMd implements Serializable {
 	 * @mbg.generated
 	 */
 	private String genreLgCd;
+
+	private GenreLg genreLg;
 
 	/**
 	 *

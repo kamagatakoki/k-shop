@@ -32,8 +32,9 @@
 		<level value="info" />
 	</logger>
 
+	<!-- SQL Log -->
 	<logger name="jdbc.sqltiming">
-	    <level value="debug" />
+	    <level value="${LOG_JDBC_SQLTIMING}" />
 	</logger>
 
 	<!-- Root Logger -->

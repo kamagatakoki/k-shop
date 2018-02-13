@@ -7,7 +7,7 @@
 		<!-- Lombokプラグイン設定 -->
 		<plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin">
 			<!-- enable annotations -->
-			<property name="builder" value="true"/>
+			<property name="builder" value="false"/>
 			<property name="allArgsConstructor" value="false"/>
 		</plugin>
 

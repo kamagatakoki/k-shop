@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.sample.domain.model.maintenance.GenreLg;
+import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.form.maintenance.GenreLgForm;
 import com.example.sample.service.maintenance.GenreLgService;
 
@@ -76,7 +76,7 @@ public class GenreLgListController {
 	String search(Model model, GenreLgForm genreLgForm) {
 
 		// 検索実行
-		List<GenreLg> genreLEntities = genreLgService.findGenreLg(genreLgForm);
+		List<GenreLgEntity> genreLEntities = genreLgService.findGenreLg(genreLgForm);
 
 		// 検索結果、件数
 		model.addAttribute("items", genreLEntities);
@@ -111,7 +111,7 @@ public class GenreLgListController {
 	String newEdit(@RequestParam String genreLgCd, GenreLgForm genreLgForm) {
 
 		// 検索処理
-		GenreLg genreLgEntity = genreLgService.findOne(genreLgCd);
+		GenreLgEntity genreLgEntity = genreLgService.findOne(genreLgCd);
 
 		// フォームにエンティティの内容をコピー、検索条件をフォームにセット
 		BeanUtils.copyProperties(genreLgEntity, genreLgForm);

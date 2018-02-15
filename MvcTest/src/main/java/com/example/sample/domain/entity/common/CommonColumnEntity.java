@@ -1,8 +1,9 @@
-package com.example.sample.domain.model.common;
+package com.example.sample.domain.entity.common;
 
 import java.util.Date;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * クラスの説明：共通カラムエンティティ
@@ -10,6 +11,7 @@ import lombok.Data;
  * @since 2018/01/09
  */
 @Data
+@NoArgsConstructor
 public class CommonColumnEntity {
 
 	/**
@@ -38,7 +40,7 @@ public class CommonColumnEntity {
 	 * @author kamagata
 	 * @since 2018/01/06
 	 */
-	private Integer insertCd;
+	private Long insertCd;
 
 	/**
 	 * フィールドの説明：更新日
@@ -52,6 +54,6 @@ public class CommonColumnEntity {
 	 * @author kamagata
 	 * @since 2018/01/06
 	 */
-	private Integer updateCd;
+	private Long updateCd;
 
 }

@@ -9,7 +9,21 @@
 			<!-- enable annotations -->
 			<property name="builder" value="false"/>
 			<property name="allArgsConstructor" value="false"/>
+			<property name="noArgsConstructor" value="true"/>
 		</plugin>
+
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example"/>
+			<property name="replaceString" value="Criteria"/>
+		</plugin>
+
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin">
+			<property name="suppressJavaInterface" value="false"/>
+		</plugin>
+
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+
+		<plugin type="com.example.sample.domain.model.common.TableClassNmPlugin" />
 
 		<!-- タイムスタンプを含まないコメントを生成する設定 -->
 		<commentGenerator>
@@ -25,8 +39,9 @@
 			password="ora_test" />
 
 		<!-- モデル設定 -->
-		<javaModelGenerator targetPackage="com.example.sample.domain.model.maintenance"
-			targetProject="MvcTest" />
+		<javaModelGenerator targetPackage="com.example.sample.domain.model.maintenance" targetProject="MvcTest">
+			<property name="rootClass" value="com.example.sample.domain.model.common.CommonColumnEntity"/>
+		</javaModelGenerator>
 
 		<!-- SQLマッパー設定 -->
 		<sqlMapGenerator targetPackage="com.example.sample.domain.mapper.maintenance"
@@ -37,8 +52,8 @@
 			targetProject="MvcTest" type="XMLMAPPER" />
 
 
-		<table tableName="GENRE_LG" alias="GENRE_LG" />
-		<table tableName="GENRE_MD" alias="GENRE_MD" />
+		<table tableName="GENRE_LG" alias="LG" />
+		<table tableName="GENRE_MD" alias="MD" />
 
 
 	</context>

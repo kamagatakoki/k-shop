@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.sample.domain.model.maintenance.GenreLg;
-import com.example.sample.domain.model.maintenance.GenreMd;
+import com.example.sample.domain.entity.maintenance.GenreLgEntity;
+import com.example.sample.domain.entity.maintenance.GenreMdEntity;
 import com.example.sample.form.maintenance.GenreMdForm;
 import com.example.sample.service.maintenance.GenreMdService;
 
@@ -78,7 +78,7 @@ public class GenreMdListController {
 	String search(Model model, GenreMdForm genreMdForm) {
 
 		// 検索実行
-		List<GenreMd> genreMdEntities = genreMdService.findGenreMd(genreMdForm);
+		List<GenreMdEntity> genreMdEntities = genreMdService.findGenreMd(genreMdForm);
 
 		// 検索結果、件数
 		model.addAttribute("items", genreMdEntities);
@@ -100,7 +100,7 @@ public class GenreMdListController {
 	String openNew(Model model, GenreMdForm genreMdForm) {
 
 		// 大ジャンルプルダウン要素取得
-		List<GenreLg> genreLgEntities = genreMdService.findGenreLgList();
+		List<GenreLgEntity> genreLgEntities = genreMdService.findGenreLgList();
 
 		// 大ジャンルをセット
 		model.addAttribute("genreLgList", genreLgEntities); // 大ジャンルプルダウン要素
@@ -121,10 +121,10 @@ public class GenreMdListController {
 	String openEdit(GenreMdForm genreMdForm, Model model) {
 
 		// 検索処理
-		GenreMd genreMgEntity = genreMdService.findOne(genreMdForm.getGenreMdCd());
+		GenreMdEntity genreMgEntity = genreMdService.findOne(genreMdForm.getGenreMdCd());
 
 		// 大ジャンルプルダウン要素取得
-		List<GenreLg> genreLgEntities = genreMdService.findGenreLgList();
+		List<GenreLgEntity> genreLgEntities = genreMdService.findGenreLgList();
 
 		// エンティティの内容をフォームにコピー
 		BeanUtils.copyProperties(genreMgEntity, genreMdForm);

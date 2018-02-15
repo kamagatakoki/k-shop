@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.sample.domain.entity.maintenance.GenreLgCriteria;
+import com.example.sample.domain.entity.maintenance.GenreLgEntity;
+import com.example.sample.domain.entity.maintenance.GenreLgCriteria.Criteria;
 import com.example.sample.domain.mapper.maintenance.GenreLgMapper;
-import com.example.sample.domain.model.maintenance.GenreLg;
-import com.example.sample.domain.model.maintenance.GenreLgExample;
-import com.example.sample.domain.model.maintenance.GenreLgExample.Criteria;
 import com.example.sample.form.maintenance.GenreLgForm;
 
 /**
@@ -28,7 +28,7 @@ public class GenreLgService {
 	GenreLgMapper genreLgMapper;
 
 	@Autowired
-	GenreLgExample genreLgExample;
+	GenreLgCriteria genreLgCriteria;
 
 	/**
 	 * メソッドの説明：全件検索
@@ -36,8 +36,8 @@ public class GenreLgService {
 	 * @since 2018/02/11
 	 * @return List<GenreLg> 大ジャンルマスタのリスト
 	 */
-	public List<GenreLg> findAll() {
-		return genreLgMapper.selectByExample(genreLgExample);
+	public List<GenreLgEntity> findAll() {
+		return genreLgMapper.selectByExample(genreLgCriteria);
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class GenreLgService {
 	 * @param genreLgCd 大ジャンルコード
 	 * @return GenreLg 大ジャンルマスタ
 	 */
-	public GenreLg findOne(String genreLgCd) {
+	public GenreLgEntity findOne(String genreLgCd) {
 		return genreLgMapper.selectByPrimaryKey(genreLgCd);
 	}
 
@@ -58,9 +58,9 @@ public class GenreLgService {
 	 * @param genreLgForm 大ジャンルフォーム
 	 * @return List<GenreLg> 大ジャンルマスタのリスト
 	 */
-	public List<GenreLg> findGenreLg(GenreLgForm genreLgForm) {
+	public List<GenreLgEntity> findGenreLg(GenreLgForm genreLgForm) {
 
-		Criteria criteria = genreLgExample.createCriteria();
+		Criteria criteria = genreLgCriteria.createCriteria();
 
 		// 大ジャンルコード
 		Optional.ofNullable(genreLgForm.getSearchGenreLgCd())
@@ -70,9 +70,9 @@ public class GenreLgService {
 				.ifPresent(t -> criteria.andGenreLgNmLike("%" + t + "%"));
 
 		// ソート
-		genreLgExample.setOrderByClause("DISPLAY_ORDER");
+		genreLgCriteria.setOrderByClause("DISPLAY_ORDER");
 
-		return genreLgMapper.selectByExample(genreLgExample);
+		return genreLgMapper.selectByExample(genreLgCriteria);
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class GenreLgService {
 	 * @param genreLg 大ジャンルマスタ
 	 * @return Integer 成功可否
 	 */
-	public Integer insert(GenreLg genreLg) {
+	public Integer insert(GenreLgEntity genreLg) {
 		return genreLgMapper.insertSelective(genreLg);
 	}
 
@@ -93,7 +93,7 @@ public class GenreLgService {
 	 * @param genreLg 大ジャンルマスタ
 	 * @return Integer 成功可否
 	 */
-	public Integer update(GenreLg genreLg) {
+	public Integer update(GenreLgEntity genreLg) {
 		return genreLgMapper.updateByPrimaryKeySelective(genreLg);
 	}
 

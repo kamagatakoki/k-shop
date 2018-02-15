@@ -2,17 +2,17 @@ package com.example.sample.domain.mapper.maintenance;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.session.RowBounds;
 
 import com.example.sample.domain.entity.maintenance.GenreSmCriteria;
 import com.example.sample.domain.entity.maintenance.GenreSmEntity;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 /**
  * クラスの説明：小ジャンルマスタマッパー
@@ -122,4 +122,14 @@ public interface GenreSmMapper {
 	 * @return List<GenreSmEntity> 小ジャンルエンティティのリスト
 	 */
 	List<GenreSmEntity> selectGenreLgMdSmByExample(GenreSmCriteria criteria);
+
+	/**
+	 * メソッドの説明：中ジャンルコード存在チェック
+	 * @author kamagata
+	 * @since 2018/02/15
+	 * @param genreMdCd 中ジャンルコード
+	 * @return True:存在する、False:存在しない
+	 */
+	@Select({ "select 1 from GENRE_SM where GENRE_SM_CD = #{genreSmCd" })
+	boolean existsByGenreMdCd(String genreMdCd);
 }

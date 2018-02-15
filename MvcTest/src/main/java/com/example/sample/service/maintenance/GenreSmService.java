@@ -130,16 +130,4 @@ public class GenreSmService {
 	public void delete(String genreSmCd) {
 		genreSmMapper.deleteByPrimaryKey(genreSmCd);
 	}
-
-	//	/**
-	//	 * メソッドの説明：削除時チェック
-	//	 * @author kamagata
-	//	 * @since 2018/01/15
-	//	 * @param genreSmCd 中ジャンルコード
-	//	 * @return True:OK False:NG
-	//	 */
-	//	public boolean deleteCheck(String genreSmCd) {
-	//
-	//		return genreSmRepository.existsByGenreMdgenreSmCd(genreSmCd);
-	//	}
 }

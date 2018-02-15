@@ -151,12 +151,12 @@ public class GenreMdListController {
 	String delete(@RequestParam String genreMdCd, Model model, GenreMdForm genreMdForm,
 			BindingResult bindingResult) {
 
-		//		// 小ジャンル存在チェック
-		//		if (genreMdService.deleteCheck(genreMdCd)) {
-		//			// 存在する場合はエラー
-		//			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
-		//			return search(model, genreMdForm);
-		//		}
+		// 小ジャンル存在チェック
+		if (genreMdService.deleteCheck(genreMdCd)) {
+			// 存在する場合はエラー
+			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
+			return search(model, genreMdForm);
+		}
 
 		// 削除処理
 		genreMdService.delete(genreMdCd);

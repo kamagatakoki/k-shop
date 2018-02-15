@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.sample.domain.entity.maintenance.GenreLgCriteria;
-import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.domain.entity.maintenance.GenreLgCriteria.Criteria;
+import com.example.sample.domain.entity.maintenance.GenreLgEntity;
+import com.example.sample.domain.entity.maintenance.GenreMdCriteria;
 import com.example.sample.domain.mapper.maintenance.GenreLgMapper;
+import com.example.sample.domain.mapper.maintenance.GenreMdMapper;
 import com.example.sample.form.maintenance.GenreLgForm;
 
 /**
@@ -28,7 +30,13 @@ public class GenreLgService {
 	GenreLgMapper genreLgMapper;
 
 	@Autowired
+	GenreMdMapper genreMdMapper;
+
+	@Autowired
 	GenreLgCriteria genreLgCriteria;
+
+	@Autowired
+	GenreMdCriteria genreMdCriteria;
 
 	/**
 	 * メソッドの説明：全件検索
@@ -106,5 +114,21 @@ public class GenreLgService {
 	 */
 	public Integer delete(String genreLgCd) {
 		return genreLgMapper.deleteByPrimaryKey(genreLgCd);
+	}
+
+	/**
+	 * メソッドの説明：削除時下位データ(中ジャンル)存在チェック
+	 * @author kamagata
+	 * @since 2018/01/15
+	 * @param genreLgCd 大ジャンルコード
+	 * @return True:OK False:NG
+	 */
+	public boolean deleteCheck(String genreLgCd) {
+
+		// 中ジャンルコード
+		genreMdCriteria.createCriteria().andGenreLgCdEqualTo(genreLgCd);
+
+		// 存在する場合はエラー
+		return !(genreMdMapper.countByExample(genreMdCriteria) == 0);
 	}
 }

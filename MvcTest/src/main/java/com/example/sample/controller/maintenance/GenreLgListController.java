@@ -134,12 +134,12 @@ public class GenreLgListController {
 	String delete(@RequestParam String genreLgCd, Model model, GenreLgForm genreLgForm,
 			BindingResult bindingResult) {
 
-		//		// 中ジャンル存在チェック
-		//		if (genreLgService.deleteCheck(genreLgCd)) {
-		//			// 存在する場合はエラー
-		//			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
-		//			return search(modelAndView, genreLgForm);
-		//		}
+		// 中ジャンル存在チェック
+		if (genreLgService.deleteCheck(genreLgCd)) {
+			// 存在する場合はエラー
+			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
+			return search(model, genreLgForm);
+		}
 
 		// 削除処理
 		genreLgService.delete(genreLgCd);

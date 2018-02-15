@@ -12,7 +12,9 @@ import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.domain.entity.maintenance.GenreMdCriteria;
 import com.example.sample.domain.entity.maintenance.GenreMdCriteria.Criteria;
 import com.example.sample.domain.entity.maintenance.GenreMdEntity;
+import com.example.sample.domain.entity.maintenance.GenreSmCriteria;
 import com.example.sample.domain.mapper.maintenance.GenreMdMapper;
+import com.example.sample.domain.mapper.maintenance.GenreSmMapper;
 import com.example.sample.form.maintenance.GenreMdForm;
 
 /**
@@ -29,7 +31,13 @@ public class GenreMdService {
 	GenreMdMapper genreMdMapper;
 
 	@Autowired
+	GenreSmMapper genreSmMapper;
+
+	@Autowired
 	GenreMdCriteria genreMdCriteria;
+
+	@Autowired
+	GenreSmCriteria genreSmCriteria;
 
 	@Autowired
 	GenreLgService genreLgService;
@@ -119,15 +127,19 @@ public class GenreMdService {
 		genreMdMapper.deleteByPrimaryKey(genreMdCd);
 	}
 
-	//	/**
-	//	 * メソッドの説明：削除時チェック
-	//	 * @author kamagata
-	//	 * @since 2018/01/15
-	//	 * @param genreMdCd 中ジャンルコード
-	//	 * @return True:OK False:NG
-	//	 */
-	//	public boolean deleteCheck(String genreMdCd) {
-	//
-	//		return genreSmRepository.existsByGenreMdGenreMdCd(genreMdCd);
-	//	}
+	/**
+	 * メソッドの説明：削除時下位データ(小ジャンル)存在チェック
+	 * @author kamagata
+	 * @since 2018/01/15
+	 * @param genreMdCd 中ジャンルコード
+	 * @return True:OK False:NG
+	 */
+	public boolean deleteCheck(String genreMdCd) {
+
+		// 中ジャンルコード
+		genreSmCriteria.createCriteria().andGenreMdCdEqualTo(genreMdCd);
+
+		// 存在する場合はエラー
+		return !(genreSmMapper.countByExample(genreSmCriteria) == 0);
+	}
 }

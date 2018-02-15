@@ -151,13 +151,6 @@ public class GenreSmListController {
 	String delete(@RequestParam String genreSmCd, Model model, GenreSmForm genreSmForm,
 			BindingResult bindingResult) {
 
-		//		// 小ジャンル存在チェック
-		//		if (genreSmService.deleteCheck(genreSmCd)) {
-		//			// 存在する場合はエラー
-		//			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
-		//			return search(model, genreSmForm);
-		//		}
-
 		// 削除処理
 		genreSmService.delete(genreSmCd);
 

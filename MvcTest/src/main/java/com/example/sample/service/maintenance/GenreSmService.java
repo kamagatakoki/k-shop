@@ -44,7 +44,7 @@ public class GenreSmService {
 	 * @return List<GenreMd> 中ジャンルエンティティのリスト
 	 */
 	public List<GenreSmEntity> findAll() {
-		return genreSmMapper.selectByExample(genreSmCriteria);
+		return genreSmMapper.selectByCriteria(genreSmCriteria);
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class GenreSmService {
 		genreSmCriteria.setOrderByClause("LG.DISPLAY_ORDER, MD.DISPLAY_ORDER, SM.DISPLAY_ORDER");
 
 		// 検索実行
-		return genreSmMapper.selectGenreLgMdSmByExample(genreSmCriteria);
+		return genreSmMapper.selectGenreLgMdSmByCriteria(genreSmCriteria);
 	}
 
 	/**

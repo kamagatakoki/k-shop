@@ -45,7 +45,7 @@ public class GenreLgService {
 	 * @return List<GenreLg> 大ジャンルマスタのリスト
 	 */
 	public List<GenreLgEntity> findAll() {
-		return genreLgMapper.selectByExample(genreLgCriteria);
+		return genreLgMapper.selectByCriteria(genreLgCriteria);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class GenreLgService {
 		// ソート
 		genreLgCriteria.setOrderByClause("DISPLAY_ORDER");
 
-		return genreLgMapper.selectByExample(genreLgCriteria);
+		return genreLgMapper.selectByCriteria(genreLgCriteria);
 	}
 
 	/**
@@ -129,6 +129,6 @@ public class GenreLgService {
 		genreMdCriteria.createCriteria().andGenreLgCdEqualTo(genreLgCd);
 
 		// 存在する場合はエラー
-		return !(genreMdMapper.countByExample(genreMdCriteria) == 0);
+		return !(genreMdMapper.countByCriteria(genreMdCriteria) == 0);
 	}
 }

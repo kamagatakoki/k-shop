@@ -48,6 +48,7 @@ public class GenreMdEntity extends CommonColumnEntity implements Serializable {
 	 * @mbg.generated
 	 */
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * フィールドの説明：大ジャンルエンティティ
 	 * @author kamagata

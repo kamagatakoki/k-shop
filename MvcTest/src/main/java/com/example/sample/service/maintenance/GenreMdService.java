@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +21,7 @@ import com.example.sample.form.maintenance.GenreMdForm;
  * @since 2018/02/13
  */
 @Service
+@Scope("prototype")
 @Transactional
 public class GenreMdService {
 

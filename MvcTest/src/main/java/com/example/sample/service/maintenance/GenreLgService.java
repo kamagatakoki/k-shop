@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.sample.domain.mapper.maintenance.GenreLgMapper;
 import com.example.sample.domain.model.maintenance.GenreLg;
@@ -20,6 +21,7 @@ import com.example.sample.form.maintenance.GenreLgForm;
  */
 @Service
 @Scope("prototype")
+@Transactional
 public class GenreLgService {
 
 	@Autowired

@@ -28,10 +28,10 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-6">
-						<form:input path="searchGenreMdNm" class="form-control" placeholder="大ジャンル名称" />
+						<form:input path="searchGenreLgNm" class="form-control" placeholder="大ジャンル名称" />
 					</div>
 					<div class="col-sm-6">
-						<form:input path="searchGenreLgNm" class="form-control" placeholder="中ジャンル名称" />
+						<form:input path="searchGenreMdNm" class="form-control" placeholder="中ジャンル名称" />
 					</div>
 				</div>
 				<div class="form-group">

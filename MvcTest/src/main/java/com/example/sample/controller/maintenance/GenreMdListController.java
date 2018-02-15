@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -27,6 +28,7 @@ import com.example.sample.service.maintenance.GenreMdService;
  * @since 2018/01/14
  */
 @Controller
+@Scope("prototype")
 @RequestMapping("/maintenance/genremd")
 public class GenreMdListController {
 

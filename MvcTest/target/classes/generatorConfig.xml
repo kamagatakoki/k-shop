@@ -36,10 +36,10 @@
 		<javaClientGenerator targetPackage="com.example.sample.domain.mapper.maintenance"
 			targetProject="MvcTest" type="XMLMAPPER" />
 
-		<!--
-		<table tableName="GENRE_LG" />
-		<table tableName="GENRE_MD" />
-		-->
-		<table tableName="" />
+
+		<table tableName="GENRE_LG" alias="GENRE_LG" />
+		<table tableName="GENRE_MD" alias="GENRE_MD" />
+
+
 	</context>
 </generatorConfiguration>

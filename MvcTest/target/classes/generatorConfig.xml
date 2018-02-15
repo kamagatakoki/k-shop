@@ -23,7 +23,7 @@
 
 		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
 
-		<plugin type="com.example.sample.domain.model.common.TableClassNmPlugin" />
+		<plugin type="com.example.sample.domain.entity.common.TableClassNmPlugin" />
 
 		<!-- タイムスタンプを含まないコメントを生成する設定 -->
 		<commentGenerator>
@@ -39,8 +39,8 @@
 			password="ora_test" />
 
 		<!-- モデル設定 -->
-		<javaModelGenerator targetPackage="com.example.sample.domain.model.maintenance" targetProject="MvcTest">
-			<property name="rootClass" value="com.example.sample.domain.model.common.CommonColumnEntity"/>
+		<javaModelGenerator targetPackage="com.example.sample.domain.entity.maintenance" targetProject="MvcTest">
+			<property name="rootClass" value="com.example.sample.domain.entity.common.CommonColumnEntity"/>
 		</javaModelGenerator>
 
 		<!-- SQLマッパー設定 -->

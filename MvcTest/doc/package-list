@@ -1,0 +1,8 @@
+com.example.sample.config
+com.example.sample.controller.maintenance
+com.example.sample.domain.entity.common
+com.example.sample.domain.entity.maintenance
+com.example.sample.domain.mapper.maintenance
+com.example.sample.form.common
+com.example.sample.form.maintenance
+com.example.sample.service.maintenance

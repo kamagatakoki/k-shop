@@ -12,17 +12,21 @@
 			<property name="noArgsConstructor" value="true"/>
 		</plugin>
 
+		<!-- Exampleクラス名をCriteriaに変更 -->
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
 			<property name="searchString" value="Example"/>
 			<property name="replaceString" value="Criteria"/>
 		</plugin>
 
+		<!-- Entityにシリアライズを継承させる -->
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin">
 			<property name="suppressJavaInterface" value="false"/>
 		</plugin>
 
+		<!-- ページ検索できるメソッドを追加 -->
 		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
 
+		<!-- エンティティのクラス名を「テーブル名 + "Entity"」とするように変更 -->
 		<plugin type="com.example.sample.domain.entity.common.TableClassNmPlugin" />
 
 		<!-- タイムスタンプを含まないコメントを生成する設定 -->
@@ -49,12 +53,11 @@
 
 		<!-- マッパークラス設定 -->
 		<javaClientGenerator targetPackage="com.example.sample.domain.mapper.maintenance"
-			targetProject="MvcTest" type="XMLMAPPER" />
+			targetProject="MvcTest" type="MIXEDMAPPER" />
 
-
+		<!-- 自動生成対象テーブル -->
 		<table tableName="GENRE_LG" alias="LG" />
 		<table tableName="GENRE_MD" alias="MD" />
-
-
+		<table tableName="GENRE_SM" alias="SM" />
 	</context>
 </generatorConfiguration>

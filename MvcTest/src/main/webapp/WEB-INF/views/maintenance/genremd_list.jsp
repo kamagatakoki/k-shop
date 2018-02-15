@@ -65,7 +65,7 @@
 								<c:forEach items="${items}" var="item">
 									<tr>
 										<td><h5 class="product-title font-alt"><c:out value="${item.genreLgCd}" /></h5></td>
-										<td><h5 class="product-title font-alt"><c:out value="${item.genreLg.genreLgNm}" /></h5></td>
+										<td><h5 class="product-title font-alt"><c:out value="${item.genreLgEntity.genreLgNm}" /></h5></td>
 										<td><h5 class="product-title font-alt"><c:out value="${item.genreMdCd}" /></h5></td>
 										<td><h5 class="product-title font-alt"><c:out value="${item.genreMdNm}" /></h5></td>
 										<td><h5 class="product-title font-alt"><c:out value="${item.displayOrder}" /></h5></td>

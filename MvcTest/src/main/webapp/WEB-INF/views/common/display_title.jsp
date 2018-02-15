@@ -1,6 +1,6 @@
 
 		<!-- 画面名 -->
-		<section class="module bg-dark-30 home-sub-section" data-background="${defUrl}/assets/images/maintenance_menu.png">
+		<section class="module bg-dark-30 home-sub-section" data-background="${resourceUrl}/assets/images/maintenance_menu.png">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-sm-offset-3">

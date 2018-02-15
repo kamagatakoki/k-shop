@@ -12,6 +12,6 @@
 
 	<!-- エイリアス -->
 	<typeAliases>
-		<package name="com.example.sample.model"/>
+		<package name="com.example.sample.entity"/>
 	</typeAliases>
 </configuration>

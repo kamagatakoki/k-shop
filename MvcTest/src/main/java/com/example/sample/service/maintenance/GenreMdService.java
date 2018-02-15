@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.domain.entity.maintenance.GenreMdCriteria;
-import com.example.sample.domain.entity.maintenance.GenreMdEntity;
 import com.example.sample.domain.entity.maintenance.GenreMdCriteria.Criteria;
+import com.example.sample.domain.entity.maintenance.GenreMdEntity;
 import com.example.sample.domain.mapper.maintenance.GenreMdMapper;
 import com.example.sample.form.maintenance.GenreMdForm;
 
@@ -82,7 +82,7 @@ public class GenreMdService {
 	 * @author kamagata
 	 * @since 2018/02/13
 	 * @param genreMdCd 中ジャンルコード
-	 * @return GenreMd 中ジャンルエンティティ
+	 * @return GenreMdEntity 中ジャンルエンティティ
 	 */
 	public GenreMdEntity findOne(String genreMdCd) {
 		return genreMdMapper.selectByPrimaryKey(genreMdCd);

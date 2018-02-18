@@ -1,5 +1,7 @@
 package com.example.sample.form.common;
 
+import javax.validation.groups.Default;
+
 import lombok.Data;
 
 /**
@@ -15,7 +17,7 @@ public class CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/14
 	 */
-	public static interface Insert {
+	public static interface Insert extends Default {
 
 	}
 
@@ -24,7 +26,7 @@ public class CommonForm {
 	 * @author kamagata
 	 * @since 2018/01/14
 	 */
-	public static interface Update {
+	public static interface Update extends Default {
 
 	}
 

@@ -323,52 +323,52 @@ public class GenreSmCriteria {
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderEqualTo(Short value) {
+		public Criteria andDisplayOrderEqualTo(Integer value) {
 			addCriterion("SM.DISPLAY_ORDER =", value, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderNotEqualTo(Short value) {
+		public Criteria andDisplayOrderNotEqualTo(Integer value) {
 			addCriterion("SM.DISPLAY_ORDER <>", value, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderGreaterThan(Short value) {
+		public Criteria andDisplayOrderGreaterThan(Integer value) {
 			addCriterion("SM.DISPLAY_ORDER >", value, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderGreaterThanOrEqualTo(Short value) {
+		public Criteria andDisplayOrderGreaterThanOrEqualTo(Integer value) {
 			addCriterion("SM.DISPLAY_ORDER >=", value, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderLessThan(Short value) {
+		public Criteria andDisplayOrderLessThan(Integer value) {
 			addCriterion("SM.DISPLAY_ORDER <", value, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderLessThanOrEqualTo(Short value) {
+		public Criteria andDisplayOrderLessThanOrEqualTo(Integer value) {
 			addCriterion("SM.DISPLAY_ORDER <=", value, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderIn(List<Short> values) {
+		public Criteria andDisplayOrderIn(List<Integer> values) {
 			addCriterion("SM.DISPLAY_ORDER in", values, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderNotIn(List<Short> values) {
+		public Criteria andDisplayOrderNotIn(List<Integer> values) {
 			addCriterion("SM.DISPLAY_ORDER not in", values, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderBetween(Short value1, Short value2) {
+		public Criteria andDisplayOrderBetween(Integer value1, Integer value2) {
 			addCriterion("SM.DISPLAY_ORDER between", value1, value2, "displayOrder");
 			return (Criteria) this;
 		}
 
-		public Criteria andDisplayOrderNotBetween(Short value1, Short value2) {
+		public Criteria andDisplayOrderNotBetween(Integer value1, Integer value2) {
 			addCriterion("SM.DISPLAY_ORDER not between", value1, value2, "displayOrder");
 			return (Criteria) this;
 		}

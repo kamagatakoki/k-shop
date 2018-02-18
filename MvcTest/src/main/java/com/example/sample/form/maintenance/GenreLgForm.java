@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.example.sample.form.common.CommonForm;
+import com.example.sample.validation.Unique;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +27,7 @@ public class GenreLgForm extends CommonForm {
 	 */
 	@NotNull
 	@Size(min = 2, max = 2)
+	@Unique(tableNm = "GENRE_LG", columnNm = "GENRE_LG_CD", groups = Insert.class)
 	private String genreLgCd;
 
 	/**
@@ -61,10 +63,4 @@ public class GenreLgForm extends CommonForm {
 	 */
 	private String searchGenreLgNm;
 
-	/**
-	 * フィールドの説明：更新モード(新規or更新)
-	 * @author kamagata
-	 * @since 2018/01/14
-	 */
-	private String crud;
 }

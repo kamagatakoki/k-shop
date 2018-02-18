@@ -5,7 +5,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.example.demo.domain.entity.maintenance.GenreMdEntity;
+import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.domain.validator.Unique;
 import com.example.demo.web.form.common.CommonForm;
 
@@ -28,7 +28,7 @@ public class GenreLgForm extends CommonForm {
 	 */
 	@NotNull
 	@Size(min = 2, max = 2)
-	@Unique(entity = GenreMdEntity.class, property = "genreLgCd", groups = Insert.class)
+	@Unique(entity = GenreLgEntity.class, property = "genreLgCd")
 	private String genreLgCd;
 
 	/**

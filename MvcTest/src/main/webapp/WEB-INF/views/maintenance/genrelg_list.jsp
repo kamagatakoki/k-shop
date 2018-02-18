@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 	<%@ include file="/WEB-INF/views/common/header.jsp" %>
@@ -71,7 +70,7 @@
 												<td><h5 class="product-title font-alt"><c:out value="${item.genreLgNm}" /></h5></td>
 												<td><h5 class="product-title font-alt"><c:out value="${item.displayOrder}" /></h5></td>
 												<td>
-													<form:form action="/views/maintenance/genrelg/list" class="form-horizontal" method="post">
+													<form:form action="newedit" class="form-horizontal" method="get">
 														<button class="btn btn-border-d btn-circle btn-sm" type="submit" name="edit" ><i class="fa fa-cog fa-spin"></i> 編集</button>
 														<input type="hidden" name="crud" value="update" />
 														<input type="hidden" name="genreLgCd" value="${item.genreLgCd}" />

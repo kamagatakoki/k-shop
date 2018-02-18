@@ -56,8 +56,14 @@
 			targetProject="MvcTest" type="MIXEDMAPPER" />
 
 		<!-- 自動生成対象テーブル -->
-		<table tableName="GENRE_LG" alias="LG" />
-		<table tableName="GENRE_MD" alias="MD" />
-		<table tableName="GENRE_SM" alias="SM" />
+		<table tableName="GENRE_LG" alias="LG">
+			<columnOverride column="DISPLAY_ORDER" javaType="java.lang.Integer" />
+		</table>
+		<table tableName="GENRE_MD" alias="MD">
+			<columnOverride column="DISPLAY_ORDER" javaType="java.lang.Integer" />
+		</table>
+		<table tableName="GENRE_SM" alias="SM">
+			<columnOverride column="DISPLAY_ORDER" javaType="java.lang.Integer" />
+		</table>
 	</context>
 </generatorConfiguration>

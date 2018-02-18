@@ -1,23 +1,25 @@
 package com.example.sample.controller.maintenance;
 
-import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
+import com.example.sample.form.common.CommonForm.Insert;
 import com.example.sample.form.maintenance.GenreLgForm;
 import com.example.sample.service.maintenance.GenreLgService;
 
@@ -29,9 +31,12 @@ import com.example.sample.service.maintenance.GenreLgService;
 @Controller
 @RequestMapping("/maintenance/genrelg")
 @Scope("prototype")
-public class GenreLgListController {
+public class GenreLgDetailController {
 	@Autowired
 	GenreLgService genreLgService;
+
+	@Autowired
+	GenreLgEntity genreLgEntity;
 
 	@ModelAttribute
 	GenreLgForm setUpForm() {
@@ -50,85 +55,72 @@ public class GenreLgListController {
 	}
 
 	/**
-	 * メソッドの説明：一覧画面初期処理
+	 * メソッドの説明：画面初期処理
 	 * @author kamagata
 	 * @param model モデル
 	 * @param genreLgForm 大ジャンルフォーム
-	 * @since 2018/01/07
+	 * @since 2018/02/17
 	 * @return 遷移先モデル(一覧)
 	 */
-	@GetMapping(path = "list")
+	@GetMapping(path = "newedit")
 	String list(Model model, GenreLgForm genreLgForm) {
 
-		// 検索処理
-		return search(model, genreLgForm);
-	}
-
-	/**
-	 * メソッドの説明：検索ボタン処理
-	 * @author kamagata
-	 * @since 2018/01/07
-	 * @param model モデル
-	 * @param genreLgForm 大ジャンルフォーム
-	 * @return 検索結果(モデル)
-	 */
-	@PostMapping(path = "list", params = "search")
-	String search(Model model, GenreLgForm genreLgForm) {
-
 		// 検索実行
-		List<GenreLgEntity> genreLEntities = genreLgService.findGenreLg(genreLgForm);
+		GenreLgEntity genreLgEntity = genreLgService.findOne(genreLgForm.getGenreLgCd());
 
-		// 検索結果、件数
-		model.addAttribute("items", genreLEntities);
-		model.addAttribute("itemsSize", genreLEntities.size());
+		// エンティティにフォームの内容をコピー
+		Optional.ofNullable(genreLgEntity)
+				.ifPresent(t -> BeanUtils.copyProperties(t, genreLgForm));
 
-		// 遷移先
-		return "maintenance/genrelg_list";
+		// 検索処理
+		return "maintenance/genrelg_newedit";
 	}
 
 	/**
-	 * メソッドの説明：初期表示処理(新規)
+	 * メソッドの説明：登録処理
 	 * @author kamagata
-	 * @param redirectAttributes リダイレクト
 	 * @param genreLgForm 大ジャンルフォーム
-	 * @since 2018/01/07
+	 * @param bindingResult バリデーション結果
+	 * @since 2018/02/17
 	 * @return 遷移先URL(登録更新)
 	 */
-	@PostMapping(path = "list", params = "new")
-	String newEdit(RedirectAttributes redirectAttributes, GenreLgForm genreLgForm) {
+	@PostMapping(path = "newedit", params = { "regist", "crud=insert" })
+	String regist(@Validated({ Insert.class }) GenreLgForm genreLgForm, BindingResult bindingResult) {
+
+		// 入力エラーの場合は中断
+		if (bindingResult.hasErrors()) {
+			return "maintenance/genrelg_newedit";
+		}
+
+		// エンティティにフォームの内容をコピー
+		BeanUtils.copyProperties(genreLgForm, genreLgEntity);
+
+		// 登録処理
+		if (genreLgService.findOne(genreLgEntity.getGenreLgCd()) == null) {
+			// キーが存在しない場合は登録
+			genreLgService.insert(genreLgEntity);
+		} else {
+			// キーが存在する場合は更新
+			genreLgService.update(genreLgEntity);
+		}
+
+		return "redirect:list";
+	}
+
+	/**
+	 * メソッドの説明：戻るボタン処理
+	 * @author kamagata
+	 * @param redirectAttributes リダイクレト先へのパラメータ
+	 * @param genreLgForm ジャン大フォーム
+	 * @since 2018/02/17
+	 * @return モデル
+	 */
+	@PostMapping(path = "newedit", params = "goToBack")
+	String goToTop(RedirectAttributes redirectAttributes, GenreLgForm genreLgForm) {
 
 		redirectAttributes.addFlashAttribute("genreLgForm", genreLgForm);
 
-		return "redirect:newedit";
-	}
-
-	/**
-	 * メソッドの説明：削除処理
-	 * @author kamagata
-	 * @since 2018/01/08
-	 * @param genreLgCd 大ジャンルコード
-	 * @param model モデル
-	 * @param genreLgForm 大ジャンルフォーム
-	 * @param bindingResult エラー情報
-	 * @return 遷移先URL(一覧)
-	 */
-	@PostMapping(path = "list", params = "delete")
-	String delete(@RequestParam String genreLgCd, Model model, GenreLgForm genreLgForm,
-			BindingResult bindingResult) {
-
-		// 中ジャンル存在チェック
-		if (genreLgService.deleteCheck(genreLgCd)) {
-			// 存在する場合はエラー
-			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
-			return search(model, genreLgForm);
-		}
-
-		// 削除処理
-		genreLgService.delete(genreLgCd);
-
-		// 一覧画面へ
-		return search(model, genreLgForm);
-
+		return "redirect:list";
 	}
 
 }

@@ -131,4 +131,5 @@ public class GenreLgService {
 		// 存在する場合はエラー
 		return !(genreMdMapper.countByCriteria(genreMdCriteria) == 0);
 	}
+
 }

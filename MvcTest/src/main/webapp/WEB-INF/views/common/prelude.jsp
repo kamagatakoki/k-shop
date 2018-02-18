@@ -4,3 +4,4 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <spring:url value="/resources" var="resourceUrl"></spring:url>
 <spring:url value="/maintenance" var="menteUrl"></spring:url>
+<spring:url value="/WEB-INF/views" var="viewUrl"></spring:url>

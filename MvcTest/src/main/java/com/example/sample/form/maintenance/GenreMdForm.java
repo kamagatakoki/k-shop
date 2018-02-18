@@ -83,10 +83,4 @@ public class GenreMdForm extends CommonForm {
 	 */
 	private String searchGenreMdNm;
 
-	/**
-	 * フィールドの説明：更新モード(新規or更新)
-	 * @author kamagata
-	 * @since 2018/02/13
-	 */
-	private String crud;
 }

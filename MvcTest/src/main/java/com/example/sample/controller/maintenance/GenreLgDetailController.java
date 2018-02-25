@@ -20,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.form.common.CommonForm.Insert;
+import com.example.sample.form.common.CommonForm.Update;
 import com.example.sample.form.maintenance.GenreLgForm;
 import com.example.sample.service.maintenance.GenreLgService;
 
@@ -82,10 +83,10 @@ public class GenreLgDetailController {
 	 * @param genreLgForm 大ジャンルフォーム
 	 * @param bindingResult バリデーション結果
 	 * @since 2018/02/17
-	 * @return 遷移先URL(登録更新)
+	 * @return 遷移先URL(一覧)
 	 */
 	@PostMapping(path = "newedit", params = { "regist", "crud=insert" })
-	String regist(@Validated({ Insert.class }) GenreLgForm genreLgForm, BindingResult bindingResult) {
+	String insert(@Validated({ Insert.class }) GenreLgForm genreLgForm, BindingResult bindingResult) {
 
 		// 入力エラーの場合は中断
 		if (bindingResult.hasErrors()) {
@@ -96,13 +97,32 @@ public class GenreLgDetailController {
 		BeanUtils.copyProperties(genreLgForm, genreLgEntity);
 
 		// 登録処理
-		if (genreLgService.findOne(genreLgEntity.getGenreLgCd()) == null) {
-			// キーが存在しない場合は登録
-			genreLgService.insert(genreLgEntity);
-		} else {
-			// キーが存在する場合は更新
-			genreLgService.update(genreLgEntity);
+		genreLgService.insert(genreLgEntity);
+
+		return "redirect:list";
+	}
+
+	/**
+	 * メソッドの説明：更新処理
+	 * @author kamagata
+	 * @param genreLgForm 大ジャンルフォーム
+	 * @param bindingResult バリデーション結果
+	 * @since 2018/02/17
+	 * @return 遷移先URL(一覧)
+	 */
+	@PostMapping(path = "newedit", params = { "regist", "crud=update" })
+	String update(@Validated({ Update.class }) GenreLgForm genreLgForm, BindingResult bindingResult) {
+
+		// 入力エラーの場合は中断
+		if (bindingResult.hasErrors()) {
+			return "maintenance/genrelg_newedit";
 		}
+
+		// エンティティにフォームの内容をコピー
+		BeanUtils.copyProperties(genreLgForm, genreLgEntity);
+
+		// 更新処理
+		genreLgService.update(genreLgEntity);
 
 		return "redirect:list";
 	}

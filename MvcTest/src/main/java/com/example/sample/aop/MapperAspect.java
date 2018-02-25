@@ -1,4 +1,4 @@
-package com.example.sample.service.common;
+package com.example.sample.aop;
 
 import java.lang.reflect.Method;
 import java.util.Date;
@@ -7,8 +7,12 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
+
+import com.example.sample.service.common.AccountUserDetails;
 
 /**
  * クラスの説明：登録・更新時に共通カラムの値を設定
@@ -41,56 +45,44 @@ public class MapperAspect {
 
 		// 登録者・登録日をエンティティに設定
 		if (methodNm.startsWith("insert")) {
-			setValueByInsert(entity);
+			setValue(entity, "Insert");
 		}
 
 		// 更新者・更新日をエンティティに設定
 		if (methodNm.startsWith("update")) {
-			setValueByUpdate(entity);
+			setValue(entity, "Update");
 		}
 	}
 
 	/**
-	 * メソッドの説明：登録者・登録日設定
+	 * メソッドの説明：登録(更新)者・登録(更新)日時設定
 	 * @author kamagata
 	 * @since 2018/02/24
 	 * @param entity エンティティ
+	 * @param columnNm カラム名
 	 * @throws Throwable 例外スロー
 	 */
-	private void setValueByInsert(Object entity) throws Throwable {
+	private void setValue(Object entity, String columnNm) throws Throwable {
 
-		// 登録者設定
-		Method setInsertCd = ReflectionUtils.findMethod(entity.getClass(), "setInsertCd", Long.class);
-		if (setInsertCd != null) {
-			setInsertCd.invoke(entity, Long.parseLong("1234"));
+		// 登録(更新)者設定
+		Method methodUserCd = ReflectionUtils.findMethod(entity.getClass(), "set" + columnNm + "Cd", Long.class);
+		if (methodUserCd != null) {
+			// ログイン情報からユーザーコードを取得しセット
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			if (authentication.getPrincipal() instanceof AccountUserDetails) {
+				// ユーザーコードを取得しエンティティにセット
+				AccountUserDetails accountUserDetails = AccountUserDetails.class.cast(authentication.getPrincipal());
+				methodUserCd.invoke(entity, accountUserDetails.getUserInfoEntity().getUserCd());
+			} else {
+				// ログイン情報が取得できない場合は固定文字列をセット
+				methodUserCd.invoke(entity, Long.parseLong("999999999"));
+			}
 		}
 
-		// 登録日時設定
-		Method setInsertDt = ReflectionUtils.findMethod(entity.getClass(), "setInsertDt", Date.class);
-		if (setInsertDt != null) {
-			setInsertDt.invoke(entity, new Date());
-		}
-	}
-
-	/**
-	 * メソッドの説明：更新者・更新日設定
-	 * @author kamagata
-	 * @since 2018/02/24
-	 * @param entity エンティティ
-	 * @throws Throwable 例外スロー
-	 */
-	private void setValueByUpdate(Object entity) throws Throwable {
-
-		// 登録者設定
-		Method setInsertCd = ReflectionUtils.findMethod(entity.getClass(), "setUpdateCd", Long.class);
-		if (setInsertCd != null) {
-			setInsertCd.invoke(entity, Long.parseLong("1234"));
-		}
-
-		// 登録日時設定
-		Method setInsertDt = ReflectionUtils.findMethod(entity.getClass(), "setUpdateDt", Date.class);
-		if (setInsertDt != null) {
-			setInsertDt.invoke(entity, new Date());
+		// 登録(更新)日時設定
+		Method methodDate = ReflectionUtils.findMethod(entity.getClass(), "set" + columnNm + "Dt", Date.class);
+		if (methodDate != null) {
+			methodDate.invoke(entity, new Date());
 		}
 	}
 

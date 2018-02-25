@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Email;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 
 import com.example.demo.domain.entity.common.CommonColumnEntity;
@@ -35,6 +36,8 @@ import lombok.Setter;
 @Table(name = "USER_INFO")
 @EntityListeners(AuditingEntityListener.class)
 public class UserInfoEntity extends CommonColumnEntity implements Serializable {
+
+	User user;
 
 	/**
 	 * フィールドの説明：ユーザーコード

@@ -9,10 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.resource.VersionResourceResolver;
 
 /**
  * クラスの説明：DispatcherServlet用コンフィギュレーション
@@ -22,7 +20,7 @@ import org.springframework.web.servlet.resource.VersionResourceResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.example.sample")
-public class WebMvcConfig implements WebMvcConfigurer {
+public class WebMvcConfigTest implements WebMvcConfigurer {
 
 	/**
 	 * フィールドの説明：キャッシュ利用(プロパティファイル経由で環境変数から取得)
@@ -53,23 +51,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Bean
 	public JdbcTemplate jdbcTemplate(DataSource dataSource) {
 		return new JdbcTemplate(dataSource);
-	}
-
-	/** オーバーライドの説明：静的リソースアクセス設定(SpringMVC機能)
-	 * @see org.springframework.web.servlet.config.annotation.WebMvcConfigurer#addResourceHandlers(org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry)
-	 * @author kamagata
-	 * @since 2018/02/12
-	 * @param registry リソースハンドラー
-	 */
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-		registry.addResourceHandler("/resources/**")
-				.addResourceLocations("classpath:../../resources/")
-				.resourceChain(enableCache) // キャッシュ
-				// コンテンツデータのMD5ハッシュ値によるバージョニング機能の有効化
-				.addResolver(new VersionResourceResolver()
-						.addContentVersionStrategy("/**"));
 	}
 
 	//	/** オーバーライドの説明：静的リソースアクセス設定(Tomcat機能)

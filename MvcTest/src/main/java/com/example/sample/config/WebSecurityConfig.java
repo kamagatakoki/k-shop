@@ -84,6 +84,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				.antMatchers("/maintenance/").permitAll() // 除外対象がある場合は指定
 				.antMatchers("/maintenance/**").hasRole("ADMIN") // ADMIN権限を保持しているユーザーのみmaintenance配下にアクセス可能
+				.antMatchers("/async").permitAll()
 				.anyRequest().authenticated(); // 全てのリクエストで認可チェックの対象
 
 		// ログアウト制御

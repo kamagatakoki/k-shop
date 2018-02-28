@@ -41,12 +41,12 @@
 					</sec:authorize>
 					<ul class="nav navbar-nav navbar-right">
 						<sec:authorize access="hasRole('ROLE_USER')">
-							<li sec:authorize="isAuthenticated()">
+							<li>
 								<a href="/"><i class="fa  fa-user"></i><sec:authentication property="principal.username" />さん</a>
 							</li>
 						</sec:authorize>
 						<sec:authorize access="!hasRole('ROLE_USER')">
-							<li sec:authorize="!isAuthenticated()">
+							<li>
 								<c:url var="loginUrl" value="/login"></c:url>
 								<a href="${loginUrl}"><i class="fa  fa-sign-in"></i>login</a>
 							</li>

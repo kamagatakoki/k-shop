@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +23,6 @@ import com.example.sample.form.maintenance.GenreMdForm;
  * @since 2018/02/13
  */
 @Service
-@Scope("prototype")
 @Transactional
 public class GenreMdService {
 
@@ -34,13 +33,17 @@ public class GenreMdService {
 	GenreSmMapper genreSmMapper;
 
 	@Autowired
-	GenreMdCriteria genreMdCriteria;
-
-	@Autowired
-	GenreSmCriteria genreSmCriteria;
-
-	@Autowired
 	GenreLgService genreLgService;
+
+	@Lookup
+	GenreMdCriteria genreMdCriteria() {
+		return null;
+	}
+
+	@Lookup
+	GenreSmCriteria genreSmCriteria() {
+		return null;
+	}
 
 	/**
 	 * メソッドの説明：全件検索
@@ -49,6 +52,7 @@ public class GenreMdService {
 	 * @return List<GenreMd> 中ジャンルエンティティのリスト
 	 */
 	public List<GenreMdEntity> findAll() {
+		GenreMdCriteria genreMdCriteria = genreMdCriteria();
 		return genreMdMapper.selectByCriteria(genreMdCriteria);
 	}
 
@@ -61,6 +65,7 @@ public class GenreMdService {
 	 */
 	public List<GenreMdEntity> findGenreMd(GenreMdForm genreMdForm) {
 
+		GenreMdCriteria genreMdCriteria = genreMdCriteria();
 		Criteria criteria = genreMdCriteria.createCriteria();
 
 		// 大ジャンルコード
@@ -137,6 +142,7 @@ public class GenreMdService {
 	public boolean deleteCheck(String genreMdCd) {
 
 		// 中ジャンルコード
+		GenreSmCriteria genreSmCriteria = genreSmCriteria();
 		genreSmCriteria.createCriteria().andGenreMdCdEqualTo(genreMdCd);
 
 		// 存在する場合はエラー

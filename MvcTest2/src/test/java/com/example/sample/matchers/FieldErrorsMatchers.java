@@ -2,7 +2,6 @@ package com.example.sample.matchers;
 
 import static org.junit.Assert.*;
 
-import org.springframework.context.MessageSource;
 import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.result.ModelResultMatchers;
 import org.springframework.validation.BindingResult;
@@ -13,9 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
  * @author kamagata
  * @since 2018/03/04
  */
-public class GlobalErrorsMatchers extends ModelResultMatchers {
+public class FieldErrorsMatchers extends ModelResultMatchers {
 
-	private GlobalErrorsMatchers() {
+	private FieldErrorsMatchers() {
 	}
 
 	/**
@@ -24,8 +23,8 @@ public class GlobalErrorsMatchers extends ModelResultMatchers {
 	 * @since 2018/03/04
 	 * @return GlobalErrorsMatchers
 	 */
-	public static GlobalErrorsMatchers globalErrors() {
-		return new GlobalErrorsMatchers();
+	public static FieldErrorsMatchers fieldError() {
+		return new FieldErrorsMatchers();
 	}
 
 	/**
@@ -33,23 +32,19 @@ public class GlobalErrorsMatchers extends ModelResultMatchers {
 	 * @author kamagata
 	 * @since 2018/03/04
 	 * @param attribute アトリビュート
+	 * @param fieldname フィールド名
 	 * @param expectedMessage エラーメッセージコード
-	 * @param msgArgs メッセージパラメータ
-	 * @param messageSource メッセージソース
 	 * @return ResultMatcher
 	 */
-	public ResultMatcher hasGlobalError(String attribute, String expectedMessage, String[] msgArgs,
-			MessageSource messageSource) {
-
+	public ResultMatcher hasFieldError(String attribute, String fieldname, String expectedMessage) {
 		return result -> {
 			BindingResult bindingResult = getBindingResult(
 					result.getModelAndView(), attribute);
-			bindingResult.getGlobalErrors()
+			bindingResult.getFieldErrors(fieldname)
 					.stream()
-					.filter(oe -> attribute.equals(oe.getObjectName()))
-					.forEach(oe -> assertEquals(
-							"Expected default message", expectedMessage,
-							messageSource.getMessage(oe.getCode(), msgArgs, java.util.Locale.getDefault())));
+					.filter(fe -> attribute.equals(fe.getObjectName()))
+					.forEach(fe -> assertEquals(
+							"Expected default message", expectedMessage, fe.getDefaultMessage()));
 		};
 	}
 
@@ -66,7 +61,7 @@ public class GlobalErrorsMatchers extends ModelResultMatchers {
 		assertTrue(
 				"No BindingResult for attribute: " + name, result != null);
 		assertTrue(
-				"No global errors for attribute: " + name, result.getGlobalErrorCount() > 0);
+				"No global errors for attribute: " + name, result.getFieldErrorCount() > 0);
 		return result;
 	}
 }

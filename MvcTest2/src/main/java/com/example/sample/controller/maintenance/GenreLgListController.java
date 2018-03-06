@@ -4,18 +4,16 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.form.maintenance.GenreLgForm;
@@ -28,7 +26,6 @@ import com.example.sample.service.maintenance.GenreLgService;
  */
 @Controller
 @RequestMapping("/maintenance/genrelg")
-@Scope("prototype")
 public class GenreLgListController {
 	@Autowired
 	GenreLgService genreLgService;
@@ -57,7 +54,7 @@ public class GenreLgListController {
 	 * @since 2018/01/07
 	 * @return 遷移先モデル(一覧)
 	 */
-	@GetMapping(path = "list")
+	@RequestMapping(path = "list", method = { RequestMethod.GET, RequestMethod.POST })
 	String list(Model model, GenreLgForm genreLgForm) {
 
 		// 検索処理
@@ -89,17 +86,16 @@ public class GenreLgListController {
 	/**
 	 * メソッドの説明：初期表示処理(新規)
 	 * @author kamagata
-	 * @param redirectAttributes リダイレクト
 	 * @param genreLgForm 大ジャンルフォーム
 	 * @since 2018/01/07
 	 * @return 遷移先URL(登録更新)
 	 */
 	@PostMapping(path = "list", params = "new")
-	String newEdit(RedirectAttributes redirectAttributes, GenreLgForm genreLgForm) {
+	String newEdit(GenreLgForm genreLgForm) {
 
-		redirectAttributes.addFlashAttribute("genreLgForm", genreLgForm);
+		//redirectAttributes.addFlashAttribute("genreLgForm", genreLgForm);
 
-		return "redirect:newedit";
+		return "forward:newedit";
 	}
 
 	/**
@@ -119,7 +115,7 @@ public class GenreLgListController {
 		// 中ジャンル存在チェック
 		if (genreLgService.deleteCheck(genreLgCd)) {
 			// 存在する場合はエラー
-			bindingResult.reject("com.example.demo.web.controller.maintenance.deletecheck");
+			bindingResult.reject("duplicated");
 			return search(model, genreLgForm);
 		}
 

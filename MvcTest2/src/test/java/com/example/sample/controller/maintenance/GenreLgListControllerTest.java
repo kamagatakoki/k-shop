@@ -14,6 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.context.ContextConfiguration;
@@ -52,6 +53,9 @@ public class GenreLgListControllerTest {
 
 	@Autowired
 	private Filter resourceUrlEncodingFilter;
+
+	@Autowired
+	MessageSource messageSource;
 
 	MockMvc mockMvc;
 
@@ -151,8 +155,8 @@ public class GenreLgListControllerTest {
 		mockMvc.perform(post("/maintenance/genrelg/list").with(csrf())
 				.param("new", ""))
 
-				.andExpect(status().isFound())
-				.andExpect(redirectedUrl("newedit"));
+				.andExpect(status().isOk())
+				.andExpect(forwardedUrl("newedit"));
 	}
 
 	/**
@@ -193,7 +197,7 @@ public class GenreLgListControllerTest {
 				.andExpect(forwardedUrl("/WEB-INF/views/maintenance/genrelg_list.jsp"))
 				.andExpect(model().hasErrors())
 				.andExpect(globalErrors().hasGlobalError("genreLgForm",
-						"com.example.demo.web.controller.maintenance.deletecheck"));
+						"下位ジャンルに紐づくデータがあります。", new String[] {}, messageSource));
 
 	}
 

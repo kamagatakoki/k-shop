@@ -2,22 +2,19 @@ package com.example.sample.controller.maintenance;
 
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
@@ -33,7 +30,6 @@ import com.example.sample.service.maintenance.GenreLgService;
  */
 @Controller
 @RequestMapping("/maintenance/genrelg")
-@Scope("prototype")
 public class GenreLgDetailController {
 	@Autowired
 	GenreLgService genreLgService;
@@ -47,7 +43,7 @@ public class GenreLgDetailController {
 	}
 
 	/**
-	 * メソッドの説明：初期処理 入力値をtrimし、空の場合はNULLでforｍmに格納する
+	 * メソッドの説明：初期処理 入力値をtrimし、空の場合はNULLでformに格納する
 	 * @author kamagata
 	 * @since 2018/02/12
 	 * @param binder バインダー
@@ -65,7 +61,7 @@ public class GenreLgDetailController {
 	 * @since 2018/02/17
 	 * @return 遷移先モデル(一覧)
 	 */
-	@GetMapping(path = "newedit")
+	@RequestMapping(path = "newedit", method = { RequestMethod.GET, RequestMethod.POST })
 	String list(Model model, GenreLgForm genreLgForm) {
 
 		// 検索実行
@@ -88,7 +84,7 @@ public class GenreLgDetailController {
 	 * @return 遷移先URL(一覧)
 	 */
 	@PostMapping(path = "newedit", params = { "regist", "crud=insert" })
-	String insert(@Validated({ Insert.class }) @Valid GenreLgForm genreLgForm, BindingResult bindingResult) {
+	String insert(@Validated({ Insert.class }) GenreLgForm genreLgForm, BindingResult bindingResult) {
 
 		// 入力エラーの場合は中断
 		if (bindingResult.hasErrors()) {
@@ -101,7 +97,7 @@ public class GenreLgDetailController {
 		// 登録処理
 		genreLgService.insert(genreLgEntity);
 
-		return "redirect:list";
+		return "forward:list";
 	}
 
 	/**
@@ -126,7 +122,7 @@ public class GenreLgDetailController {
 		// 更新処理
 		genreLgService.update(genreLgEntity);
 
-		return "redirect:list";
+		return "forward:list";
 	}
 
 	/**
@@ -142,7 +138,7 @@ public class GenreLgDetailController {
 
 		redirectAttributes.addFlashAttribute("genreLgForm", genreLgForm);
 
-		return "redirect:list";
+		return "forward:list";
 	}
 
 }

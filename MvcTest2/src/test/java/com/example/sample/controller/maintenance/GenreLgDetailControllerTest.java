@@ -1,5 +1,6 @@
 package com.example.sample.controller.maintenance;
 
+import static com.example.sample.matchers.FieldErrorsMatchers.*;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.is;
@@ -36,6 +37,9 @@ import com.example.sample.config.DataSourceConfigTest;
 import com.example.sample.config.WebMvcConfig;
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.form.maintenance.GenreLgForm;
+import com.example.sample.service.maintenance.GenreLgService;
+
+import mockit.Expectations;
 
 /**
  * クラスの説明：大ジャンル詳細コントローラーテスト
@@ -146,9 +150,9 @@ public class GenreLgDetailControllerTest {
 				.flashAttr("genreLgForm", genreLgForm))
 				// .andDo(print()) // リクエストとレスポンスをコンソール出力
 
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgCd", "NotNull"))
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgNm", "NotNull"))
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "displayOrder", "NotNull"));
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgCd", "必須項目です。"))
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgNm", "必須項目です。"))
+				.andExpect(fieldError().hasFieldError("genreLgForm", "displayOrder", "必須項目です。"));
 
 		// 文字数エラー(下限)
 		genreLgForm.setGenreLgCd("0");
@@ -160,9 +164,9 @@ public class GenreLgDetailControllerTest {
 				.flashAttr("genreLgForm", genreLgForm))
 				// .andDo(print()) // リクエストとレスポンスをコンソール出力
 
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgCd", "Size"))
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgNm", "Size"))
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "displayOrder", "Min"));
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgCd", "2文字で入力してください。"))
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgNm", "1文字以上50文字以下にして下さい。"))
+				.andExpect(fieldError().hasFieldError("genreLgForm", "displayOrder", "1以上を入力して下さい。"));
 
 		// 文字数エラー(上限)
 		genreLgForm.setGenreLgCd("123");
@@ -174,9 +178,9 @@ public class GenreLgDetailControllerTest {
 				.flashAttr("genreLgForm", genreLgForm))
 				// .andDo(print()) // リクエストとレスポンスをコンソール出力
 
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgCd", "Size"))
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgNm", "Size"))
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "displayOrder", "Max"));
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgCd", "2文字で入力してください。"))
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgNm", "1文字以上50文字以下にして下さい。"))
+				.andExpect(fieldError().hasFieldError("genreLgForm", "displayOrder", "99以下を入力して下さい。"));
 
 		// 重複チェック
 		genreLgForm.setGenreLgCd("90");
@@ -188,7 +192,7 @@ public class GenreLgDetailControllerTest {
 				.flashAttr("genreLgForm", genreLgForm))
 				// .andDo(print()) // リクエストとレスポンスをコンソール出力
 
-				.andExpect(model().attributeHasFieldErrorCode("genreLgForm", "genreLgCd", "Unique"));
+				.andExpect(fieldError().hasFieldError("genreLgForm", "genreLgCd", "重複しています。"));
 	}
 
 	/**
@@ -203,6 +207,16 @@ public class GenreLgDetailControllerTest {
 
 		GenreLgForm genreLgForm = new GenreLgForm();
 
+		new Expectations() {
+
+			GenreLgService genreLgService;
+
+			{
+				genreLgService.insert(new GenreLgEntity());
+				times = 1;
+			}
+		};
+
 		// 登録
 		genreLgForm.setGenreLgCd("92");
 		genreLgForm.setGenreLgNm("テストジャンル");
@@ -213,8 +227,8 @@ public class GenreLgDetailControllerTest {
 				.flashAttr("genreLgForm", genreLgForm))
 				// .andDo(print()) // リクエストとレスポンスをコンソール出力
 
-				.andExpect(status().isFound())
-				.andExpect(redirectedUrl("list"));
+				.andExpect(status().isOk())
+				.andExpect(forwardedUrl("list"));
 
 		// 登録検証
 		MvcResult mvcResultInsert = mockMvc.perform(post("/maintenance/genrelg/list").with(csrf()) // Get以外の場合はcsrfトークンを含める
@@ -243,8 +257,8 @@ public class GenreLgDetailControllerTest {
 				.param("crud", "update")
 				.flashAttr("genreLgForm", genreLgForm))
 
-				.andExpect(status().isFound())
-				.andExpect(redirectedUrl("list"));
+				.andExpect(status().isOk())
+				.andExpect(forwardedUrl("list"));
 
 		// 更新検証
 		MvcResult mvcResultUpdate = mockMvc.perform(post("/maintenance/genrelg/list").with(csrf()) // Get以外の場合はcsrfトークンを含める

@@ -30,6 +30,7 @@ import com.example.sample.service.maintenance.GenreLgService;
  */
 @Controller
 @RequestMapping("/maintenance/genrelg")
+//@TransactionTokenCheck("genreLg")
 public class GenreLgDetailController {
 	@Autowired
 	GenreLgService genreLgService;
@@ -49,6 +50,7 @@ public class GenreLgDetailController {
 	 * @param binder バインダー
 	 */
 	@InitBinder
+	//@TransactionTokenCheck(type = TransactionTokenType.BEGIN)
 	public void InitBinder(WebDataBinder binder) {
 		binder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
 	}
@@ -80,11 +82,13 @@ public class GenreLgDetailController {
 	 * @author kamagata
 	 * @param genreLgForm 大ジャンルフォーム
 	 * @param bindingResult バリデーション結果
+	 * @param redirectAttributes リダイレクト
 	 * @since 2018/02/17
 	 * @return 遷移先URL(一覧)
 	 */
 	@PostMapping(path = "newedit", params = { "regist", "crud=insert" })
-	String insert(@Validated({ Insert.class }) GenreLgForm genreLgForm, BindingResult bindingResult) {
+	String insert(@Validated({ Insert.class }) GenreLgForm genreLgForm, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes) {
 
 		// 入力エラーの場合は中断
 		if (bindingResult.hasErrors()) {
@@ -97,7 +101,10 @@ public class GenreLgDetailController {
 		// 登録処理
 		genreLgService.insert(genreLgEntity);
 
-		return "forward:list";
+		// リダイレクト先のパラメータ設定
+		redirectAttributes.addFlashAttribute("genreLgForm", genreLgForm);
+
+		return "redirect:/maintenance/genrelg/list";
 	}
 
 	/**

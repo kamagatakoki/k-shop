@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.sample.config.AppConfig;
 import com.example.sample.config.DataSourceConfigTest;
+import com.example.sample.config.WebMvcConfig;
 import com.example.sample.domain.entity.maintenance.GenreLgEntity;
 import com.example.sample.form.maintenance.GenreLgForm;
 
@@ -30,7 +31,8 @@ import com.example.sample.form.maintenance.GenreLgForm;
 @RunWith(SpringRunner.class)
 @ContextHierarchy({
 		@ContextConfiguration(classes = AppConfig.class),
-		@ContextConfiguration(classes = DataSourceConfigTest.class)
+		@ContextConfiguration(classes = DataSourceConfigTest.class),
+		@ContextConfiguration(classes = WebMvcConfig.class)
 })
 @WebAppConfiguration
 @Sql("/com/example/sample/data/maintenance/GenreLgTest.sql")

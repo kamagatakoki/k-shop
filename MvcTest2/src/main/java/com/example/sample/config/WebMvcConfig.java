@@ -93,4 +93,39 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
 		configurer.setDefaultTimeout(5000); // タイアウトの設定
 	}
+	//
+	//	/**
+	//	 * メソッドの説明：トランザクショントークンの生成・チェックの設定(二重送信防止)
+	//	 * @author kamagata
+	//	 * @since 2018/03/10
+	//	 * @return TransactionTokenInterceptor
+	//	 */
+	//	@Bean
+	//	public TransactionTokenInterceptor transactionTokenInterceptor() {
+	//		return new TransactionTokenInterceptor();
+	//	}
+	//
+	//	/**
+	//	 * メソッドの説明：トランザクショントークンをformタグに埋め込む(hidden)設定
+	//	 * @author kamagata
+	//	 * @since 2018/03/10
+	//	 * @return RequestDataValueProcessor
+	//	 */
+	//	@Bean
+	//	public RequestDataValueProcessor requestDataValueProcessor() {
+	//		return new TransactionTokenRequestDataValueProcessor();
+	//	}
+	//
+	//	/**
+	//	 * メソッドの説明：トランザクショントークン生成適用のマッピング
+	//	 * @author kamagata
+	//	 * @since 2018/03/10
+	//	 * @param registry InterceptorRegistry
+	//	 */
+	//	@Override
+	//	public void addInterceptors(InterceptorRegistry registry) {
+	//		registry.addInterceptor(transactionTokenInterceptor())
+	//				//.addPathPatterns("/**")
+	//				.excludePathPatterns("/resources/**");
+	//	}
 }

@@ -8,7 +8,6 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -21,7 +20,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @since 2018/02/10
  */
 @Configuration
-@ComponentScan("com.example.sample")
 @EnableTransactionManagement
 @MapperScan("com.example.sample.domain.mapper")
 public class DataSourceConfigTest {

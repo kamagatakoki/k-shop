@@ -233,9 +233,9 @@ public class GenreLgDetailControllerTest {
 				.flashAttr("genreLgForm", genreLgForm))
 				// .andDo(print()) // リクエストとレスポンスをコンソール出力
 
-				.andExpect(status().isOk())
+				.andExpect(status().isFound())
 				.andExpect(model().hasNoErrors())
-				.andExpect(forwardedUrl("list"));
+				.andExpect(redirectedUrl("/maintenance/genrelg/list"));
 
 		//		// 登録検証
 		//		MvcResult mvcResultInsert = mockMvc.perform(post("/maintenance/genrelg/list").with(csrf()) // Get以外の場合はcsrfトークンを含める

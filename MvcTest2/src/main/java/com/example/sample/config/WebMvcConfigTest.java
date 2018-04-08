@@ -9,8 +9,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.support.RequestDataValueProcessor;
+import org.terasoluna.gfw.web.token.transaction.TransactionTokenInterceptor;
+import org.terasoluna.gfw.web.token.transaction.TransactionTokenRequestDataValueProcessor;
 
 /**
  * クラスの説明：DispatcherServlet用コンフィギュレーション
@@ -73,5 +77,41 @@ public class WebMvcConfigTest implements WebMvcConfigurer {
 	@Override
 	public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
 		configurer.setDefaultTimeout(5000); // タイアウトの設定
+	}
+
+	/**
+	 * メソッドの説明：トランザクショントークンの生成・チェックの設定(二重送信防止)
+	 * @author kamagata
+	 * @since 2018/03/10
+	 * @return TransactionTokenInterceptor
+	 */
+	@Bean
+	public TransactionTokenInterceptor transactionTokenInterceptor() {
+		return new TransactionTokenInterceptor();
+	}
+
+	/**
+	 * メソッドの説明：トランザクショントークンをformタグに埋め込む(hidden)設定
+	 * @author kamagata
+	 * @since 2018/03/10
+	 * @return RequestDataValueProcessor
+	 */
+	@Bean
+	public RequestDataValueProcessor requestDataValueProcessor() {
+		return new TransactionTokenRequestDataValueProcessor();
+	}
+
+	/**
+	 * メソッドの説明：トランザクショントークン生成適用のマッピング
+	 * @author kamagata
+	 * @since 2018/03/10
+	 * @param registry InterceptorRegistry
+	 */
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(transactionTokenInterceptor())
+				.addPathPatterns("/**")
+				.excludePathPatterns("/resources/**")
+				.excludePathPatterns("/**/*.html");
 	}
 }

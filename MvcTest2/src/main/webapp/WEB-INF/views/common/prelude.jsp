@@ -7,3 +7,4 @@
 <spring:url value="/resources" var="resourceUrl"></spring:url>
 <spring:url value="/maintenance" var="menteUrl"></spring:url>
 <spring:url value="/WEB-INF/views" var="viewUrl"></spring:url>
+<%@taglib prefix="my" uri="/WEB-INF/tld/mytaglib" %>

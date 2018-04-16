@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+
+  <tlib-version>1.0</tlib-version>
+  <short-name>mytaglib</short-name>
+  <uri>/WEB-INF/tld/mytaglib</uri>
+
+  <!-- タグの定義 -->
+  <tag>
+    <!-- タグの名前 -->
+    <name>SampleTag</name>
+    <!-- タグハンドラクラス -->
+    <tag-class>com.example.sample.tag.SampleTagHandler</tag-class>
+    <!-- bodyを持つかどうか -->
+    <body-content>empty</body-content>
+    <!-- 属性の定義。attributeを複数並べられる。 -->
+    <attribute>
+      <!-- 属性名 -->
+      <name>name</name>
+      <!-- 必須属性かどうか -->
+      <required>true</required>
+      <!-- 実行時評価属性かどうか -->
+      <rtexprvalue>true</rtexprvalue>
+      <!-- 属性の型 -->
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+</taglib>

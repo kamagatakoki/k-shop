@@ -1,5 +1,6 @@
 package com.example.demo.web.controller.shop;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
 import com.example.demo.service.maintenance.GoodsService;
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+import common.Greet;
+import common.MyAppSqlConfig;
+import entity.GenreLgEntity;
 
 /**
  * クラスの説明：ショップ　トップ画面コントローラー(
@@ -34,9 +40,14 @@ public class TopController {
 	 * @since 2018/01/27
 	 * @param modelAndView モデルビュー
 	 * @return ModelAndView モデルビュー
+	 * @throws SQLException
 	 */
 	@GetMapping(path = "/")
-	ModelAndView list(ModelAndView modelAndView) {
+	ModelAndView list(ModelAndView modelAndView) throws SQLException {
+
+		System.out.println(Greet.greet());
+		SqlMapClient sqlMap = MyAppSqlConfig.getSqlMapInstance();
+		GenreLgEntity genreLgEntity = (GenreLgEntity) sqlMap.queryForObject("getGenreLg");
 
 		// 商品情報取得
 		List<GoodsEntity> goodsEntities = goodsService.findAll(new Sort("goodsCd"));

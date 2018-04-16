@@ -13,6 +13,8 @@
 			<c:param name="subTitle" value="一覧" />
 		</c:import>
 
+		<my:SampleTag name="aaa" />
+
 		<div class="container">
 			<div class="row">
 				<!-- 検索条件 -->

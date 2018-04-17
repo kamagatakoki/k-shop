@@ -13,11 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
 import com.example.demo.service.maintenance.GoodsService;
-import com.ibatis.sqlmap.client.SqlMapClient;
 
-import common.Greet;
-import common.MyAppSqlConfig;
-import entity.GenreLgEntity;
+import common2.DaoManagerDelegate;
 
 /**
  * クラスの説明：ショップ　トップ画面コントローラー(
@@ -45,9 +42,16 @@ public class TopController {
 	@GetMapping(path = "/")
 	ModelAndView list(ModelAndView modelAndView) throws SQLException {
 
-		System.out.println(Greet.greet());
-		SqlMapClient sqlMap = MyAppSqlConfig.getSqlMapInstance();
-		GenreLgEntity genreLgEntity = (GenreLgEntity) sqlMap.queryForObject("getGenreLg");
+		//		System.out.println(Greet.greet());
+		//		DaoManagerDelegate.init("dao.xml");
+		//
+		//		IDao dao = DaoManagerDelegate.createDao(IDao.class);
+		//
+		//		GenreLgEntity genreLgEntity = (GenreLgEntity) dao.queryForObject("getGenreLg", null);
+
+		DaoManagerDelegate.init("SqlMapConfig2.xml");
+
+		//		GenreLgEntity genreLgEntity = (GenreLgEntity) sqlMap.queryForObject("getGenreLg");
 
 		// 商品情報取得
 		List<GoodsEntity> goodsEntities = goodsService.findAll(new Sort("goodsCd"));

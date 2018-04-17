@@ -17,5 +17,5 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
     </transactionManager>
 
     <!-- sqlMapファイル参照する -->
-    <sqlMap resource="examples/SqlMap-Dept.xml"/>
+    <sqlMap resource="SqlMap-Dept.xml"/>
 </sqlMapConfig>

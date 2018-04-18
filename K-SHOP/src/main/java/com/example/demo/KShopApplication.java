@@ -20,6 +20,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import com.example.demo.domain.entity.maintenance.GenreLgEntity;
 import com.example.demo.service.maintenance.GenreLgService;
 
+import jp.co.intage.framework.dao.DaoManagerDelegate;
+
 /**
  * クラスの説明：Bean定義
  * @author kamagata
@@ -72,6 +74,7 @@ public class KShopApplication {
 			servletContext.setSessionTrackingModes(
 					Collections.singleton(SessionTrackingMode.COOKIE));
 		};
+		DaoManagerDelegate.init("SqlMapConfig3.xml");
 		return servletContextInitializer;
 	}
 

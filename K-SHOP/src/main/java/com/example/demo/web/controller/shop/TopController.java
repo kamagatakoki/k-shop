@@ -1,6 +1,7 @@
 package com.example.demo.web.controller.shop;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.domain.entity.maintenance.GoodsEntity;
 import com.example.demo.service.maintenance.GoodsService;
 
-import common2.DaoManagerDelegate;
+import Test.Blog;
+import jp.co.intage.framework.dao.DaoManagerDelegate;
+import jp.co.intage.framework.dao.IDao;
 
 /**
  * クラスの説明：ショップ　トップ画面コントローラー(
@@ -49,7 +52,42 @@ public class TopController {
 		//
 		//		GenreLgEntity genreLgEntity = (GenreLgEntity) dao.queryForObject("getGenreLg", null);
 
-		DaoManagerDelegate.init("SqlMapConfig2.xml");
+		DaoManagerDelegate.startTransaction();
+
+		IDao dao = DaoManagerDelegate.createDao(IDao.class);
+
+		Blog blog = (Blog) dao.queryForObject("BlogMapper.selectBlogOne", null);
+		System.out.println(blog.getGenreLgCd());
+
+		List<Blog> blogs = dao.queryForList("BlogMapper.selectBlogAll", null);
+		blogs.stream().forEach(System.out::println);
+
+		Blog blog2 = new Blog();
+		blog2.setGenreLgCd("88");
+		blog2.setGenreLgNm("grjeiow");
+		blog2.setDisplayOrder(77);
+		blog2.setBiko("");
+		blog2.setDeleteFlg("0");
+		blog2.setInsertDt(new Date());
+		blog2.setInsertCd(1113);
+		blog2.setUpdateDt(new Date());
+		blog2.setUpdateCd(null);
+
+		dao.insert("insertBlog", blog2);
+
+		DaoManagerDelegate.commitTransaction();
+
+		blog2.setGenreLgNm("***********");
+
+		dao.update("updateBlog", blog2);
+
+		DaoManagerDelegate.commitTransaction();
+
+		blog2.setGenreLgNm("------------");
+
+		dao.update("updateBlog", blog2);
+
+		DaoManagerDelegate.endTransaction();
 
 		//		GenreLgEntity genreLgEntity = (GenreLgEntity) sqlMap.queryForObject("getGenreLg");
 

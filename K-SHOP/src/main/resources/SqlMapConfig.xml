@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE sqlMapConfig
-PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
-"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
-
-<sqlMapConfig>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <environments default="development">
+    <environment id="development">
     <!-- DB接続設定 -->
-    <transactionManager type="JDBC">
-        <dataSource type="SIMPLE">
-            <property name="JDBC.Driver"
+    <transactionManager type="JDBC" />
+        <dataSource type="POOLED">
+            <property name="driver"
                       value="oracle.jdbc.driver.OracleDriver"/>
-            <property name="JDBC.ConnectionURL"
+            <property name="url"
                       value="jdbc:oracle:thin:@localhost:1521:xe"/>
-            <property name="JDBC.Username" value="ora_test"/>
-            <property name="JDBC.Password" value="ora_test"/>
+            <property name="username" value="ora_test"/>
+            <property name="password" value="ora_test"/>
         </dataSource>
-    </transactionManager>
-
-    <!-- sqlMapファイル参照する -->
-    <sqlMap resource="SqlMap-Dept.xml"/>
-</sqlMapConfig>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="Test/BlogMapper.xml"/>
+  </mappers>
+</configuration>

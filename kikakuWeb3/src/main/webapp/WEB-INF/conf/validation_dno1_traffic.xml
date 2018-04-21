@@ -1,0 +1,1406 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+		  "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+		  "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+	<formset>
+		<form name="DR01012Form">
+			<!-- 送付先 -->
+			<field property="data.planAnsData.ansSendAddr" depends="required">
+				<arg key="dr01012.W060"/>
+			</field>
+			<!-- 商品名 -->
+			<field property="data.planAnsData.goodsNm"
+				depends="required,maxlengthDB, cooperationIgnoreChars">
+				<arg key="dr01012.W061" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- 参照元１ -->
+			<field property="data.trafficData.originalGoodsCd1"
+				depends="maxlength">
+				<arg key="dr01012.W062" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>9</var-value>
+				</var>
+			</field>
+			<!-- 参照元２ -->
+			<field property="data.trafficData.originalGoodsCd2"
+				depends="maxlength">
+				<arg key="dr01012.W063" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 予約開始月 -->
+			<field property="data.trafficData.bookBeginDateM"
+				depends="maxlength">
+				<arg key="dr01012.W064" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 予約開始日 -->
+			<field property="data.trafficData.bookBeginDateD"
+				depends="maxlength">
+				<arg key="dr01012.W065" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 商品コード -->
+			<field property="data.trafficData.goodsCd1"
+				depends="maxlength">
+				<arg key="dr01012.W066" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>9</var-value>
+				</var>
+			</field>
+			<!-- 分類コード -->
+			<field property="data.trafficData.goodsKindCd" depends="mask">
+				<arg key="dr01012.W067" />
+				<arg1 key="dr01011.W001" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${goodsKindCd}</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+			<!-- 会員券コース名 -->
+			<field property="data.trafficData.courseNmKanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W068" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- 券面表示 -->
+			<field property="data.trafficData.bookPurpose"
+				depends="validwhen">
+				<arg key="dr01012.W094" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(
+							((data.planAnsData.kindFlg != '7') and (*this* != null ))
+							or
+							(data.planAnsData.kindFlg == '7')
+						)
+					</var-value>
+				</var>
+			</field>
+			<!-- 在庫番号 -->
+			<field property="data.stockNo" depends="required,mask">
+				<arg key="common.sme.stockNo" />
+				<arg1 key="dr01011.W053" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${4code}</var-value>
+				</var>
+			</field>
+			<!-- 在庫名称（漢字） -->
+			<field property="data.stockKanj" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="common.sme.stockKanj" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- 在庫名称（カナ） -->
+			<field property="data.stockKana" depends="mask">
+				<arg key="common.sme.stockKana" />
+				<arg1 key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<!-- 手仕舞日 -->
+			<field property="data.liquidateDay" depends="integer">
+				<arg key="dr01012.W013" />
+			</field>
+			<!-- 手仕舞時刻：時 -->
+			<field property="data.liquidateTimeHour" depends="intRange">
+				<arg key="dr01012.W091" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<!-- 手仕舞時刻：分 -->
+			<field property="data.liquidateTimeMinute" depends="intRange">
+				<arg key="dr01012.W092" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<!-- 通知先名称 -->
+			<field property="data.informNm" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="common.sme.informNm" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			
+			<!-- 住所（在庫） -->
+			<field property="data.stockAddr" depends="maxlength">
+				<arg key="common.sme.address" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			
+			<!-- 電話番号（在庫） -->
+			<field property="data.stockTel" depends="mask">
+				<arg key="common.sme.telephonNo" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			
+			<!-- 記事 -->
+			<field property="data.trafficData.news" depends="maxlength">
+				<arg key="dr01012.W010" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>128</var-value>
+				</var>
+			</field>
+			<!-- 取消料 -->
+			<field property="data.trafficData.cancelFeeCmt" depends="maxlength">
+				<arg key="dr01012.W073" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>128</var-value>
+				</var>
+			</field>
+			<!-- 運輸機関名（カナ） -->
+			<field property="data.planAnsData.facilityNmKana"
+				depends="required,maxlengthDB,mask">
+				<arg key="dr01012.W024" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			
+			<!-- 住所 -->
+			<field property="data.trafficData.facilityAddr"
+				depends="required,maxlengthDB">
+				<arg key="dr01012.W004" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- ＴＥＬ -->
+			<field property="data.trafficData.facilityTel"
+				depends="required,maxlengthDB,mask">
+				<arg key="dr01012.W005" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W067" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<!-- FAX -->
+			<field property="data.trafficData.facilityFax"
+				depends="required,mask">
+				<arg key="dr01012.W006" />
+				<arg1 name="mask" key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<!-- 有効期間 -->
+			<field property="data.trafficData.validPeriod" depends="integer">
+				<arg key="dr01012.W014" />
+			</field>
+			<!-- 通知先FAX -->
+			<field property="data.informFax" depends="maxlengthDB,mask">
+				<arg key="common.sme.informFax" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W067" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.trafficData.memo" depends="maxlengthDB">
+				<arg key="dr01012.W001" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>160</var-value>
+				</var>
+			</field>
+			<!-- 特典 -->
+			<field property="data.trafficData.special" depends="maxlength">
+				<arg key="dr01012.W012" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+			<!-- メモ -->
+			<field property="data.memo" depends="maxlength">
+				<arg key="dr01012.W001" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>128</var-value>
+				</var>
+			</field>
+			<!-- 子供料金適用 -->
+			<field property="data.trafficData.childAgeFrom"
+				depends="integer,intRange">
+				<arg0 key="dr01012.W083" />
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- シニア料金適用 -->
+			<field property="data.trafficData.seniorAgeFrom"
+				depends="integer">
+				<arg0 key="dr01012.W084" />
+			</field>
+			<!-- 配車営業所名（レンタカーのみ） -->
+			<field property="data.dispatcherOfficeName"
+				depends="validwhen,maxlengthDB,cooperationIgnoreChars">
+				<msg name="validwhen" key="dr01012.W089" />
+				<arg key="dr01012.W088" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01012.W088" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(
+							((data.planAnsData.kindFlg == '7') and (*this* != null ))
+							or
+							(data.planAnsData.kindFlg != '7')
+						)
+					</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- 便名（カタカナ） -->
+			<field property="chargeInfoData[0].courseNmKana"
+				depends="mask">
+				<arg key="dr01012.W079"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].courseNmKana"
+				depends="mask">
+				<arg key="dr01012.W079"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].courseNmKana"
+				depends="mask">
+				<arg key="dr01012.W079"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].courseNmKana"
+				depends="mask">
+				<arg key="dr01012.W079"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].courseNmKana"
+				depends="mask">
+				<arg key="dr01012.W079"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].courseNmKana"
+				depends="mask">
+				<arg key="dr01012.W079"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<!-- 便名（FM漢字） -->
+			<field property="chargeInfoData[0].courseNmKanji"
+				depends="cooperationIgnoreChars">
+				<arg key="dr01012.W080"/>
+			</field>
+			<field property="chargeInfoData[1].courseNmKanji"
+				depends="cooperationIgnoreChars">
+				<arg key="dr01012.W080"/>
+			</field>
+			<field property="chargeInfoData[2].courseNmKanji"
+				depends="cooperationIgnoreChars">
+				<arg key="dr01012.W080"/>
+			</field>
+			<field property="chargeInfoData[3].courseNmKanji"
+				depends="cooperationIgnoreChars">
+				<arg key="dr01012.W080"/>
+			</field>
+			<field property="chargeInfoData[4].courseNmKanji"
+				depends="cooperationIgnoreChars">
+				<arg key="dr01012.W080"/>
+			</field>
+			<field property="chargeInfoData[5].courseNmKanji"
+				depends="cooperationIgnoreChars">
+				<arg key="dr01012.W080"/>
+			</field>
+			<!-- 提供内容１（カナ） -->
+			<field property="chargeInfoData[0].contentExplain1Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].contentExplain1Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].contentExplain1Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].contentExplain1Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].contentExplain1Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].contentExplain1Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<!-- 提供内容１ -->
+			<field property="chargeInfoData[0].contentExplain1Kanji"
+				depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].contentExplain1Kanji"
+				depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].contentExplain1Kanji"
+				depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].contentExplain1Kanji"
+				depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].contentExplain1Kanji"
+				depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].contentExplain1Kanji"
+				depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- 提供内容２（カナ） -->
+			<field property="chargeInfoData[0].contentExplain2Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].contentExplain2Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].contentExplain2Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].contentExplain2Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].contentExplain2Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].contentExplain2Kana"
+				depends="maxlengthDB,mask">
+				<arg key="dr01012.W074" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W001" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<!-- 提供内容２（レンタカー時：返車営業所名） -->
+			<field property="chargeInfoData[0].contentExplain2Kanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].contentExplain2Kanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].contentExplain2Kanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].contentExplain2Kanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].contentExplain2Kanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].contentExplain2Kanji"
+				depends="maxlengthDB">
+				<arg key="dr01012.W075" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr01011.W002" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- 出発時間時 -->
+			<field property="chargeInfoData[0].departureTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].departureTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].departureTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].departureTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].departureTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].departureTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<!-- 出発時間分 -->
+			<field property="chargeInfoData[0].departureTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].departureTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].departureTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].departureTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].departureTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].departureTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<!-- 出発時間 -->
+			<field property="chargeInfoData[0].departureTimeH" depends="validwhen">
+			<arg key="dr01012.W022" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[0].departureTimeM != null)and
+						(chargeInfoData[0].departureTimeH!=null)) or
+						((chargeInfoData[0].departureTimeM == null)and
+						(chargeInfoData[0].departureTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].departureTimeH" depends="validwhen">
+			<arg key="dr01012.W022" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[1].departureTimeM != null)and
+						(chargeInfoData[1].departureTimeH!=null)) or
+						((chargeInfoData[1].departureTimeM == null)and
+						(chargeInfoData[1].departureTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].departureTimeH" depends="validwhen">
+			<arg key="dr01012.W022" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[2].departureTimeM != null)and
+						(chargeInfoData[2].departureTimeH!=null)) or
+						((chargeInfoData[2].departureTimeM == null)and
+						(chargeInfoData[2].departureTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].departureTimeH" depends="validwhen">
+			<arg key="dr01012.W022" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[3].departureTimeM != null)and
+						(chargeInfoData[3].departureTimeH!=null)) or
+						((chargeInfoData[3].departureTimeM == null)and
+						(chargeInfoData[3].departureTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].departureTimeH" depends="validwhen">
+			<arg key="dr01012.W022" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[4].departureTimeM != null)and
+						(chargeInfoData[4].departureTimeH!=null)) or
+						((chargeInfoData[4].departureTimeM == null)and
+						(chargeInfoData[4].departureTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].departureTimeH" depends="validwhen">
+			<arg key="dr01012.W022" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[5].departureTimeM != null)and
+						(chargeInfoData[5].departureTimeH!=null)) or
+						((chargeInfoData[5].departureTimeM == null)and
+						(chargeInfoData[5].departureTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 到着時間時 -->
+			<field property="chargeInfoData[0].arrivalTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W085" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].arrivalTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W085" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].arrivalTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W085" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].arrivalTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W085" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].arrivalTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W085" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].arrivalTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W085" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<!-- 到着時間分 -->
+			<field property="chargeInfoData[0].arrivalTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W086" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].arrivalTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W086" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].arrivalTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W086" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].arrivalTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W086" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].arrivalTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W086" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].arrivalTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01012.W086" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false"/>
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<!-- 到着時間 -->
+			<field property="chargeInfoData[0].arrivalTimeH" depends="validwhen">
+			<arg key="dr01012.W087" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[0].arrivalTimeM != null)and
+						(chargeInfoData[0].arrivalTimeH!=null)) or
+						((chargeInfoData[0].arrivalTimeM == null)and
+						(chargeInfoData[0].arrivalTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].arrivalTimeH" depends="validwhen">
+			<arg key="dr01012.W087" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[1].arrivalTimeM != null)and
+						(chargeInfoData[1].arrivalTimeH!=null)) or
+						((chargeInfoData[1].arrivalTimeM == null)and
+						(chargeInfoData[1].arrivalTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].arrivalTimeH" depends="validwhen">
+			<arg key="dr01012.W087" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[2].arrivalTimeM != null)and
+						(chargeInfoData[2].arrivalTimeH!=null)) or
+						((chargeInfoData[2].arrivalTimeM == null)and
+						(chargeInfoData[2].arrivalTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].arrivalTimeH" depends="validwhen">
+			<arg key="dr01012.W087" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[3].arrivalTimeM != null)and
+						(chargeInfoData[3].arrivalTimeH!=null)) or
+						((chargeInfoData[3].arrivalTimeM == null)and
+						(chargeInfoData[3].arrivalTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].arrivalTimeH" depends="validwhen">
+			<arg key="dr01012.W087" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[4].arrivalTimeM != null)and
+						(chargeInfoData[4].arrivalTimeH!=null)) or
+						((chargeInfoData[4].arrivalTimeM == null)and
+						(chargeInfoData[4].arrivalTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].arrivalTimeH" depends="validwhen">
+			<arg key="dr01012.W087" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((chargeInfoData[5].arrivalTimeM != null)and
+						(chargeInfoData[5].arrivalTimeH!=null)) or
+						((chargeInfoData[5].arrivalTimeM == null)and
+						(chargeInfoData[5].arrivalTimeH ==null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- バウチャー券案内文【40文字】 -->
+			<field property="chargeInfoData[0].voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W082" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[1].voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W082" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[2].voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W082" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[3].voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W082" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[4].voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W082" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<field property="chargeInfoData[5].voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01012.W082" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+
+			<!-- 提供料金に対するチェックは Form の doValidate にて実施 -->
+
+			<field property="data.planAnsData.senderTel" depends="required, mask">
+				<arg key="dr01010.W015" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<field property="data.planAnsData.senderFax" depends="required, mask">
+				<arg key="dr01010.W131" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>

@@ -1,0 +1,800 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+		"-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+		"http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<formset>
+		<form name="DR01013Form">
+			<field property="data.planAnsData.ansSendAddr" depends="required">
+				<arg key="dr01012.W060"/>
+			</field>
+			<field property="data.planAnsData.goodsNm" depends="required,cooperationIgnoreChars">
+				<arg key="dr01010.W001"/>
+			</field>
+			<field property="data.planAnsData.facilityNmKana" depends="required,mask">
+				<arg key="dr01011.W004"/>
+				<arg1 key="dr01011.W001"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="data.planAnsData.facilityNm" depends="required,cooperationIgnoreChars">
+				<arg key="dr01011.W005"/>
+				<arg1 key="dr01011.W002" />
+			</field>
+			<!-- 地区名（カナ） -->
+			<field property="data.no1GolfData.areaKana" depends="mask">
+				<arg key="dr01011.W007"/>
+				<arg1 key="dr01011.W001"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<!-- 地区名（漢字） -->
+			<field property="data.no1GolfData.areaNm" depends="cooperationIgnoreChars">
+				<arg key="dr01011.W008"/>
+				<arg1 key="dr01011.W002"/>
+			</field>
+			<field property="data.no1GolfData.facilityAddr" depends="maxlengthDB">
+				<arg key="dr01010.W005"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+			<field property="data.stockNo" depends="required,mask">
+				<arg key="common.sme.stockNo"/>
+				<arg1 key="dr01011.W053"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${4code}</var-value>
+				</var>
+			</field>
+			<!-- 在庫名称（漢字） -->
+			<field property="data.stockKanj" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="common.sme.stockKanj" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- 在庫名称（カナ） -->
+			<field property="data.stockKana" depends="mask">
+				<arg key="common.sme.stockKana" />
+				<arg1 key="dr01011.W001" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${halfKata}</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.facilityAddr" depends="required">
+				<arg key="dr01011.W013"/>
+			</field>
+			<field property="data.no1GolfData.facilityTel" depends="required,mask">
+				<arg key="dr01011.W014" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.facilityFax" depends="required,mask">
+				<arg key="dr01011.W015"/>
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.liquidateDay" depends="integer">
+				<arg key="dr01011.W016"/>
+			</field>
+			<!-- 手仕舞時刻（当日設定時）（時） -->
+			<field property="data.liquidateTimeHour"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01013.W089" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<!-- 手仕舞時刻（当日設定時）（分） -->
+			<field property="data.liquidateTimeMinute"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01013.W090" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.informFax" depends="mask">
+				<arg key="common.sme.informFax" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<!-- 通知先名称 -->
+			<field property="data.informNm" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="common.sme.informNm"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<!-- 通知先地区名称 -->
+			<field property="data.informAreaNm" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="common.sme.informAreaNm"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<!-- 住所（在庫） -->
+			<field property="data.stockAddr" depends="maxlength">
+				<arg key="common.sme.address" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 電話番号（在庫） -->
+			<field property="data.stockTel" depends="mask">
+				<arg key="common.sme.telephonNo" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			
+			<!-- バウチャー券案内文 -->
+			<field property="data.no1GolfData.voucherIntroKanji" depends="maxlengthDB,cooperationIgnoreChars">
+				<arg key="dr01013.W108"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.startTimeH" depends="integer,intRange">
+				<arg key="dr01013.W001" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.startTimeM" depends="integer,intRange">
+				<arg key="dr01013.W002" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.startTimeH"
+				depends="validwhen">
+				<arg key="dr01013.W055" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.startTimeH ==
+						null)and (data.no1GolfData.startTimeM
+						== null))or
+						((data.no1GolfData.startTimeH != null)
+						and (data.no1GolfData.startTimeM !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- シニア料金適用 -->
+			<field property="data.no1GolfData.seniorAgeFrom" depends="integer">
+				<arg key="dr01012.W084" />
+			</field>
+			<field property="data.no1GolfData.coursePar1" depends="integer">
+				<arg key="dr01013.W003"/>
+			</field>
+			<field property="data.no1GolfData.courseDistance1" depends="integer">
+				<arg key="dr01013.W004"/>
+			</field>
+			<field property="data.no1GolfData.coursePar2" depends="integer">
+				<arg key="dr01013.W005"/>
+			</field>
+			<field property="data.no1GolfData.courseDistance2" depends="integer">
+				<arg key="dr01013.W006"/>
+			</field>
+			<field property="data.no1GolfData.coursePar3" depends="integer">
+				<arg key="dr01013.W007"/>
+			</field>
+			<field property="data.no1GolfData.courseDistance3" depends="integer">
+				<arg key="dr01013.W008"/>
+			</field>
+			<field property="data.no1GolfData.coursePar4" depends="integer">
+				<arg key="dr01013.W009"/>
+			</field>
+			<field property="data.no1GolfData.courseDistance4" depends="integer">
+				<arg key="dr01013.W010"/>
+			</field>
+			<field property="data.no1GolfData.msTerm" depends="integer">
+				<arg key="dr01013.W011"/>
+			</field>
+			<field property="data.no1GolfData.reserveCmt" depends="integer">
+				<arg key="dr01013.W012"/>
+			</field>
+			<field property="data.no1GolfData.meetTimeBeginH" depends="integer,intRange">
+				<arg key="dr01013.W013" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.meetTimeBeginM" depends="integer,intRange">
+				<arg key="dr01013.W014" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.meetTimeBeginH"
+				depends="validwhen">
+				<arg key="dr01011.W046" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.meetTimeBeginH ==
+						null)and
+						(data.no1GolfData.meetTimeBeginM ==
+						null))or ((data.no1GolfData.meetTimeBeginH
+						!= null) and
+						(data.no1GolfData.meetTimeBeginM !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.meetTimeEndH" depends="integer,intRange">
+				<arg key="dr01013.W015" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.meetTimeEndM" depends="integer,intRange">
+				<arg key="dr01013.W016" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.meetTimeEndH"
+				depends="validwhen">
+				<arg key="dr01011.W049" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.meetTimeEndH ==
+						null)and (data.no1GolfData.meetTimeEndM
+						== null))or
+						((data.no1GolfData.meetTimeEndH != null)
+						and (data.no1GolfData.meetTimeEndM !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.sendTimeBeginH" depends="integer,intRange">
+				<arg key="dr01013.W017" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.sendTimeBeginM" depends="integer,intRange">
+				<arg key="dr01013.W018" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.sendTimeBeginH"
+				depends="validwhen">
+				<arg key="dr01011.W052" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.sendTimeBeginH ==
+						null)and
+						(data.no1GolfData.sendTimeBeginM ==
+						null))or ((data.no1GolfData.sendTimeBeginH
+						!= null) and
+						(data.no1GolfData.sendTimeBeginM !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.sendTimeEndH" depends="integer,intRange">
+				<arg key="dr01013.W019" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.sendTimeEndM" depends="integer,intRange">
+				<arg key="dr01013.W020" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.sendTimeEndH"
+				depends="validwhen">
+				<arg key="dr01011.W056" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.sendTimeEndH ==
+						null)and (data.no1GolfData.sendTimeEndM
+						== null))or
+						((data.no1GolfData.sendTimeEndH != null)
+						and (data.no1GolfData.sendTimeEndM !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.shuttleBusBookCmt" depends="integer">
+				<arg key="dr01013.W021"/>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartH1" depends="integer,intRange">
+				<arg key="dr01013.W022" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartM1" depends="integer,intRange">
+				<arg key="dr01013.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartH1"
+				depends="validwhen">
+				<arg key="dr01013.W049" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.nearestStationDepartH1 ==
+						null)and (data.no1GolfData.nearestStationDepartM1
+						== null))or
+						((data.no1GolfData.nearestStationDepartH1 != null)
+						and (data.no1GolfData.nearestStationDepartM1 !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartH2" depends="integer,intRange">
+				<arg key="dr01013.W024" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartM2" depends="integer,intRange">
+				<arg key="dr01013.W025" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartH2"
+				depends="validwhen">
+				<arg key="dr01013.W050" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.nearestStationDepartH2 ==
+						null)and (data.no1GolfData.nearestStationDepartM2
+						== null))or
+						((data.no1GolfData.nearestStationDepartH2 != null)
+						and (data.no1GolfData.nearestStationDepartM2 !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartH3" depends="integer,intRange">
+				<arg key="dr01013.W026" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartM3" depends="integer,intRange">
+				<arg key="dr01013.W027" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.nearestStationDepartH3"
+				depends="validwhen">
+				<arg key="dr01013.W051" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.nearestStationDepartH3 ==
+						null)and (data.no1GolfData.nearestStationDepartM3
+						== null))or
+						((data.no1GolfData.nearestStationDepartH3 != null)
+						and (data.no1GolfData.nearestStationDepartM3 !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartH1" depends="integer,intRange">
+				<arg key="dr01013.W028" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartM1" depends="integer,intRange">
+				<arg key="dr01013.W029" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartH1"
+				depends="validwhen">
+				<arg key="dr01013.W052" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.golfSpotDepartH1 ==
+						null)and (data.no1GolfData.golfSpotDepartM1
+						== null))or
+						((data.no1GolfData.golfSpotDepartH1 != null)
+						and (data.no1GolfData.golfSpotDepartM1 !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartH2" depends="integer,intRange">
+				<arg key="dr01013.W030" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartM2" depends="integer,intRange">
+				<arg key="dr01013.W031" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartH2"
+				depends="validwhen">
+				<arg key="dr01013.W053" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.golfSpotDepartH2 ==
+						null)and (data.no1GolfData.golfSpotDepartM2
+						== null))or
+						((data.no1GolfData.golfSpotDepartH2 != null)
+						and (data.no1GolfData.golfSpotDepartM2 !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartH3" depends="integer,intRange">
+				<arg key="dr01013.W032" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartM3" depends="integer,intRange">
+				<arg key="dr01013.W033" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.golfSpotDepartH3"
+				depends="validwhen">
+				<arg key="dr01013.W054" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.no1GolfData.golfSpotDepartH3 ==
+						null)and (data.no1GolfData.golfSpotDepartM3
+						== null))or
+						((data.no1GolfData.golfSpotDepartH3 != null)
+						and (data.no1GolfData.golfSpotDepartM3 !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- キャディ料金_平日_4B -->
+			<field property="data.no1GolfData.caddieCharge4bWeekday" depends="integer">
+				<arg key="dr01013.W095" />
+			</field>
+			<!-- キャディ料金_平日_3B -->
+			<field property="data.no1GolfData.caddieCharge3bWeekday" depends="integer">
+				<arg key="dr01013.W096" />
+			</field>
+			<!-- キャディ料金_平日_2B -->
+			<field property="data.no1GolfData.caddieCharge2bWeekday" depends="integer">
+				<arg key="dr01013.W097" />
+			</field>
+			<!-- キャディ料金_休日_4B -->
+			<field property="data.no1GolfData.caddieCharge4bHoliday" depends="integer">
+				<arg key="dr01013.W098" />
+			</field>
+			<!-- キャディ料金_休日_3B -->
+			<field property="data.no1GolfData.caddieCharge3bHoliday" depends="integer">
+				<arg key="dr01013.W099" />
+			</field>
+			<!-- キャディ料金_休日_2B -->
+			<field property="data.no1GolfData.caddieCharge2bHoliday" depends="integer">
+				<arg key="dr01013.W100" />
+			</field>
+			<!-- カート料金_平日_4B -->
+			<field property="data.no1GolfData.kartCharge4bWeekday" depends="integer">
+				<arg key="dr01013.W101" />
+			</field>
+			<!-- カート料金_平日_3B -->
+			<field property="data.no1GolfData.kartCharge3bWeekday" depends="integer">
+				<arg key="dr01013.W102" />
+			</field>
+			<!-- カート料金_平日_2B -->
+			<field property="data.no1GolfData.kartCharge2bWeekday" depends="integer">
+				<arg key="dr01013.W103" />
+			</field>
+			<!-- カート料金_休日_4B -->
+			<field property="data.no1GolfData.kartCharge4bHoliday" depends="integer">
+				<arg key="dr01013.W104" />
+			</field>
+			<!-- カート料金_休日_3B -->
+			<field property="data.no1GolfData.kartCharge3bHoliday" depends="integer">
+				<arg key="dr01013.W105" />
+			</field>
+			<!-- カート料金_休日_2B -->
+			<field property="data.no1GolfData.kartCharge2bHoliday" depends="integer">
+				<arg key="dr01013.W106" />
+			</field>
+			<field property="data.no1GolfData.toStationWalktime" depends="integer">
+				<arg key="dr01013.W034" />
+			</field>
+			<field property="data.no1GolfData.taxiTime" depends="integer">
+				<arg key="dr01013.W035" />
+			</field>
+			<field property="data.no1GolfData.busTimetable" depends="integer">
+				<arg key="dr01013.W036" />
+			</field>
+			<field property="data.no1GolfData.toBusStaTime" depends="integer">
+				<arg key="dr01013.W037" />
+			</field>
+			<field property="data.no1GolfData.availableDistance" depends="integer">
+				<arg key="dr01013.W038" />
+			</field>
+			<field property="data.no1GolfData.accessTime" depends="integer">
+				<arg key="dr01013.W039" />
+			</field>
+			<field property="data.planAnsData.senderTel" depends="required, mask">
+				<arg key="dr01010.W015" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<field property="data.planAnsData.senderFax" depends="required, mask">
+				<arg key="dr01010.W131" />
+				<arg1 key="dr01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<field property="data.no1GolfData.freelyColumn" depends="maxlength">
+				<arg name="maxlength" key="dr01011.W077" position="0"/>
+				<arg name="maxlength" key="${var:maxlength}" resource="false"
+					position="1" />
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>100</var-value>
+					</var>
+			</field>
+			<!-- 備考（販売店用販売画面に表示されません） -->
+			<field property="data.no1GolfData.memo" depends="maxlength">
+				<arg name="maxlength" key="dr01013.W107" position="0"/>
+				<arg name="maxlength" key="${var:maxlength}" resource="false"
+					position="1" />
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>100</var-value>
+					</var>
+			</field>
+			<!-- 分類コード -->
+			<field property="data.no1GolfData.goodsKindCd" depends="mask,maxlength">
+				<arg key="dr01013.W111" />
+				<arg1 key="dr01011.W001" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${goodsKindCd}</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>

@@ -1,0 +1,672 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<formset>
+        <form name="UR01030Form">
+            <field property="data.memoData.memo" depends="maxlengthDB">
+                <arg key="ur01020.W021"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>128</var-value>
+                </var>
+            </field>
+            
+        	<field  property="data.specialItemData.s2OtherServiceCmt" depends="maxlengthDB">
+                <arg key="ur01030.W001"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>10</var-value>
+                    </var>
+            </field>
+            <field  property="data.specialItemData.s3OtherServiceCmt" depends="maxlengthDB">
+                <arg key="ur01030.W002"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>10</var-value>
+                    </var>
+            </field>
+            <field  property="data.specialItemData.s6Content" depends="maxlengthDB">
+                <arg key="ur01030.W003"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            <field  property="data.specialItemData.s8Content" depends="maxlengthDB">
+                <arg key="ur01030.W004"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            <field  property="data.specialItemData.s10Content" depends="maxlengthDB">
+                <arg key="ur01030.W005"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            <field  property="data.specialItemData.s11Content" depends="maxlengthDB">
+                <arg key="ur01030.W006"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            <field  property="data.specialItemData.s16Restran" depends="maxlengthDB">
+                <arg key="ur01030.W007"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            
+            <field  property="data.specialItemData.s17Place" depends="maxlengthDB">
+                <arg key="ur01030.W008"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            
+            <field  property="data.specialItemData.s17Content" depends="maxlengthDB">
+                <arg key="ur01030.W008"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                    </var>
+            </field>
+            
+            
+	        <field property="data.specialItemData.s7DiscountPer" depends="intRange">
+                <arg0 key="ur01030.W010"/>
+                <arg1 key="ur01030.min"/>
+                <arg2 key="ur01030.max"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                    
+                </var>
+            </field>
+            <field property="data.specialItemData.s9DiscountPer" depends="intRange">
+                <arg0 key="ur01030.W011"/>
+                <arg1 key="ur01030.min"/>
+                <arg2 key="ur01030.max"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>1</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>99</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s9DiscountYen" depends="integer">
+                <arg key="ur01030.W012"/>
+            </field>
+            <field property="data.specialItemData.s17RedeemAmoumt" depends="integer">
+                <arg key="ur01030.W013"/>
+            </field>
+            <field property="data.specialItemData.s16Time1" depends="integer">
+                <arg key="ur01030.W007"/>
+            </field>
+            <field property="data.specialItemData.s16Time2" depends="integer">
+                <arg key="ur01030.W007"/>
+            </field>
+            <field property="data.specialItemData.s17Time1" depends="integer">
+                <arg key="ur01030.W008"/>
+            </field>
+            <field property="data.specialItemData.s17Time2" depends="integer">
+                <arg key="ur01030.W008"/>
+            </field>
+            <field property="data.specialItemData.s18Time1Be" depends="integer">
+                <arg key="ur01030.W009"/>
+            </field>
+            <field property="data.specialItemData.s18Time1Af" depends="integer">
+                <arg key="ur01030.W009"/>
+            </field>
+            <field property="data.specialItemData.s18Time2Be" depends="integer">
+                <arg key="ur01030.W009"/>
+            </field>
+            <field property="data.specialItemData.s18Time2Af" depends="integer">
+                <arg key="ur01030.W009"/>
+            </field>
+            <field property="data.specialItemData.s19Time1Be" depends="integer">
+                <arg key="ur01030.W041"/>
+            </field>
+            <field property="data.specialItemData.s19Time1Af" depends="integer">
+                <arg key="ur01030.W041"/>
+            </field>
+            <field property="data.specialItemData.s19Time2Be" depends="integer">
+                <arg key="ur01030.W041"/>
+            </field>
+            <field property="data.specialItemData.s19Time2Af" depends="integer">
+                <arg key="ur01030.W041"/>
+            </field>
+
+            <field property="data.specialItemData.s16Time1" depends="intRange">
+                <arg0 key="ur01030.W014"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s16Time2" depends="intRange">
+                <arg0 key="ur01030.W015"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s16Time1" depends="validwhen">
+                <arg key="ur01030.W050"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s16Time1 == null) and
+                        (data.specialItemData.s16Time2 == null))
+                         or 
+                        ((data.specialItemData.s16Time1 != null) and
+                        (data.specialItemData.s16Time2 != null)))
+                    </var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s16Time3" depends="intRange">
+                <arg0 key="ur01030.W114"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s16Time4" depends="intRange">
+                <arg0 key="ur01030.W115"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s16Time3" depends="validwhen">
+                <arg key="ur01030.W150"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s16Time3 == null) and
+                        (data.specialItemData.s16Time4 == null))
+                         or 
+                        ((data.specialItemData.s16Time3 != null) and
+                        (data.specialItemData.s16Time4 != null)))
+                    </var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s17Time1" depends="intRange">
+                <arg0 key="ur01030.W016"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s17Time2" depends="intRange">
+                <arg0 key="ur01030.W017"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s17Time1" depends="validwhen">
+                <arg key="ur01030.W151"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s17Time1 == null) and
+                        (data.specialItemData.s17Time2 == null))
+                         or 
+                        ((data.specialItemData.s17Time1 != null) and
+                        (data.specialItemData.s17Time2 != null)))
+                    </var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s17Time3" depends="intRange">
+                <arg0 key="ur01030.W116"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s17Time4" depends="intRange">
+                <arg0 key="ur01030.W117"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s17Time3" depends="validwhen">
+                <arg key="ur01030.W051"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s17Time3 == null) and
+                        (data.specialItemData.s17Time4 == null))
+                         or 
+                        ((data.specialItemData.s17Time3 != null) and
+                        (data.specialItemData.s17Time4 != null)))
+                    </var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s18Time1Be" depends="intRange">
+                <arg0 key="ur01030.W018"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s18Time1Af" depends="intRange">
+                <arg0 key="ur01030.W019"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s18Time1Be" depends="validwhen">
+                <arg key="ur01030.W046"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s18Time1Be == null) and
+                        (data.specialItemData.s18Time1Af == null))
+                         or 
+                        ((data.specialItemData.s18Time1Be != null) and
+                        (data.specialItemData.s18Time1Af != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s18Time2Be" depends="intRange">
+                <arg0 key="ur01030.W020"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s18Time2Af" depends="intRange">
+                <arg0 key="ur01030.W021"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s18Time2Be" depends="validwhen">
+                <arg key="ur01030.W047"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s18Time2Be == null) and
+                        (data.specialItemData.s18Time2Af == null))
+                         or 
+                        ((data.specialItemData.s18Time2Be != null) and
+                        (data.specialItemData.s18Time2Af != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s19Time1Be" depends="intRange">
+                <arg0 key="ur01030.W022"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s19Time1Af" depends="intRange">
+                <arg0 key="ur01030.W023"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s19Time1Be" depends="validwhen">
+                <arg key="ur01030.W048"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s19Time1Be == null) and
+                        (data.specialItemData.s19Time1Af == null))
+                         or 
+                        ((data.specialItemData.s19Time1Be != null) and
+                        (data.specialItemData.s19Time1Af != null)))
+                    </var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s19Time2Be" depends="intRange">
+                <arg0 key="ur01030.W024"/>
+                <arg1 key="ur01030.timeMin"/>
+                <arg2 key="ur01030.hourMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s19Time2Af" depends="intRange">
+                <arg0 key="ur01030.W025"/>
+                <arg1 key="ur01030.timeMin"/>
+				<arg2 key="ur01030.minMax"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+           <field property="data.specialItemData.s19Time2Be" depends="validwhen">
+                <arg key="ur01030.W049"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.specialItemData.s19Time2Be == null) and
+                        (data.specialItemData.s19Time2Af == null))
+                         or 
+                        ((data.specialItemData.s19Time2Be != null) and
+                        (data.specialItemData.s19Time2Af != null)))
+                    </var-value>
+                </var>
+            </field>
+            
+            <field property="data.specialItemData.s2FlgB" depends="validwhen">
+                <arg key="ur01030.W026"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                            
+							((data.specialItemData.s2Flg != 1) or 
+							((((data.specialItemData.s2CoffeeFlg == 1) or 
+							(data.specialItemData.s2BlackTeaFlg == 1)) or 
+							(data.specialItemData.s2SoftdrinkFlg == 1)) or 
+							(data.specialItemData.s2OtherServiceFlg == 1)))
+                            
+
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s2OtherServiceCmt" depends="validwhen">
+            <arg key="ur01030.W027"/>
+
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                    		((data.specialItemData.s2Flg != 1) or 
+							((data.specialItemData.s2OtherServiceFlg != 1) or
+							(data.specialItemData.s2OtherServiceCmt != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s3FlgB" depends="validwhen">
+                <arg key="ur01030.W028"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+		                    ((data.specialItemData.s3Flg != 1) or 
+							((((data.specialItemData.s3CoffeeFlg == 1) or 
+							(data.specialItemData.s3BlackTeaFlg == 1)) or 
+							(data.specialItemData.s3SoftdrinkFlg == 1)) or 
+							(data.specialItemData.s3OtherServiceFlg == 1)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s3OtherServiceCmt" depends="validwhen">
+            <arg key="ur01030.W029"/>            
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                    		((data.specialItemData.s3Flg != 1) or 
+							((data.specialItemData.s3OtherServiceFlg != 1) or
+							(data.specialItemData.s3OtherServiceCmt != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s4FlgB" depends="validwhen">
+                <arg key="ur01030.W030"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s4Flg != 1) or 
+                        (((data.specialItemData.s4NewspaperDiv == 1) or
+                        (data.specialItemData.s4NewspaperDiv == 2)) or
+                        (data.specialItemData.s4NewspaperDiv == 3)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s6FlgB" depends="validwhen">
+                <arg key="ur01030.W031"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+						((data.specialItemData.s6Flg != 1) or
+						(data.specialItemData.s6Content != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s7FlgB" depends="validwhen">
+                <arg key="ur01030.W032"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s7Flg != 1) or 
+						(data.specialItemData.s7DiscountPer != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s8FlgB" depends="validwhen">
+                <arg key="ur01030.W033"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s8Flg != 1) or
+						(data.specialItemData.s8Content != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s9FlgB" depends="validwhen">
+                <arg key="ur01030.W034"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s9Flg != 1) or
+						((data.specialItemData.s9DiscountPer != null) or
+						(data.specialItemData.s9DiscountYen != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s10FlgB" depends="validwhen">
+                <arg key="ur01030.W035"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s10Flg != 1) or 
+						(data.specialItemData.s10Content != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s11FlgB" depends="validwhen">
+                <arg key="ur01030.W036"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s11Flg != 1) or 
+						(data.specialItemData.s11Content != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s16FlgB" depends="validwhen">
+                <arg key="ur01030.W037"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s16Flg != 1) or 
+						(((data.specialItemData.s16Restran != null) and
+						(data.specialItemData.s16Time1 != null)) and
+						(data.specialItemData.s16Time2 != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s17FlgB" depends="validwhen">
+                <arg key="ur01030.W038"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s17Flg != 1) or
+						(((((data.specialItemData.s17Place != null) and
+						(data.specialItemData.s17Time1 != null)) and
+						(data.specialItemData.s17Time2 != null)) and
+						(data.specialItemData.s17Content != null)) and
+						(data.specialItemData.s17RedeemAmoumt != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s18FlgB" depends="validwhen">
+                <arg key="ur01030.W039"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s18Flg != 1) or 
+						(((((data.specialItemData.s18Flg == 1) and 
+						(data.specialItemData.s18Time1Be != null)) and
+						(data.specialItemData.s18Time1Af != null)) and
+						(data.specialItemData.s18Time2Be != null)) and
+						(data.specialItemData.s18Time2Af != null)))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.specialItemData.s19FlgB" depends="validwhen">
+                <arg key="ur01030.W040"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.specialItemData.s19Flg != 1) or 
+						(((((data.specialItemData.s19Flg == 1) and 
+						(data.specialItemData.s19Time1Be != null)) and
+						(data.specialItemData.s19Time1Af != null)) and
+						(data.specialItemData.s19Time2Be != null)) and
+						(data.specialItemData.s19Time2Af != null)))
+                    </var-value>
+                </var>
+            </field>
+        </form>
+    </formset>
+    
+</form-validation>

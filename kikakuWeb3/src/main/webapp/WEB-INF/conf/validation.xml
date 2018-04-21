@@ -1,0 +1,436 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+          <constant>
+             <constant-name>year</constant-name>
+             <constant-value>[1-2][0-9][0-9][0-9]</constant-value>
+          </constant>   
+
+           <constant>
+             <constant-name>jancde</constant-name>
+             <constant-value>[0-9]{0,13}</constant-value>
+          </constant>
+
+          <constant>
+             <constant-name>saleDateCheck</constant-name>
+             <constant-value>[1-2][0-9][0-9][0-9][0-1][0-9]</constant-value>
+          </constant>
+          
+          <constant>
+             <constant-name>sendDateCheck</constant-name>
+             <constant-value>[1-2][0-9][0-9][0-9][0-1][0-9]</constant-value>
+          </constant>
+
+		<constant>
+			<constant-name>halfKata</constant-name>
+			<constant-value>^[｡-ﾟ|!-~]*$</constant-value>
+		</constant>
+		
+		<constant>
+			<constant-name>4code</constant-name>
+			<constant-value>[0-9][0-9][0-9][0-9]</constant-value>
+		</constant>
+		<constant>
+			<constant-name>telNum</constant-name>
+			<constant-value>^[0-9\\-]*$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>facilityCD</constant-name>
+			<constant-value>^[0-9|A-z]*$</constant-value>
+		</constant>
+		
+		<constant>
+			<constant-name>goodsKindCd</constant-name>
+			<constant-value>^[｡-ﾟ|!-~]{6}[｡-ﾟ|!-~| ]{2}$</constant-value>
+		</constant>
+		
+    </global>
+    <formset>
+        <form name="testForm">
+            <field property="data.userData.userId" depends="required">
+                <arg key="test.error.userid"/>
+            </field>
+        </form>
+        
+        <form name="UR00100Form">
+            <field property="data.user.userId1" depends="validwhen">
+            <arg key="ur00100.W001"/>
+            <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                    ((data.user.userId1 != null) and (data.user.userId2 != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.user.password" depends="required">
+                <arg key="ur00100.W003"/>
+            </field>
+        </form>
+               
+    </formset>   
+    <formset>
+        <form name="UR00300InsertForm">
+            <field property="data.branchCd" depends="validwhen">
+                <arg key="ur00300.W007"/>
+                <var>
+                  <var-name>test</var-name>
+                  <var-value>(*this* != null)</var-value>
+                </var>
+            </field>           
+            <field property="data.seasonDiv" depends="validwhen">
+                <arg key="ur00300.W017"/>
+                <var>
+                  <var-name>test</var-name>
+                  <var-value>(*this* != "8")</var-value>
+                </var>
+            </field> 
+                                
+        </form>        
+    </formset>
+    <formset>
+    	<form name="UR00300SearchForm">
+    	<!-- 施設コードの検証　jinhuashi 2004/4/17 -->
+    		<field property="data.facilityCd1L" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd1R" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2L" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2R" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    	</form>
+    </formset>
+    <formset>
+        <form name="UR00400Form">
+            <field property="data.sendYmd1" depends="date">
+                <arg key="ur00400.W001"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+            <field property="data.sendYmd2" depends="date">
+                <arg key="ur00400.W002"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+            <!-- 施設コードの検証　jinhuashi 2004/4/17 -->
+    		<field property="data.facilityCd1L" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd1R" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2L" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2R" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+            
+        </form>
+        
+        
+        <!--  <form name="UR00400FormList">
+            <field property="data.cmtTmpl" depends="required,maxlengthDB">
+                <arg key="ur00400.W003"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>128</var-value>
+                </var>
+            </field>
+        </form>-->
+    </formset>
+    <formset>
+        <form name="UR00500Form">
+            <field property="data.sendYmd1" depends="date">
+                <arg key="ur00400.W001"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+            <field property="data.sendYmd2" depends="date">
+                <arg key="ur00400.W002"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+            <!-- 施設コードの検証　jinhuashi 2004/4/17 -->
+    		<field property="data.facilityCd1L" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd1R" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2L" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2R" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		
+    		<!-- 課題No58,No59：企画通番、施設側承認日、ＦＭ連携日を検索条件として追加 -->
+    		<!-- 2009/11/17 add by s31109 -->
+    		<field property="data.confirmYmd1" depends="date">
+                <arg key="ur00500.W001"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+            <field property="data.confirmYmd2" depends="date">
+                <arg key="ur00500.W002"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+    		<field property="data.fmYmd1" depends="date">
+                <arg key="ur00500.W003"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+            <field property="data.fmYmd2" depends="date">
+                <arg key="ur00500.W004"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyy/MM/dd</var-value>
+                    </var>
+            </field>
+        </form>
+    </formset>
+    <formset>
+        <form name="UR05000Form">
+        	<field property="data.facilityCd1L" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd1R" depends="mask">
+    		<arg key="ur00300.W020"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2L" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+    		<field property="data.facilityCd2R" depends="mask">
+    		<arg key="ur00300.W022"/>
+    		<arg1 key="ur00300.W021"/>
+    			<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+    		</field>
+        </form>
+    </formset>
+
+    <formset>
+        <form name="UR08000Form">
+            <field property="data.user.userId1" depends="validwhen">
+            <arg key="ur08000.W001"/>
+            <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                    ((data.user.userId1 != null) and (data.user.userId2 != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="data.user.password" depends="required">
+                <arg key="ur08000.W003"/>
+            </field>
+
+            <field property="data.user.newPassword" depends="required">
+                <arg key="ur08000.W007"/>
+            </field>
+            <field property="data.user.newPassword2" depends="required">
+                <arg key="ur08000.W008"/>
+            </field>
+        </form>
+    </formset>   
+
+   <!--  空白の記録を許可する
+   <formset>
+        <form name="UR01060Form">
+            <field property="memoUpdateYmdValidate" indexedListProperty="data.facilityList" depends="validwhen">
+                <arg key="ur01060.W007"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.facilityList[].rowStatusFlg == 2) or (data.facilityList[].memoData.memoUpdateYmd != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="memoUpdateYmdValidate" indexedListProperty="data.facilityList" depends="date">
+                <arg key="ur01060.W003"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyyMMdd</var-value>
+                    </var>
+            </field>
+            <field property="memoUpdateYmdValidate" indexedListProperty="data.jrList" depends="validwhen">
+                <arg key="ur01060.W010"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.jrList[].rowStatusFlg == 2) or (data.jrList[].memoData.memoUpdateYmd != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="memoUpdateYmdValidate" indexedListProperty="data.jrList" depends="date">
+                <arg key="ur01060.W004"/>
+                    <var>
+                        <var-name>datePatternStrict</var-name>
+                        <var-value>yyyyMMdd</var-value>
+                    </var>
+            </field>
+            <field property="memoData.memo" indexedListProperty="data.facilityList" depends="validwhen">
+                <arg key="ur01060.W005"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.facilityList[].rowStatusFlg == 2) or (data.facilityList[].memoData.memo != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="memoData.memo" indexedListProperty="data.facilityList" depends="maxlengthDB">
+                <arg key="ur01060.W001"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>256</var-value>
+                    </var>
+            </field>
+            <field property="memoData.memo" indexedListProperty="data.jrList" depends="validwhen">
+                <arg key="ur01060.W008"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.jrList[].rowStatusFlg == 2) or (data.jrList[].memoData.memo != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="memoData.memo" indexedListProperty="data.jrList" depends="maxlengthDB">
+                <arg key="ur01060.W002"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>256</var-value>
+                    </var>
+            </field>
+            <field property="memoData.memoRecorder" indexedListProperty="data.facilityList" depends="validwhen">
+                <arg key="ur01060.W006"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.facilityList[].rowStatusFlg == 2) or (data.facilityList[].memoData.memoRecorder != null))
+                    </var-value>
+                </var>
+            </field>
+            <field property="memoData.memoRecorder" indexedListProperty="data.jrList" depends="validwhen">
+                <arg key="ur01060.W009"/>
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        ((data.jrList[].rowStatusFlg == 2) or (data.jrList[].memoData.memoRecorder != null))
+                    </var-value>
+                </var>
+            </field>
+        </form>
+    </formset> -->
+    
+</form-validation>

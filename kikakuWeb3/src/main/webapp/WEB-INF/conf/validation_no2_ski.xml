@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<formset>
+		<form name="UR01023Form">
+	
+			<field property="data.specialItemData.byu1_CHECK_IN_H"
+				depends="intRange">
+				<arg0 key="ur01023.W001" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.hourMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+
+	
+			<field property="data.specialItemData.byu1_CHECK_IN_T"
+				depends="intRange">
+				<arg0 key="ur01023.W002" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.minMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.byu1_CHECK_OUT_H"
+				depends="intRange">
+				<arg0 key="ur01023.W003" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.hourMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.byu1_CHECK_OUT_T"
+				depends="intRange">
+				<arg0 key="ur01023.W004" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.minMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			
+
+		<field property="data.specialItemData.byu1_CHECK_IN_NORMAL_H"
+				depends="intRange">
+				<arg0 key="ur01023.W005" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.hourMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.byu1_CHECK_IN_NORMAL_T"
+				depends="intRange">
+				<arg0 key="ur01023.W006" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.minMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.byu1_CHECK_OUT_NORMAL_H"
+				depends="intRange">
+				<arg0 key="ur01023.W007" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.hourMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.byu1_CHECK_OUT_NORMAL_T"
+				depends="intRange">
+				<arg0 key="ur01023.W008" />
+				<arg1 key="ur01030.timeMin" />
+				<arg2 key="ur01030.minMax" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>					
+			
+			
+	
+			<field property="data.specialItemData.byu1_CHECK_IN_H"
+				depends="validwhen">
+				<arg key="ur01023.W014" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.byu1_CHECK_IN_H == null) and
+						(data.specialItemData.byu1_CHECK_IN_T == null)) or
+						((data.specialItemData.byu1_CHECK_IN_H != null) and
+						(data.specialItemData.byu1_CHECK_IN_T != null)))
+					</var-value>
+				</var>
+			</field>
+			
+			
+			<field property="data.specialItemData.byu1_CHECK_OUT_H"
+				depends="validwhen">
+				<arg key="ur01023.W015" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.byu1_CHECK_OUT_H == null) and
+						(data.specialItemData.byu1_CHECK_OUT_T == null)) or					
+						((data.specialItemData.byu1_CHECK_OUT_H != null) and
+						(data.specialItemData.byu1_CHECK_OUT_T != null)))						
+					</var-value>
+				</var>
+			</field>
+			
+
+			<field property="data.specialItemData.byu1_CHECK_IN_NORMAL_H"
+				depends="validwhen">
+				<arg key="ur01023.W016" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.byu1_CHECK_IN_NORMAL_H == null) and
+						(data.specialItemData.byu1_CHECK_IN_NORMAL_T == null)) or
+						((data.specialItemData.byu1_CHECK_IN_NORMAL_H != null) and
+						(data.specialItemData.byu1_CHECK_IN_NORMAL_T != null)))
+					</var-value>
+				</var>
+			</field>
+			
+			
+			<field property="data.specialItemData.byu1_CHECK_OUT_NORMAL_H"
+				depends="validwhen">
+				<arg key="ur01023.W017" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.byu1_CHECK_OUT_NORMAL_H == null) and
+						(data.specialItemData.byu1_CHECK_OUT_NORMAL_T == null)) or					
+						((data.specialItemData.byu1_CHECK_OUT_NORMAL_H != null) and
+						(data.specialItemData.byu1_CHECK_OUT_NORMAL_T != null)))						
+					</var-value>
+				</var>
+			</field>
+						
+			
+	
+			
+		</form>
+	</formset>
+</form-validation>

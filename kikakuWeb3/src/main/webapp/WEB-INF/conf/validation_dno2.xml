@@ -1,0 +1,973 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+		  "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+		  "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<formset>
+		<form name="DR01020Form">
+			<field property="data.memoData.memo"
+				depends="maxlengthDB">
+				<arg key="dr01020.I001" />
+				<arg name="maxlengthDB" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>128</var-value>
+				</var>
+			</field>
+		<!-- 提供内容（食事） -->
+		<!-- 夕食 -->
+			<field  property="data.dNo2MealCond.dnPlaceNum" depends="integer,maxlength">
+				<arg key="dr01020.W101" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.dnPlaceOther" depends="maxlength">
+				<arg key="dr01020.W102" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.dnContentNum" depends="integer,maxlength">
+				<arg key="dr01020.W103" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.dnContentOther" depends="maxlength">
+				<arg key="dr01020.W104" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.dnSelectDeadline0" depends="integer,maxlength">
+				<arg key="dr01020.W105" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.dnSelectDeadline1" depends="integer,maxlength">
+				<arg key="dr01020.W106" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.dinnerItem" depends="maxlength">
+				<arg key="dr01020.W018" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>300</var-value>
+				</var>
+			</field>
+			<!-- 部屋食 -->
+			<field  property="mealListD[0].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W011" />
+				<arg key="dr01020.W027" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[0].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[0].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W027" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 個室食事処 -->
+			<field  property="mealListD[1].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W011" />
+				<arg key="dr01020.W028" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[1].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[1].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W028" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 食事処 -->
+			<field  property="mealListD[2].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W011" />
+				<arg key="dr01020.W029" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[2].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[2].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W029" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 食堂 -->
+			<field  property="mealListD[3].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W011" />
+				<arg key="dr01020.W030" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[3].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[3].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W030" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- レストラン -->
+			<field  property="mealListD[4].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[4].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W059" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 宴会場 -->
+			<field  property="mealListD[5].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[5].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W060" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 広間 -->
+			<field  property="mealListD[6].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[6].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W061" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- コンベンションホール  -->
+			<field  property="mealListD[7].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListD[7].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W013" />
+				<arg key="dr01020.W062" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- バイキングの制限人数 -->
+			<field property="data.dNo2MealCond.dinnerVkNum" depends="integer,maxlength">
+				<arg key="dr01020.W015"/>
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 特徴 -->
+			<field  property="data.dNo2MealCond.dinnerFeature" depends="maxlength">
+				<arg key="dr01020.W020"/>
+				<arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>200</var-value>
+					</var>
+			</field>
+			
+		<!-- 朝食 -->
+			<field  property="data.dNo2MealCond.bfPlaceNum" depends="integer,maxlength">
+				<arg key="dr01020.W107" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.bfPlaceOther" depends="maxlength">
+				<arg key="dr01020.W108" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.bfContentNum" depends="integer,maxlength">
+				<arg key="dr01020.W109" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.bfContentOther" depends="maxlength">
+				<arg key="dr01020.W110" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.bfSelectDeadline0" depends="integer,maxlength">
+				<arg key="dr01020.W111" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.bfSelectDeadline1" depends="integer,maxlength">
+				<arg key="dr01020.W112" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+			</field>
+			<field  property="data.dNo2MealCond.breakfastItem" depends="maxlength">
+				<arg key="dr01020.W017" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>300</var-value>
+				</var>
+			</field>
+			<!-- 部屋食 -->
+			<field  property="mealListM[0].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W012" />
+				<arg key="dr01020.W027" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[0].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[0].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W027" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 個室食事処 -->
+			<field  property="mealListM[1].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W012" />
+				<arg key="dr01020.W028" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[1].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[1].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W028" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 食事処 -->
+			<field  property="mealListM[2].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W012" />
+				<arg key="dr01020.W029" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[2].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[2].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W029" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 食堂 -->
+			<field  property="mealListM[3].personNumLit" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W012" />
+				<arg key="dr01020.W030" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[3].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[3].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W030" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- レストラン -->
+			<field  property="mealListM[4].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[4].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W059" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 宴会場 -->
+			<field  property="mealListM[5].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[5].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W060" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 広間 -->
+			<field  property="mealListM[6].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[6].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W061" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- コンベンションホール  -->
+			<field  property="mealListM[7].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W023" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<field  property="mealListM[7].mealNum" depends="integer,maxlength">
+				<msg name="integer" key="dr01020.W014" />
+				<arg key="dr01020.W062" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- バイキングの制限人数 -->
+			<field property="data.dNo2MealCond.breakfastVkNumber" depends="integer,maxlength">
+				<arg key="dr01020.W016"/>
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- 特徴 -->
+			<field  property="data.dNo2MealCond.breakfastFeature" depends="maxlength">
+				<arg key="dr01020.W019"/>
+				<arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>200</var-value>
+					</var>
+			</field>
+		<!-- 昼食  -->
+			<field  property="mealListA[9].mealContent" depends="maxlength">
+				<msg name="maxlength" key="dr01020.W063" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+		<!-- 特典 -->
+		<!-- 夕食時お酒又はジュース一本付き --> 
+			<field  property="data.specialItemData.s1OtherServiceCmt" depends="maxlengthDB">
+				<arg key="dr01020.W043"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>10</var-value>
+					</var>
+			</field>
+		<!-- 喫茶券 -->
+			<field  property="data.specialItemData.s2OtherServiceCmt" depends="maxlengthDB">
+				<arg key="dr01020.W044"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>10</var-value>
+					</var>
+			</field>
+		<!-- ウェルカムドリンク -->
+			<field  property="data.specialItemData.s3OtherServiceCmt" depends="maxlengthDB">
+				<arg key="dr01020.W045"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>10</var-value>
+					</var>
+			</field>
+		<!-- お部屋での新聞サービス -->
+			<field  property="data.specialItemData.s4SpCmt" depends="maxlengthDB">
+				<arg key="dr01020.W064"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- お一人様に浴衣２枚（大人のみ） -->
+			<field  property="data.specialItemData.s5SpCmt" depends="maxlengthDB">
+				<arg key="dr01020.W065"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- お土産付き -->
+			<field  property="data.specialItemData.s6Content" depends="maxlengthDB">
+				<arg key="dr01020.W066"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- 室内冷蔵庫内ドリンク無料 -->
+			<field  property="data.specialItemData.s7Content" depends="maxlengthDB">
+				<arg key="dr01020.W067"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>25</var-value>
+					</var>
+			</field>
+		<!-- レディース特典 -->
+			<field  property="data.specialItemData.s8Content" depends="maxlengthDB">
+				<arg key="dr01020.W047"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- シニア特典 -->
+			<field  property="data.specialItemData.s10Content" depends="maxlengthDB">
+				<arg key="dr01020.W048"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- カラオケBOX割引 -->
+			<field property="data.specialItemData.s9DiscountPer" depends="intRange">
+				<arg0 key="dr01030.W011"/>
+				<arg1 key="dr01030.min"/>
+				<arg2 key="dr01030.max"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>1</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>99</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s9DiscountYen" depends="integer">
+				<arg key="dr01030.W012"/>
+			</field>
+			<field  property="data.specialItemData.s10Content" depends="maxlengthDB">
+				<arg key="dr01020.W068"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- 夜食フルーツ -->
+			<field  property="data.specialItemData.s11Content" depends="maxlengthDB">
+				<arg key="dr01020.W049"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- 夜食おにぎり -->
+			<field  property="data.specialItemData.s12SpCmt" depends="maxlengthDB">
+				<arg key="dr01020.W069"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- 禁煙ルーム（MS） -->
+			<field  property="data.specialItemData.s13Answer" depends="maxlengthDB">
+				<arg key="dr01020.W070"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>20</var-value>
+					</var>
+			</field>
+		<!-- 禁煙ルーム（TEL） -->
+			<field  property="data.specialItemData.s20Answer" depends="maxlengthDB">
+				<arg key="dr01020.W071"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>20</var-value>
+					</var>
+			</field>
+		<!-- 喫煙ルーム(MS) -->
+			<field  property="data.specialItemData.s21Answer" depends="maxlengthDB">
+				<arg key="dr01020.W072"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>20</var-value>
+					</var>
+			</field>
+		<!-- 喫煙ルーム(TEL) -->
+			<field  property="data.specialItemData.s22Answer" depends="maxlengthDB">
+				<arg key="dr01020.W073"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>20</var-value>
+					</var>
+			</field>
+		<!-- レディースルーム(MS) -->
+			<field  property="data.specialItemData.s14Answer" depends="maxlengthDB">
+				<arg key="dr01020.W074"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>20</var-value>
+					</var>
+			</field>
+		<!-- レディースルーム(TEL) -->
+			<field  property="data.specialItemData.s15Answer" depends="maxlengthDB">
+				<arg key="dr01020.W075"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>20</var-value>
+					</var>
+			</field>
+		<!-- ブランチ変更 -->
+			<field  property="data.specialItemData.s16Restran" depends="maxlengthDB">
+				<arg key="dr01020.W056"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>10</var-value>
+					</var>
+			</field>
+			<field property="data.specialItemData.s16Time1H" depends="integer,intRange">
+				<arg key="dr01020.W076"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s16Time1M" depends="integer,intRange">
+				<arg key="dr01020.W077"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s16Time2H" depends="integer,intRange">
+				<arg key="dr01020.W078"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s16Time2M" depends="integer,intRange">
+				<arg key="dr01020.W079"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field  property="data.specialItemData.s16SpCmt" depends="maxlengthDB">
+				<arg key="dr01020.W080"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		<!-- 朝食券をバー等の飲み物に変更できる -->
+			<field  property="data.specialItemData.s17Place" depends="maxlengthDB">
+				<arg key="dr01020.W057"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>10</var-value>
+					</var>
+			</field>
+			<field property="data.specialItemData.s17Time1H" depends="integer,intRange">
+				<arg key="dr01020.W081"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s17Time1M" depends="integer,intRange">
+				<arg key="dr01020.W082"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s17Time2H" depends="integer,intRange">
+				<arg key="dr01020.W083"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.specialItemData.s17Time2M" depends="integer,intRange">
+				<arg key="dr01020.W084"/>
+				<arg1 key="${var:min}"  resource="false"/>
+				<arg2 key="${var:max}"  resource="false"/>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field  property="data.specialItemData.s17Content" depends="maxlengthDB">
+				<arg key="dr01020.W058"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>10</var-value>
+					</var>
+			</field>
+			<field property="data.specialItemData.s17RedeemAmoumt" depends="integer">
+				<arg key="dr01020.W085"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>8</var-value>
+					</var>
+			</field>
+			<field  property="data.specialItemData.s17SpCmt" depends="maxlengthDB">
+				<arg key="dr01020.W086"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		
+			<field property="data.specialItemData.s16Time1H" depends="validwhen">
+				<arg key="dr01030.W050"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.s16Time1H == null) and
+						(data.specialItemData.s16Time1M == null))
+						 or 
+						((data.specialItemData.s16Time1H != null) and
+						(data.specialItemData.s16Time1M != null)))
+					</var-value>
+				</var>
+			</field>
+			
+			<field property="data.specialItemData.s16Time2H" depends="validwhen">
+				<arg key="dr01030.W150"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.s16Time2H == null) and
+						(data.specialItemData.s16Time2M == null))
+						 or 
+						((data.specialItemData.s16Time2H != null) and
+						(data.specialItemData.s16Time2M != null)))
+					</var-value>
+				</var>
+			</field>
+			
+			<field property="data.specialItemData.s17Time1H" depends="validwhen">
+				<arg key="dr01030.W151"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.s17Time1H == null) and
+						(data.specialItemData.s17Time1M == null))
+						 or 
+						((data.specialItemData.s17Time1H != null) and
+						(data.specialItemData.s17Time1M != null)))
+					</var-value>
+				</var>
+			</field>
+
+			<field property="data.specialItemData.s17Time2H" depends="validwhen">
+				<arg key="dr01030.W051"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.specialItemData.s17Time2H == null) and
+						(data.specialItemData.s17Time2M == null))
+						 or 
+						((data.specialItemData.s17Time2H != null) and
+						(data.specialItemData.s17Time2M != null)))
+					</var-value>
+				</var>
+			</field>
+			
+			<field  property="data.otherItemData.specialRecoItem1" depends="maxlengthDB">
+				<arg key="dr01020.W040"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+			<field  property="data.otherItemData.specialRecoItem2" depends="maxlengthDB">
+				<arg key="dr01020.W040"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+			<field  property="data.otherItemData.specialRecoItem3" depends="maxlengthDB">
+				<arg key="dr01020.W040"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+			<field  property="data.otherItemData.specialRecoItem4" depends="maxlengthDB">
+				<arg key="dr01020.W040"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+			<field  property="data.otherItemData.specialRecoItem5" depends="maxlengthDB">
+				<arg key="dr01020.W040"/>
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+					<var>
+						<var-name>maxlength</var-name>
+						<var-value>50</var-value>
+					</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>

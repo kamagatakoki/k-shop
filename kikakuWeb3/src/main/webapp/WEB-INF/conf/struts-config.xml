@@ -1,0 +1,1653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="UR00100Form" type="jp.co.jreast.ur00100.form.UR00100Form" />
+        <form-bean name="UR00200Form" type="jp.co.jreast.ur00200.form.UR00200Form" />
+        <form-bean name="UR00300SearchForm"
+            type="jp.co.jreast.ur00300.form.UR00300SearchForm" />
+        <form-bean name="UR00300InsertForm"
+            type="jp.co.jreast.ur00300.form.UR00300InsertForm" />
+        <form-bean name="UR00400Form" type="jp.co.jreast.ur00400.form.UR00400SearchForm" />
+        <form-bean name="UR00400FormList"
+            type="jp.co.jreast.ur00400.form.UR00400ListForm" />
+        <form-bean name="UR00500Form" type="jp.co.jreast.ur00500.form.UR00500Form" />
+
+       <form-bean name="UR00500BatchForm"
+            type="jp.co.jreast.ur00500.form.UR00500Form" />
+
+
+        <form-bean name="UR02000Form" type="jp.co.jreast.ur02000.form.UR02000Form" />
+        <form-bean name="UR02000FormDisplay" type="jp.co.jreast.ur02000.form.UR02000Form" />
+        <form-bean name="UR02003Form" type="jp.co.jreast.ur02003.form.UR02003Form" />
+
+        <form-bean name="UR01010Form" type="jp.co.jreast.ur01010.form.UR01010Form" />
+        <form-bean name="UR01010FormDisplay" type="jp.co.jreast.ur01010.form.UR01010Form" />
+        <form-bean name="UR01010InitForm" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01010InitFormDisplay"
+            type="jp.co.jreast.common.form.No1InitForm" />
+
+        <!-- PrintNo1Form -->
+		<form-bean name="PrintNo1Form" type="jp.co.jreast.ur01010.form.UR01010Form"/>
+		<!-- end  -->
+
+        <form-bean name="UR01011Form" type="jp.co.jreast.ur01011.form.UR01011Form" />
+        <form-bean name="UR01011FormDisplay" type="jp.co.jreast.ur01011.form.UR01011Form" />
+        <form-bean name="UR01011InitForm" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01011InitFormDisplay"
+            type="jp.co.jreast.common.form.No1InitForm" />
+		<!-- PrintTravelNo1Form -->
+		<form-bean name="PrintTravelNo1Form" type="jp.co.jreast.ur01011.form.UR01011Form"/>
+
+		<!-- end -->
+        <form-bean name="UR01012Form" type="jp.co.jreast.ur01012.form.UR01012Form" />
+        <form-bean name="UR01012FormDisplay" type="jp.co.jreast.ur01012.form.UR01012Form" />
+        <form-bean name="UR01012InitForm" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01012InitFormDisplay" type="jp.co.jreast.common.form.No1InitForm" />
+
+        <form-bean name="UR01013InitForm" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01013Form" type="jp.co.jreast.ur01013.form.UR01013Form" />
+        <form-bean name="UR01013InitFormDisplay" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01013FormDisplay" type="jp.co.jreast.ur01013.form.UR01013Form" />
+
+        <form-bean name="UR01014Form" type="jp.co.jreast.ur01014.form.UR01014Form" />
+        <form-bean name="UR01014InitForm" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01014InitFormDisplay" type="jp.co.jreast.common.form.No1InitForm" />
+        <form-bean name="UR01014FormDisplay" type="jp.co.jreast.ur01014.form.UR01014Form" />
+        <form-bean name="UR01014FormDisplayCalenda" type="jp.co.jreast.ur01014.form.UR01014Form" />
+        <!-- リフトprintForm -->
+		<form-bean name="UR01014FormPrintDisplay" type="jp.co.jreast.ur01014.form.UR01014Form"/>
+		<!-- end -->
+        <form-bean name="UR01050Form" type="jp.co.jreast.ur01050.form.UR01050Form" />
+        <form-bean name="UR01050FormDisplay" type="jp.co.jreast.ur01050.form.UR01050Form" />
+        <!-- No5displayPrint -->
+        <form-bean name="PrintNo5Form" type="jp.co.jreast.ur01050.form.UR01050Form" />
+        <!-- end -->
+        <form-bean name="UR01020Form" type="jp.co.jreast.ur01020.form.UR01020Form" />
+        <form-bean name="UR01020FormDisplay" type="jp.co.jreast.ur01020.form.UR01020Form" />
+        <!-- No2displayPrint -->
+        <form-bean name="PrintNo2Form" type="jp.co.jreast.ur01020.form.UR01020Form" />
+        <!-- end -->
+        <!-- LiftNo2Form -->
+        <form-bean name="UR01021Form" type="jp.co.jreast.ur01021.form.UR01021Form"/>
+        <form-bean name="UR01021FormDisplay" type="jp.co.jreast.ur01021.form.UR01021Form" />
+        <form-bean name="PrintLiftNo2Form" type="jp.co.jreast.ur01021.form.UR01021Form" />
+        <!-- end -->
+
+		<!-- 宿泊No2ホテルkimu add -->
+        <!-- No2Form -->
+        <form-bean name="UR01022Form" type="jp.co.jreast.ur01022.form.UR01022Form"/>
+        <form-bean name="UR01022FormDisplay" type="jp.co.jreast.ur01022.form.UR01022Form" />
+        <form-bean name="PrintMealHotelNo2Form" type="jp.co.jreast.ur01022.form.UR01022Form" />
+
+        <form-bean name="UR01024Form" type="jp.co.jreast.ur01022.form.UR01024Form"/>
+        <!-- end -->
+
+		<!--スキーNo2 kimu add -->
+        <!-- No2Form -->
+        <form-bean name="UR01023Form" type="jp.co.jreast.ur01023.form.UR01023Form"/>
+        <form-bean name="UR01023FormDisplay" type="jp.co.jreast.ur01023.form.UR01023Form" />
+        <form-bean name="PrintMealSkiNo2Form" type="jp.co.jreast.ur01023.form.UR01023Form" />
+        <!-- end -->
+
+
+        <form-bean name="UR01030Form" type="jp.co.jreast.ur01030.form.UR01030Form" />
+        <form-bean name="UR01030DisplayForm" type="jp.co.jreast.ur01030.form.UR01030Form" />
+        <!-- No3displayPrint -->
+        <form-bean name="PrintNo3Form" type="jp.co.jreast.ur01030.form.UR01030Form" />
+        <!-- end -->
+        <form-bean name="UR01060Form" type="jp.co.jreast.ur01060.form.UR01060Form" />
+        <form-bean name="UR01060DisplayForm"
+            type="jp.co.jreast.ur01060.form.UR01060DisplayForm" />
+        <form-bean name="UR02001SearchForm"
+            type="jp.co.jreast.ur02001.form.UR02001SearchForm" />
+        <form-bean name="UR02001CopyForm"
+            type="jp.co.jreast.ur02001.form.UR02001CopyForm" />
+        <form-bean name="UR02002Form" type="jp.co.jreast.ur02002.form.UR02002Form" />
+
+        <form-bean name="UR01040Form" type="jp.co.jreast.ur01040.form.UR01040Form" />
+        <form-bean name="UR01040FormDisplay" type="jp.co.jreast.ur01040.form.UR01040Form" />
+        <!-- No4displayPrint -->
+        <form-bean name="PrintNo4Form" type="jp.co.jreast.ur01040.form.UR01040Form" />
+        <!-- end -->
+        <form-bean name="UR01041Form" type="jp.co.jreast.ur01041.form.UR01041Form" />
+        <form-bean name="UR01041FormDisplay" type="jp.co.jreast.ur01041.form.UR01041Form" />
+        <form-bean name="UR01042Form" type="jp.co.jreast.ur01042.form.UR01042Form" />
+        <form-bean name="UR01042FormDisplay" type="jp.co.jreast.ur01042.form.UR01042Form" />
+
+        <form-bean name="UR02004Form" type="jp.co.jreast.ur02004.form.UR02004Form"/>
+        <form-bean name="UR02004CopyCalendarForm" type="jp.co.jreast.ur02004.form.UR02004CopyCalendarForm"/>
+
+
+        <form-bean name="UR04000Form" type="jp.co.jreast.ur04000.form.UR04000Form" />
+        <form-bean name="UR04010Form" type="jp.co.jreast.ur04010.form.UR04010Form" />
+
+        <!-- 年度・シーズン・支社変更機能追加 2009/11/27 add by s31109 -->
+        <form-bean name="UR02005Form" type="jp.co.jreast.ur02005.form.UR02005Form" />
+        <!-- end -->
+        <!-- 施設付帯情報一覧機能追加 2009/12/04 s30873 -->
+        <form-bean name="UR05000Form" type="jp.co.jreast.ur05000.form.UR05000Form" />
+        <!-- end -->
+        <!-- 施設付帯情報詳細画面及び機能追加 2009/12/08 s30873 -->
+        <form-bean name="UR05030Form" type="jp.co.jreast.ur05030.form.UR05030Form" />
+        <form-bean name="UR05030InitForm" type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <form-bean name="UR05030FormDisplay" type="jp.co.jreast.ur05030.form.UR05030Form" />
+        <form-bean name="UR05030InitFormDisplay"
+            type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <form-bean name="UR05050Form" type="jp.co.jreast.ur05050.form.UR05050Form" />
+        <form-bean name="UR05050InitForm" type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <form-bean name="UR05050FormDisplay" type="jp.co.jreast.ur05050.form.UR05050Form" />
+        <form-bean name="UR05050InitFormDisplay"
+            type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <!-- end -->
+        <!-- 施設付帯情報詳細画面及び機能追加(スキー場) 2010/05/11 s32472 -->
+        <form-bean name="UR05052Form" type="jp.co.jreast.ur05052.form.UR05052Form" />
+        <form-bean name="UR05052InitForm" type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <form-bean name="UR05052FormDisplay" type="jp.co.jreast.ur05052.form.UR05052Form" />
+        <form-bean name="UR05052InitFormDisplay"
+            type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <!-- end -->
+        <!-- 状態変更機能追加 2009/12/10 add by s31109 -->
+        <form-bean name="UR06000Form" type="jp.co.jreast.ur06000.form.UR06000Form" />
+        <form-bean name="UR06000SubmitForm" type="jp.co.jreast.ur06000.form.UR06000SubmitForm" />
+        <!-- 施設付帯情報詳細ホテル画面用定義 追加 2010/01/28 s30873 -->
+        <form-bean name="UR05031Form" type="jp.co.jreast.ur05031.form.UR05031Form" />
+        <form-bean name="UR05031InitForm" type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <form-bean name="UR05031FormDisplay" type="jp.co.jreast.ur05031.form.UR05031Form" />
+        <form-bean name="UR05031InitFormDisplay"
+            type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <!-- 施設付帯情報詳細ホテル画面用定義(スキー) 追加 2010/05/06 s32423 -->
+        <form-bean name="UR05032Form" type="jp.co.jreast.ur05032.form.UR05032Form" />
+        <form-bean name="UR05032InitForm" type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <form-bean name="UR05032FormDisplay" type="jp.co.jreast.ur05032.form.UR05032Form" />
+        <form-bean name="UR05032InitFormDisplay"
+            type="jp.co.jreast.common.form.FacilityManageInitForm" />
+        <!-- 施設参照機能追加対応 2009/12/24 add by s30873 -->
+        <form-bean name="UR02007Form" type="jp.co.jreast.ur02007.form.UR02007Form" />
+        <!-- end -->
+        <!-- 施設コピー機能追加対応 2009/12/28 add by s30873 -->
+        <form-bean name="UR05100Form" type="jp.co.jreast.ur05100.form.UR05100Form" />
+        <!-- end -->
+        <!-- 施設情報設定機能追加対応 2010/1/07 add by s30873 -->
+         <form-bean name="UR02006Form"
+            type="jp.co.jreast.ur02006.form.UR02006Form" />
+        <!-- end -->
+        <!-- 付帯情報一覧削除機能追加 2010/02/02 add by s30873 -->
+        <form-bean name="UR05000ResultControlForm"
+            type="jp.co.jreast.ur05000.form.UR05000ResultControlForm" />
+        <!-- end -->
+
+         <!-- パスワード変更 -->
+         <form-bean name="UR08000Form" type="jp.co.jreast.ur08000.form.UR08000Form" />
+
+         <!-- CSRF 対策 -->
+         <form-bean name="UR09002Form" type="jp.co.jreast.ur09002.form.UR09002Form" />
+
+
+		<!-- DR画面用 -->
+        <form-bean name="DR01010Form" type="jp.co.jreast.dr01010.form.DR01010Form" />
+        <form-bean name="DR01010FormDisplay" type="jp.co.jreast.dr01010.form.DR01010Form" />
+        <form-bean name="DR01010InitForm" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01010InitFormDisplay"
+            type="jp.co.jreast.common.form.DNo1InitForm" />
+
+		<form-bean name="DRPrintNo1Form" type="jp.co.jreast.dr01010.form.DR01010Form"/>
+
+        <form-bean name="DR01011Form" type="jp.co.jreast.dr01011.form.DR01011Form" />
+        <form-bean name="DR01011FormDisplay" type="jp.co.jreast.dr01011.form.DR01011Form" />
+        <form-bean name="DR01011InitForm" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01011InitFormDisplay"
+            type="jp.co.jreast.common.form.DNo1InitForm" />
+		<form-bean name="DRPrintTravelNo1Form" type="jp.co.jreast.dr01011.form.DR01011Form"/>
+
+        <form-bean name="DR01012Form" type="jp.co.jreast.dr01012.form.DR01012Form" />
+        <form-bean name="DR01012FormDisplay" type="jp.co.jreast.dr01012.form.DR01012Form" />
+        <form-bean name="DR01012InitForm" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01012InitFormDisplay" type="jp.co.jreast.common.form.DNo1InitForm" />
+
+        <form-bean name="DR01013InitForm" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01013Form" type="jp.co.jreast.dr01013.form.DR01013Form" />
+        <form-bean name="DR01013InitFormDisplay" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01013FormDisplay" type="jp.co.jreast.dr01013.form.DR01013Form" />
+
+        <form-bean name="DR01014Form" type="jp.co.jreast.dr01014.form.DR01014Form" />
+        <form-bean name="DR01014InitForm" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01014InitFormDisplay" type="jp.co.jreast.common.form.DNo1InitForm" />
+        <form-bean name="DR01014FormDisplay" type="jp.co.jreast.dr01014.form.DR01014Form" />
+        <form-bean name="DR01014FormDisplayCalenda" type="jp.co.jreast.dr01014.form.DR01014Form" />
+		<form-bean name="DR01014FormPrintDisplay" type="jp.co.jreast.dr01014.form.DR01014Form"/>
+		
+        <form-bean name="DR01020Form" type="jp.co.jreast.dr01020.form.DR01020Form" />
+        <form-bean name="DR01020FormDisplay" type="jp.co.jreast.dr01020.form.DR01020Form" />
+        <form-bean name="DRPrintNo2Form" type="jp.co.jreast.dr01020.form.DR01020Form" />
+
+        <form-bean name="DR01021Form" type="jp.co.jreast.dr01021.form.DR01021Form"/>
+        <form-bean name="DR01021FormDisplay" type="jp.co.jreast.dr01021.form.DR01021Form" />
+        <form-bean name="DRPrintLiftNo2Form" type="jp.co.jreast.dr01021.form.DR01021Form" />
+
+        <form-bean name="DR01022Form" type="jp.co.jreast.dr01022.form.DR01022Form"/>
+        <form-bean name="DR01022FormDisplay" type="jp.co.jreast.dr01022.form.DR01022Form" />
+        <form-bean name="DRPrintMealHotelNo2Form" type="jp.co.jreast.dr01022.form.DR01022Form" />
+
+        <form-bean name="DR01023Form" type="jp.co.jreast.dr01023.form.DR01023Form"/>
+        <form-bean name="DR01023FormDisplay" type="jp.co.jreast.dr01023.form.DR01023Form" />
+        <form-bean name="DRPrintMealSkiNo2Form" type="jp.co.jreast.dr01023.form.DR01023Form" />
+
+<!--
+        <form-bean name="DR01030Form" type="jp.co.jreast.dr01030.form.DR01030Form" />
+        <form-bean name="DR01030DisplayForm" type="jp.co.jreast.dr01030.form.DR01030Form" />
+        <form-bean name="PrintNo3Form" type="jp.co.jreast.dr01030.form.DR01030Form" />
+-->
+
+        <form-bean name="DR01040Form" type="jp.co.jreast.dr01040.form.DR01040Form" />
+        <form-bean name="DR01040FormDisplay" type="jp.co.jreast.dr01040.form.DR01040Form" />
+        <form-bean name="DRPrintNo4Form" type="jp.co.jreast.dr01040.form.DR01040Form" />
+
+        <form-bean name="DR01041Form" type="jp.co.jreast.dr01041.form.DR01041Form" />
+        <form-bean name="DR01041FormDisplay" type="jp.co.jreast.dr01041.form.DR01041Form" />
+
+        <form-bean name="DR01042Form" type="jp.co.jreast.dr01042.form.DR01042Form" />
+        <form-bean name="DR01042FormDisplay" type="jp.co.jreast.dr01042.form.DR01042Form" />
+
+<!--
+        <form-bean name="DR01050Form" type="jp.co.jreast.dr01050.form.DR01050Form" />
+        <form-bean name="DR01050FormDisplay" type="jp.co.jreast.dr01050.form.DR01050Form" />
+        <form-bean name="PrintNo5Form" type="jp.co.jreast.dr01050.form.DR01050Form" />
+-->
+
+        <form-bean name="DR01060Form" type="jp.co.jreast.dr01060.form.DR01060Form" />
+        <form-bean name="DR01060DisplayForm"
+            type="jp.co.jreast.dr01060.form.DR01060DisplayForm" />
+
+        <form-bean name="DR02008Form" type="jp.co.jreast.dr02008.form.DR02008Form" />
+        
+        <form-bean name="DR05030Form" type="jp.co.jreast.dr05030.form.DR05030Form" />
+        <form-bean name="DR05030InitForm" type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+        <form-bean name="DR05030FormDisplay" type="jp.co.jreast.dr05030.form.DR05030Form" />
+        <form-bean name="DR05030InitFormDisplay"
+            type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+
+        <form-bean name="DR05032Form" type="jp.co.jreast.dr05032.form.DR05032Form" />
+        <form-bean name="DR05032InitForm" type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+        <form-bean name="DR05032FormDisplay" type="jp.co.jreast.dr05032.form.DR05032Form" />
+        <form-bean name="DR05032InitFormDisplay"
+            type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+
+        <form-bean name="DR05050Form" type="jp.co.jreast.dr05050.form.DR05050Form" />
+        <form-bean name="DR05050InitForm" type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+        <form-bean name="DR05050FormDisplay" type="jp.co.jreast.dr05050.form.DR05050Form" />
+        <form-bean name="DR05050InitFormDisplay"
+            type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+
+        <form-bean name="DR05052Form" type="jp.co.jreast.dr05052.form.DR05052Form" />
+        <form-bean name="DR05052InitForm" type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+        <form-bean name="DR05052FormDisplay" type="jp.co.jreast.dr05052.form.DR05052Form" />
+        <form-bean name="DR05052InitFormDisplay"
+            type="jp.co.jreast.common.form.DFacilityManageInitForm" />
+
+        <form-bean name="DR05100Form" type="jp.co.jreast.dr05100.form.DR05100Form" />
+    </form-beans>
+
+    <global-forwards>
+        <forward name="SystemErrorPage" path="page.systemError" />
+        <forward name="MultiWindowErrorPage" path="page.systemErrorMultiWindow" />
+        <forward name="logout" path="/login.do?logout=true" />
+        <forward name="SessionTimeOut" path="page.sessionTimeout"/>
+    </global-forwards>
+
+    <action-mappings>
+    	<action path="/main"
+    	type="jp.co.jreast.common.action.MainAction">
+    	<forward name="success" path="/WEB-INF/jsp/ur00100/ur00100.jsp" />
+    	<forward name="maintenace" path="page.maintence"/>
+    	</action>
+        <action path="/login" name="UR00100Form"
+            type="jp.co.jreast.ur00100.action.UR00100Action"
+            parameter="default=logout,login,init" input="/WEB-INF/jsp/ur00100/ur00100.jsp"
+            scope="request" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/ur00100/ur00100.jsp" />
+            <forward name="goUR00200" path="/ur00200.do" />
+            <forward name="toMain" path="/index.jsp" />
+        </action>
+
+        <action path="/ur00200" name="UR00200Form"
+            type="jp.co.jreast.ur00200.action.UR00200Action" parameter="default=init"
+            scope="request" validate="true">
+            <forward name="success" path="page.ur00200" />
+        </action>
+
+        <action path="/ur00300Search" parameter="default=init,search" validate="true"
+        	input="page.ur00300"
+            name="UR00300SearchForm" type="jp.co.jreast.ur00300.action.UR00300Action">
+            <forward name="initSuccess" path="page.ur00300" />
+            <forward name="initFailure" path="page.ur00300" />
+        </action>
+
+        <action path="/ur00300Insert" parameter="insert"
+            name="UR00300InsertForm" type="jp.co.jreast.ur00300.action.UR00300Action"
+            validate="true" input="page.ur00300" scope="request">
+            <forward name="insertSuccess" path="/ur00400.do" />
+        </action>
+
+        <action path="/ur00400" parameter="default=init,search=search" name="UR00400Form"
+            type="jp.co.jreast.ur00400.action.UR00400Action" validate="true"
+            input="page.ur00400" scope="request">
+            <forward name="init" path="page.ur00400" />
+        </action>
+
+        <action path="/ur00400_list" parameter="default=sendMail,attch" name="UR00400FormList"
+            type="jp.co.jreast.ur00400.action.UR00400Action" validate="true"
+            input="page.ur00400" scope="request">
+            <forward name="init" path="page.ur00400" />
+        </action>
+
+        <action path="/ur00500" parameter="default=init,search" name="UR00500Form"
+            type="jp.co.jreast.ur00500.action.UR00500Action" validate="true"
+            input="page.ur00500" scope="request">
+            <forward name="success" path="page.ur00500" />
+            <forward name="search" path="page.ur00500" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/ur00500Batch" parameter="default=fileDownLoad" name="UR00500Form"
+            type="jp.co.jreast.ur00500.action.UR00500Action" validate="true"
+            input="page.ur00500" scope="request">
+            <forward name="success" path="page.ur00500" />
+            <forward name="search" path="page.ur00500" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+		<action path="/ur00600" parameter="default=init" type="jp.co.jreast.ur00600.action.UR00600Action">
+		<forward name="downLoad" path="/jreDownLoad.do" />
+		<forward name="init" path="/WEB-INF/jsp/ur00600/ur00600.jsp"></forward>
+		</action>
+		<action path="/ur02000" name="UR02000Form"
+            type="jp.co.jreast.ur02000.action.UR02000Action"
+            parameter="default=init,save,close,next,previous,applyCopy,applyByWeek,applyBySpecify,applyByDay"
+            input="/WEB-INF/jsp/ur02000/ur02000.jsp" scope="request" validate="true">
+            <forward name="initSuccess" path="/WEB-INF/jsp/ur02000/ur02000.jsp" />
+            <forward name="saveSuccess" path="/WEB-INF/jsp/ur02000/ur02000.jsp" />
+            <forward name="changePageSuccess" path="/WEB-INF/jsp/ur02000/ur02000.jsp" />
+            <forward name="applySuccess" path="/WEB-INF/jsp/ur02000/ur02000.jsp" />
+        </action>
+
+        <action path="/ur02000Display" name="UR02000FormDisplay"
+            type="jp.co.jreast.ur02000.action.UR02000Action"
+            parameter="default=display,next,previous"
+            input="/WEB-INF/jsp/ur02000/ur02000Display.jsp" scope="request"
+            validate="false">
+            <forward name="history" path="/WEB-INF/jsp/ur02000/ur02000HistoryDisplay.jsp" />
+            <forward name="copy" path="/WEB-INF/jsp/ur02000/ur02000CopyDisplay.jsp" />
+        </action>
+
+        <action path="/ur02003" name="UR02003Form"
+            type="jp.co.jreast.ur02003.action.UR02003Action"
+            parameter="default=init,search" scope="request">
+            <forward name="success" path="/WEB-INF/jsp/ur02003/ur02003.jsp" />
+        </action>
+
+        <action path="/ur01000" type="jp.co.jreast.ur01000.action.UR01000Action"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="shukuhaku" path="/ur01010.do" />
+            <forward name="travel" path="/ur01011.do" />
+            <forward name="traffic" path="/ur01012.do" />
+            <forward name="golf" path="/ur01013.do" />
+            <forward name="lift" path="/ur01014.do" />
+        </action>
+
+        <!-- 宿泊No2ホテルkimu add -->
+        <action path="/ur01001" type="jp.co.jreast.ur01001.action.UR01001Action"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="typeRyokan" path="/ur01020.do" />
+            <forward name="typeHotel" path="/ur01022.do" />
+            <forward name="typeSki" path="/ur01023.do" />
+        </action>
+        <!-- 過去データコピーエラー対応 2010/02/15 add by  s30873 -->
+        <action path="/ur01001display" type="jp.co.jreast.ur01001.action.UR01001Action"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="typeRyokan" path="/ur01020display.do" />
+            <forward name="typeHotel" path="/ur01022display.do" />
+            <forward name="typeSki" path="/ur01023display.do" />
+        </action>
+        <!-- end -->
+
+        <action path="/ur01010" name="UR01010InitForm"
+            type="jp.co.jreast.ur01010.action.UR01010Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur01010/ur01010.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01010/ur01010.jsp" />
+
+        </action>
+        <action path="/ur01010Remit" name="UR01010Form"
+            type="jp.co.jreast.ur01010.action.UR01010Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/ur01010/ur01010.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01010/ur01010.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01010display" type="jp.co.jreast.ur01010.action.UR01010Action"
+            validate="false" name="UR01010InitFormDisplay" scope="request"
+            parameter="default=display,printDisplay">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01010/ur01010Display.jsp" />
+
+        </action>
+
+        <!-- No1宿泊displayPrint -->
+        <action path="/ur01010displayPrint" type="jp.co.jreast.ur01010.action.UR01010Action"
+            validate="false" name="PrintNo1Form" scope="request"
+            parameter="default=printDisplay">
+
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+
+        <action path="/ur01010RemitDisplay"
+            type="jp.co.jreast.ur01010.action.UR01010Action" name="UR01010FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+        <action path="/ur01011" name="UR01011InitForm"
+            type="jp.co.jreast.ur01011.action.UR01011Action" validate="false"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur01011/ur01011.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01011/ur01011.jsp" />
+        </action>
+
+        <action path="/ur01011Remit" name="UR01011Form"
+            type="jp.co.jreast.ur01011.action.UR01011Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,createGoods,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/ur01011/ur01011.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01011/ur01011.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01011display" type="jp.co.jreast.ur01011.action.UR01011Action"
+            validate="false" name="UR01011InitFormDisplay" scope="request"
+            parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01011/ur01011Display.jsp" />
+        </action>
+        <action path="/ur01011RemitDisplay"
+            type="jp.co.jreast.ur01011.action.UR01011Action" name="UR01011FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+		<!-- printDisplay -->
+		 <action path="/ur01011displayPrint" type="jp.co.jreast.ur01011.action.UR01011Action"
+            validate="false" name="UR01011FormDisplay" scope="request"
+            parameter="default=printDisplay">
+           <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+		<!-- end -->
+
+        <action path="/ur01012" name="UR01012InitForm"
+            type="jp.co.jreast.ur01012.action.UR01012Action" validate="false"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur01012/ur01012.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01012/ur01012.jsp" />
+        </action>
+
+        <action path="/ur01012Remit" name="UR01012Form"
+            type="jp.co.jreast.ur01012.action.UR01012Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,createGoods,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/ur01012/ur01012.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01012/ur01012.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01012display" type="jp.co.jreast.ur01012.action.UR01012Action"
+            validate="false" name="UR01012InitFormDisplay" scope="request"
+            parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01012/ur01012Display.jsp" />
+        </action>
+        <action path="/ur01012RemitDisplay"
+            type="jp.co.jreast.ur01012.action.UR01012Action" name="UR01012FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+        <!-- printDisplay -->
+		 <action path="/ur01012displayPrint" type="jp.co.jreast.ur01012.action.UR01012Action"
+            validate="false" name="UR01012FormDisplay" scope="request"
+            parameter="default=printDisplay">
+           <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+		<!-- end -->
+        <action path="/ur01013" name="UR01013InitForm"
+            type="jp.co.jreast.ur01013.action.UR01013Action" validate="false"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur01013/ur01013.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01013/ur01013.jsp" />
+        </action>
+        <action path="/ur01013Remit" name="UR01013Form"
+            type="jp.co.jreast.ur01013.action.UR01013Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/ur01013/ur01013.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01013/ur01013.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01013display" type="jp.co.jreast.ur01013.action.UR01013Action"
+            validate="false" name="UR01013InitFormDisplay" scope="request"
+            parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01013/ur01013Display.jsp" />
+        </action>
+        <action path="/ur01013RemitDisplay"
+            type="jp.co.jreast.ur01013.action.UR01013Action" name="UR01013FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+
+        <!-- printDisplay -->
+		 <action path="/ur01013displayPrint" type="jp.co.jreast.ur01013.action.UR01013Action"
+            validate="false" name="UR01013FormDisplay" scope="request"
+            parameter="default=printDisplay">
+           <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+		<!-- end -->
+
+        <action path="/ur01020" type="jp.co.jreast.ur01020.action.UR01020Action"
+            name="UR01020Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform"
+            scope="session" input="/WEB-INF/jsp/ur01020/ur01020.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01020/ur01020.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01020display" type="jp.co.jreast.ur01020.action.UR01020Action"
+            name="UR01020FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01020/ur01020Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- No2displayPrint -->
+        <action path="/ur01020displayPrint" type="jp.co.jreast.ur01020.action.UR01020Action"
+            name="PrintNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+
+        <!-- kimu add -->
+        <action path="/ur01022" type="jp.co.jreast.ur01022.action.UR01022Action"
+            name="UR01022Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform"
+            scope="session" input="/WEB-INF/jsp/ur01022/ur01022.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01022/ur01022.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01022display" type="jp.co.jreast.ur01022.action.UR01022Action"
+            name="UR01022FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01022/ur01022Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- No2displayPrint -->
+        <action path="/ur01022displayPrint" type="jp.co.jreast.ur01022.action.UR01022Action"
+            name="PrintMealHotelNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+
+       <!-- スキーkimu add -->
+        <action path="/ur01023" type="jp.co.jreast.ur01023.action.UR01023Action"
+            name="UR01023Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform"
+            scope="session" input="/WEB-INF/jsp/ur01023/ur01023.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01023/ur01023.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01023display" type="jp.co.jreast.ur01023.action.UR01023Action"
+            name="UR01023FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01023/ur01023Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01023displayPrint" type="jp.co.jreast.ur01023.action.UR01023Action"
+            name="PrintMealSkiNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+
+
+        <action path="/ur01030" type="jp.co.jreast.ur01030.action.UR01030Action"
+            name="UR01030Form" validate="true"
+            parameter="default=init,saveButton=save,confirmButton=confirm,backButton=backconfirm,admitButton=admit,display,copy,printButton=print"
+            scope="session" input="/WEB-INF/jsp/ur01030/ur01030.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01030/ur01030.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01030display" type="jp.co.jreast.ur01030.action.UR01030Action"
+            name="UR01030DisplayForm" parameter="default=display" scope="request">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01030/ur01030Display.jsp" />
+        </action>
+		 <!-- No3displayPrint -->
+        <action path="/ur01030displayPrint" type="jp.co.jreast.ur01030.action.UR01030Action"
+            name="PrintNo3Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+        <action path="/ur01050" type="jp.co.jreast.ur01050.action.UR01050Action"
+            name="UR01050Form" validate="true"
+            parameter="default=init,print,onceSave,confirm,sendBack,approve,display,copy"
+            input="/WEB-INF/jsp/ur01050/ur01050.jsp" scope="session">
+            <forward name="init" path="/WEB-INF/jsp/ur01050/ur01050.jsp" />
+            <forward name="display" path="/WEB-INF/jsp/ur01050/ur01050Display.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/ur01050display" type="jp.co.jreast.ur01050.action.UR01050Action"
+            name="UR01050FormDisplay" parameter="default=display" scope="request">
+            <forward name="display" path="/WEB-INF/jsp/ur01050/ur01050Display.jsp" />
+        </action>
+		 <!-- No5displayPrint -->
+        <action path="/ur01050displayPrint" type="jp.co.jreast.ur01050.action.UR01050Action"
+            name="PrintNo5Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+        <action path="/ur01060" input="/WEB-INF/jsp/ur01060/ur01060.jsp"
+            type="jp.co.jreast.ur01060.action.UR01060Action" name="UR01060Form"
+            validate="true" parameter="default=init,save">
+            <forward name="success" path="/WEB-INF/jsp/ur01060/ur01060.jsp" />
+        </action>
+
+        <action path="/ur01060display" type="jp.co.jreast.ur01060.action.UR01060Action"
+            name="UR01060DisplayForm" parameter="default=display" scope="request">
+            <forward name="display" path="/WEB-INF/jsp/ur01060/ur01060Display.jsp" />
+        </action>
+
+        <action path="/ur02001" name="UR02001SearchForm"
+            type="jp.co.jreast.ur02001.action.UR02001Action"
+            parameter="default=init,search" input="/WEB-INF/jsp/ur02001/ur02001.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur02001/ur02001.jsp" />
+        </action>
+
+        <action
+            path="/ur02001copy"
+            name="UR02001CopyForm"
+            type="jp.co.jreast.ur02001.action.UR02001Action"
+            parameter="default=copy">
+            <forward name="success" path="/WEB-INF/jsp/ur02001/ur02001.jsp" />
+        </action>
+
+        <action path="/ur01014" name="UR01014InitForm"
+            type="jp.co.jreast.ur01014.action.UR01014Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur01014/ur01014.jsp">
+            <forward name="init" path="/WEB-INF/jsp/ur01014/ur01014.jsp" />
+        </action>
+        <action path="/ur01014Remit" name="UR01014Form"
+            parameter="default=save,move,facilitiyAdmit,jrAdmit,deny,fmSend,setCalendar,hDecide,delete,close,fileDownLoad"
+            scope="session" type="jp.co.jreast.ur01014.action.UR01014Action"
+            validate="true" input="/WEB-INF/jsp/ur01014/ur01014.jsp">
+            <forward name="init" path="/WEB-INF/jsp/ur01014/ur01014.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01014display" name="UR01014InitFormDisplay"
+            type="jp.co.jreast.ur01014.action.UR01014Action" validate="false"
+            parameter="default=display" scope="request">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01014/ur01014Display.jsp" />
+        </action>
+
+        <action path="/ur01014Remitdisplay" name="UR01014FormDisplay"
+            parameter="default=calendarDisplay" validate="false"
+            scope="request" type="jp.co.jreast.ur01014.action.UR01014Action">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+
+         <!-- No3displayPrint -->
+        <action path="/ur01014displayPrint" type="jp.co.jreast.ur01014.action.UR01014Action"
+            name="UR01014FormPrintDisplay" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+        <action path="/ur01014RemitdisplayCalenda" name="UR01014FormDisplayCalenda"
+            parameter="default=calendarDisplay" validate="false"
+            scope="request" type="jp.co.jreast.ur01014.action.UR01014Action">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+        <action path="/ur02002" name="UR02002Form"
+            type="jp.co.jreast.ur02002.action.UR02002Action" parameter="default=init">
+            <forward name="success" path="/WEB-INF/jsp/ur02002/ur02002.jsp" />
+        </action>
+        <action path="/jreDownLoad" type="jp.co.jreast.common.action.JreDownloadAction" />
+
+        <action path="/ur01040" type="jp.co.jreast.ur01040.action.UR01040Action"
+            name="UR01040Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,fmSend,close,next,previous,applyByWeek,applyBySpecify"
+            scope="session" input="/WEB-INF/jsp/ur01040/ur01040.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01040/ur01040.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/ur01040/ur01040Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01040display" type="jp.co.jreast.ur01040.action.UR01040Action"
+            name="UR01040FormDisplay" scope="session" parameter="default=display,close,next,previous">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01040/ur01040Display.jsp" />
+            <forward name="dispError" path="/WEB-INF/jsp/ur01040/ur01040DisplayErr.jsp" />
+        </action>
+		<!-- No4displayPrint -->
+		<action path="/ur01040displayPrint" type="jp.co.jreast.ur01040.action.UR01040Action"
+            name="PrintNo4Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+		<!-- end -->
+        <action path="/ur01041" type="jp.co.jreast.ur01041.action.UR01041Action"
+            name="UR01041Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,fmSend,close,next,previous,applyByWeek,applyBySpecify"
+            scope="session" input="/WEB-INF/jsp/ur01041/ur01041.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01041/ur01041.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/ur01041/ur01041Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01041display" type="jp.co.jreast.ur01041.action.UR01041Action"
+            name="UR01041FormDisplay" scope="session" parameter="default=display,fileDownLoad,close,next,previous">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01041/ur01041Display.jsp" />
+            <forward name="dispError" path="/WEB-INF/jsp/ur01041/ur01041DisplayErr.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01042" type="jp.co.jreast.ur01042.action.UR01042Action"
+            name="UR01042Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,fmSend,close,next,previous,applyByWeek,applyBySpecify"
+            scope="session" input="/WEB-INF/jsp/ur01042/ur01042.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur01042/ur01042.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/ur01042/ur01042Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01042display" type="jp.co.jreast.ur01042.action.UR01042Action"
+            name="UR01042FormDisplay" scope="session" parameter="default=display,fileDownLoad,close,next,previous">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01042/ur01042Display.jsp" />
+            <forward name="dispError" path="/WEB-INF/jsp/ur01042/ur01042DisplayErr.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/ur04000" parameter="default=init,search" name="UR04000Form"
+            type="jp.co.jreast.ur04000.action.UR04000Action" validate="true"
+            input="page.ur04000" scope="request">
+            <forward name="success" path="page.ur04000" />
+            <forward name="search" path="page.ur04000" />
+        </action>
+        <action path="/ur04010" type="jp.co.jreast.ur04010.action.UR04010Action"
+            name="UR04010Form" validate="true"
+            parameter="default=init,update,fileDownLoad,close,next,previous,jumpPage,changeStock"
+            scope="session" input="/WEB-INF/jsp/ur04010/ur04010.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur04010/ur04010.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/ur04010/ur04010Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/ur01021" type="jp.co.jreast.ur01021.action.UR01021Action"
+        	name="UR01021Form" validate="true"
+        	parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform"
+        	scope="session" input="/WEB-INF/jsp/ur01021/ur01021.jsp">
+        	<forward name="success" path="/WEB-INF/jsp/ur01021/ur01021.jsp"/>
+        	<forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur01021display" type="jp.co.jreast.ur01021.action.UR01021Action"
+            name="UR01021FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/ur01021/ur01021Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- No2displayPrint -->
+        <action path="/ur01021displayPrint" type="jp.co.jreast.ur01021.action.UR01021Action"
+            name="PrintLiftNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <!-- end -->
+
+        <!-- *************************************************************** -->
+        <!-- UR02004 No1カレンダーコピー機能 (2007.07.09 T.Kobayashi)		 -->
+        <!-- *************************************************************** -->
+		<action
+			path="/ur02004"
+			parameter="default=init,search"
+			type="jp.co.jreast.ur02004.action.UR02004Action"
+			name="UR02004Form"
+			scope="request"
+			validate="false"
+		>
+			<forward name="success" path="/WEB-INF/jsp/ur02004/ur02004.jsp" />
+            <forward name="copyDisplay" path="/WEB-INF/jsp/ur02000/ur02000CopyDisplay.jsp" />
+        </action>
+
+        <action
+			path="/ur02004DisplayCopyCalendar"
+			parameter="default=displayCopyCalendar"
+			type="jp.co.jreast.ur02004.action.UR02004Action"
+			name="UR02004CopyCalendarForm"
+			scope="request"
+			validate="false"
+		>
+			<forward name="success" path="/ur02000Display.do" />
+        </action>
+
+        <action
+			path="/ur02004Apply"
+			parameter="default=apply"
+			type="jp.co.jreast.ur02004.action.UR02004Action"
+			name="UR02004CopyCalendarForm"
+			scope="request"
+			validate="false"
+		>
+			<forward name="success" path="/WEB-INF/jsp/ur02004/ur02004Submit.jsp"/>
+        </action>
+
+        <!-- 年度・シーズン・支社変更機能追加 2009/11/27 add by s31109 -->
+        <action path="/ur02005" type="jp.co.jreast.ur02005.action.UR02005Action"
+            name="UR02005Form" scope="request" parameter="default=init,save"
+            input="/WEB-INF/jsp/ur02005/ur02005.jsp">
+            <forward name="initSuccess" path="/WEB-INF/jsp/ur02005/ur02005.jsp" />
+            <forward name="saveSuccess" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        <!-- end -->
+        <!-- 施設付帯情報一覧機能追加 2009/12/04 s30873 -->
+        <action path="/ur05000" parameter="default=init,search,remove" name="UR05000Form"
+            type="jp.co.jreast.ur05000.action.UR05000Action" validate="true"
+            input="page.ur05000" scope="request">
+            <forward name="success" path="page.ur05000"/>
+            <forward name="search"  path="page.ur05000"/>
+            <forward name="failure" path="page.ur05000"/>
+        </action>
+        <!-- end -->
+        <!-- 施設付帯情報一覧削除機能追加 2010/02/02 add by s30873 -->
+        <action path="/ur05000Control" parameter="delete"
+            name="UR05000ResultControlForm" type="jp.co.jreast.ur05000.action.UR05000Action"
+            validate="true" input="page.ur05000" scope="request">
+            <forward name="deleteSuccess" path="page.ur05000" />
+        </action>
+        <!-- end -->
+        <!-- 施設付帯情報詳細画面及び機能追加 2009/12/08 s30873 -->
+        <action path="/ur05030Type" type="jp.co.jreast.ur05030.action.UR05030MoveAction"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="inn" path="/ur05030.do" />
+            <forward name="hotel" path="/ur05031.do" />
+            <forward name="ski" path="/ur05032.do" />
+        </action>
+        <action path="/ur05030" name="UR05030InitForm"
+            type="jp.co.jreast.ur05030.action.UR05030Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur05030/ur05030.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05030/ur05030.jsp" />
+        </action>
+        <action path="/ur05030Remit" name="UR05030Form"
+            type="jp.co.jreast.ur05030.action.UR05030Action" validate="true"
+            parameter="default=save,confirm,close,fileDownLoad,copy,facilityVerified,printButton=print"
+            scope="session" input="/WEB-INF/jsp/ur05030/ur05030.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05030/ur05030.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur05030Display" name="UR05030InitFormDisplay"
+            type="jp.co.jreast.ur05030.action.UR05030Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/ur05030/ur05030Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/ur05030/ur05030Display.jsp" />
+        </action>
+        <action path="/ur05030RemitDisplay" name="UR05030FormDisplay"
+            type="jp.co.jreast.ur05030.action.UR05030Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/ur05030/ur05030Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        <action path="/ur05050Type" type="jp.co.jreast.ur05050.action.UR05050MoveAction"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="inn" path="/ur05050.do" />
+            <forward name="hotel" path="/ur05050.do" />
+            <forward name="ski" path="/ur05052.do" />
+        </action>
+        <action path="/ur05050" name="UR05050InitForm"
+            type="jp.co.jreast.ur05050.action.UR05050Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur05050/ur05050.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05050/ur05050.jsp" />
+        </action>
+        <action path="/ur05050Remit" name="UR05050Form"
+            type="jp.co.jreast.ur05050.action.UR05050Action" validate="true"
+            parameter="default=save,print,confirm,copy,close,fileDownLoad,facilityVerified"
+            scope="session" input="/WEB-INF/jsp/ur05050/ur05050.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05050/ur05050.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur05050Display" name="UR05050InitFormDisplay"
+            type="jp.co.jreast.ur05050.action.UR05050Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/ur05050/ur05050Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/ur05050/ur05050Display.jsp" />
+        </action>
+        <action path="/ur05050RemitDisplay" name="UR05050FormDisplay"
+            type="jp.co.jreast.ur05050.action.UR05050Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/ur05050/ur05050Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        <!-- end -->
+
+       	<!-- スキー場画面の追加 2010/05/10 add by s32472 START-->
+        <action path="/ur05052" name="UR05050InitForm"
+            type="jp.co.jreast.ur05052.action.UR05052Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur05052/ur05052.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05052/ur05052.jsp" />
+        </action>
+        <action path="/ur05052Remit" name="UR05052Form"
+            type="jp.co.jreast.ur05052.action.UR05052Action" validate="true"
+            parameter="default=save,print,confirm,copy,close,fileDownLoad,facilityVerified"
+            scope="session" input="/WEB-INF/jsp/ur05052/ur05052.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05052/ur05052.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur05052Display" name="UR05052InitFormDisplay"
+            type="jp.co.jreast.ur05052.action.UR05052Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/ur05052/ur05052Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/ur05052/ur05052Display.jsp" />
+        </action>
+        <action path="/ur05052RemitDisplay" name="UR05052FormDisplay"
+            type="jp.co.jreast.ur05052.action.UR05052Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/ur05052/ur05052Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        <!-- スキー場画面の追加 2010/05/10 add by s32472 END-->
+        <!-- 状態変更機能追加 2009/12/10 add by s31109 -->
+        <action path="/ur06000Search" type="jp.co.jreast.ur06000.action.UR06000Action"
+            name="UR06000Form" scope="request" parameter="default=init,search" validate="true"
+            input="page.ur06000">
+            <forward name="initSuccess" path="page.ur06000" />
+            <forward name="searchSuccess" path="page.ur06000" />
+        </action>
+        <action path="/ur06000Submit" type="jp.co.jreast.ur06000.action.UR06000Action"
+            name="UR06000SubmitForm" scope="request" parameter="default=submit" validate="true"
+            input="page.ur06000">
+            <forward name="success" path="page.ur06000" />
+        </action>
+        <!-- end -->
+
+        <!-- 施設付帯情報No3ホテル用(アクション定義追加 2010/01/28 s30873 -->
+        <action path="/ur05031" name="UR05031InitForm"
+            type="jp.co.jreast.ur05031.action.UR05031Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur05031/ur05031.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05031/ur05031.jsp" />
+        </action>
+        <action path="/ur05031Remit" name="UR05031Form"
+            type="jp.co.jreast.ur05031.action.UR05031Action" validate="true"
+            parameter="default=save,confirm,close,fileDownLoad,copy,facilityVerified,printButton=print"
+            scope="session" input="/WEB-INF/jsp/ur05031/ur05031.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05031/ur05031.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur05031Display" name="UR05031InitFormDisplay"
+            type="jp.co.jreast.ur05031.action.UR05031Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/ur05031/ur05031Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/ur05031/ur05031Display.jsp" />
+        </action>
+        <action path="/ur05031RemitDisplay" name="UR05031FormDisplay"
+            type="jp.co.jreast.ur05031.action.UR05031Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/ur05031/ur05031Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        <!-- end -->
+
+        <!-- 施設付帯情報No3スキー用(アクション定義追加 2010/05/06 s32423 -->
+        <action path="/ur05032" name="UR05032InitForm"
+            type="jp.co.jreast.ur05032.action.UR05032Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/ur05032/ur05032.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05032/ur05032.jsp" />
+        </action>
+        <action path="/ur05032Remit" name="UR05032Form"
+            type="jp.co.jreast.ur05032.action.UR05032Action" validate="true"
+            parameter="default=save,confirm,close,fileDownLoad,copy,facilityVerified,printButton=print"
+            scope="session" input="/WEB-INF/jsp/ur05032/ur05032.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur05032/ur05032.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/ur05032Display" name="UR05032InitFormDisplay"
+            type="jp.co.jreast.ur05032.action.UR05032Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/ur05032/ur05032Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/ur05032/ur05032Display.jsp" />
+        </action>
+        <action path="/ur05032RemitDisplay" name="UR05032FormDisplay"
+            type="jp.co.jreast.ur05032.action.UR05032Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/ur05032/ur05032Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        <!-- end -->
+
+        <!-- 施設参照機能追加対応 2009/12/24 add by s30873 -->
+        <action path="/ur02007" name="UR02007Form"
+            type="jp.co.jreast.ur02007.action.UR02007Action"
+            parameter="default=init,search" scope="request">
+            <forward name="success" path="/WEB-INF/jsp/ur02007/ur02007.jsp" />
+            <forward name="search" path="/WEB-INF/jsp/ur02007/ur02007.jsp" />
+        </action>
+		<!-- end -->
+		<!-- 施設付帯情報コピー機能追加 2010/1/04 add by s30873 -->
+		<action path="/ur05100" name="UR05100Form"
+            type="jp.co.jreast.ur05100.action.UR05100Action"
+            parameter="default=init,search" scope="request">
+            <forward name="success" path="/WEB-INF/jsp/ur05100/ur05100.jsp" />
+            <forward name="search" path="/WEB-INF/jsp/ur05100/ur05100.jsp" />
+        </action>
+		<!-- end -->
+		<!-- 施設情報設定機能追加 2010/1/07 add by s30873 -->
+		<action path="/ur02006" name="UR02006Form"
+            type="jp.co.jreast.ur02006.action.UR02006Action"
+            parameter="default=init,search" input="/WEB-INF/jsp/ur02006/ur02006.jsp">
+            <forward name="success" path="/WEB-INF/jsp/ur02006/ur02006.jsp" />
+        </action>
+        <!-- end -->
+
+         <!-- パスワード変更 -->
+         <action path="/ur08000" name="UR08000Form"
+             type="jp.co.jreast.ur08000.action.UR08000Action"
+             parameter="default=init,update" input="/WEB-INF/jsp/ur08000/ur08000.jsp"
+             scope="request" validate="true">
+             <forward name="success" path="/WEB-INF/jsp/ur08000/ur08000.jsp" />
+         </action>
+
+        <!-- CSRF 対策 -->
+        <action path="/ur09002" name="UR09002Form"
+            type="jp.co.jreast.ur09002.action.UR09002Action" parameter="default=init"
+            scope="request" validate="true">
+            <forward name="success" path="page.systemErrorCSRF" />
+        </action>
+        
+        
+		<!-- DR画面用 -->
+        <action path="/dr01000" type="jp.co.jreast.dr01000.action.DR01000Action"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="shukuhaku" path="/dr01010.do" />
+            <forward name="travel" path="/dr01011.do" />
+            <forward name="traffic" path="/dr01012.do" />
+            <forward name="golf" path="/dr01013.do" />
+            <forward name="lift" path="/dr01014.do" />
+        </action>
+        
+        <action path="/dr01001" type="jp.co.jreast.dr01001.action.DR01001Action"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="typeRyokan" path="/dr01020.do" />
+            <forward name="typeHotel" path="/dr01022.do" />
+            <forward name="typeSki" path="/dr01023.do" />
+        </action>
+        <action path="/dr01001display" type="jp.co.jreast.dr01001.action.DR01001Action"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="typeRyokan" path="/dr01020display.do" />
+            <forward name="typeHotel" path="/dr01022display.do" />
+            <forward name="typeSki" path="/dr01023display.do" />
+        </action>
+
+        <action path="/dr01010" name="DR01010InitForm"
+            type="jp.co.jreast.dr01010.action.DR01010Action" validate="true"
+            parameter="default=init,initValidate" scope="request"
+            input="/WEB-INF/jsp/dr01010/dr01010.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01010/dr01010.jsp" />
+        </action>
+        <action path="/dr01010Remit" name="DR01010Form"
+            type="jp.co.jreast.dr01010.action.DR01010Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad,changeNo3"
+            scope="session" input="/WEB-INF/jsp/dr01010/dr01010.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01010/dr01010.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01010display" type="jp.co.jreast.dr01010.action.DR01010Action"
+            validate="false" name="DR01010InitFormDisplay" scope="request"
+            parameter="default=display,printDisplay">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01010/dr01010Display.jsp" />
+        </action>
+        <action path="/dr01010displayPrint" type="jp.co.jreast.dr01010.action.DR01010Action"
+            validate="false" name="DRPrintNo1Form" scope="request"
+            parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01010RemitDisplay"
+            type="jp.co.jreast.dr01010.action.DR01010Action" name="DR01010FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+        <action path="/dr01011" name="DR01011InitForm"
+            type="jp.co.jreast.dr01011.action.DR01011Action" validate="false"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr01011/dr01011.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01011/dr01011.jsp" />
+        </action>
+
+        <action path="/dr01011Remit" name="DR01011Form"
+            type="jp.co.jreast.dr01011.action.DR01011Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,createGoods,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/dr01011/dr01011.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01011/dr01011.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01011display" type="jp.co.jreast.dr01011.action.DR01011Action"
+            validate="false" name="DR01011InitFormDisplay" scope="request"
+            parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01011/dr01011Display.jsp" />
+        </action>
+        <action path="/dr01011RemitDisplay"
+            type="jp.co.jreast.dr01011.action.DR01011Action" name="DR01011FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+		<action path="/dr01011displayPrint" type="jp.co.jreast.dr01011.action.DR01011Action"
+            validate="false" name="DR01011FormDisplay" scope="request"
+            parameter="default=printDisplay">
+           <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01012" name="DR01012InitForm"
+            type="jp.co.jreast.dr01012.action.DR01012Action" validate="false"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr01012/dr01012.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01012/dr01012.jsp" />
+        </action>
+        <action path="/dr01012Remit" name="DR01012Form"
+            type="jp.co.jreast.dr01012.action.DR01012Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,createGoods,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/dr01012/dr01012.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01012/dr01012.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01012display" type="jp.co.jreast.dr01012.action.DR01012Action"
+            validate="false" name="DR01012InitFormDisplay" scope="request"
+            parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01012/dr01012Display.jsp" />
+        </action>
+        <action path="/dr01012RemitDisplay"
+            type="jp.co.jreast.dr01012.action.DR01012Action" name="DR01012FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+		 <action path="/dr01012displayPrint" type="jp.co.jreast.dr01012.action.DR01012Action"
+            validate="false" name="DR01012FormDisplay" scope="request"
+            parameter="default=printDisplay">
+           <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01013" name="DR01013InitForm"
+            type="jp.co.jreast.dr01013.action.DR01013Action" validate="false"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr01013/dr01013.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01013/dr01013.jsp" />
+        </action>
+        <action path="/dr01013Remit" name="DR01013Form"
+            type="jp.co.jreast.dr01013.action.DR01013Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/dr01013/dr01013.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01013/dr01013.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01013display" type="jp.co.jreast.dr01013.action.DR01013Action"
+            validate="false" name="DR01013InitFormDisplay" scope="request"
+            parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01013/dr01013Display.jsp" />
+        </action>
+        <action path="/dr01013RemitDisplay"
+            type="jp.co.jreast.dr01013.action.DR01013Action" name="DR01013FormDisplay"
+            validate="false" scope="request" parameter="default=calendarDisplay">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+		 <action path="/dr01013displayPrint" type="jp.co.jreast.dr01013.action.DR01013Action"
+            validate="false" name="DR01013FormDisplay" scope="request"
+            parameter="default=printDisplay">
+           <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        
+        <action path="/dr01014" name="DR01014InitForm"
+            type="jp.co.jreast.dr01014.action.DR01014Action" validate="true"
+            parameter="default=init,initValidate" scope="request"
+            input="/WEB-INF/jsp/dr01014/dr01014.jsp">
+            <forward name="init" path="/WEB-INF/jsp/dr01014/dr01014.jsp" />
+        </action>
+        <action path="/dr01014Remit" name="DR01014Form"
+            parameter="default=save,move,facilitiyAdmit,jrAdmit,deny,fmSend,setCalendar,hDecide,delete,close,fileDownLoad"
+            scope="session" type="jp.co.jreast.dr01014.action.DR01014Action"
+            validate="true" input="/WEB-INF/jsp/dr01014/dr01014.jsp">
+            <forward name="init" path="/WEB-INF/jsp/dr01014/dr01014.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01014display" name="DR01014InitFormDisplay"
+            type="jp.co.jreast.dr01014.action.DR01014Action" validate="false"
+            parameter="default=display" scope="request">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01014/dr01014Display.jsp" />
+        </action>
+        <action path="/dr01014Remitdisplay" name="DR01014FormDisplay"
+            parameter="default=calendarDisplay" validate="false"
+            scope="request" type="jp.co.jreast.dr01014.action.DR01014Action">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+        <action path="/dr01014displayPrint" type="jp.co.jreast.dr01014.action.DR01014Action"
+            name="DR01014FormPrintDisplay" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01014RemitdisplayCalenda" name="DR01014FormDisplayCalenda"
+            parameter="default=calendarDisplay" validate="false"
+            scope="request" type="jp.co.jreast.dr01014.action.DR01014Action">
+            <forward name="showCalendarHistory" path="/ur02000Display.do" />
+        </action>
+
+        <action path="/dr01020" type="jp.co.jreast.dr01020.action.DR01020Action"
+            name="DR01020Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform,facilitiyAdmit,jrAdmit,deny,fmSend,hDecide"
+            scope="session" input="/WEB-INF/jsp/dr01020/dr01020.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01020/dr01020.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01020display" type="jp.co.jreast.dr01020.action.DR01020Action"
+            name="DR01020FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01020/dr01020Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01020Remit" name="DR01020Form"
+            type="jp.co.jreast.dr01020.action.DR01020Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/dr01020/dr01020.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01020/dr01020.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01020displayPrint" type="jp.co.jreast.dr01020.action.DR01020Action"
+            name="DRPrintNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01021" type="jp.co.jreast.dr01021.action.DR01021Action"
+        	name="DR01021Form" validate="true"
+        	parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform,facilitiyAdmit,jrAdmit,deny,fmSend,hDecide"
+        	scope="session" input="/WEB-INF/jsp/dr01021/dr01021.jsp">
+        	<forward name="success" path="/WEB-INF/jsp/dr01021/dr01021.jsp"/>
+        	<forward name="init" path="/WEB-INF/jsp/dr01021/dr01021.jsp" />
+        	<forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01021display" type="jp.co.jreast.dr01021.action.DR01021Action"
+            name="DR01021FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01021/dr01021Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01021displayPrint" type="jp.co.jreast.dr01021.action.DR01021Action"
+            name="DRPrintLiftNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01022" type="jp.co.jreast.dr01022.action.DR01022Action"
+            name="DR01022Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform"
+            scope="session" input="/WEB-INF/jsp/dr01022/dr01022.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01022/dr01022.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01022display" type="jp.co.jreast.dr01022.action.DR01022Action"
+            name="DR01022FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01022/dr01022Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01022displayPrint" type="jp.co.jreast.dr01022.action.DR01022Action"
+            name="DRPrintMealHotelNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01022Remit" name="DR01022Form"
+            type="jp.co.jreast.dr01022.action.DR01022Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/dr01022/dr01022.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01022/dr01022.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01023" type="jp.co.jreast.dr01023.action.DR01023Action"
+            name="DR01023Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,changeRoomInform"
+            scope="session" input="/WEB-INF/jsp/dr01023/dr01023.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01023/dr01023.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01023display" type="jp.co.jreast.dr01023.action.DR01023Action"
+            name="DR01023FormDisplay" scope="request" parameter="default=display">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01023/dr01023Display.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01023displayPrint" type="jp.co.jreast.dr01023.action.DR01023Action"
+            name="DRPrintMealSkiNo2Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01023Remit" name="DR01023Form"
+            type="jp.co.jreast.dr01023.action.DR01023Action" validate="true"
+            parameter="default=save,facilitiyAdmit,jrAdmit,delete,deny,setCalendar,fmSend,hDecide,close,fileDownLoad"
+            scope="session" input="/WEB-INF/jsp/dr01023/dr01023.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01023/dr01023.jsp" />
+            <forward name="setCalendar" path="/ur02000.do" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="delete" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+<!--
+        <action path="/dr01030" type="jp.co.jreast.dr01030.action.DR01030Action"
+            name="DR01030Form" validate="true"
+            parameter="default=init,saveButton=save,confirmButton=confirm,backButton=backconfirm,admitButton=admit,display,copy,printButton=print"
+            scope="session" input="/WEB-INF/jsp/dr01030/dr01030.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01030/dr01030.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01030display" type="jp.co.jreast.dr01030.action.DR01030Action"
+            name="DR01030DisplayForm" parameter="default=display" scope="request">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01030/dr01030Display.jsp" />
+        </action>
+        <action path="/dr01030displayPrint" type="jp.co.jreast.dr01030.action.DR01030Action"
+            name="PrintNo3Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+-->
+
+        <action path="/dr01040" type="jp.co.jreast.dr01040.action.DR01040Action"
+            name="DR01040Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,fmSend,close,next,previous,applyByWeek,applyBySpecify,addStock"
+            scope="session" input="/WEB-INF/jsp/dr01040/dr01040.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01040/dr01040.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/dr01040/dr01040Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01040display" type="jp.co.jreast.dr01040.action.DR01040Action"
+            name="DR01040FormDisplay" scope="session" parameter="default=display,close,next,previous">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01040/dr01040Display.jsp" />
+            <forward name="dispError" path="/WEB-INF/jsp/dr01040/dr01040DisplayErr.jsp" />
+        </action>
+		<action path="/dr01040displayPrint" type="jp.co.jreast.dr01040.action.DR01040Action"
+            name="DRPrintNo4Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01041" type="jp.co.jreast.dr01041.action.DR01041Action"
+            name="DR01041Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,fmSend,close,next,previous,applyByWeek,applyBySpecify"
+            scope="session" input="/WEB-INF/jsp/dr01041/dr01041.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01041/dr01041.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/dr01041/dr01041Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01041display" type="jp.co.jreast.dr01041.action.DR01041Action"
+            name="DR01041FormDisplay" scope="session" parameter="default=display,fileDownLoad,close,next,previous">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01041/dr01041Display.jsp" />
+            <forward name="dispError" path="/WEB-INF/jsp/dr01041/dr01041DisplayErr.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+        <action path="/dr01042" type="jp.co.jreast.dr01042.action.DR01042Action"
+            name="DR01042Form" validate="true"
+            parameter="default=init,insert,backconfirm,confirm,admint,copy,fileDownLoad,fmSend,close,next,previous,applyByWeek,applyBySpecify"
+            scope="session" input="/WEB-INF/jsp/dr01042/dr01042.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr01042/dr01042.jsp" />
+            <forward name="error" path="/WEB-INF/jsp/dr01042/dr01042Err.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01042display" type="jp.co.jreast.dr01042.action.DR01042Action"
+            name="DR01042FormDisplay" scope="session" parameter="default=display,fileDownLoad,close,next,previous">
+            <forward name="showHistory" path="/WEB-INF/jsp/dr01042/dr01042Display.jsp" />
+            <forward name="dispError" path="/WEB-INF/jsp/dr01042/dr01042DisplayErr.jsp" />
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+
+<!--
+        <action path="/dr01050" type="jp.co.jreast.dr01050.action.DR01050Action"
+            name="DR01050Form" validate="true"
+            parameter="default=init,print,onceSave,confirm,sendBack,approve,display,copy"
+            input="/WEB-INF/jsp/dr01050/dr01050.jsp" scope="session">
+            <forward name="init" path="/WEB-INF/jsp/dr01050/dr01050.jsp" />
+            <forward name="display" path="/WEB-INF/jsp/dr01050/dr01050Display.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr01050display" type="jp.co.jreast.dr01050.action.DR01050Action"
+            name="DR01050FormDisplay" parameter="default=display" scope="request">
+            <forward name="display" path="/WEB-INF/jsp/dr01050/dr01050Display.jsp" />
+        </action>
+        <action path="/dr01050displayPrint" type="jp.co.jreast.dr01050.action.DR01050Action"
+            name="PrintNo5Form" scope="request" parameter="default=printDisplay">
+            <forward name="downLoad" path="/jreDownLoad.do" />
+        </action>
+-->
+
+        <action path="/dr01060" input="/WEB-INF/jsp/dr01060/dr01060.jsp"
+            type="jp.co.jreast.dr01060.action.DR01060Action" name="DR01060Form"
+            validate="true" parameter="default=init,save">
+            <forward name="success" path="/WEB-INF/jsp/dr01060/dr01060.jsp" />
+        </action>
+        <action path="/dr01060display" type="jp.co.jreast.dr01060.action.DR01060Action"
+            name="DR01060DisplayForm" parameter="default=display" scope="request">
+            <forward name="display" path="/WEB-INF/jsp/dr01060/dr01060Display.jsp" />
+        </action>
+
+        <action path="/dr02008" name="DR02008Form"
+            type="jp.co.jreast.dr02008.action.DR02008Action" parameter="default=init">
+            <forward name="success" path="/WEB-INF/jsp/dr02008/dr02008.jsp" />
+        </action>
+        
+        <action path="/dr05030Type" type="jp.co.jreast.dr05030.action.DR05030MoveAction"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="inn" path="/dr05030.do" />
+            <forward name="hotel" path="/dr05030.do" />
+            <forward name="ski" path="/dr05032.do" />
+        </action>
+        <action path="/dr05030" name="DR05030InitForm"
+            type="jp.co.jreast.dr05030.action.DR05030Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr05030/dr05030.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05030/dr05030.jsp" />
+        </action>
+        <action path="/dr05030Remit" name="DR05030Form"
+            type="jp.co.jreast.dr05030.action.DR05030Action" validate="true"
+            parameter="default=save,close,fileDownLoad,copy,reqInput,reqApproval,reEdit,cooperate,admit,deny,print"
+            scope="session" input="/WEB-INF/jsp/dr05030/dr05030.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05030/dr05030.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr05030Display" name="DR05030InitFormDisplay"
+            type="jp.co.jreast.dr05030.action.DR05030Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/dr05030/dr05030Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/dr05030/dr05030Display.jsp" />
+        </action>
+        <action path="/dr05030RemitDisplay" name="DR05030FormDisplay"
+            type="jp.co.jreast.dr05030.action.DR05030Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/dr05030/dr05030Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        
+        <action path="/dr05032" name="DR05032InitForm"
+            type="jp.co.jreast.dr05032.action.DR05032Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr05032/dr05032.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05032/dr05032.jsp" />
+        </action>
+        <action path="/dr05032Remit" name="DR05032Form"
+            type="jp.co.jreast.dr05032.action.DR05032Action" validate="true"
+            parameter="default=save,close,fileDownLoad,copy,reqInput,reqApproval,reEdit,cooperate,admit,deny,print"
+            scope="session" input="/WEB-INF/jsp/dr05032/dr05032.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05032/dr05032.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr05032Display" name="DR05032InitFormDisplay"
+            type="jp.co.jreast.dr05032.action.DR05032Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/dr05032/dr05032Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/dr05032/dr05032Display.jsp" />
+        </action>
+        <action path="/dr05032RemitDisplay" name="DR05032FormDisplay"
+            type="jp.co.jreast.dr05032.action.DR05032Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/dr05032/dr05032Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+        
+        <action path="/dr05050Type" type="jp.co.jreast.dr05050.action.DR05050MoveAction"
+            validate="false" parameter="default=transfer" scope="request">
+            <forward name="inn" path="/dr05050.do" />
+            <forward name="hotel" path="/dr05050.do" />
+            <forward name="ski" path="/dr05052.do" />
+        </action>
+        <action path="/dr05050" name="DR05050InitForm"
+            type="jp.co.jreast.dr05050.action.DR05050Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr05050/dr05050.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05050/dr05050.jsp" />
+        </action>
+        <action path="/dr05050Remit" name="DR05050Form"
+            type="jp.co.jreast.dr05050.action.DR05050Action" validate="true"
+            parameter="default=save,close,fileDownLoad,copy,reqInput,reqApproval,reEdit,cooperate,admit,deny,print"
+            scope="session" input="/WEB-INF/jsp/dr05050/dr05050.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05050/dr05050.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr05050Display" name="DR05050InitFormDisplay"
+            type="jp.co.jreast.dr05050.action.DR05050Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/dr05050/dr05050Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/dr05050/dr05050Display.jsp" />
+        </action>
+        <action path="/dr05050RemitDisplay" name="DR05050FormDisplay"
+            type="jp.co.jreast.dr05050.action.DR05050Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/dr05050/dr05050Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+
+        <action path="/dr05052" name="DR05052InitForm"
+            type="jp.co.jreast.dr05052.action.DR05052Action" validate="true"
+            parameter="default=init" scope="request"
+            input="/WEB-INF/jsp/dr05052/dr05052.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05052/dr05052.jsp" />
+        </action>
+        <action path="/dr05052Remit" name="DR05052Form"
+            type="jp.co.jreast.dr05052.action.DR05052Action" validate="true"
+            parameter="default=save,close,fileDownLoad,copy,reqInput,reqApproval,reEdit,cooperate,admit,deny,print"
+            scope="session" input="/WEB-INF/jsp/dr05052/dr05052.jsp">
+            <forward name="success" path="/WEB-INF/jsp/dr05052/dr05052.jsp" />
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+            <forward name="print" path="/jreDownLoad.do" />
+        </action>
+        <action path="/dr05052Display" name="DR05052InitFormDisplay"
+            type="jp.co.jreast.dr05052.action.DR05052Action" validate="true"
+            parameter="default=display" scope="request"
+            input="/WEB-INF/jsp/dr05052/dr05052Display.jsp">
+            <forward name="copySuccess" path="/WEB-INF/jsp/dr05052/dr05052Display.jsp" />
+        </action>
+        <action path="/dr05052RemitDisplay" name="DR05052FormDisplay"
+            type="jp.co.jreast.dr05052.action.DR05052Action" validate="true"
+            parameter="default=close"
+            scope="session" input="/WEB-INF/jsp/dr05052/dr05052Display.jsp">
+            <forward name="close" path="/WEB-INF/jsp/common/close.jsp" />
+        </action>
+
+		<action path="/js/badWords" type="jp.co.jreast.common.action.js.BadWordsAction"
+			validate="false" parameter="default=index" scope="request">
+			<forward name="index" path="/WEB-INF/jsp/common/js/badWords.js.jsp" />
+		</action>
+
+		<action path="/js/getMFacility" type="jp.co.jreast.common.action.js.GetMFacilityAction"
+			validate="false" parameter="default=index,ajax" scope="request">
+			<forward name="index" path="/WEB-INF/jsp/common/js/getMFacility.js.jsp" />
+		</action>
+
+		<!-- WEBAPI -->
+
+		<!-- SSOID取得 -->
+		<action path="/api/authSso" type="jp.co.jreast.webapi.action.AuthSsoAction" />
+
+		<!-- SSOID認証チェック --> 
+		<action path="/api/checkSso" type="jp.co.jreast.webapi.action.CheckSsoAction" />
+
+		<!-- 企画回答書自動ログイン --> 
+		<action path="/api/loginSso" type="jp.co.jreast.webapi.action.LoginSsoAction"
+			validate="false" scope="session" parameter="default=login">
+            <forward name="success" path="/WEB-INF/jsp/webapi/exMenu.jsp" />
+	    	<forward name="maintenace" path="page.maintence"/>
+		</action>
+
+    </action-mappings>
+
+    <message-resources null="true"
+        parameter="jp.co.jreast.common.properties.appresources" />
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/conf/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+        <set-property property="definitions-parser-validate" value="true" />
+    </plug-in>
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames"
+            value="/WEB-INF/conf/validation.xml,
+		            /WEB-INF/conf/validation_no1.xml,
+		            /WEB-INF/conf/validation_no2.xml,
+		            /WEB-INF/conf/validation_no3.xml,
+		            /WEB-INF/conf/validation_no3_ski.xml,
+		            /WEB-INF/conf/validation_no4.xml,
+		            /WEB-INF/conf/validation_no5.xml,
+		            /WEB-INF/conf/validation_no1_traffic.xml,
+		            /WEB-INF/conf/validation_no1_travel.xml,
+		            /WEB-INF/conf/validator-rules.xml,
+		            /WEB-INF/conf/validation_no1_traffic_lift.xml,
+		            /WEB-INF/conf/validation_no1_travel_golf.xml,
+		            /WEB-INF/conf/validation_no4_1.xml,
+		            /WEB-INF/conf/validation_no4_2.xml,
+		            /WEB-INF/conf/validation_zaiko.xml,
+		            /WEB-INF/conf/validation_no2_lift.xml,
+		            /WEB-INF/conf/validation_no2_hotel.xml,
+		            /WEB-INF/conf/validation_no2_ski.xml,
+		            /WEB-INF/conf/validation_no5_facility.xml,
+		            /WEB-INF/conf/validation_dno1_travel.xml,
+		            /WEB-INF/conf/validation_dno1_traffic.xml,
+		            /WEB-INF/conf/validation_dno1_traffic_lift.xml,
+		            /WEB-INF/conf/validation_dno1_travel_golf.xml
+		            ,/WEB-INF/conf/validation_dno1.xml
+		            ,/WEB-INF/conf/validation_dno2.xml
+		            ,/WEB-INF/conf/validation_dno2_hotel.xml
+		            ,/WEB-INF/conf/validation_dno2_ski.xml
+		            ,/WEB-INF/conf/validation_dno3.xml
+		            ,/WEB-INF/conf/validation_dno3_ski.xml
+		            ,/WEB-INF/conf/validation_dno5.xml
+		            ,/WEB-INF/conf/validation_dno5_ski.xml
+		            "/>
+        <set-property property="stopOnFirstError" value="false" />
+    </plug-in>
+
+</struts-config>

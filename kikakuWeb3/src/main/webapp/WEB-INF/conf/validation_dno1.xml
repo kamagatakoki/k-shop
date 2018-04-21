@@ -1,0 +1,588 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+    <formset>
+        <form name="DR01010Form">
+
+        	<field property="data.planAnsData.ansSendAddr" depends="required">
+        		<arg key="dr01012.W060"/>
+        	</field>
+            <field property="data.planAnsData.goodsNm" depends="required, cooperationIgnoreChars">
+                <arg key="dr01010.W001" />
+            </field>
+            <field property="data.planAnsData.facilityCd" depends="required">
+                <arg key="dr01010.W002" />
+            </field>
+            <field property="data.planAnsData.facilityNm" depends="required">
+                <arg key="dr01010.W003" />
+            </field>
+            
+            <field property="data.no1LodgingData.liquidateDay"
+                depends="required,integer">
+                <arg key="dr01010.W012" />
+            </field>
+            
+			<field property="data.no1LodgingData.liquidateTimeH"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01010.W326" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.no1LodgingData.liquidateTimeM"
+				depends="integer,maxlength,intRange">
+				<arg key="dr01010.W327" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="intRange" key="${var:min}" resource="false" />
+				<arg2 name="intRange" key="${var:max}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+            
+            <field property="charge" depends="required">
+                <arg key="dr01010.W013" />
+            </field>
+            
+            <field property="data.planAnsData.senderTel" depends="required">
+                <arg key="dr01010.W015" />
+            </field>
+            <field property="data.planAnsData.senderFax" depends="required">
+                <arg key="dr01010.W131" />
+            </field>
+
+            <field property="data.no1LodgingData.checkInFromH" depends="integer, intRange">
+                <arg key="dr01010.W021" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInFromM" depends="integer, intRange">
+                <arg key="dr01010.W022" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkInToH" depends="integer, intRange">
+                <arg key="dr01010.W021" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInToM" depends="integer, intRange">
+                <arg key="dr01010.W022" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutH" depends="integer, intRange">
+                <arg key="dr01010.W023" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkOutM" depends="integer, intRange">
+                <arg key="dr01010.W024" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInNorH"
+                depends="integer, intRange">
+                <arg key="dr01010.W025" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInNorM"
+                depends="integer, intRange">
+                <arg key="dr01010.W026" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorM"
+                depends="integer, intRange">
+                <arg key="dr01010.W028" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+           
+            <field property="data.planAnsData.goodsNm" depends="maxlengthDB">
+                <arg key="dr01010.W001" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>25</var-value>
+                </var>
+            </field>
+            <field property="data.planAnsData.facilityNm" depends="maxlengthDB">
+                <arg key="dr01010.W003" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>25</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkInFromH" depends="maxlength">
+                <arg key="dr01010.W021" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInFromM" depends="maxlength">
+                <arg key="dr01010.W022" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            
+            <field property="data.no1LodgingData.checkInToH" depends="maxlength">
+                <arg key="dr01010.W021" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInToM" depends="maxlength">
+                <arg key="dr01010.W022" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            
+            <field property="data.no1LodgingData.checkInNorH" depends="maxlength">
+                <arg key="dr01010.W025" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInNorM" depends="maxlength">
+                <arg key="dr01010.W026" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutH" depends="maxlength">
+                <arg key="dr01010.W023" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutM" depends="maxlength">
+                <arg key="dr01010.W023" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorM" depends="maxlength">
+                <arg key="dr01010.W028" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1AckInfoFacilityData.responsibler"
+                depends="maxlengthDB">
+                <arg key="dr01010.W047" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1AckInfoJrData.tantousya" depends="maxlengthDB">
+                <arg key="dr01010.W048" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1AckInfoJrData.responsibler" depends="maxlengthDB">
+                <arg key="dr01010.W049" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+           
+            <field property="data.no1LodgingData.memo" depends="maxlength">
+                <arg key="dr01010.W050" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>100</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.stayDiscountAdlt"
+                depends="maxlength, integer">
+                <arg key="dr01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.stayDiscountChild"
+                depends="maxlength, integer">
+                <arg key="dr01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.stayDiscountAdlt1"
+                depends="maxlength, integer">
+                <arg key="dr01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.stayDiscountChild1"
+                depends="maxlength, integer">
+                <arg key="dr01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.stayDiscountAdlt2"
+                depends="maxlength, integer">
+                <arg key="dr01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.stayDiscountChild2"
+                depends="maxlength, integer">
+                <arg key="dr01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.stayDiscountAdlt3"
+                depends="maxlength, integer">
+                <arg key="dr01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.stayDiscountChild3"
+                depends="maxlength, integer">
+                <arg key="dr01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.stayDiscountAdlt4"
+                depends="maxlength, integer">
+                <arg key="dr01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.stayDiscountChild4"
+                depends="maxlength, integer">
+                <arg key="dr01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.stayDiscountAdlt5"
+                depends="maxlength, integer">
+                <arg key="dr01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.stayDiscountChild5"
+                depends="maxlength, integer">
+                <arg key="dr01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorH"
+                depends="integer, intRange">
+                <arg key="dr01010.W027" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorH" depends="maxlength">
+                <arg0 key="dr01010.W027" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkInFromH" depends="validwhen">
+                <arg key="dr01010.W101" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkInFromM != null)and
+                        (data.no1LodgingData.checkInFromH!=null)) or
+                        ((data.no1LodgingData.checkInFromM == null)and
+                        (data.no1LodgingData.checkInFromH ==null)))
+                    </var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkInToH" depends="validwhen">
+                <arg key="dr01010.W101" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkInToM != null)and
+                        (data.no1LodgingData.checkInToH!=null)) or
+                        ((data.no1LodgingData.checkInToM == null)and
+                        (data.no1LodgingData.checkInToH ==null)))
+                    </var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutH" depends="validwhen">
+                <arg key="dr01010.W104" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkOutM == null)and
+                        (data.no1LodgingData.checkOutH == null))or
+                        ((data.no1LodgingData.checkOutM != null) and
+                        (data.no1LodgingData.checkOutH != null)))
+                    </var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkInNorH" depends="validwhen">
+                <arg key="dr01010.W105" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkInNorH == null)and
+                        (data.no1LodgingData.checkInNorM == null))or
+                        ((data.no1LodgingData.checkInNorH != null) and
+                        (data.no1LodgingData.checkInNorM != null)))
+                    </var-value>
+                </var>
+            </field>
+
+
+            <field property="data.no1LodgingData.checkOutNorH" depends="validwhen">
+                <arg key="dr01010.W107" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkOutNorH == null)and
+                        (data.no1LodgingData.checkOutNorM == null))or
+                        ((data.no1LodgingData.checkOutNorH != null) and
+                        (data.no1LodgingData.checkOutNorM != null)))
+                    </var-value>
+                </var>
+            </field>
+
+             <field property="data.no1LodgingData.spaTaxAdlt" depends="integer">
+             	<arg key="dr01010.W136"/>
+             </field>
+             <field property="data.no1LodgingData.spaTaxChild" depends="integer">
+             	<arg key="dr01010.W137"/>
+             </field>
+        </form>
+    </formset>
+</form-validation>

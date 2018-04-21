@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+    <definition name="list.layout" page="/WEB-INF/jsp/common/list_layout.jsp">
+        <put name="header" value="/WEB-INF/jsp/common/list_head.jsp" />
+    </definition>
+
+    <definition name="page.ur00200" extends="list.layout">
+        <put name="title" value="トップページ" />
+        <put name="body" value="/WEB-INF/jsp/ur00200/ur00200.jsp"/>
+    </definition>
+    <definition name="page.ur00300" extends="list.layout">
+        <put name="title" value="回答書作成" />
+        <put name="body" value="/WEB-INF/jsp/ur00300/ur00300.jsp"/>
+    </definition>
+    <definition name="page.ur00400" extends="list.layout">
+        <put name="title" value="依頼メール・FAX送信" />
+        <put name="body" value="/WEB-INF/jsp/ur00400/ur00400.jsp"/>
+    </definition>
+    <definition name="page.ur00500" extends="list.layout">
+        <put name="title" value="記入状況一覧" />
+        <put name="body" value="/WEB-INF/jsp/ur00500/ur00500.jsp"/>
+    </definition>
+    <definition name="page.ur04000" extends="list.layout">
+        <put name="title" value="在庫情報" />
+        <put name="body" value="/WEB-INF/jsp/ur04000/ur04000.jsp"/>
+    </definition>
+    <!-- 施設付帯情報一覧機能追加 2009/12/04 s30873 -->
+    <definition name="page.ur05000" extends="list.layout">
+        <put name="title" value="施設付帯情報" />
+        <put name="body" value="/WEB-INF/jsp/ur05000/ur05000.jsp"/>
+    </definition>
+    <!-- end -->
+    <!-- 課題No52：状態変更機能追加 2009/12/10 s31109 -->
+    <definition name="page.ur06000" extends="list.layout">
+        <put name="title" value="状態変更" />
+        <put name="body" value="/WEB-INF/jsp/ur06000/ur06000.jsp"/>
+    </definition>
+    <!-- end -->
+    <definition name="page.systemError" page="/WEB-INF/jsp/common/list_layout.jsp">
+        <put name="header" value="/WEB-INF/jsp/common/system_error_head.jsp" />
+        <put name="title" value="システムエラー" />
+        <put name="body" value="/WEB-INF/jsp/ur09000/ur09000.jsp"/>
+    </definition>
+    <definition name="page.sessionTimeout" page="/WEB-INF/jsp/common/list_layout.jsp">
+        <put name="header" value="/WEB-INF/jsp/common/system_error_head.jsp" />
+        <put name="title" value="セッションタイムアウト" />
+        <put name="body" value="/WEB-INF/jsp/ur09001/ur09001.jsp"/>
+    </definition>
+    <definition name="page.maintence" page="/WEB-INF/jsp/common/maintenance.jsp">
+    </definition>
+    <definition name="page.systemErrorCSRF" page="/WEB-INF/jsp/common/list_layout.jsp">
+        <put name="header" value="/WEB-INF/jsp/common/system_error_head.jsp" />
+        <put name="title" value="システムエラー" />
+        <put name="body" value="/WEB-INF/jsp/ur09002/ur09002.jsp"/>
+    </definition>
+     <definition name="page.systemErrorMultiWindow" page="/WEB-INF/jsp/common/list_layout.jsp">
+        <put name="header" value="/WEB-INF/jsp/common/system_error_head.jsp" />
+        <put name="title" value="システムエラー" />
+        <put name="body" value="/WEB-INF/jsp/ur09003/ur09003.jsp"/>
+    </definition>
+
+</tiles-definitions>
+

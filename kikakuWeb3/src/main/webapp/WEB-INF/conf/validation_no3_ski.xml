@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+	<formset>
+		<form name="UR05032Form">
+			<!-- 営業時間（通常営業(開始時間)）-->
+			<field property="data.liftBsNomalStartH"
+				depends="integer, intRange">
+				<arg key="ur05032.W001" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNomalStartM"
+				depends="integer, intRange">
+				<arg key="ur05032.W002" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNomalStartH"
+				depends="validwhen">
+				<arg key="ur05032.W013" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftBsNomalStartH == null)and
+						(data.liftBsNomalStartM == null))or
+						((data.liftBsNomalStartH != null) and
+						(data.liftBsNomalStartM != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（通常営業(終了時間)）-->
+			<field property="data.liftBsNomalEndH"
+				depends="integer, intRange">
+				<arg key="ur05032.W003" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNomalEndM"
+				depends="integer, intRange">
+				<arg key="ur05032.W004" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNomalEndH"
+				depends="validwhen">
+				<arg key="ur05032.W014" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftBsNomalEndH == null)and
+						(data.liftBsNomalEndM == null))or
+						((data.liftBsNomalEndH != null) and
+						(data.liftBsNomalEndM != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（ナイター(開始時間)）-->
+			<field property="data.liftBsNightStartH"
+				depends="integer, intRange">
+				<arg key="ur05032.W005" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNightStartM"
+				depends="integer, intRange">
+				<arg key="ur05032.W006" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNightStartH"
+				depends="validwhen">
+				<arg key="ur05032.W015" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftBsNightStartH == null)and
+						(data.liftBsNightStartM == null))or
+						((data.liftBsNightStartH != null) and
+						(data.liftBsNightStartM != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（ナイター(終了時間)）-->
+			<field property="data.liftBsNightEndH"
+				depends="integer, intRange">
+				<arg key="ur05032.W007" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNightEndM"
+				depends="integer, intRange">
+				<arg key="ur05032.W008" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsNightEndH"
+				depends="validwhen">
+				<arg key="ur05032.W016" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftBsNightEndH == null)and
+						(data.liftBsNightEndM == null))or
+						((data.liftBsNightEndH != null) and
+						(data.liftBsNightEndM != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（早朝営業(開始時間)）-->
+			<field property="data.liftBsMorningStartH"
+				depends="integer, intRange">
+				<arg key="ur05032.W009" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsMorningStartM"
+				depends="integer, intRange">
+				<arg key="ur05032.W010" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsMorningStartH" depends="validwhen">
+				<arg key="ur05032.W017" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftBsMorningStartH == null)and
+						(data.liftBsMorningStartM == null))or
+						((data.liftBsMorningStartH != null) and
+						(data.liftBsMorningStartM != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（早朝営業(終了時間)）-->
+			<field property="data.liftBsMorningEndH"
+				depends="integer, intRange">
+				<arg key="ur05032.W011" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsMorningEndM"
+				depends="integer, intRange">
+				<arg key="ur05032.W012" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftBsMorningEndH" depends="validwhen">
+				<arg key="ur05032.W018" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftBsMorningEndH == null)and
+						(data.liftBsMorningEndM == null))or
+						((data.liftBsMorningEndH != null) and
+						(data.liftBsMorningEndM != null)))
+					</var-value>
+				</var>
+			</field>
+			<field property="data.skiCatchcopy" depends="maxlengthDB">
+            	<arg key="ur05032.W019" />
+			
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field property="data.liftAttentionContent" depends="maxlengthDB">
+            	<arg key="ur05032.W020" />
+			
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>30</var-value>
+                </var>
+            </field>
+		</form>
+	</formset>
+</form-validation>

@@ -1,0 +1,3350 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+	<formset>
+		<form name="DR05032Form">
+			<!-- 施設パターン名称 -->
+			<field property="data.facilityPatternNm" depends="maxlengthDB">
+				<arg key="dr05030.W015" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves1.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves1.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves1.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves1.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves1.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves1.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves1.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves1.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves1.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves1.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves1.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves1.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves1.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves1.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves1.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves2.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves2.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves2.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves2.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves2.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves2.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves2.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves2.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves2.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves2.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves2.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves2.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves2.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves2.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves2.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves3.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves3.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves3.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves3.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves3.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves3.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves3.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves3.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves3.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves3.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves3.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves3.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves3.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves3.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves3.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves4.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves4.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves4.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves4.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves4.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves4.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves4.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves4.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves4.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves4.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves4.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves4.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves4.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves4.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves4.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves5.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves5.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves5.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves5.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves5.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves5.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves5.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves5.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves5.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves5.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves5.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves5.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves5.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves5.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves5.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves6.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves6.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves6.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves6.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves6.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves6.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves6.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves6.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves6.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves6.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves6.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves6.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves6.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves6.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves6.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves7.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves7.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves7.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves7.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves7.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves7.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves7.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves7.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves7.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves7.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves7.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves7.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves7.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves7.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves7.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves8.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves8.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves8.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves8.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves8.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves8.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves8.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves8.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves8.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves8.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves8.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves8.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves8.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves8.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves8.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves9.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves9.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves9.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves9.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves9.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves9.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves9.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves9.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves9.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves9.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves9.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves9.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves9.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves9.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves9.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves10.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves10.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves10.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves10.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves10.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves10.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves10.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves10.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves10.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves10.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves10.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves10.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves10.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves10.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves10.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves11.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves11.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves11.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves11.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves11.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves11.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves11.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves11.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves11.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves11.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves11.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves11.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves11.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves11.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves11.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			<!-- 建物・部屋タイプ名称 -->
+			<field property="data.vesselInfoData.ves12.buildingRoomNm" depends="maxlengthDB">
+				<arg key="dr05030.W016" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>40</var-value>
+				</var>
+			</field>
+			<!-- 定員１ -->
+			<field property="data.vesselInfoData.ves12.capacityFrom" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 定員２ -->
+			<field property="data.vesselInfoData.ves12.capacityTo" depends="integer,maxlength">
+				<arg key="dr05030.W021" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 階層指定 -->
+			<field property="data.vesselInfoData.ves12.floorAssign" depends="integer,maxlength">
+				<arg key="dr05030.W022" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 面積 -->
+			<field property="data.vesselInfoData.ves12.area" depends="float,floatRange">
+				<arg key="dr05030.W023" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>9999.9</var-value>
+				</var>
+			</field>
+			<!-- ベッド幅 -->
+			<field property="data.vesselInfoData.ves12.bedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves12.extraBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- エキストラベッド：人数 -->
+			<field property="data.vesselInfoData.ves12.extraBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves12.sofaBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- ソファーベッド：人数 -->
+			<field property="data.vesselInfoData.ves12.sofaBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：ベッド幅 -->
+			<field property="data.vesselInfoData.ves12.stackingBedWidth" depends="integer,maxlength">
+				<arg key="dr05030.W024" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<!-- スタッキングベッド：人数 -->
+			<field property="data.vesselInfoData.ves12.stackingBedNum" depends="integer,maxlength">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<!-- 子供用寝具コメント -->
+			<field property="data.vesselInfoData.ves12.childBeddingCmt" depends="maxlengthDB">
+				<arg key="dr05030.W017" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 備考 -->
+			<field property="data.vesselInfoData.ves12.memo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- セールスポイント -->
+			<field property="data.vesselInfoData.ves12.salesPoint" depends="maxlengthDB">
+				<arg key="dr05030.W019" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			
+			
+			<!-- ＜リフト代金 宿泊代金込み＞スキー場名 -->
+			<field property="data.liftSki.liftTkSkiNm" depends="maxlengthDB">
+				<arg key="dr05052.W041" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- ＜リフト券種＞その他 -->
+			<field property="data.liftSki.liftTkOtherContent" depends="maxlengthDB">
+				<arg key="dr05032.W023" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<!-- ＜リフト券有効内容＞その他 -->
+			<field property="data.liftSki.liftYkOtherContent" depends="maxlengthDB">
+				<arg key="dr05032.W024" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<!-- ＜引換え場所＞その他 -->
+			<field property="data.liftSki.liftChWayOtherContent" depends="maxlengthDB">
+				<arg key="dr05032.W025" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<!-- ＜リフト券使用上の注意事項＞注意事項 -->
+			<field property="data.liftSki.liftAttentionContent" depends="maxlength">
+				<arg key="dr05032.W026" />
+				<arg name="maxlength" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- ＜スキー場の営業時間＞スキー場名 -->
+			<field property="data.liftSki.liftBsSkiNm" depends="maxlengthDB">
+				<arg key="dr05052.W041" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（通常営業(開始時間)） -->
+			<field property="data.liftSki.liftBsNomalStartHour" depends="integer, intRange">
+				<arg key="dr05032.W001" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNomalStartMinute" depends="integer, intRange">
+				<arg key="dr05032.W002" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNomalStartHour" depends="validwhen">
+				<arg key="dr05032.W013" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.liftBsNomalStartHour == null)and
+						(data.liftSki.liftBsNomalStartMinute == null))or
+						((data.liftSki.liftBsNomalStartHour !=
+						null) and
+						(data.liftSki.liftBsNomalStartMinute != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（通常営業(終了時間)） -->
+			<field property="data.liftSki.liftBsNomalEndHour" depends="integer, intRange">
+				<arg key="dr05032.W003" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNomalEndMinute" depends="integer, intRange">
+				<arg key="dr05032.W004" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNomalEndHour" depends="validwhen">
+				<arg key="dr05032.W014" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.liftBsNomalEndHour == null)and
+						(data.liftSki.liftBsNomalEndMinute == null))or
+						((data.liftSki.liftBsNomalEndHour != null)
+						and
+						(data.liftSki.liftBsNomalEndMinute != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- ナイター営業日 -->
+			<field property="data.liftSki.liftBsNightDay" depends="maxlengthDB">
+				<arg key="dr05032.W028" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（ナイター(開始時間)） -->
+			<field property="data.liftSki.liftBsNightStartHour" depends="integer, intRange">
+				<arg key="dr05032.W005" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNightStartMinute" depends="integer, intRange">
+				<arg key="dr05032.W006" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNightStartHour" depends="validwhen">
+				<arg key="dr05032.W015" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.liftBsNightStartHour == null)and
+						(data.liftSki.liftBsNightStartMinute == null))or
+						((data.liftSki.liftBsNightStartHour !=
+						null) and
+						(data.liftSki.liftBsNightStartMinute != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（ナイター(終了時間)） -->
+			<field property="data.liftSki.liftBsNightEndHour" depends="integer, intRange">
+				<arg key="dr05032.W007" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNightEndMinute" depends="integer, intRange">
+				<arg key="dr05032.W008" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsNightEndHour" depends="validwhen">
+				<arg key="dr05032.W016" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.liftBsNightEndHour == null)and
+						(data.liftSki.liftBsNightEndMinute == null))or
+						((data.liftSki.liftBsNightEndHour != null)
+						and
+						(data.liftSki.liftBsNightEndMinute != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 早朝営業日 -->
+			<field property="data.liftSki.liftBsMorningDay" depends="maxlengthDB">
+				<arg key="dr05032.W029" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（早朝営業(開始時間)） -->
+			<field property="data.liftSki.liftBsMorningStartHour" depends="integer, intRange">
+				<arg key="dr05032.W009" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsMorningStartMinute" depends="integer, intRange">
+				<arg key="dr05032.W010" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsMorningStartHour" depends="validwhen">
+				<arg key="dr05032.W017" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.liftBsMorningStartHour == null)and
+						(data.liftSki.liftBsMorningStartMinute == null))or
+						((data.liftSki.liftBsMorningStartHour !=
+						null) and
+						(data.liftSki.liftBsMorningStartMinute != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- 営業時間（早朝営業(終了時間)） -->
+			<field property="data.liftSki.liftBsMorningEndHour" depends="integer, intRange">
+				<arg key="dr05032.W011" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsMorningEndMinute" depends="integer, intRange">
+				<arg key="dr05032.W012" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.liftBsMorningEndHour" depends="validwhen">
+				<arg key="dr05032.W018" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.liftBsMorningEndHour == null)and
+						(data.liftSki.liftBsMorningEndMinute == null))or
+						((data.liftSki.liftBsMorningEndHour !=
+						null) and
+						(data.liftSki.liftBsMorningEndMinute != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- ＜リフト券販売価格＞スキー場名 -->
+			<field property="data.liftSki.liftSlSkiNm" depends="maxlengthDB">
+				<arg key="dr05052.W041" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<!-- 券１（おとな） -->
+			<field property="data.liftSki.liftSlAdultKind1" depends="maxlengthDB">
+				<arg key="dr05032.W030" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+			<!-- 通常価格１（おとな） -->
+			<field property="data.liftSki.liftSlAdultNomal1" depends="integer,maxlength">
+				<arg key="dr05032.W041" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 宿泊者割引１（おとな） -->
+			<field property="data.liftSki.liftSlAdultDiscount1" depends="integer,maxlength">
+				<arg key="dr05032.W042" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- びゅう商品割引１（おとな） -->
+			<field property="data.liftSki.liftSlAdultByu1" depends="integer,maxlength">
+				<arg key="dr05032.W043" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 券２（おとな） -->
+			<field property="data.liftSki.liftSlAdultKind2" depends="maxlengthDB">
+				<arg key="dr05032.W030" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+			<!-- 通常価格２（おとな） -->
+			<field property="data.liftSki.liftSlAdultNomal2" depends="integer,maxlength">
+				<arg key="dr05032.W041" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 宿泊者割引２（おとな） -->
+			<field property="data.liftSki.liftSlAdultDiscount2" depends="integer,maxlength">
+				<arg key="dr05032.W042" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- びゅう商品割引２（おとな） -->
+			<field property="data.liftSki.liftSlAdultByu2" depends="integer,maxlength">
+				<arg key="dr05032.W043" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 券１（こども） -->
+			<field property="data.liftSki.liftSlChildKind1" depends="maxlengthDB">
+				<arg key="dr05032.W031" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+			<!-- 通常価格１（こども） -->
+			<field property="data.liftSki.liftSlChildNomal1" depends="integer,maxlength">
+				<arg key="dr05032.W044" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 宿泊者割引１（こども） -->
+			<field property="data.liftSki.liftSlChildDiscount1" depends="integer,maxlength">
+				<arg key="dr05032.W045" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- びゅう商品割引１（こども） -->
+			<field property="data.liftSki.liftSlChildByu1" depends="integer,maxlength">
+				<arg key="dr05032.W046" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 券２（こども） -->
+			<field property="data.liftSki.liftSlChildKind2" depends="maxlengthDB">
+				<arg key="dr05032.W031" />
+				<arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+					position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+			<!-- 通常価格２（こども） -->
+			<field property="data.liftSki.liftSlChildNomal2" depends="integer,maxlength">
+				<arg key="dr05032.W044" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 宿泊者割引２（こども） -->
+			<field property="data.liftSki.liftSlChildDiscount2" depends="integer,maxlength">
+				<arg key="dr05032.W045" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- びゅう商品割引２（こども） -->
+			<field property="data.liftSki.liftSlChildByu2" depends="integer,maxlength">
+				<arg key="dr05032.W046" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ＜レンタル＞申込方法 -->
+			<field property="data.liftSki.rentRequestWay" depends="maxlengthDB">
+				<arg key="dr05032.W032" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 半日 通常価格（おとな） -->
+			<field property="data.liftSki.rentSkiHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W047" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 半日 割引（おとな） -->
+			<field property="data.liftSki.rentSkiHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W048" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 半日 通常価格（こども） -->
+			<field property="data.liftSki.rentSkiHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W053" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 半日 割引（こども） -->
+			<field property="data.liftSki.rentSkiHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W054" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) １日 通常価格（おとな） -->
+			<field property="data.liftSki.rentSkiDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W049" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) １日 割引（おとな） -->
+			<field property="data.liftSki.rentSkiDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W050" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) １日 通常価格（こども） -->
+			<field property="data.liftSki.rentSkiDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W055" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) １日 割引（こども） -->
+			<field property="data.liftSki.rentSkiDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W056" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 特定割引(スキー(従来型ストレート)) -->
+			<field property="data.liftSki.rentSkiSpKind" depends="maxlengthDB">
+				<arg key="dr05032.W059" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 特定 通常価格（おとな） -->
+			<field property="data.liftSki.rentSkiSpAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W051" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 特定 割引（おとな） -->
+			<field property="data.liftSki.rentSkiSpAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W052" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 特定 通常価格（こども） -->
+			<field property="data.liftSki.rentSkiSpChild1" depends="integer,maxlength">
+				<arg key="dr05032.W057" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(従来型ストレート)) 特定 割引（こども） -->
+			<field property="data.liftSki.rentSkiSpChild2" depends="integer,maxlength">
+				<arg key="dr05032.W058" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 半日 通常価格（おとな） -->
+			<field property="data.liftSki.rentCvHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W047" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 半日 割引（おとな） -->
+			<field property="data.liftSki.rentCvHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W048" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 半日 通常価格（こども） -->
+			<field property="data.liftSki.rentCvHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W053" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 半日 割引（こども） -->
+			<field property="data.liftSki.rentCvHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W054" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) １日 通常価格（おとな） -->
+			<field property="data.liftSki.rentCvDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W049" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) １日 割引（おとな） -->
+			<field property="data.liftSki.rentCvDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W050" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) １日 通常価格（こども） -->
+			<field property="data.liftSki.rentCvDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W055" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) １日 割引（こども） -->
+			<field property="data.liftSki.rentCvDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W056" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 特定割引(スキー(カービング)) -->
+			<field property="data.liftSki.rentCvSpKind" depends="maxlengthDB">
+				<arg key="dr05032.W059" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 特定 通常価格（おとな） -->
+			<field property="data.liftSki.rentCvSpAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W051" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 特定 割引（おとな） -->
+			<field property="data.liftSki.rentCvSpAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W052" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 特定 通常価格（こども） -->
+			<field property="data.liftSki.rentCvSpChild1" depends="integer,maxlength">
+				<arg key="dr05032.W057" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキー(カービング)) 特定 割引（こども） -->
+			<field property="data.liftSki.rentCvSpChild2" depends="integer,maxlength">
+				<arg key="dr05032.W058" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 半日 通常価格（おとな） -->
+			<field property="data.liftSki.rentBdHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W047" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 半日 割引（おとな） -->
+			<field property="data.liftSki.rentBdHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W048" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 半日 通常価格（こども） -->
+			<field property="data.liftSki.rentBdHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W053" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 半日 割引（こども） -->
+			<field property="data.liftSki.rentBdHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W054" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) １日 通常価格（おとな） -->
+			<field property="data.liftSki.rentBdDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W049" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) １日 割引（おとな） -->
+			<field property="data.liftSki.rentBdDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W050" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) １日 通常価格（こども） -->
+			<field property="data.liftSki.rentBdDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W055" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) １日 割引（こども） -->
+			<field property="data.liftSki.rentBdDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W056" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 特定割引(スノーボード) -->
+			<field property="data.liftSki.rentBdSpKind" depends="maxlengthDB">
+				<arg key="dr05032.W059" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 特定 通常価格（おとな） -->
+			<field property="data.liftSki.rentBdSpAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W051" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 特定 割引（おとな） -->
+			<field property="data.liftSki.rentBdSpAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W052" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 特定 通常価格（こども） -->
+			<field property="data.liftSki.rentBdSpChild1" depends="integer,maxlength">
+				<arg key="dr05032.W057" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スノーボード) 特定 割引（こども） -->
+			<field property="data.liftSki.rentBdSpChild2" depends="integer,maxlength">
+				<arg key="dr05032.W058" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 半日 通常価格（おとな） -->
+			<field property="data.liftSki.rentSkiwHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W047" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 半日 割引（おとな） -->
+			<field property="data.liftSki.rentSkiwHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W048" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 半日 通常価格（こども） -->
+			<field property="data.liftSki.rentSkiwHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W053" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 半日 割引（こども） -->
+			<field property="data.liftSki.rentSkiwHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W054" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) １日 通常価格（おとな） -->
+			<field property="data.liftSki.rentSkiwDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W049" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) １日 割引（おとな） -->
+			<field property="data.liftSki.rentSkiwDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W050" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) １日 通常価格（こども） -->
+			<field property="data.liftSki.rentSkiwDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W055" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) １日 割引（こども） -->
+			<field property="data.liftSki.rentSkiwDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W056" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 特定割引(スキーウェア) -->
+			<field property="data.liftSki.rentSkiwSpKind" depends="maxlengthDB">
+				<arg key="dr05032.W059" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 特定 通常価格（おとな） -->
+			<field property="data.liftSki.rentSkiwSpAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W051" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 特定 割引（おとな） -->
+			<field property="data.liftSki.rentSkiwSpAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W052" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 特定 通常価格（こども） -->
+			<field property="data.liftSki.rentSkiwSpChild1" depends="integer,maxlength">
+				<arg key="dr05032.W057" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(スキーウェア) 特定 割引（こども） -->
+			<field property="data.liftSki.rentSkiwSpChild2" depends="integer,maxlength">
+				<arg key="dr05032.W058" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 半日 通常価格（おとな） -->
+			<field property="data.liftSki.rentBdwHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W047" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 半日 割引（おとな） -->
+			<field property="data.liftSki.rentBdwHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W048" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 半日 通常価格（こども） -->
+			<field property="data.liftSki.rentBdwHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W053" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 半日 割引（こども） -->
+			<field property="data.liftSki.rentBdwHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W054" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) １日 通常価格（おとな） -->
+			<field property="data.liftSki.rentBdwDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W049" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) １日 割引（おとな） -->
+			<field property="data.liftSki.rentBdwDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W050" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) １日 通常価格（こども） -->
+			<field property="data.liftSki.rentBdwDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W055" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) １日 割引（こども） -->
+			<field property="data.liftSki.rentBdwDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W056" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- 特定割引(ボードウェア) -->
+			<field property="data.liftSki.rentBdwSpKind" depends="maxlengthDB">
+				<arg key="dr05032.W059" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 特定 通常価格（おとな） -->
+			<field property="data.liftSki.rentBdwSpAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W051" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 特定 割引（おとな） -->
+			<field property="data.liftSki.rentBdwSpAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W052" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 特定 通常価格（こども） -->
+			<field property="data.liftSki.rentBdwSpChild1" depends="integer,maxlength">
+				<arg key="dr05032.W057" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル(ボードウェア) 特定 割引（こども） -->
+			<field property="data.liftSki.rentBdwSpChild2" depends="integer,maxlength">
+				<arg key="dr05032.W058" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- レンタル 備考 -->
+			<field property="data.liftSki.rentSkiPriceMemo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- スクール その他 -->
+			<field property="data.liftSki.schoolOtherContent" depends="maxlengthDB">
+				<arg key="dr05032.W038" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- スキースクール割引（特定１） -->
+			<field property="data.liftSki.schoolSkiTime1Hh" depends="integer, intRange">
+				<arg key="dr05032.W060" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolSkiTime1Mm" depends="integer, intRange">
+				<arg key="dr05032.W061" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolSkiTime1Hh" depends="validwhen">
+				<arg key="dr05032.W062" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.schoolSkiTime1Hh == null)and
+						(data.liftSki.schoolSkiTime1Mm == null))or
+						((data.liftSki.schoolSkiTime1Hh !=
+						null) and
+						(data.liftSki.schoolSkiTime1Mm != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- スキースクール割引（特定２） -->
+			<field property="data.liftSki.schoolSkiTime2Hh" depends="integer, intRange">
+				<arg key="dr05032.W060" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolSkiTime2Mm" depends="integer, intRange">
+				<arg key="dr05032.W061" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolSkiTime2Hh" depends="validwhen">
+				<arg key="dr05032.W062" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.schoolSkiTime2Hh == null)and
+						(data.liftSki.schoolSkiTime2Mm == null))or
+						((data.liftSki.schoolSkiTime2Hh !=
+						null) and
+						(data.liftSki.schoolSkiTime2Mm != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 半日 通常価格（おとな） -->
+			<field property="data.liftSki.schoolSkiHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W064" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 半日 割引（おとな） -->
+			<field property="data.liftSki.schoolSkiHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W065" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 半日 通常価格（こども） -->
+			<field property="data.liftSki.schoolSkiHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 半日 割引（こども） -->
+			<field property="data.liftSki.schoolSkiHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール １日 通常価格（おとな） -->
+			<field property="data.liftSki.schoolSkiDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W066" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール １日 割引（おとな） -->
+			<field property="data.liftSki.schoolSkiDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W067" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール １日 通常価格（こども） -->
+			<field property="data.liftSki.schoolSkiDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W072" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール １日 割引（こども） -->
+			<field property="data.liftSki.schoolSkiDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W073" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定１ 通常価格（おとな） -->
+			<field property="data.liftSki.schoolSkiTime1Adult1" depends="integer,maxlength">
+				<arg key="dr05032.W068" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定１ 割引（おとな） -->
+			<field property="data.liftSki.schoolSkiTime1Adult2" depends="integer,maxlength">
+				<arg key="dr05032.W069" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定１ 通常価格（こども） -->
+			<field property="data.liftSki.schoolSkiTime1Child1" depends="integer,maxlength">
+				<arg key="dr05032.W074" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定１ 割引（こども） -->
+			<field property="data.liftSki.schoolSkiTime1Child2" depends="integer,maxlength">
+				<arg key="dr05032.W075" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定２ 通常価格（おとな） -->
+			<field property="data.liftSki.schoolSkiTime2Adult1" depends="integer,maxlength">
+				<arg key="dr05032.W068" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定２ 割引（おとな） -->
+			<field property="data.liftSki.schoolSkiTime2Adult1" depends="integer,maxlength">
+				<arg key="dr05032.W069" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定２ 通常価格（こども） -->
+			<field property="data.liftSki.schoolSkiTime2Child1" depends="integer,maxlength">
+				<arg key="dr05032.W074" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スキースクール 特定２ 割引（こども） -->
+			<field property="data.liftSki.schoolSkiTime2Child2" depends="integer,maxlength">
+				<arg key="dr05032.W075" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			
+			<!-- ボードスクール割引（特定１） -->
+			<field property="data.liftSki.schoolBdTime1Hh" depends="integer, intRange">
+				<arg key="dr05032.W060" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolBdTime1Mm" depends="integer, intRange">
+				<arg key="dr05032.W061" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolBdTime1Hh" depends="validwhen">
+				<arg key="dr05032.W062" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.schoolBdTime1Hh == null)and
+						(data.liftSki.schoolBdTime1Mm == null))or
+						((data.liftSki.schoolBdTime1Hh !=
+						null) and
+						(data.liftSki.schoolBdTime1Mm != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール割引（特定２） -->
+			<field property="data.liftSki.schoolBdTime2Hh" depends="integer, intRange">
+				<arg key="dr05032.W060" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolBdTime2Mm" depends="integer, intRange">
+				<arg key="dr05032.W061" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftSki.schoolBdTime2Hh" depends="validwhen">
+				<arg key="dr05032.W062" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftSki.schoolBdTime2Hh == null)and
+						(data.liftSki.schoolBdTime2Mm == null))or
+						((data.liftSki.schoolBdTime2Hh !=
+						null) and
+						(data.liftSki.schoolBdTime2Mm != null)))
+					</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 半日 通常価格（おとな） -->
+			<field property="data.liftSki.schoolBdHalfAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W064" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 半日 割引（おとな） -->
+			<field property="data.liftSki.schoolBdHalfAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W065" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 半日 通常価格（こども） -->
+			<field property="data.liftSki.schoolBdHalfChild1" depends="integer,maxlength">
+				<arg key="dr05032.W070" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 半日 割引（こども） -->
+			<field property="data.liftSki.schoolBdHalfChild2" depends="integer,maxlength">
+				<arg key="dr05032.W071" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール １日 通常価格（おとな） -->
+			<field property="data.liftSki.schoolBdDayAdult1" depends="integer,maxlength">
+				<arg key="dr05032.W066" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール １日 割引（おとな） -->
+			<field property="data.liftSki.schoolBdDayAdult2" depends="integer,maxlength">
+				<arg key="dr05032.W067" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール １日 通常価格（こども） -->
+			<field property="data.liftSki.schoolBdDayChild1" depends="integer,maxlength">
+				<arg key="dr05032.W072" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール １日 割引（こども） -->
+			<field property="data.liftSki.schoolBdDayChild2" depends="integer,maxlength">
+				<arg key="dr05032.W073" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定１ 通常価格（おとな） -->
+			<field property="data.liftSki.schoolBdTime1Adult1" depends="integer,maxlength">
+				<arg key="dr05032.W068" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定１ 割引（おとな） -->
+			<field property="data.liftSki.schoolBdTime1Adult2" depends="integer,maxlength">
+				<arg key="dr05032.W069" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定１ 通常価格（こども） -->
+			<field property="data.liftSki.schoolBdTime1Child1" depends="integer,maxlength">
+				<arg key="dr05032.W074" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定１ 割引（こども） -->
+			<field property="data.liftSki.schoolBdTime1Child2" depends="integer,maxlength">
+				<arg key="dr05032.W075" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定２ 通常価格（おとな） -->
+			<field property="data.liftSki.schoolBdTime2Adult1" depends="integer,maxlength">
+				<arg key="dr05032.W068" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定２ 割引（おとな） -->
+			<field property="data.liftSki.schoolBdTime2Adult2" depends="integer,maxlength">
+				<arg key="dr05032.W069" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定２ 通常価格（こども） -->
+			<field property="data.liftSki.schoolBdTime2Child1" depends="integer,maxlength">
+				<arg key="dr05032.W074" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- ボードスクール 特定２ 割引（こども） -->
+			<field property="data.liftSki.schoolBdTime2Child2" depends="integer,maxlength">
+				<arg key="dr05032.W075" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+			</field>
+			<!-- スクール 備考 -->
+			<field property="data.liftSki.schoolPriceMemo" depends="maxlengthDB">
+				<arg key="dr05030.W018" />
+				<arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<!-- その他スキー場等に関する備考(キャッチコピー) -->
+			<field property="data.liftSki.skiCatchcopy" depends="maxlength">
+				<arg key="dr05032.W019" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+			
+			<!-- 施設 記入者 -->
+			<field property="data.responsibler" depends="maxlength,mask">
+				<arg key="dr05030.W025" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr05030.W029" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>4</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+			</field>
+			<!-- JR 記入者 -->
+			<field property="data.senderNm" depends="maxlength,mask">
+				<arg key="dr01010.W014" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<arg1 name="mask" key="dr05030.W029" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>4</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${facilityCD}</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>

@@ -1,0 +1,863 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+	<formset>
+		<form name="UR01021Form">
+
+			<field property="data.targetShop1Tel" depends="mask">
+				<arg key="ur01021.W001" />
+				<arg1 name="mask" key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<field property="data.targetShop2Tel" depends="mask">
+				<arg key="ur01021.W002" />
+				<arg1 name="mask" key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+			</field>
+			<!-- リフト運行時間（平日）1-->
+			<field property="data.liftOpentimeOrdinary1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W003" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeOrdinary1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W004" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeOrdinary1H"
+				depends="validwhen">
+				<arg key="ur01021.W005" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftOpentimeOrdinary1H == null)and
+						(data.liftOpentimeOrdinary1M == null))or
+						((data.liftOpentimeOrdinary1H != null) and
+						(data.liftOpentimeOrdinary1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 リフト運行時間（平日）2-->
+			<field property="data.liftOpentimeOrdinary2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W006" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeOrdinary2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W007" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeOrdinary2H"
+				depends="validwhen">
+				<arg key="ur01021.W008" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftOpentimeOrdinary2H == null)and
+						(data.liftOpentimeOrdinary2M == null))or
+						((data.liftOpentimeOrdinary2H != null) and
+						(data.liftOpentimeOrdinary2M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 リフト運行時間(週末・祝日)1-->
+			<field property="data.liftOpentimeHoliday1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W009" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeHoliday1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W010" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeHoliday1H"
+				depends="validwhen">
+				<arg key="ur01021.W011" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftOpentimeHoliday1H == null)and
+						(data.liftOpentimeHoliday1M == null))or
+						((data.liftOpentimeHoliday1H != null) and
+						(data.liftOpentimeHoliday1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 リフト運行時間(週末・祝日)2-->
+			<field property="data.liftOpentimeHoliday2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W012" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeHoliday2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W013" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftOpentimeHoliday2H"
+				depends="validwhen">
+				<arg key="ur01021.W014" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftOpentimeHoliday2H == null)and
+						(data.liftOpentimeHoliday2M == null))or
+						((data.liftOpentimeHoliday2H != null) and
+						(data.liftOpentimeHoliday2M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 リフト券_ナイター利用時間帯1-->
+			<field property="data.liftNightOpentime1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W015" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftNightOpentime1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W016" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftNightOpentime1H" depends="validwhen">
+				<arg key="ur01021.W017" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftNightOpentime1H == null)and
+						(data.liftNightOpentime1M == null))or
+						((data.liftNightOpentime1H != null) and
+						(data.liftNightOpentime1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 リフト券_ナイター利用時間帯2-->
+			<field property="data.liftNightOpentime2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W018" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.liftNightOpentime2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W019" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.liftNightOpentime2H" depends="validwhen">
+				<arg key="ur01021.W020" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.liftNightOpentime2H == null)and
+						(data.liftNightOpentime2M == null))or
+						((data.liftNightOpentime2H != null) and
+						(data.liftNightOpentime2M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 早朝滑走利用時間帯1-->
+			<field property="data.morningSlidingOpentime1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W021" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.morningSlidingOpentime1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W022" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.morningSlidingOpentime1H"
+				depends="validwhen">
+				<arg key="ur01021.W023" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.morningSlidingOpentime1H == null)and
+						(data.morningSlidingOpentime1M == null))or
+						((data.morningSlidingOpentime1H != null) and
+						(data.morningSlidingOpentime1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 早朝滑走利用時間帯2時-->
+			<field property="data.morningSlidingOpentime2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W024" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.morningSlidingOpentime2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W025" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.morningSlidingOpentime2H"
+				depends="validwhen">
+				<arg key="ur01021.W026" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.morningSlidingOpentime2H == null)and
+						(data.morningSlidingOpentime2M == null))or
+						((data.morningSlidingOpentime2H != null) and
+						(data.morningSlidingOpentime2M != null)))
+					</var-value>
+				</var>
+			</field>
+
+			<!--                 食事券利用可能時間1-->
+			<field property="data.foodOpentime1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W027" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.foodOpentime1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W028" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.foodOpentime1H" depends="validwhen">
+				<arg key="ur01021.W029" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.foodOpentime1H == null)and
+						(data.foodOpentime1M == null))or
+						((data.foodOpentime1H != null) and
+						(data.foodOpentime1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 食事券利用可能時間2時-->
+			<field property="data.foodOpentime2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W030" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.foodOpentime2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W031" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.foodOpentime2H" depends="validwhen">
+				<arg key="ur01021.W032" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.foodOpentime2H == null)and
+						(data.foodOpentime2M == null))or
+						((data.foodOpentime2H != null) and
+						(data.foodOpentime2M != null)))
+					</var-value>
+				</var>
+			</field>
+
+			<!--                 入浴券の営業時間１-->
+			<field property="data.bathTicketOpentime1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W033" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.bathTicketOpentime1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W034" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.bathTicketOpentime1H"
+				depends="validwhen">
+				<arg key="ur01021.W035" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.bathTicketOpentime1H == null)and
+						(data.bathTicketOpentime1M == null))or
+						((data.bathTicketOpentime1H != null) and
+						(data.bathTicketOpentime1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 入浴券の営業時間２時-->
+			<field property="data.bathTicketOpentime2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W036" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.bathTicketOpentime2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W037" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.bathTicketOpentime2H"
+				depends="validwhen">
+				<arg key="ur01021.W038" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.bathTicketOpentime2H == null)and
+						(data.bathTicketOpentime2M == null))or
+						((data.bathTicketOpentime2H != null) and
+						(data.bathTicketOpentime2M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 ドリンク券の利用時間１-->
+			<field property="data.drinkTicketOpentime1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W039" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.drinkTicketOpentime1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W040" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.drinkTicketOpentime1H"
+				depends="validwhen">
+				<arg key="ur01021.W041" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.drinkTicketOpentime1H == null)and
+						(data.drinkTicketOpentime1M == null))or
+						((data.drinkTicketOpentime1H != null) and
+						(data.drinkTicketOpentime1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 ドリンク券の利用時間２時-->
+			<field property="data.drinkTicketOpentime2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W042" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.drinkTicketOpentime2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W043" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.drinkTicketOpentime2H"
+				depends="validwhen">
+				<arg key="ur01021.W044" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.drinkTicketOpentime2H == null)and
+						(data.drinkTicketOpentime2M == null))or
+						((data.drinkTicketOpentime2H != null) and
+						(data.drinkTicketOpentime2M != null)))
+					</var-value>
+				</var>
+			</field>
+
+			<!--                 送迎可能時間帯１-->
+			<field property="data.pickupbusOpentime1H"
+				depends="integer, intRange">
+				<arg key="ur01021.W045" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.pickupbusOpentime1M"
+				depends="integer, intRange">
+				<arg key="ur01021.W046" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.pickupbusOpentime1H" depends="validwhen">
+				<arg key="ur01021.W047" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.pickupbusOpentime1H == null)and
+						(data.pickupbusOpentime1M == null))or
+						((data.pickupbusOpentime1H != null) and
+						(data.pickupbusOpentime1M != null)))
+					</var-value>
+				</var>
+			</field>
+			<!--                 送迎可能時間帯２時-->
+			<field property="data.pickupbusOpentime2H"
+				depends="integer, intRange">
+				<arg key="ur01021.W048" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>23</var-value>
+				</var>
+			</field>
+			<field property="data.pickupbusOpentime2M"
+				depends="integer, intRange">
+				<arg key="ur01021.W049" />
+				<arg1 key="${var:min}" resource="false" />
+				<arg2 key="${var:max}" resource="false" />
+				<var>
+					<var-name>min</var-name>
+					<var-value>0</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>59</var-value>
+				</var>
+			</field>
+			<field property="data.pickupbusOpentime2H" depends="validwhen">
+				<arg key="ur01021.W050" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(((data.pickupbusOpentime2H == null)and
+						(data.pickupbusOpentime2M == null))or
+						((data.pickupbusOpentime2H != null) and
+						(data.pickupbusOpentime2M != null)))
+					</var-value>
+				</var>
+			</field>
+			
+			<!-- 数字の検証 -->
+			<field property="data.liftTicketPrice"
+				depends="integer">
+				<arg key="ur01021.W051" />
+			</field>
+			<field property="data.foodTicketPrice"
+				depends="integer">
+				<arg key="ur01021.W052" />
+			</field>
+			<field property="data.bathTicketPrice"
+				depends="integer">
+				<arg key="ur01021.W053" />
+			</field>
+			<field property="data.lendTowelFee"
+				depends="integer">
+				<arg key="ur01021.W054" />
+			</field>
+			<field property="data.drinkTicketPrice"
+				depends="integer">
+				<arg key="ur01021.W055" />
+			</field>
+			<field property="data.other1TicketPrice"
+				depends="integer">
+				<arg key="ur01021.W056" />
+			</field>
+			<field property="data.other2TicketPrice"
+				depends="integer">
+				<arg key="ur01021.W062" />
+			</field>
+			<field property="data.localOnFoot"
+				depends="integer">
+				<arg key="ur01021.W057" />
+			</field>
+			<field property="data.localOnBus"
+				depends="integer">
+				<arg key="ur01021.W058" />
+			</field>
+			<field property="data.bookingDay"
+				depends="integer">
+				<arg key="ur01021.W059" />
+			</field>
+			<field property="data.localBusNeedTime"
+				depends="integer">
+				<arg key="ur01021.W060" />
+			</field>
+			<field property="data.localOneWayPrice"
+				depends="integer">
+				<arg key="ur01021.W061" />
+			</field>
+			<field property="data.stopToSkiOnFoot"
+				depends="integer">
+				<arg key="ur01021.W063" />
+			</field>
+			<field property="data.skiNormalAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W064" />
+			</field>
+			<field property="data.skiNormalAdultDiscount"
+				depends="integer">
+				<arg key="ur01021.W065" />
+			</field>
+			<field property="data.skiNormalChildPrice"
+				depends="integer">
+				<arg key="ur01021.W066" />
+			</field>
+			<field property="data.skiNormalChildDiscount"
+				depends="integer">
+				<arg key="ur01021.W067" />
+			</field>
+			<field property="data.skiCarvingAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W068" />
+			</field>
+			<field property="data.skiCarvingAdutlDiscoutn"
+				depends="integer">
+				<arg key="ur01021.W069" />
+			</field>
+			<field property="data.skiCarvingChildPrice"
+				depends="integer">
+				<arg key="ur01021.W070" />
+			</field>
+			<field property="data.skiCarvingChildDiscount"
+				depends="integer">
+				<arg key="ur01021.W072" />
+			</field>
+			<field property="data.snowboardAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W073" />
+			</field>
+			<field property="data.snowboardAdultDiscount"
+				depends="integer">
+				<arg key="ur01021.W074" />
+			</field>
+			<field property="data.snowboardChildPrice"
+				depends="integer">
+				<arg key="ur01021.W075" />
+			</field>
+			<field property="data.snowboardChildDiscount"
+				depends="integer">
+				<arg key="ur01021.W076" />
+			</field>
+			<field property="data.skiWearAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W077" />
+			</field>
+			<field property="data.skiWearAdultDiscount"
+				depends="integer">
+				<arg key="ur01021.W078" />
+			</field>
+			<field property="data.skiWearChildPrice"
+				depends="integer">
+				<arg key="ur01021.W079" />
+			</field>
+			<field property="data.skiWearChildDiscont"
+				depends="integer">
+				<arg key="ur01021.W080" />
+			</field>
+			<field property="data.boardWearAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W081" />
+			</field>
+			<field property="data.boardWearAdutlDiscount"
+				depends="integer">
+				<arg key="ur01021.W082" />
+			</field>
+			<field property="data.boardWearChildPrice"
+				depends="integer">
+				<arg key="ur01021.W083" />
+			</field>
+			<field property="data.boardWearChildDiscount"
+				depends="integer">
+				<arg key="ur01021.W084" />
+			</field>
+			<field property="data.skiSchoolAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W085" />
+			</field>
+			<field property="data.skiSchoolAdultDiscount"
+				depends="integer">
+				<arg key="ur01021.W086" />
+			</field>
+			<field property="data.skiSchoolChildPrice"
+				depends="integer">
+				<arg key="ur01021.W087" />
+			</field>
+			<field property="data.skiSchoolChildDiscount"
+				depends="integer">
+				<arg key="ur01021.W088" />
+			</field>
+			<field property="data.boardSchoolAdultPrice"
+				depends="integer">
+				<arg key="ur01021.W089" />
+			</field>
+			<field property="data.boardSchoolAdultDiscount"
+				depends="integer">
+				<arg key="ur01021.W090" />
+			</field>
+			<field property="data.boardSchoolChildPrice"
+				depends="integer">
+				<arg key="ur01021.W091" />
+			</field>
+			<field property="data.boardSchoolChildDiscount"
+				depends="integer">
+				<arg key="ur01021.W092" />
+			</field>
+		</form>
+	</formset>
+</form-validation>

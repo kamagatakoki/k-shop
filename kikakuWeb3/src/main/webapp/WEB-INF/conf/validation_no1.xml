@@ -1,0 +1,658 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+    <formset>
+        <form name="UR01010Form">
+        	<field property="data.planAnsData.ansSendAddr" depends="required">
+        		<arg key="ur01012.W060"/>
+        	</field>
+        	<field property="data.no1LodgingData.saleTax" depends="required">
+        		<arg key="ur01010.W138"/>
+        	</field>
+            <field property="data.planAnsData.goodsNm" depends="required">
+                <arg key="ur01010.W001" />
+            </field>
+            <field property="data.planAnsData.facilityCd" depends="required">
+                <arg key="ur01010.W002" />
+            </field>
+            <field property="data.planAnsData.facilityNm" depends="required">
+                <arg key="ur01010.W003" />
+            </field>
+            <field property="data.no1LodgingData.facilityPostCd" depends="required">
+                <arg key="ur01010.W004" />
+            </field>
+            <field property="data.no1LodgingData.facilityAddr" depends="required">
+                <arg key="ur01010.W005" />
+            </field>
+            <!-- 電話番号 -->
+            <field property="data.no1LodgingData.facilityTel" depends="required,mask">
+
+				<arg key="ur01010.W006" />
+				<arg1 key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+            <!-- FAX番号 -->
+            <field property="data.no1LodgingData.facilityFax" depends="required,mask">
+
+				<arg key="ur01010.W007" />
+				<arg1 key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+            <!--312	4月2日	小山	"NO1 パソコン"
+            <field property="data.no1LodgingData.terminalNo" depends="required">
+                <arg key="ur01010.W008" />
+            </field>
+            -->
+            
+            <!-- パソコン 2007/12/12 必須以外のチェック方式をFM連携項目と同様に-->
+            <field property="data.no1LodgingData.terminalNo" depends="mask">
+				<arg key="ur01010.W008" />
+				<arg1 key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+            
+            
+            <field property="data.no1LodgingData.liquidateDay"
+                depends="required,integer">
+                <arg key="ur01010.W012" />
+            </field>
+            <field property="charge" depends="required">
+                <arg key="ur01010.W013" />
+            </field>
+            
+            <!--
+            <field property="data.planAnsData.senderNm" depends="required">
+                <arg key="ur01010.W014" />
+            </field>
+            -->
+            
+            <field property="data.planAnsData.senderTel" depends="required, mask">
+                <arg key="ur01010.W015" />
+                <arg1 key="ur01011.W067" />
+                <var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+            <field property="data.planAnsData.senderFax" depends="required, mask">
+                <arg key="ur01010.W131" />
+                <arg1 key="ur01011.W067" />
+                <var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+
+            <field property="data.no1LodgingData.checkInH" depends="integer, intRange">
+                <arg key="ur01010.W021" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInM" depends="integer, intRange">
+                <arg key="ur01010.W022" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutH" depends="integer, intRange">
+                <arg key="ur01010.W023" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkOutM" depends="integer, intRange">
+                <arg key="ur01010.W024" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInNorH"
+                depends="integer, intRange">
+                <arg key="ur01010.W025" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.checkInNorM"
+                depends="integer, intRange">
+                <arg key="ur01010.W026" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorM"
+                depends="integer, intRange">
+                <arg key="ur01010.W028" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+           
+            <field property="data.planAnsData.goodsNm" depends="maxlengthDB">
+                <arg key="ur01010.W001" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>25</var-value>
+                </var>
+            </field>
+            <field property="data.planAnsData.facilityNm" depends="maxlengthDB">
+                <arg key="ur01010.W003" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>25</var-value>
+                </var>
+            </field>
+           
+            <field property="data.no1LodgingData.facilityAddr" depends="maxlengthDB">
+                <arg key="ur01010.W005" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>40</var-value>
+                </var>
+            </field>
+            
+            <field property="data.no1LodgingData.facilityFax" depends="maxlengthDB">
+                <arg key="ur01010.W007" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            <field property="data.no1LodgingData.terminalNo" depends="maxlengthDB">
+                <arg key="ur01010.W008" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>10</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.emenComOrd" depends="maxlengthDB">
+                <arg key="ur01010.W041" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.emenPersonOrd" depends="maxlengthDB">
+                <arg key="ur01010.W042" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            
+            <field property="data.no1LodgingData.emenTelOrd"
+				depends="mask">
+
+				<arg key="ur01010.W043" />
+				<arg1 key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+
+			</field>
+            
+            <field property="data.no1LodgingData.emenComWk" depends="maxlengthDB">
+                <arg key="ur01010.W044" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+			</field>
+			 <field property="data.no1LodgingData.emenTelWk"
+				depends="mask">
+
+				<arg key="ur01010.W040" />
+				<arg1 key="ur01011.W067" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+
+			
+            </field>
+            <field property="data.no1LodgingData.emenPersonWk" depends="maxlengthDB">
+                <arg key="ur01010.W045" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            
+            <field property="data.no1LodgingData.emenAddrMemo" depends="maxlengthDB">
+                <arg key="ur01010.W122" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>20</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInH" depends="maxlength">
+                <arg key="ur01010.W021" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInM" depends="maxlength">
+                <arg key="ur01010.W022" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInNorH" depends="maxlength">
+                <arg key="ur01010.W025" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.checkInNorM" depends="maxlength">
+                <arg key="ur01010.W026" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutH" depends="maxlength">
+                <arg key="ur01010.W023" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutM" depends="maxlength">
+                <arg key="ur01010.W023" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorM" depends="maxlength">
+                <arg key="ur01010.W028" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+            <!--
+            <field property="data.no1AckInfoFacilityData.tantousya"
+                depends="maxlengthDB">
+                <arg key="ur01010.W046" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+            </field>
+            -->
+            <field property="data.no1AckInfoFacilityData.responsibler"
+                depends="maxlengthDB">
+                <arg key="ur01010.W047" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1AckInfoJrData.tantousya" depends="maxlengthDB">
+                <arg key="ur01010.W048" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1AckInfoJrData.responsibler" depends="maxlengthDB">
+                <arg key="ur01010.W049" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            
+            <!--
+            <field property="data.planAnsData.senderNm" depends="maxlengthDB">
+                <arg key="ur01010.W014" />
+                <arg1 key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            -->
+           
+            <field property="data.no1LodgingData.memo" depends="maxlengthDB">
+                <arg key="ur01010.W050" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>100</var-value>
+                </var>
+            </field>
+
+           <!-- <field property="data.jr6CStockData.building" depends="maxlengthDB">
+                <arg key="ur01010.W052" />
+                <arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>6</var-value>
+                </var>
+
+            </field>
+            -->
+            <!--<field property="data.jr6CStockData.view" depends="maxlengthDB">
+                <arg key="ur01010.W130" />
+                <arg1 name="maxlengthDB" key="${var:maxlength}" resource="false"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+			-->
+            <field property="data.no1LodgingData.stayDisCountAdlt"
+                depends="maxlength, integer">
+                <arg key="ur01010.W056" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.stayDisCountChild"
+                depends="maxlength, integer">
+                <arg key="ur01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+            <field property="data.no1LodgingData.stayDisCountChild" depends="maxlength">
+                <arg key="ur01010.W057" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>8</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorH"
+                depends="integer, intRange">
+                <arg key="ur01010.W027" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkOutNorH" depends="maxlength">
+                <arg0 key="ur01010.W027" />
+                <arg name="maxlength" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2</var-value>
+                </var>
+
+            </field>
+
+            <field property="data.no1LodgingData.checkInH" depends="validwhen">
+                <arg key="ur01010.W101" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkInM != null)and
+                        (data.no1LodgingData.checkInH!=null)) or
+                        ((data.no1LodgingData.checkInM == null)and
+                        (data.no1LodgingData.checkInH ==null)))
+                    </var-value>
+                </var>
+            </field>
+
+
+            <field property="data.no1LodgingData.checkOutH" depends="validwhen">
+                <arg key="ur01010.W104" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkOutM == null)and
+                        (data.no1LodgingData.checkOutH == null))or
+                        ((data.no1LodgingData.checkOutM != null) and
+                        (data.no1LodgingData.checkOutH != null)))
+                    </var-value>
+                </var>
+            </field>
+
+            <field property="data.no1LodgingData.checkInNorH" depends="validwhen">
+                <arg key="ur01010.W105" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkInNorH == null)and
+                        (data.no1LodgingData.checkInNorM == null))or
+                        ((data.no1LodgingData.checkInNorH != null) and
+                        (data.no1LodgingData.checkInNorM != null)))
+                    </var-value>
+                </var>
+            </field>
+
+
+            <field property="data.no1LodgingData.checkOutNorH" depends="validwhen">
+                <arg key="ur01010.W107" />
+                <var>
+                    <var-name>test</var-name>
+                    <var-value>
+                        (((data.no1LodgingData.checkOutNorH == null)and
+                        (data.no1LodgingData.checkOutNorM == null))or
+                        ((data.no1LodgingData.checkOutNorH != null) and
+                        (data.no1LodgingData.checkOutNorM != null)))
+                    </var-value>
+                </var>
+            </field>
+            <!--  
+            <field property="building[0]" depends="maxlengthDB">
+                <arg key="ur01010.W124" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>6</var-value>
+                </var>
+            </field>
+            -->
+            <!-- 
+            <field property="building[1]" depends="maxlengthDB">
+                <arg key="ur01010.W124" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>6</var-value>
+                </var>
+            </field>
+            -->
+             <!--
+            <field property="building[2]" depends="maxlengthDB">
+                <arg key="ur01010.W124" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>6</var-value>
+                </var>
+            </field>
+             -->
+              <!--
+            <field property="view[0]" depends="maxlengthDB">
+                <arg key="ur01010.W125" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            -->
+             <!-- 
+            <field property="view[1]" depends="maxlengthDB">
+                <arg key="ur01010.W125" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+             -->
+             <!--
+            <field property="view[2]" depends="maxlengthDB">
+                <arg key="ur01010.W125" />
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false"
+                    position="1" />
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+             -->
+             <field property="data.no1LodgingData.spaTaxAdlt" depends="integer">
+             	<arg key="ur01010.W136"/>
+             </field>
+             <field property="data.no1LodgingData.spaTaxChild" depends="integer">
+             	<arg key="ur01010.W137"/>
+             </field>
+        </form>
+    </formset>
+</form-validation>

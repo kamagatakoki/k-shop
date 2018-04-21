@@ -1,0 +1,619 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+    <formset>
+    	<form name="UR01014Form">
+        <!--                    入力必要　   スタート                                     -->
+        <!--                    入力必要　   エンド                                     -->
+        <!--                    全角と半角入力する文字のサイズ制御（スタート）　                                        -->
+            <field property="data.planAnsData.ansSendAddr" depends="required">
+        		<arg key="ur01012.W060"/>
+        	</field>
+        	<field property="data.liftData.dealFee" depends="required">
+        		<arg key="errors.saleTex"/>
+        	</field>
+            <field property="data.planAnsData.goodsNm" depends="required,maxlengthDB">
+                <arg key="ur00300.W001"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>25</var-value>
+                </var>
+            </field>
+            <field  property="data.memo" depends="maxlengthDB">
+                <arg key="ur01050.W069"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                    <var>
+                        <var-name>maxlength</var-name>
+                        <var-value>128</var-value>
+                    </var>
+            </field>
+            <!-- del by youzm 07/04/13
+            <field property="data.liftData.ownerNm" depends="required,maxlengthDB">
+                <arg key="ur01011.W006"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>25</var-value>
+                </var>
+            </field>
+             -->
+            <field property="data.liftData.facilityAddr" depends="required,maxlengthDB">
+                <arg key="ur01011.W013"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>40</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.memo" depends="maxlengthDB">
+                <arg key="ur01010.W122"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>100</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeMemoNor" depends="maxlengthDB">
+                <arg key="ur01014.W008"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>20</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeMemoNight" depends="maxlengthDB">
+                <arg key="ur01014.W009"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>20</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeOthers" depends="maxlengthDB">
+                <arg key="ur01014.W010"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>40</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.sendAddrCmt" depends="maxlengthDB">
+                <arg key="ur01014.W011"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>15</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.receiptPart" depends="maxlengthDB">
+                <arg key="ur01014.W012"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>15</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.specialItem" depends="maxlengthDB">
+                <arg key="ur01014.W013"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>20</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.freelyColumn" depends="maxlengthDB">
+                <arg key="ur01014.W014"/>
+                <arg name="maxlengthDB" key="${var:maxlength}" resource="false" position="1"/>
+                <var>
+                  <var-name>maxlength</var-name>
+                  <var-value>100</var-value>
+                </var>
+            </field>
+            
+            <!--                    全角と半角入力する文字のサイズ制御（エンド）　                                        -->
+            
+            <!--                    半角入力する文字の制御（スタート）　                                        -->
+            <field property="data.planAnsData.facilityNmKana" depends="required,mask">
+                 <arg key="ur01011.W004"/>
+                <arg1 key="ur01011.W001" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${halfKata}</var-value>
+                </var> 
+            </field>
+            <field property="data.liftData.ticketTitleKana" depends="mask">
+                <arg key="ur01014.W016"/>
+                <arg1 key="ur01011.W001" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${halfKata}</var-value>
+                </var>           
+            </field>
+            <field property="data.liftData.voucherIntroKana" depends="mask">
+                <arg key="ur01014.W017"/>
+                <arg1 key="ur01011.W001" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${halfKata}</var-value>
+                </var>           
+            </field>
+            <!--                    半角入力する文字の制御（エンド）　                                        -->
+            
+            <!--                    全角入力する文字の制御（スタート）　                                        -->
+            <field property="data.planAnsData.facilityNm"
+                depends="required,FMKanJiCheck">
+                <arg key="ur01011.W005" />
+                <arg1 key="ur01011.W002" />
+               
+            </field>
+            <field property="data.liftData.ticketTitleKanji"
+                depends="FMKanJiCheck">
+                <arg key="ur01014.W018" />
+                <arg1 key="ur01011.W002" />
+                
+            </field>
+            <field property="data.liftData.voucherIntroKanji"
+                depends="FMKanJiCheck">
+                <arg key="ur01014.W019" />
+                <arg1 key="ur01011.W002" />
+                
+            </field>
+            <!--                    全角入力する文字の制御（エンド）　                                        -->
+            <!--                    入力する数字の有効性制御（スタート）　                                                    -->
+            <field property="data.liftData.liquidateDay" depends="required,integer">
+                 <arg key="ur01014.W038"/>
+            </field>
+            <!-- 必要検証ではない. 
+            <field property="data.liftData.validPeriod" depends="required,integer">
+                 <arg key="ur01014.W007"/>
+            </field>-->
+            <field property="data.liftData.validPeriod" depends="integer">
+                 <arg key="ur01014.W007"/>
+            </field>
+            <!--                    入力する数字の有効性制御（エンド）　                                                    -->
+            <!--                    入力する数字の範囲制御（スタート）　                                                        -->
+            <field property="data.liftData.stockNo"
+                depends="required,mask">
+               <arg key="ur01012.W072" />                
+				<arg1 key="ur01011.W053" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${4code}</var-value>
+				</var>                    
+            </field>
+            
+            <field property="data.liftData.liftTicketBeginOdrHour"
+                depends="intRange">
+                <arg key="ur01014.W020" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.liftTicketBeginOdrMinutes"
+                depends="intRange">
+                <arg key="ur01014.W021" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.liftData.liftTicketBeginOdrHour"
+				depends="validwhen">
+				<arg key="ur01014.W039" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.liftTicketBeginOdrHour ==
+						null)and
+						(data.liftData.liftTicketBeginOdrMinutes ==
+						null))or ((data.liftData.liftTicketBeginOdrHour
+						!= null) and
+						(data.liftData.liftTicketBeginOdrMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+			
+			
+            <field property="data.liftData.liftTicketEndOdrHour"
+                depends="intRange">
+                <arg key="ur01014.W022" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.liftTicketEndOdrMinutes"
+                depends="intRange">
+                <arg key="ur01014.W023" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.liftData.liftTicketEndOdrHour"
+				depends="validwhen">
+				<arg key="ur01014.W040" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.liftTicketEndOdrHour ==
+						null)and
+						(data.liftData.liftTicketEndOdrMinutes ==
+						null))or ((data.liftData.liftTicketEndOdrHour
+						!= null) and
+						(data.liftData.liftTicketEndOdrMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field>
+            <field property="data.liftData.liftTicketBeginHolHour"
+                depends="intRange">
+                <arg key="ur01014.W024" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.liftTicketBeginHolMinutes"
+                depends="intRange">
+                <arg key="ur01014.W025" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+             <field property="data.liftData.liftTicketBeginHolHour"
+				depends="validwhen">
+				<arg key="ur01014.W041" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.liftTicketBeginHolHour ==
+						null)and
+						(data.liftData.liftTicketBeginHolMinutes ==
+						null))or ((data.liftData.liftTicketBeginHolHour
+						!= null) and
+						(data.liftData.liftTicketBeginHolMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field>           
+            <field property="data.liftData.liftTicketEndHolHour"
+                depends="intRange">
+                <arg key="ur01014.W026" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.liftTicketEndHolMinutes"
+                depends="intRange">
+                <arg key="ur01014.W027" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>           
+             <field property="data.liftData.liftTicketEndHolHour"
+				depends="validwhen">
+				<arg key="ur01014.W042" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.liftTicketEndHolHour ==
+						null)and
+						(data.liftData.liftTicketEndHolMinutes ==
+						null))or ((data.liftData.liftTicketEndHolHour
+						!= null) and
+						(data.liftData.liftTicketEndHolMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field>  
+            <field property="data.liftData.salesTimeBeginNorHour"
+                depends="intRange">
+                <arg key="ur01014.W028" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeBeginNorMinutes"
+                depends="intRange">
+                <arg key="ur01014.W029" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+                      
+            <field property="data.liftData.salesTimeBeginNorHour"
+				depends="validwhen">
+				<arg key="ur01014.W043" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.salesTimeBeginNorHour ==
+						null)and
+						(data.liftData.salesTimeBeginNorMinutes ==
+						null))or ((data.liftData.salesTimeBeginNorHour
+						!= null) and
+						(data.liftData.salesTimeBeginNorMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field>  
+			  
+            <field property="data.liftData.salesTimeEndNorHour"
+                depends="intRange">
+                <arg key="ur01014.W030" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeEndNorMinutes"
+                depends="intRange">
+                <arg key="ur01014.W031" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.liftData.salesTimeEndNorHour"
+				depends="validwhen">
+				<arg key="ur01014.W044" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.salesTimeEndNorHour ==
+						null)and
+						(data.liftData.salesTimeEndNorMinutes ==
+						null))or ((data.liftData.salesTimeEndNorHour
+						!= null) and
+						(data.liftData.salesTimeEndNorMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field> 
+            
+            <field property="data.liftData.salesTimeBeginNightHour"
+                depends="intRange">
+                <arg key="ur01014.W032" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeBeginNightMinutes"
+                depends="intRange">
+                <arg key="ur01014.W033" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>      
+            
+            <field property="data.liftData.salesTimeBeginNightHour"
+				depends="validwhen">
+				<arg key="ur01014.W045" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.salesTimeBeginNightHour ==
+						null)and
+						(data.liftData.salesTimeBeginNightMinutes ==
+						null))or ((data.liftData.salesTimeBeginNightHour
+						!= null) and
+						(data.liftData.salesTimeBeginNightMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field> 
+                  
+            <field property="data.liftData.salesTimeEndNightHour"
+                depends="intRange">
+                <arg key="ur01014.W034" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>23</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.salesTimeEndNightMinutes"
+                depends="intRange">
+                <arg key="ur01014.W035" />
+                <arg1 key="${var:min}" resource="false" />
+                <arg2 key="${var:max}" resource="false" />
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>59</var-value>
+                </var>
+            </field>
+            
+            <field property="data.liftData.salesTimeEndNightHour"
+				depends="validwhen">
+				<arg key="ur01014.W045" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+
+						(((data.liftData.salesTimeEndNightHour ==
+						null)and
+						(data.liftData.salesTimeEndNightMinutes ==
+						null))or ((data.liftData.salesTimeEndNightHour
+						!= null) and
+						(data.liftData.salesTimeEndNightMinutes !=
+						null)))
+					</var-value>
+				</var>
+			</field> 
+                  
+            
+            <!--                    入力する数字の範囲制御（エンド）　                                                        -->
+            <!--                    半角数字と’－’のみ入力可（スタート）　                                                        -->
+            <field property="data.liftData.facilityTel"
+                depends="required,mask">
+                <arg key="ur01011.W014" />
+                <arg1 key="ur01011.W067" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${telNum}</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.informFax"
+                depends="required,mask">
+                <arg key="ur01012.W007" />
+                <arg1 key="ur01011.W067" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${telNum}</var-value>
+                </var>
+            </field>
+            <field property="data.liftData.facilityFax"
+                depends="required,mask">
+                <arg key="ur01010.W007" />
+                <arg1 key="ur01011.W067" />
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>${telNum}</var-value>
+                </var>
+            </field>
+            
+            <!--
+             <field property="data.planAnsData.senderNm" depends="required">
+                <arg key="ur01010.W014" />
+            </field>
+            -->
+            
+            <field property="data.planAnsData.senderTel" depends="required, mask">
+                <arg key="ur01010.W015" />
+                <arg1 key="ur01011.W067" />
+                <var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+             <field property="data.planAnsData.senderFax" depends="required, mask">
+                <arg key="ur01010.W131" />
+                <arg1 key="ur01011.W067" />
+                <var>
+					<var-name>mask</var-name>
+					<var-value>${telNum}</var-value>
+				</var>
+            </field>
+            <!--                    半角数字と’－’のみ入力可（エンド）　                                                        -->
+            <!--                    タイム有効性制御（スタート）　                                                        -->
+            <!--                    タイム有効性制御（スタート）　                                                        -->
+        </form>
+    </formset>
+</form-validation>

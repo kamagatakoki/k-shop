@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap 
+          PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+          "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="common">
+<!--
+    <typeAlias alias="StatParamter" type="jp.co.jreast.common.util.StatParamter" />
+    <typeAlias alias="SimpleData" type="jp.co.jreast.common.util.SimpleData" />
+    <typeAlias alias="AnsSearchData" type="jp.co.jreast.common.data.AnsSearchData" />
+-->
+	<typeAlias alias="DPlanAnsStatusData" type="jp.co.jreast.common.data.DPlanAnsData"/>
+	<typeAlias alias="MFacilityData" type="jp.co.jreast.common.data.FacilityData"/>
+<!-- 
+	<typeAlias alias="BaseData" type="jp.co.jreast.common.data.PlanAnsBaseData"/>
+	<typeAlias alias="MainTenanceData" type="jp.co.jreast.common.data.MainTenanceData"/>
+	<typeAlias alias="TaxData" type="jp.co.jreast.common.data.TaxData"/>
+-->
+	<resultMap id="AllStatus" class="DPlanAnsStatusData">
+		<result property="no1Status" javaType="integer" column="NO1_STATUS" jdbcType="smallint"/>
+		<result property="no2Status" javaType="integer" column="NO2_STATUS" jdbcType="smallint"/>
+		<result property="no3Status" javaType="integer" column="NO3_STATUS" jdbcType="smallint"/>
+		<result property="no4Status" javaType="integer" column="NO4_STATUS" jdbcType="smallint"/>
+		<result property="no5Status" javaType="integer" column="NO5_STATUS" jdbcType="smallint"/>
+		<result property="fmCostRelateDiv" javaType="integer" column="FM_COST_RELATE_DIV" jdbcType="smallint"/>
+	</resultMap>
+	<resultMap id="ResultMFacilityData" class="MFacilityData">
+		<result property="facilityCd" column="FACILITY_CD" javaType="string" jdbcType="char" />
+		<result property="facilityNm" column="FACILITY_NM" javaType="string" jdbcType="varchar" />
+		<result property="facilityNmKana" column="FACILITY_NM_KANA" javaType="string" jdbcType="varchar" />
+		<result property="kind" column="KIND_FLG" javaType="string" jdbcType="char" />
+		<result property="contractKind" column="CONTRACT_KIND" javaType="string" jdbcType="char" />
+		<result property="address" column="ADDRESS" javaType="string" jdbcType="varchar" />
+		<result property="telephonNo" column="TELEPHON_NO" javaType="string" jdbcType="char" />
+		<result property="faxNo" column="FAX_NO" javaType="string" jdbcType="char" />
+		<result property="areaCd" column="AREA_CD" javaType="string" jdbcType="char" />
+		<result property="areaDaiCd" column="AREA_DAI_CD" javaType="string" jdbcType="char" />
+		<result property="areaShoCd" column="AREA_SHO_CD" javaType="string" jdbcType="char" />
+		<result property="handlingTax" column="HANDLING_TAX" javaType="string" jdbcType="numeric" />
+		<result property="handlingTaxDp" column="HANDLING_TAX_DP" javaType="string" jdbcType="numeric" />
+		<result property="handlingTaxRmsp" column="HANDLING_TAX_RMSP" javaType="string" jdbcType="numeric" />
+		<result property="handlingTaxType" column="HANDLING_TAX_TYPE" javaType="string" jdbcType="char" />
+		<result property="spaTaxAdlt" column="SPA_TAX_ADLT" javaType="string" jdbcType="smallint" />
+		<result property="spaTaxChild" column="SPA_TAX_CHILD" javaType="string" jdbcType="smallint" />
+		<result property="tyoStayTaxFlg" column="TYO_STAY_TAX_FLG" javaType="string" jdbcType="char" />
+		<result property="facilityUrl" column="FACILITY_URL" javaType="string" jdbcType="varchar" />
+		<result property="terminalNo" column="TERMINAL_NO" javaType="string" jdbcType="char" />
+		<result property="postcode" column="POSTCODE" javaType="string" jdbcType="char" />
+	</resultMap>
+<!-- 
+	<resultMap class="MainTenanceData" id="MainTenanceFlg">
+		<result property="sysJTI" javaType="string" column="SYSJTI" jdbcType="varchar"/>
+		<result property="sysTMD" javaType="date" column="SYSTMD" jdbcType="datetime"/>
+	</resultMap>
+	<resultMap class="TaxData" id="TaxData">
+		<result property="taxDivisionCd" javaType="string" column="TAX_DIVISION_CD" jdbcType="char"/>
+		<result property="taxRate"       javaType="string" column="TAX_RATE" jdbcType="char"/>
+		<result property="fromYmd"       javaType="string" column="FROM_YMD" jdbcType="char"/>
+		<result property="toYmd"         javaType="string" column="TO_YMD" jdbcType="char"/>
+		<result property="createYmd"     javaType="date"   column="CREATE_YMD" jdbcType="date"/>
+		<result property="upYmd"         javaType="date"   column="UP_YMD" jdbcType="date"/>
+	</resultMap>
+	
+	<select id="isMaintenance" resultMap="MainTenanceFlg">
+	SELECT TOP 1
+		SYSJTI,
+		SYSTMD
+	FROM 
+		dbo.SSYS
+	</select>
+-->
+
+	<!--
+	DCommonServiceWrapper.java
+	-->
+	<select id="d_StatusSearch" resultMap="AllStatus" parameterClass="BaseData">
+	SELECT 
+		NO1_STATUS,
+	    NO2_STATUS,
+	    NO3_STATUS,
+	    NO4_STATUS,
+	    NO5_STATUS,
+	    FM_COST_RELATE_DIV 
+	FROM 
+	    D_PLAN_ANS
+	WHERE 
+	    PLAN_ANS_NO = #planAnsNo#
+	AND
+	 CAREER_NO = (SELECT
+            CAREER_NO
+         FROM
+            D_PLAN_ANS
+         WHERE
+            PLAN_ANS_NO=#planAnsNo#
+         AND
+             NEW_FLG=1
+         
+         )
+	</select>
+	
+	<!--
+	DCommonServiceWrapper.java
+	-->
+	<insert id="d_PlanAnsFinishInsert" parameterClass="BaseData">
+		INSERT INTO D_PLAN_ANS (
+            PLAN_ANS_NO ,
+	        CAREER_NO ,
+	        FACILITY_CD ,
+	        BRANCH_CD ,
+	        [YEAR] ,
+	        SEASON_DIV ,
+	        SEND_DIV ,
+	        STATUS ,
+	        NO1_STATUS ,
+	        NO2_STATUS ,
+	        NO3_STATUS ,
+	        NO4_STATUS ,
+	        NO5_STATUS ,
+	        UPDATE_YMD ,
+	        [TIMESTAMP] ,
+	        DEL_FLG ,
+	        NEW_FLG ,
+	        FACILITY_NM ,
+	        FACILITY_NM_KANA ,
+	        GOODS_NM ,
+	        STOCK_DIV ,
+	        PLAN_NO_E_JP ,
+	        PLAN_NO_6_OFF ,
+	        ANS_SEND_ADDR ,
+	        SEND_YMD ,
+	        SENDER_NM ,
+	        SENDER_TEL ,
+	        SENDER_FAX,
+	        NO1_CAREER_NO ,
+	        NO2_CAREER_NO ,
+	        NO3_CAREER_NO ,
+	        NO4_CAREER_NO ,
+	        NO5_CAREER_NO ,
+	        FM_COST_RELATE_DIV ,
+	        FM_STOCK_RELATE_DIV ,
+	        KIND_FLG ,
+	        SEND_STATUS ,
+	        USER_ID ,
+	        USER_NM,
+	        COM_ID,
+            MATERIAL_KIND,
+            ZOUSEI_RELATE_CNT
+        )
+       
+        SELECT
+            PLAN_ANS_NO ,
+            CAREER_NO + 1 ,
+            FACILITY_CD ,
+            BRANCH_CD ,
+            [YEAR] ,
+            SEASON_DIV ,
+            SEND_DIV ,
+            30 AS STATUS ,
+            30 AS NO1_STATUS,
+            30 AS NO2_STATUS ,
+            30 AS NO3_STATUS ,
+            30 AS NO4_STATUS ,
+            30 AS NO5_STATUS ,
+            UPDATE_YMD ,
+            getDate(),
+            DEL_FLG ,
+            '1' AS NEW_FLG ,
+            FACILITY_NM ,
+            FACILITY_NM_KANA ,
+            GOODS_NM ,
+            STOCK_DIV ,
+            PLAN_NO_E_JP ,
+            PLAN_NO_6_OFF ,
+            ANS_SEND_ADDR ,
+            SEND_YMD ,
+            SENDER_NM ,
+            SENDER_TEL ,
+            SENDER_FAX,
+            NO1_CAREER_NO ,
+            NO2_CAREER_NO ,
+            NO3_CAREER_NO ,
+            NO4_CAREER_NO ,
+            NO5_CAREER_NO ,
+            FM_COST_RELATE_DIV ,
+            FM_STOCK_RELATE_DIV ,
+            KIND_FLG ,
+            SEND_STATUS ,
+            USER_ID ,
+            USER_NM,
+            COM_ID,
+            MATERIAL_KIND,
+            ZOUSEI_RELATE_CNT
+            
+        FROM
+            D_PLAN_ANS
+        WHERE
+            PLAN_ANS_NO = #planAnsNo#
+        AND
+            CAREER_NO = (SELECT
+            CAREER_NO
+         FROM
+            D_PLAN_ANS
+         WHERE
+            PLAN_ANS_NO=#planAnsNo#
+         AND
+            CAREER_NO =#careerNo# + 1
+         
+         
+         )
+	</insert>
+	
+    <sql id="d_insertFinishItem">
+        NO5_STATUS,
+        NO5_CAREER_NO,
+        PLAN_ANS_NO,
+        FACILITY_CD,
+        FACILITY_NM,
+        BRANCH_CD,
+        KIND_FLG,
+        [YEAR],
+        SEASON_DIV,
+        GOODS_NM,
+        STOCK_DIV,
+        PLAN_NO_E_JP,
+        PLAN_NO_6_OFF,
+        SEND_DIV,
+        ANS_SEND_ADDR,
+        SEND_YMD,
+        SENDER_NM,
+        SENDER_TEL,
+        SENDER_FAX,
+        SEND_STATUS,
+        NO1_STATUS,
+        NO2_STATUS,
+        NO3_STATUS,
+        NO4_STATUS,
+        NO1_CAREER_NO,
+        NO2_CAREER_NO,
+        NO3_CAREER_NO,
+        NO4_CAREER_NO,
+        FM_COST_RELATE_DIV,
+        FM_STOCK_RELATE_DIV,
+        USER_ID,
+        USER_NM,
+        UPDATE_YMD,
+        TIMESTAMP,
+        FACILITY_NM_KANA
+    </sql>
+
+<!--
+    <resultMap id="Simple" class="SimpleData">
+        <result property="longValue" column="longValue" javaType="long" jdbcType="int" />
+    </resultMap>
+
+    <resultMap id="StringSimple" class="SimpleData">
+        <result property="stringValue" column="stringValue" javaType="string" jdbcType="long" />
+    </resultMap>
+
+    <select id="Stat" resultMap="Simple" parameterClass="StatParamter">
+        SELECT
+            $function$ ($field$) AS longValue
+        FROM
+           $tableName$
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="AND" property="conString">
+                 $conString$
+            </isNotEmpty>
+            <iterate prepend="AND" property="conSet" conjunction="AND">
+                $conSet[].fieldName$ $conSet[].operater$ #conSet[].value#
+            </iterate>
+        </dynamic>
+    </select>
+
+    <select id="StringStat" resultMap="StringSimple" parameterClass="StatParamter">
+        SELECT
+            $function$ ($field$) AS stringValue
+        FROM
+           $tableName$
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="AND" property="conString">
+                 $conString$
+            </isNotEmpty>
+            <iterate prepend="AND" property="conSet" conjunction="AND">
+                $conSet[].fieldName$ $conSet[].operater$ #conSet[].value#
+            </iterate>
+        </dynamic>
+    </select>
+-->
+
+	<!--
+	HarvestUtil.java
+	TODO: 元ロジックの修正が必要そう
+	-->
+    <statement id="d_IndentPlanNo" resultMap="StringSimple" parameterClass="AnsSearchData">
+
+        DECLARE @branchCd char(2)
+        DECLARE @yearNo char(1)
+        DECLARE @seasonDiv char(1)
+        DECLARE @kindFlg char(1)
+        DECLARE @facilityCd char(6)
+        DECLARE @planNo varchar(3)
+        DECLARE @planAnsNo bigint
+        DECLARE @searchAngin char(1)
+        DECLARE @prefixCd char(2)
+        DECLARE @nextSeasonDiv char(1)
+
+        SELECT
+            @planAnsNo	= P.PLAN_ANS_NO,
+            @yearNo		= SUBSTRING(P.YEAR,4,1),
+            @facilityCd	= P.FACILITY_CD,
+            @branchCd	= P.BRANCH_CD,
+            @kindFlg	= P.KIND_FLG,
+            @seasonDiv	= P.SEASON_DIV,
+            @prefixCd	= B.BASIS_CD2
+        FROM D_PLAN_ANS P
+        INNER JOIN
+        	M_BASIS B
+        ON
+        		P.BRANCH_CD		= B.BASIS_CD1
+        	AND	B.DIVISION_CD	= '0048'
+        WHERE 
+        		PLAN_ANS_NO	= #planAnsNo# 
+        	AND CAREER_NO	= #careerNo#
+		
+		 IF @kindFlg = '2' or @kindFlg = '6' or @kindFlg = '7'
+			 BEGIN 
+		        SELECT @planNo=MAX(PLAN_NO) FROM D_PLAN_NO
+		        WHERE 
+			      
+			        KIND_FLG in (2,6,7)
+			     
+		         AND FACILITY_CD=@facilityCd
+		         AND BRANCH_CD=@branchCd
+		         AND YEAR_NO=@yearNo
+		         AND SEASON_DIV=@seasonDiv
+			END 
+		
+		ELSE IF @kindFlg = '3' or  @kindFlg = '5' or @kindFlg = '8'
+			BEGIN
+		        SELECT @planNo=MAX(PLAN_NO) FROM D_PLAN_NO
+		        WHERE 
+			      
+			        KIND_FLG in (3,5,8)
+			     
+		         AND FACILITY_CD=@facilityCd
+		         AND BRANCH_CD=@branchCd
+		         AND YEAR_NO=@yearNo
+		         AND SEASON_DIV=@seasonDiv
+			END
+		
+		ELSE
+			BEGIN
+		        SELECT @planNo=MAX(PLAN_NO) FROM D_PLAN_NO
+		        WHERE 
+			      
+			        KIND_FLG =@kindFlg
+			     
+		         AND FACILITY_CD=@facilityCd
+		         AND BRANCH_CD=@branchCd
+		         AND YEAR_NO=@yearNo
+		         AND SEASON_DIV=@seasonDiv
+			END
+		
+         IF @planNo = '99' AND (@kindFlg = '2' or @kindFlg = '6' or @kindFlg = '7')
+         BEGIN
+             SET @seasonDiv = 0
+             SELECT @planNo=MAX(PLAN_NO) FROM D_PLAN_NO
+             WHERE KIND_FLG IN (2,6,7)
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             AND SEASON_DIV=@seasonDiv
+             SET @searchAngin = '1'
+         END
+         ELSE
+         IF @planNo = '99' AND (@kindFlg = '3' or @kindFlg = '5' or @kindFlg = '8')
+         BEGIN
+             SET @seasonDiv = 0
+             SELECT @planNo=MAX(PLAN_NO) FROM D_PLAN_NO
+             WHERE KIND_FLG IN (3,5,8)
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             AND SEASON_DIV=@seasonDiv
+             SET @searchAngin = '1'
+         END
+		ELSE 
+			IF @planNo = '99'
+		 BEGIN
+             SET @seasonDiv = 0
+             SELECT @planNo=MAX(PLAN_NO) FROM D_PLAN_NO
+             WHERE KIND_FLG =@kindFlg
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             AND SEASON_DIV=@seasonDiv
+             SET @searchAngin = '1'
+         END
+         
+		IF @planNo = '99' AND (@kindFlg = '2' or @kindFlg = '6' or @kindFlg = '7')
+			BEGIN
+			SET @planNo = NULL
+             SELECT top 1 @seasonDiv=SEASON_DIV, @nextSeasonDiv=b.BASIS_CD2, @planNo=MAX(plan_no) 
+             FROM D_PLAN_NO as p 
+             inner join M_BASIS as b 
+             on b.DIVISION_CD = '0061' and p.SEASON_DIV = b.BASIS_CD1
+             WHERE KIND_FLG IN (2,6,7)
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             group by SEASON_DIV, b.BASIS_CD2, b.ORDER_NO
+             order by b.ORDER_NO desc
+             
+             IF @planNo IS NULL
+				BEGIN
+             		SET @seasonDiv = 'A'
+             	END
+             ELSE IF @planNo = '99'
+				BEGIN
+             		SET @seasonDiv = @nextSeasonDiv
+             	END
+             
+             SET @searchAngin = '1'
+			END
+		ELSE IF @planNo = '99' AND (@kindFlg = '3' or @kindFlg = '5' or @kindFlg = '8')
+			BEGIN
+             SET @planNo = NULL
+             SELECT top 1 @seasonDiv=SEASON_DIV, @nextSeasonDiv=b.BASIS_CD2, @planNo=MAX(plan_no) 
+             FROM D_PLAN_NO as p 
+             inner join M_BASIS as b 
+             on b.DIVISION_CD = '0061' and p.SEASON_DIV = b.BASIS_CD1
+             WHERE KIND_FLG IN (3,5,8)
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             group by SEASON_DIV, b.BASIS_CD2, b.ORDER_NO
+             order by b.ORDER_NO desc
+             
+             IF @planNo IS NULL
+				BEGIN
+             		SET @seasonDiv = 'A'
+             	END
+             ELSE IF @planNo = '99'
+				BEGIN
+             		SET @seasonDiv = @nextSeasonDiv
+             	END
+             
+             SET @searchAngin = '1'
+			END
+
+         IF @planNo IS NULL
+         SET @planNo = '00'
+
+         IF @searchAngin = '1'
+         SET @planNo = @planNo + '1'
+
+        SELECT (@prefixCd+@yearNo+@seasonDiv+@planNo) AS stringValue
+
+    </statement>
+    
+    <select id="dGetBranchCd" resultClass="String" parameterClass="java.lang.String">
+    	SELECT
+    		BASIS_CD1
+    	FROM
+    		M_BASIS
+    	WHERE
+    			DIVISION_CD = '0048'
+    		AND	BASIS_CD2	= #prefixCd#
+    </select>
+
+	<!--
+	DKikakuWebUtilWrapper.java
+    <insert id="d_insertFinishStatus" parameterClass="AnsSearchData">
+        INSERT
+        INTO
+            D_PLAN_ANS
+            (
+                CAREER_NO,
+                DEL_FLG,
+                NEW_FLG,
+                STATUS,
+                <include refid="d_insertFinishItem"/>
+            )
+            SELECT
+                #careerNo:smallint#+1 AS CAREER_NO,
+                '0' AS DEL_FLG,
+                '1' AS NEW_FLG,
+                30  AS STATUS,
+                <include refid="d_insertFinishItem"/>
+            FROM
+                D_PLAN_ANS
+            WHERE
+                PLAN_ANS_NO  = #planAnsNo#
+                AND CAREER_NO= #careerNo:smallint#
+    </insert>
+	-->
+
+	<!--
+	AbstractDNo1UtilWrapper.java
+	DKikakuWebUtilWrapper.java
+	TODO: UR00400SendMailBusiness.java
+	DR01020SaveBusiness.java
+	DR01021SaveBusiness.java
+	DR01022SaveBusiness.java
+	DR01023SaveBusiness.java
+		DR01030SaveBusiness.java
+	DR01040FMSendBusiness.java
+	DR01041FMSendBusiness.java
+	DR01041SaveBusiness.java
+	DR01042FMSendBusiness.java
+	DR01042SaveBusiness.java
+		DR01050ApproveBusiness.java
+		DR01050CommonBusiness.java
+	-->
+    <update id="d_PlanAnsFlgRestore" parameterClass="long">
+        UPDATE D_PLAN_ANS
+            SET NEW_FLG = 0
+        WHERE
+            NEW_FLG = 1
+        AND
+            PLAN_ANS_NO = #planAnsNo#
+    </update>
+    
+<!--
+   <select id="getTax" resultMap="TaxData">
+        SELECT
+            TAX_DIVISION_CD
+            ,TAX_RATE
+            ,FROM_YMD
+            ,TO_YMD
+            ,CREATE_YMD
+            ,UP_YMD
+        FROM
+           M_TAX
+        WHERE
+           TAX_DIVISION_CD = #value#
+    </select>
+	
+-->
+
+	<select id="d_planAnsFacilityData" resultMap="ResultMFacilityData" parameterClass="MFacilityData">
+		SELECT
+			*
+		FROM
+			M_FACILITY MF
+		WHERE
+			MF.FACILITY_CD = #facilityCd#
+		AND
+			MF.COM_ID = '2'
+		AND
+			MF.KIND_FLG = #kind#
+	</select>
+
+	<typeAlias alias="MStock" type="jp.co.jreast.common.data.ddata.MStock"/>
+	<resultMap id="MStockObject" class="MStock">
+		<result property="facilityCd"		column="FACILITY_CD"			javaType="String" jdbcType="char" />
+		<result property="comId"			column="COM_ID"					javaType="String" jdbcType="char" />
+		<result property="kindFlg"			column="KIND_FLG"				javaType="String" jdbcType="char" />
+		<result property="stockNo"			column="STOCK_NO"				javaType="String" jdbcType="varchar" />
+		<result property="stockKanj"		column="STOCK_KANJ"				javaType="String" jdbcType="varchar" />
+		<result property="stockKana"		column="STOCK_KANA"				javaType="String" jdbcType="varchar" />
+		<result property="stockUnit"		column="STOCK_UNIT"				javaType="String" jdbcType="varchar" />
+		<result property="stockPlaceCd"		column="STOCK_PLACE_CD"			javaType="String" jdbcType="char" />
+		<result property="stockManagement"	column="STOCK_MANAGEMENT"		javaType="String" jdbcType="char" />
+		<result property="liquidateDay"		column="LIQUIDATE_DAY"			javaType="String" jdbcType="smallint" />
+		<result property="liquidateTime"	column="LIQUIDATE_TIME"			javaType="String" jdbcType="char" />
+		<result property="liquidateInform"	column="LIQUIDATE_INFORM"		javaType="String" jdbcType="char" />
+		<result property="informNm"			column="INFORM_NM"				javaType="String" jdbcType="varchar" />
+		<result property="reserveInformWay"	column="RESERVE_INFORM_WAY"	javaType="String" jdbcType="char" />
+		<result property="informFax"		column="INFORM_FAX"				javaType="String" jdbcType="char" />
+		<result property="informAreaNm"		column="INFORM_AREA_NM"			javaType="String" jdbcType="varchar" />
+		<result property="areaCd"			column="AREA_CD"				javaType="String" jdbcType="char" />
+		<result property="prefecturesCd"	column="PREFECTURES_CD"			javaType="String" jdbcType="char" />
+		<result property="regionCd"			column="REGION_CD"				javaType="String" jdbcType="char" />
+		<result property="postcode"			column="POSTCODE"				javaType="String" jdbcType="char" />
+		<result property="address"			column="ADDRESS"				javaType="String" jdbcType="varchar" />
+		<result property="telephonNo"		column="TELEPHON_NO"			javaType="String" jdbcType="char" />
+		<result property="memo"				column="MEMO"					javaType="String" jdbcType="varchar" />
+		<result property="newFlg"			column="NEW_FLG"				javaType="String" jdbcType="char" />
+		<result property="updateFlg"		column="UPDATE_FLG"				javaType="String" jdbcType="char" />
+		<result property="createYmd"		column="CREATE_YMD"				javaType="String" jdbcType="datetime" />
+		<result property="upYmd"			column="UP_YMD"					javaType="String" jdbcType="datetime" />
+	</resultMap>
+	<select id="DCmnFindStock" resultMap="MStockObject" parameterClass="MStock">
+		SELECT
+			*
+		FROM
+			M_STOCK
+		WHERE FACILITY_CD = #facilityCd:char#
+		AND COM_ID = #comId:char#
+		AND KIND_FLG = #kindFlg:char#
+		AND STOCK_NO = #stockNo:varchar#
+	</select>
+
+	<typeAlias alias="MArea" type="jp.co.jreast.common.data.ddata.MArea"/>
+	<resultMap id="MAreaObject" class="MArea">
+		<result property="areaCd"	column="AREA_CD"	javaType="String" jdbcType="char" />
+		<result property="areaNm"	column="AREA_NM"	javaType="String" jdbcType="varchar" />
+		<result property="areaKana"	column="AREA_KANA"	javaType="String" jdbcType="varchar" />
+	</resultMap>
+	<select id="DCmnFindArea" resultMap="MAreaObject" parameterClass="MArea">
+		SELECT
+			*
+		FROM
+			M_AREA
+		WHERE AREA_CD = #areaCd:char#
+	</select>
+</sqlMap>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap 
+		  PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+		  "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="dNo2Common">
+	<typeAlias alias="DPlanAnsData" type="jp.co.jreast.common.data.DPlanAnsData" />
+	<typeAlias alias="BaseDNo2Data" type="jp.co.jreast.common.data.dno2data.BaseDNo2Data" />
+	<typeAlias alias="DNo2OtherItem" type="jp.co.jreast.common.data.dno2data.DNo2OtherItem" />
+	<typeAlias alias="DNo1AckInfoData"  type="jp.co.jreast.common.data.dno1data.DNo1AckInfoData" />
+
+	<resultMap id="DNo1AckInfoData_Init" class="DNo1AckInfoData">
+		<result	property="userDiv"			column="USER_DIV"				javaType="integer"	jdbcType="smallint"	/>
+		<result	property="sequence"			column="SEQUENCE"				javaType="integer"	jdbcType="smallint"	/>
+		<result	property="tantousya"		column="TANTOUSYA"				javaType="string"	jdbcType="varchar"	/>
+		<result	property="responsibler"		column="RESPONSIBLER"			javaType="string"	jdbcType="varchar"	/>
+		<result	property="ackDate"			column="ACK_DATE"				javaType="date"		jdbcType="datetime"	/>
+	</resultMap>
+
+	<resultMap id="DNo3OtherItem_Init" class="DNo2OtherItem">
+		<result	property="planAnsNo"		column="PLAN_ANS_NO"			javaType="long"		jdbcType="bigint"/>
+		<result	property="careerNo"			column="CAREER_NO"				javaType="int"		jdbcType="smallint"/>
+		<result property="sequence"			column="SEQUENCE"				javaType="integer"	jdbcType="smallint" />
+		<result property="serviceContent"	column="SERVICE_CONTENT"		javaType="string"	jdbcType="varchar" />
+		<result property="specialContent"	column="SPECIAL_CONTENT"		javaType="string"	jdbcType="varchar" />
+		<result property="specialRecoItem"	column="SPECIAL_RECO_ITEM"		javaType="string"	jdbcType="varchar" />
+	</resultMap>
+
+	<resultMap id="DPlanAnsData_Init" class="DPlanAnsData">
+		<result	property="planAnsNo"		column="PLAN_ANS_NO"			javaType="long"		jdbcType="bigint"/>
+		<result	property="careerNo"			column="CAREER_NO"				javaType="int"		jdbcType="smallint"/>
+		<result	property="comId"			column="COM_ID"					javaType="string"	jdbcType="char"/>
+		<result	property="materialKind"		column="MATERIAL_KIND"			javaType="string"	jdbcType="char"/>
+		<result	property="facilityCd"		column="FACILITY_CD"			javaType="string"	jdbcType="char"/>
+		<result	property="facilityNm"		column="FACILITY_NM"			javaType="string"	jdbcType="varchar"/>
+		<result	property="facilityNmKana"	column="FACILITY_NM_KANA"		javaType="string"	jdbcType="varchar"/>
+		<result	property="branchCd"			column="BRANCH_CD"				javaType="string"	jdbcType="char"/>
+		<result	property="kindFlg"			column="KIND_FLG"				javaType="string"	jdbcType="char"/>
+		<result	property="year"				column="YEAR"					javaType="string"	jdbcType="char"/>
+		<result	property="seasonDiv"		column="SEASON_DIV"				javaType="string"	jdbcType="char"/>
+		<result	property="goodsNm"			column="GOODS_NM"				javaType="string"	jdbcType="varchar"/>
+		<result	property="stockDiv"			column="STOCK_DIV"				javaType="integer"	jdbcType="smallint"/>
+		<result	property="planNoEJp"		column="PLAN_NO_E_JP"			javaType="string"	jdbcType="varchar"/>
+		<result	property="planNo6Off"		column="PLAN_NO_6_OFF"			javaType="string"	jdbcType="varchar"/>
+		<result	property="sendDiv"			column="SEND_DIV"				javaType="integer"	jdbcType="smallint"/>
+		<result	property="ansSendAddr"		column="ANS_SEND_ADDR"			javaType="string"	jdbcType="varchar"/>
+		<result property="sendYmd"			column="SEND_YMD"				javaType="string"	jdbcType="char"/>
+		<result property="senderNm"			column="SENDER_NM"				javaType="string"	jdbcType="varchar"/>
+		<result property="senderTel"		column="SENDER_TEL"				javaType="string"	jdbcType="varchar"/>
+		<result property="senderFax"		column="SENDER_FAX"				javaType="string"	jdbcType="varchar"/>
+		<result property="sendStatus"		column="SEND_STATUS"			javaType="string"	jdbcType="varchar"/>
+		<result property="status"			column="STATUS"					javaType="integer"	jdbcType="smallint" />
+		<result property="no1Status"		column="NO1_STATUS"				javaType="integer"	jdbcType="smallint"/>
+		<result property="no2Status"		column="NO2_STATUS"				javaType="integer"	jdbcType="smallint"/>
+		<result property="no3Status"		column="NO3_STATUS"				javaType="integer"	jdbcType="smallint"/>
+		<result property="no4Status"		column="NO4_STATUS"				javaType="integer"	jdbcType="smallint"/>
+		<result property="no5Status"		column="NO5_STATUS"				javaType="integer"	jdbcType="smallint"/>
+		<result property="no1CareerNo"		column="NO1_CAREER_NO"			javaType="integer"	jdbcType="smallint"/>
+		<result property="no2CareerNo"		column="NO2_CAREER_NO"			javaType="integer"	jdbcType="smallint"/>
+		<result property="no3CareerNo"		column="NO3_CAREER_NO"			javaType="integer"	jdbcType="smallint"/>
+		<result property="no4CareerNo"		column="NO4_CAREER_NO"			javaType="integer"	jdbcType="smallint"/>
+		<result property="no5CareerNo"		column="NO5_CAREER_NO"			javaType="integer"	jdbcType="smallint"/>
+		<result property="zouseiRelateCnt"	column="ZOUSEI_RELATE_CNT"		javaType="integer"	jdbcType="smallint"/>
+		<result property="fmCostRelateDiv"	column="FM_COST_RELATE_DIV"		javaType="integer"	jdbcType="smallint"/>
+		<result property="fmStockRelateDiv"	column="FM_STOCK_RELATE_DIV"	javaType="integer"	jdbcType="smallint"/>
+		<result property="delFlg"			column="DEL_FLG"				javaType="string"	jdbcType="char"/>
+		<result property="newFlg"			column="NEW_FLG"				javaType="string"	jdbcType="char"/>
+		<result property="userId"			column="USER_ID"				javaType="string"	jdbcType="varchar"/>
+		<result property="userNm"			column="USER_NM"				javaType="string"	jdbcType="varchar"/>
+	</resultMap>
+
+	<select id="dNo2Common.dPlanAnsData" resultMap="DPlanAnsData_Init" parameterClass="BaseDNo2Data">
+		SELECT
+			<include refid="d_No1PlanAnsData"/>
+		FROM
+			D_PLAN_ANS 
+		WHERE
+			PLAN_ANS_NO  = #planAnsData.planAnsNo#
+			AND CAREER_NO= #planAnsData.careerNo#
+	</select>
+	
+	<select id="dNo2Common.DNo3OtherItem" resultMap="DNo3OtherItem_Init" parameterClass="BaseDNo2Data">
+		SELECT
+			A.*
+		FROM
+			D_NO3_OTHER_ITEM A
+		LEFT JOIN
+			D_PLAN_ANS B
+	 		ON
+	 			B.PLAN_ANS_NO	= A.PLAN_ANS_NO
+	 		AND
+				B.CAREER_NO		= #careerNo#
+		WHERE
+				A.PLAN_ANS_NO	= #planAnsNo#
+				AND A.CAREER_NO	= B.NO2_CAREER_NO
+				AND A.SEQUENCE	= 1
+	</select>
+	
+	<insert id="dNo2Common.insertDPlanAns" parameterClass="BaseDNo2Data">
+		INSERT
+			INTO
+				D_PLAN_ANS
+				(
+					<include refid="d_No1PlanAnsData"/>
+				)
+				SELECT
+					PLAN_ANS_NO,
+					CAREER_NO+1 AS CAREER_NO,
+					COM_ID,
+					MATERIAL_KIND,
+					FACILITY_CD,
+					BRANCH_CD,
+					[YEAR],
+					SEASON_DIV,
+					SEND_DIV,
+					#planAnsData.status#,
+					<isNull property="planAnsData.no1Status">
+					NO1_STATUS,
+					</isNull>
+					<isNotNull property="planAnsData.no1Status">
+					#planAnsData.no1Status#,
+					</isNotNull>
+					#planAnsData.no2Status#,
+					NO3_STATUS,
+					NO4_STATUS,
+					NO5_STATUS,
+					convert(char(8),getDate(),112),
+					getDate(),
+					'0' AS DEL_FLG,
+					'1' AS NEW_FLG,
+					FACILITY_NM,
+					FACILITY_NM_KANA,
+					GOODS_NM,
+					STOCK_DIV,
+					PLAN_NO_E_JP,
+					PLAN_NO_6_OFF,
+					ANS_SEND_ADDR,
+					SEND_YMD,
+					#planAnsData.senderNm#,
+					#planAnsData.senderTel#,
+					#planAnsData.senderFax#,
+					NO1_CAREER_NO,
+					#planAnsData.no2CareerNo# AS NO2_CAREER_NO,
+					NO3_CAREER_NO,
+					NO4_CAREER_NO,
+					NO5_CAREER_NO,
+					ZOUSEI_RELATE_CNT,
+					FM_COST_RELATE_DIV,
+					FM_STOCK_RELATE_DIV,
+					KIND_FLG,
+					SEND_STATUS,
+					#userId#,
+					#userNm#
+				FROM
+					D_PLAN_ANS
+				WHERE
+					PLAN_ANS_NO		= #planAnsNo#
+					AND CAREER_NO	= #careerNo#
+	</insert>
+
+	
+	<insert id="dNo2Common.insertDNo3OtherItem"  parameterClass="DNo2OtherItem">
+		INSERT
+			INTO
+				D_NO3_OTHER_ITEM (
+					PLAN_ANS_NO,
+					CAREER_NO,
+					SEQUENCE,
+					SERVICE_CONTENT,
+					SPECIAL_CONTENT,
+					SPECIAL_RECO_ITEM
+				)
+				VALUES
+				(
+					#planAnsNo#,
+					#careerNo#,
+					1,
+					#serviceContent#,
+					#specialContent#,
+					#specialRecoItem:varchar#
+				)
+	</insert>
+
+	<insert id="dNo2Common.insertDMemo" parameterClass="BaseDNo2Data">
+		INSERT
+		INTO
+			D_MEMO
+			(
+					PLAN_ANS_NO,
+					CAREER_NO,
+					USER_DIV,
+					[SEQUENCE],
+					MEMO_UPDATE_YMD,
+					UPDATE_ANS_NO
+				<isNotEmpty prepend="," property="memo">
+					MEMO
+				</isNotEmpty>
+				<isNotEmpty prepend="," property="userNm">
+					MEMO_RECORDER
+				</isNotEmpty>
+			)
+			VALUES
+			(
+					#planAnsNo#,
+					#careerNo#+1,
+					#userDiv#,
+					1,
+					convert(char(8),getDate(),112),
+					'2'
+				<isNotEmpty prepend="," property="memo">
+					#memo#
+				</isNotEmpty>
+				<isNotEmpty prepend="," property="userNm">
+					#userNm#
+				</isNotEmpty>
+			)
+	</insert>
+
+	<insert id="dNo2Common.insertDNo1AckInfo" parameterClass="DNo1AckInfoData">
+		INSERT INTO
+			D_NO1_ACK_INFO
+			(
+				PLAN_ANS_NO ,
+				CAREER_NO ,
+				USER_DIV ,
+				SEQUENCE ,
+				TANTOUSYA ,
+				RESPONSIBLER ,
+				ACK_DATE
+			)
+			VALUES
+			(
+				#planAnsNo#,
+				#careerNo#+1,
+				#userDiv#,
+				1,
+				#tantousya#,
+				#responsibler#,
+				#ackDate#
+			)
+	</insert>
+
+	<sql id="dNo2Common.dNo1AckInfo">
+		SELECT
+			TANTOUSYA,
+			RESPONSIBLER,
+			ACK_DATE,
+			USER_DIV,
+			SEQUENCE
+		FROM
+			D_NO1_ACK_INFO
+		WHERE
+			PLAN_ANS_NO		= #planAnsData.planAnsNo#
+			<isNotNull property="planAnsData.careerNo">
+			<![CDATA[
+			AND CAREER_NO	<= #planAnsData.careerNo#
+			]]>
+			</isNotNull>
+	</sql>
+	
+
+	
+	<!-- JR側承認状況データ -->
+	<select id="dNo2Common.dNo1AckInfoData_JR" resultMap="DNo1AckInfoData_Init" parameterClass="BaseDNo2Data">
+		<include refid="dNo2Common.dNo1AckInfo"/>
+		AND USER_DIV	= 1
+		ORDER BY ACK_DATE
+	</select>
+	
+	<!-- 施設側承認状況データ -->
+	<select id="dNo2Common.dNo1AckInfoData_Facility" resultMap="DNo1AckInfoData_Init" parameterClass="BaseDNo2Data">
+		<include refid="dNo2Common.dNo1AckInfo"/>
+		AND USER_DIV	= 2
+		ORDER BY ACK_DATE
+	</select>
+</sqlMap>

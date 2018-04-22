@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap 
+          PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+          "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="common">
+    <typeAlias alias="StatParamter" type="jp.co.jreast.common.util.StatParamter" />
+    <typeAlias alias="SimpleData" type="jp.co.jreast.common.util.SimpleData" />
+    <typeAlias alias="AnsSearchData" type="jp.co.jreast.common.data.AnsSearchData" />
+	<typeAlias alias="PlanAnsStatusData" type="jp.co.jreast.common.data.PlanAnsData"/>
+	<typeAlias alias="BaseData" type="jp.co.jreast.common.data.PlanAnsBaseData"/>
+	<typeAlias alias="MainTenanceData" type="jp.co.jreast.common.data.MainTenanceData"/>
+	<typeAlias alias="TaxData" type="jp.co.jreast.common.data.TaxData"/>
+	
+	<resultMap id="AllStatus" class="PlanAnsStatusData">
+		<result property="no1Status" javaType="integer" column="NO1_STATUS" jdbcType="smallint"/>
+		<result property="no2Status" javaType="integer" column="NO2_STATUS" jdbcType="smallint"/>
+		<result property="no3Status" javaType="integer" column="NO3_STATUS" jdbcType="smallint"/>
+		<result property="no4Status" javaType="integer" column="NO4_STATUS" jdbcType="smallint"/>
+		<result property="no5Status" javaType="integer" column="NO5_STATUS" jdbcType="smallint"/>
+		<result property="fmCostRelateDiv" javaType="integer" column="FM_COST_RELATE_DIV" jdbcType="smallint"/>
+	</resultMap>
+	<resultMap class="MainTenanceData" id="MainTenanceFlg">
+		<result property="sysJTI" javaType="string" column="SYSJTI" jdbcType="varchar"/>
+		<result property="sysTMD" javaType="date" column="SYSTMD" jdbcType="datetime"/>
+	</resultMap>
+	<resultMap class="TaxData" id="TaxData">
+		<result property="taxDivisionCd" javaType="string" column="TAX_DIVISION_CD" jdbcType="char"/>
+		<result property="taxRate"       javaType="string" column="TAX_RATE" jdbcType="char"/>
+		<result property="fromYmd"       javaType="string" column="FROM_YMD" jdbcType="char"/>
+		<result property="toYmd"         javaType="string" column="TO_YMD" jdbcType="char"/>
+		<result property="createYmd"     javaType="date"   column="CREATE_YMD" jdbcType="date"/>
+		<result property="upYmd"         javaType="date"   column="UP_YMD" jdbcType="date"/>
+	</resultMap>
+		
+	
+	<select id="isMaintenance" resultMap="MainTenanceFlg">
+	SELECT TOP 1
+		SYSJTI,
+		SYSTMD
+	FROM 
+		dbo.SSYS
+	</select>
+	<select id="StatusSearch" resultMap="AllStatus" parameterClass="BaseData">
+	SELECT 
+		NO1_STATUS,
+	    NO2_STATUS,
+	    NO3_STATUS,
+	    NO4_STATUS,
+	    NO5_STATUS,
+	    FM_COST_RELATE_DIV 
+	FROM 
+	    A_PLAN_ANS
+	WHERE 
+	    PLAN_ANS_NO = #planAnsNo#
+	AND
+	 CAREER_NO = (SELECT
+            CAREER_NO
+         FROM
+            A_PLAN_ANS
+         WHERE
+            PLAN_ANS_NO=#planAnsNo#
+         AND
+             NEW_FLG=1
+         
+         )
+	</select>
+	
+	<insert id="PlanAnsFinishInsert" parameterClass="BaseData">
+		INSERT INTO A_PLAN_ANS (
+            PLAN_ANS_NO ,
+	        CAREER_NO ,
+	        FACILITY_CD ,
+	        BRANCH_CD ,
+	        [YEAR] ,
+	        SEASON_DIV ,
+	        SEND_DIV ,
+	        STATUS ,
+	        NO1_STATUS ,
+	        NO2_STATUS ,
+	        NO3_STATUS ,
+	        NO4_STATUS ,
+	        NO5_STATUS ,
+	        UPDATE_YMD ,
+	        [TIMESTAMP] ,
+	        DEL_FLG ,
+	        NEW_FLG ,
+	        FACILITY_NM ,
+	        FACILITY_NM_KANA ,
+	        GOODS_NM ,
+	        STOCK_DIV ,
+	        PLAN_NO_E_JP ,
+	        PLAN_NO_6_OFF ,
+	        ANS_SEND_ADDR ,
+	        SEND_YMD ,
+	        SENDER_NM ,
+	        SENDER_TEL ,
+	        SENDER_FAX,
+	        NO1_CAREER_NO ,
+	        NO2_CAREER_NO ,
+	        NO3_CAREER_NO ,
+	        NO4_CAREER_NO ,
+	        NO5_CAREER_NO ,
+	        FM_COST_RELATE_DIV ,
+	        FM_STOCK_RELATE_DIV ,
+	        KIND_FLG ,
+	        SEND_STATUS ,
+	        USER_ID ,
+	        USER_NM
+        )
+       
+        SELECT
+            PLAN_ANS_NO ,
+            CAREER_NO + 1 ,
+            FACILITY_CD ,
+            BRANCH_CD ,
+            [YEAR] ,
+            SEASON_DIV ,
+            SEND_DIV ,
+            30 AS STATUS ,
+            30 AS NO1_STATUS,
+            30 AS NO2_STATUS ,
+            30 AS NO3_STATUS ,
+            30 AS NO4_STATUS ,
+            30 AS NO5_STATUS ,
+            UPDATE_YMD ,
+            getDate(),
+            DEL_FLG ,
+            '1' AS NEW_FLG ,
+            FACILITY_NM ,
+            FACILITY_NM_KANA ,
+            GOODS_NM ,
+            STOCK_DIV ,
+            PLAN_NO_E_JP ,
+            PLAN_NO_6_OFF ,
+            ANS_SEND_ADDR ,
+            SEND_YMD ,
+            SENDER_NM ,
+            SENDER_TEL ,
+            SENDER_FAX,
+            NO1_CAREER_NO ,
+            NO2_CAREER_NO ,
+            NO3_CAREER_NO ,
+            NO4_CAREER_NO ,
+            NO5_CAREER_NO ,
+            FM_COST_RELATE_DIV ,
+            FM_STOCK_RELATE_DIV ,
+            KIND_FLG ,
+            SEND_STATUS ,
+            USER_ID ,
+            USER_NM
+        FROM
+            A_PLAN_ANS
+        WHERE
+            PLAN_ANS_NO = #planAnsNo#
+        AND
+            CAREER_NO = (SELECT
+            CAREER_NO
+         FROM
+            A_PLAN_ANS
+         WHERE
+            PLAN_ANS_NO=#planAnsNo#
+         AND
+            CAREER_NO =#careerNo# + 1
+         
+         
+         )
+	</insert>
+
+	
+	
+    <sql id="insertFinishItem">
+        NO5_STATUS,
+        NO5_CAREER_NO,
+        PLAN_ANS_NO,
+        FACILITY_CD,
+        FACILITY_NM,
+        BRANCH_CD,
+        KIND_FLG,
+        [YEAR],
+        SEASON_DIV,
+        GOODS_NM,
+        STOCK_DIV,
+        PLAN_NO_E_JP,
+        PLAN_NO_6_OFF,
+        SEND_DIV,
+        ANS_SEND_ADDR,
+        SEND_YMD,
+        SENDER_NM,
+        SENDER_TEL,
+        SENDER_FAX,
+        SEND_STATUS,
+        NO1_STATUS,
+        NO2_STATUS,
+        NO3_STATUS,
+        NO4_STATUS,
+        NO1_CAREER_NO,
+        NO2_CAREER_NO,
+        NO3_CAREER_NO,
+        NO4_CAREER_NO,
+        FM_COST_RELATE_DIV,
+        FM_STOCK_RELATE_DIV,
+        USER_ID,
+        USER_NM,
+        UPDATE_YMD,
+        TIMESTAMP,
+        FACILITY_NM_KANA
+    </sql>
+
+    <resultMap id="Simple" class="SimpleData">
+        <result property="longValue" column="longValue" javaType="long" jdbcType="int" />
+    </resultMap>
+
+    <resultMap id="StringSimple" class="SimpleData">
+        <result property="stringValue" column="stringValue" javaType="string" jdbcType="long" />
+    </resultMap>
+
+    <select id="Stat" resultMap="Simple" parameterClass="StatParamter">
+        SELECT
+            $function$ ($field$) AS longValue
+        FROM
+           $tableName$
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="AND" property="conString">
+                 $conString$
+            </isNotEmpty>
+            <iterate prepend="AND" property="conSet" conjunction="AND">
+                $conSet[].fieldName$ $conSet[].operater$ #conSet[].value#
+            </iterate>
+        </dynamic>
+    </select>
+
+    <select id="StringStat" resultMap="StringSimple" parameterClass="StatParamter">
+        SELECT
+            $function$ ($field$) AS stringValue
+        FROM
+           $tableName$
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="AND" property="conString">
+                 $conString$
+            </isNotEmpty>
+            <iterate prepend="AND" property="conSet" conjunction="AND">
+                $conSet[].fieldName$ $conSet[].operater$ #conSet[].value#
+            </iterate>
+        </dynamic>
+    </select>
+
+    <statement id="IndentPlanNo" resultMap="StringSimple" parameterClass="AnsSearchData">
+
+        DECLARE @branchCd char(2)
+        DECLARE @yearNo char(1)
+        DECLARE @seasonDiv char(1)
+        DECLARE @kindFlg char(1)
+        DECLARE @facilityCd char(6)
+        DECLARE @planNo varchar(3)
+        DECLARE @planAnsNo bigint
+        DECLARE @searchAngin char(1)
+        
+       
+
+        SELECT
+            @planAnsNo=PLAN_ANS_NO,
+            @yearNo=SUBSTRING(YEAR,4,1),
+            @facilityCd=FACILITY_CD,
+            @branchCd=BRANCH_CD,
+            @kindFlg=KIND_FLG,
+            @seasonDiv=SEASON_DIV
+        FROM A_PLAN_ANS
+        WHERE PLAN_ANS_NO=#planAnsNo# AND CAREER_NO=#careerNo#
+		
+		 IF @kindFlg = '2' or @kindFlg = '6'
+			 BEGIN 
+		        SELECT @planNo=MAX(PLAN_NO) FROM A_PLAN_NO
+		        WHERE 
+			      
+			        KIND_FLG in (2,6)
+			     
+		         AND FACILITY_CD=@facilityCd
+		         AND BRANCH_CD=@branchCd
+		         AND YEAR_NO=@yearNo
+		         AND SEASON_DIV=@seasonDiv
+			END 
+		
+		ELSE IF @kindFlg = '3' or  @kindFlg = '5'
+			BEGIN
+		        SELECT @planNo=MAX(PLAN_NO) FROM A_PLAN_NO
+		        WHERE 
+			      
+			        KIND_FLG in (3,5)
+			     
+		         AND FACILITY_CD=@facilityCd
+		         AND BRANCH_CD=@branchCd
+		         AND YEAR_NO=@yearNo
+		         AND SEASON_DIV=@seasonDiv
+			END
+		
+		ELSE
+			BEGIN
+		        SELECT @planNo=MAX(PLAN_NO) FROM A_PLAN_NO
+		        WHERE 
+			      
+			        KIND_FLG =@kindFlg
+			     
+		         AND FACILITY_CD=@facilityCd
+		         AND BRANCH_CD=@branchCd
+		         AND YEAR_NO=@yearNo
+		         AND SEASON_DIV=@seasonDiv
+			END
+		
+         IF @planNo = '99' AND (@kindFlg = '2' or @kindFlg = '6')
+         BEGIN
+             SET @seasonDiv = 0
+             SELECT @planNo=MAX(PLAN_NO) FROM A_PLAN_NO
+             WHERE KIND_FLG IN (2,6)
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             AND SEASON_DIV=@seasonDiv
+             SET @searchAngin = '1'
+         END
+         ELSE
+         IF @planNo = '99' AND (@kindFlg = '3' or @kindFlg = '5')
+         BEGIN
+             SET @seasonDiv = 0
+             SELECT @planNo=MAX(PLAN_NO) FROM A_PLAN_NO
+             WHERE KIND_FLG IN (3,5)
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             AND SEASON_DIV=@seasonDiv
+             SET @searchAngin = '1'
+         END
+		ELSE 
+			IF @planNo = '99'
+		 BEGIN
+             SET @seasonDiv = 0
+             SELECT @planNo=MAX(PLAN_NO) FROM A_PLAN_NO
+             WHERE KIND_FLG =@kindFlg
+             AND FACILITY_CD=@facilityCd
+             AND BRANCH_CD=@branchCd
+             AND YEAR_NO=@yearNo
+             AND SEASON_DIV=@seasonDiv
+             SET @searchAngin = '1'
+         END
+         IF @planNo IS NULL
+         SET @planNo = '00'
+
+         IF @searchAngin = '1'
+         SET @planNo = @planNo + '1'
+
+        SELECT (@branchCd+@yearNo+@seasonDiv+@planNo) AS stringValue
+
+    </statement>
+
+    <insert id="insertFinishStatus" parameterClass="AnsSearchData">
+        INSERT
+        INTO
+            A_PLAN_ANS
+            (
+                CAREER_NO,
+                DEL_FLG,
+                NEW_FLG,
+                STATUS,
+                <include refid="insertFinishItem"/>
+            )
+            SELECT
+                #careerNo:smallint#+1 AS CAREER_NO,
+                '0' AS DEL_FLG,
+                '1' AS NEW_FLG,
+                30  AS STATUS,
+                <include refid="insertFinishItem"/>
+            FROM
+                A_PLAN_ANS
+            WHERE
+                PLAN_ANS_NO  = #planAnsNo#
+                AND CAREER_NO= #careerNo:smallint#
+    </insert>
+
+    <update id="PlanAnsFlgRestore" parameterClass="long">
+        UPDATE A_PLAN_ANS
+            SET NEW_FLG = 0
+        WHERE
+            NEW_FLG = 1
+        AND
+            PLAN_ANS_NO = #planAnsNo#
+    </update>
+    
+   <select id="getTax" resultMap="TaxData">
+        SELECT
+            TAX_DIVISION_CD
+            ,TAX_RATE
+            ,FROM_YMD
+            ,TO_YMD
+            ,CREATE_YMD
+            ,UP_YMD
+        FROM
+           M_TAX
+        WHERE
+           TAX_DIVISION_CD = #value#
+    </select>
+	
+</sqlMap>

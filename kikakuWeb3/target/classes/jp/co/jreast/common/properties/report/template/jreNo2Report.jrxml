@@ -1,0 +1,3455 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="jreNo2Report"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="830"
+		 columnWidth="595"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="styHead"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="12"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="styHeadT"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="11"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="styvesselVConTitle"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="styTitleVessel"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="11"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="sysVesselFlg"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="styVesselContitle"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="stymealtilte"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="stymealCon"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="styVesselCon"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		isBold="false"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="styplace2"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="7"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+	/>
+	<style 
+		name="styitem"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Top"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+	/>
+
+
+	<field name="area1" class="java.lang.String">
+		<fieldDescription><![CDATA[area1]]></fieldDescription>
+	</field>
+	<field name="area2" class="java.lang.String">
+		<fieldDescription><![CDATA[area2]]></fieldDescription>
+	</field>
+	<field name="area3" class="java.lang.String">
+		<fieldDescription><![CDATA[area3]]></fieldDescription>
+	</field>
+	<field name="areaUnitNm1" class="java.lang.String">
+		<fieldDescription><![CDATA[areaUnitNm1]]></fieldDescription>
+	</field>
+	<field name="areaUnitNm2" class="java.lang.String">
+		<fieldDescription><![CDATA[areaUnitNm2]]></fieldDescription>
+	</field>
+	<field name="areaUnitNm3" class="java.lang.String">
+		<fieldDescription><![CDATA[areaUnitNm3]]></fieldDescription>
+	</field>
+	<field name="bathFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathFlg1]]></fieldDescription>
+	</field>
+	<field name="bathFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathFlg2]]></fieldDescription>
+	</field>
+	<field name="bathFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathFlg3]]></fieldDescription>
+	</field>
+	<field name="bathTowelFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTowelFlg1]]></fieldDescription>
+	</field>
+	<field name="bathTowelFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTowelFlg2]]></fieldDescription>
+	</field>
+	<field name="bathTowelFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTowelFlg3]]></fieldDescription>
+	</field>
+	<field name="bathrobeFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathrobeFlg1]]></fieldDescription>
+	</field>
+	<field name="bathrobeFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathrobeFlg2]]></fieldDescription>
+	</field>
+	<field name="bathrobeFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathrobeFlg3]]></fieldDescription>
+	</field>
+	<field name="bedWidth1" class="java.lang.String">
+		<fieldDescription><![CDATA[bedWidth1]]></fieldDescription>
+	</field>
+	<field name="bedWidth2" class="java.lang.String">
+		<fieldDescription><![CDATA[bedWidth2]]></fieldDescription>
+	</field>
+	<field name="bedWidth3" class="java.lang.String">
+		<fieldDescription><![CDATA[bedWidth3]]></fieldDescription>
+	</field>
+	<field name="breakfastFeature" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastFeature]]></fieldDescription>
+	</field>
+	<field name="breakfastItem" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastItem]]></fieldDescription>
+	</field>
+	<field name="breakfastVkLitFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastVkLitFlg]]></fieldDescription>
+	</field>
+	<field name="breakfastVkNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastVkNumber]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="dinnerFeature" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerFeature]]></fieldDescription>
+	</field>
+	<field name="dinnerItem" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerItem]]></fieldDescription>
+	</field>
+	<field name="dinnerVkLitFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerVkLitFlg]]></fieldDescription>
+	</field>
+	<field name="dinnerVkNum" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerVkNum]]></fieldDescription>
+	</field>
+	<field name="dryerFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[dryerFlg1]]></fieldDescription>
+	</field>
+	<field name="dryerFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[dryerFlg2]]></fieldDescription>
+	</field>
+	<field name="dryerFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[dryerFlg3]]></fieldDescription>
+	</field>
+	<field name="extraBedFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[extraBedFlg1]]></fieldDescription>
+	</field>
+	<field name="extraBedFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[extraBedFlg2]]></fieldDescription>
+	</field>
+	<field name="extraBedFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[extraBedFlg3]]></fieldDescription>
+	</field>
+	<field name="facilityCd" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityCd]]></fieldDescription>
+	</field>
+	<field name="facilityNm" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityNm]]></fieldDescription>
+	</field>
+	<field name="foodFlgD1" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD1]]></fieldDescription>
+	</field>
+	<field name="foodFlgD2" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD2]]></fieldDescription>
+	</field>
+	<field name="foodFlgD3" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD3]]></fieldDescription>
+	</field>
+	<field name="foodFlgD4" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD4]]></fieldDescription>
+	</field>
+	<field name="foodFlgD5" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD5]]></fieldDescription>
+	</field>
+	<field name="foodFlgD6" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD6]]></fieldDescription>
+	</field>
+	<field name="foodFlgD7" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD7]]></fieldDescription>
+	</field>
+	<field name="foodFlgD8" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD8]]></fieldDescription>
+	</field>
+	<field name="foodFlgM1" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM1]]></fieldDescription>
+	</field>
+	<field name="foodFlgM2" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM2]]></fieldDescription>
+	</field>
+	<field name="foodFlgM3" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM3]]></fieldDescription>
+	</field>
+	<field name="foodFlgM4" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM4]]></fieldDescription>
+	</field>
+	<field name="foodFlgM5" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM5]]></fieldDescription>
+	</field>
+	<field name="foodFlgM6" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM6]]></fieldDescription>
+	</field>
+	<field name="foodFlgM7" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM7]]></fieldDescription>
+	</field>
+	<field name="foodFlgM8" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM8]]></fieldDescription>
+	</field>
+	<field name="goodsNm" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsNm]]></fieldDescription>
+	</field>
+	<field name="mealContentD1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentD1]]></fieldDescription>
+	</field>
+	<field name="mealContentD2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentD2]]></fieldDescription>
+	</field>
+	<field name="mealContentD3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentD3]]></fieldDescription>
+	</field>
+	<field name="mealContentD4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentD4]]></fieldDescription>
+	</field>
+	<field name="mealContentM1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentM1]]></fieldDescription>
+	</field>
+	<field name="mealContentM2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentM2]]></fieldDescription>
+	</field>
+	<field name="mealContentM3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentM3]]></fieldDescription>
+	</field>
+	<field name="mealContentM4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealContentM4]]></fieldDescription>
+	</field>
+	<field name="mealNumD1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD1]]></fieldDescription>
+	</field>
+	<field name="mealNumD2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD2]]></fieldDescription>
+	</field>
+	<field name="mealNumD3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD3]]></fieldDescription>
+	</field>
+	<field name="mealNumD4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD4]]></fieldDescription>
+	</field>
+	<field name="mealNumD5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD5]]></fieldDescription>
+	</field>
+	<field name="mealNumD6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD6]]></fieldDescription>
+	</field>
+	<field name="mealNumD7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD7]]></fieldDescription>
+	</field>
+	<field name="mealNumD8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD8]]></fieldDescription>
+	</field>
+	<field name="mealNumM1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM1]]></fieldDescription>
+	</field>
+	<field name="mealNumM2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM2]]></fieldDescription>
+	</field>
+	<field name="mealNumM3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM3]]></fieldDescription>
+	</field>
+	<field name="mealNumM4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM4]]></fieldDescription>
+	</field>
+	<field name="mealNumM5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM5]]></fieldDescription>
+	</field>
+	<field name="mealNumM6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM6]]></fieldDescription>
+	</field>
+	<field name="mealNumM7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM7]]></fieldDescription>
+	</field>
+	<field name="mealNumM8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM8]]></fieldDescription>
+	</field>
+	<field name="mealPlaceA1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceA1]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD1]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD2]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD3]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD4]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD5]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD6]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD7]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD8]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD9" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD9]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM1]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM2]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM3]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM4]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM5]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM6]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM7]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM8]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM9" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM9]]></fieldDescription>
+	</field>
+	<field name="modularFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[modularFlg1]]></fieldDescription>
+	</field>
+	<field name="modularFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[modularFlg2]]></fieldDescription>
+	</field>
+	<field name="modularFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[modularFlg3]]></fieldDescription>
+	</field>
+	<field name="pajamasFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[pajamasFlg1]]></fieldDescription>
+	</field>
+	<field name="pajamasFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[pajamasFlg2]]></fieldDescription>
+	</field>
+	<field name="pajamasFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[pajamasFlg3]]></fieldDescription>
+	</field>
+	<field name="personNumLitD1" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD1]]></fieldDescription>
+	</field>
+	<field name="personNumLitD2" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD2]]></fieldDescription>
+	</field>
+	<field name="personNumLitD3" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD3]]></fieldDescription>
+	</field>
+	<field name="personNumLitD4" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD4]]></fieldDescription>
+	</field>
+	<field name="personNumLitM1" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM1]]></fieldDescription>
+	</field>
+	<field name="personNumLitM2" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM2]]></fieldDescription>
+	</field>
+	<field name="personNumLitM3" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM3]]></fieldDescription>
+	</field>
+	<field name="personNumLitM4" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM4]]></fieldDescription>
+	</field>
+	<field name="planNoEJp" class="java.lang.String">
+		<fieldDescription><![CDATA[planNoEJp]]></fieldDescription>
+	</field>
+	<field name="roomNm1" class="java.lang.String">
+		<fieldDescription><![CDATA[roomNm1]]></fieldDescription>
+	</field>
+	<field name="roomNm2" class="java.lang.String">
+		<fieldDescription><![CDATA[roomNm2]]></fieldDescription>
+	</field>
+	<field name="roomNm3" class="java.lang.String">
+		<fieldDescription><![CDATA[roomNm3]]></fieldDescription>
+	</field>
+	<field name="roomVesselFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[roomVesselFlg]]></fieldDescription>
+	</field>
+	<field name="salesPoint1" class="java.lang.String">
+		<fieldDescription><![CDATA[salesPoint1]]></fieldDescription>
+	</field>
+	<field name="salesPoint2" class="java.lang.String">
+		<fieldDescription><![CDATA[salesPoint2]]></fieldDescription>
+	</field>
+	<field name="salesPoint3" class="java.lang.String">
+		<fieldDescription><![CDATA[salesPoint3]]></fieldDescription>
+	</field>
+	<field name="shampooRinseFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[shampooRinseFlg1]]></fieldDescription>
+	</field>
+	<field name="shampooRinseFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[shampooRinseFlg2]]></fieldDescription>
+	</field>
+	<field name="shampooRinseFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[shampooRinseFlg3]]></fieldDescription>
+	</field>
+	<field name="showerBoothFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[showerBoothFlg1]]></fieldDescription>
+	</field>
+	<field name="showerBoothFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[showerBoothFlg2]]></fieldDescription>
+	</field>
+	<field name="showerBoothFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[showerBoothFlg3]]></fieldDescription>
+	</field>
+	<field name="sofaBedFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[sofaBedFlg1]]></fieldDescription>
+	</field>
+	<field name="sofaBedFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[sofaBedFlg2]]></fieldDescription>
+	</field>
+	<field name="sofaBedFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[sofaBedFlg3]]></fieldDescription>
+	</field>
+	<field name="styleDivNm1" class="java.lang.String">
+		<fieldDescription><![CDATA[styleDivNm1]]></fieldDescription>
+	</field>
+	<field name="styleDivNm2" class="java.lang.String">
+		<fieldDescription><![CDATA[styleDivNm2]]></fieldDescription>
+	</field>
+	<field name="styleDivNm3" class="java.lang.String">
+		<fieldDescription><![CDATA[styleDivNm3]]></fieldDescription>
+	</field>
+	<field name="toiletFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[toiletFlg1]]></fieldDescription>
+	</field>
+	<field name="toiletFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[toiletFlg2]]></fieldDescription>
+	</field>
+	<field name="toiletFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[toiletFlg3]]></fieldDescription>
+	</field>
+	<field name="washToolFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[washToolFlg1]]></fieldDescription>
+	</field>
+	<field name="washToolFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[washToolFlg2]]></fieldDescription>
+	</field>
+	<field name="washToolFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[washToolFlg3]]></fieldDescription>
+	</field>
+	<field name="washletFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[washletFlg1]]></fieldDescription>
+	</field>
+	<field name="washletFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[washletFlg2]]></fieldDescription>
+	</field>
+	<field name="washletFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[washletFlg3]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<field name="yukataFlg1" class="java.lang.String">
+		<fieldDescription><![CDATA[yukataFlg1]]></fieldDescription>
+	</field>
+	<field name="yukataFlg2" class="java.lang.String">
+		<fieldDescription><![CDATA[yukataFlg2]]></fieldDescription>
+	</field>
+	<field name="yukataFlg3" class="java.lang.String">
+		<fieldDescription><![CDATA[yukataFlg3]]></fieldDescription>
+	</field>
+	<field name="roomInfor1" class="java.lang.String"/>
+	<field name="roomInfor2" class="java.lang.String"/>
+	<field name="roomInfor3" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="830"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styHead"
+						x="19"
+						y="25"
+						width="555"
+						height="17"
+						key="textField-196"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["びゅう  "+$F{year}+"年《JR東日本》びゅう商品企画回答書【NO2】（宿泊用）"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="69"
+						y="50"
+						width="339"
+						height="17"
+						key="textField-6"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{goodsNm}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="69"
+						y="67"
+						width="339"
+						height="17"
+						key="textField-7"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{facilityNm}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="492"
+						y="50"
+						width="82"
+						height="17"
+						key="textField-8"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{planNoEJp}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="492"
+						y="67"
+						width="82"
+						height="17"
+						key="textField-9"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["("+$F{facilityCd}+")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="styvesselVConTitle"
+						x="19"
+						y="84"
+						width="555"
+						height="17"
+						key="staticText-2"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[〔☆印は該当項目にご記入ください。※印はＪＲ記入欄です。〕]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styTitleVessel"
+						x="19"
+						y="101"
+						width="555"
+						height="14"
+						key="staticText-3"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[提　　供　　内　　容]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="19"
+						y="130"
+						width="15"
+						height="55"
+						key="staticText-26"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="34"
+						y="130"
+						width="56"
+						height="55"
+						key="staticText-30"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[様
+式]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="90"
+						y="130"
+						width="56"
+						height="55"
+						key="staticText-35"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[面　積
+[畳数]　
+[㎡]　]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="174"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-36"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ベ
+ッ
+ド]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="146"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-37"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ラ
+ベ
+ッ
+ド]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="230"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-38"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[バ 
+ス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="202"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-39"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ベ
+ッ
+ド
+幅]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="286"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-40"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[レ
+ッ
+ト]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="258"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-41"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ト
+イ
+レ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="342"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-42"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ド 
+ラ 
+イ 
+ヤ 
+|]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="314"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-43"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[バ
+ス
+タ
+オ
+ル]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="398"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-44"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[パ
+ジ
+ャ
+マ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="370"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-45"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ゆ
+か
+た]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="454"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-46"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[・
+リ
+ン
+ス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="426"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-47"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[洗
+面
+具]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="510"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-48"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ブ
+|
+ス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="482"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-49"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[バ 
+ス
+ロ
+| 
+ブ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="566"
+						y="130"
+						width="8"
+						height="55"
+						key="staticText-50"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="538"
+						y="130"
+						width="28"
+						height="55"
+						key="staticText-51"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[モ
+ジ
+ュ
+ラ
+|]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="160"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-52"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[エ
+キ
+ス
+ト]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="468"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-53"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[シ
+ャ
+ン
+プ
+|]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="sysVesselFlg"
+						x="97"
+						y="214"
+						width="467"
+						height="16"
+						key="textField-12"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{salesPoint1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="370"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-13"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{yukataFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="398"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-14"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{pajamasFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="454"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-15"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{shampooRinseFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="426"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-16"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{washToolFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="482"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-17"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathrobeFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="510"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-18"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{showerBoothFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="538"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-20"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{modularFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="286"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-21"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{washletFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="342"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-22"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dryerFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="314"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-23"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathTowelFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="34"
+						y="185"
+						width="112"
+						height="14"
+						key="textField-24"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roomNm1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="34"
+						y="199"
+						width="56"
+						height="15"
+						key="textField-25"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{styleDivNm1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="118"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-26"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{areaUnitNm1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="90"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-27"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{area1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="146"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-28"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{extraBedFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="174"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-29"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{sofaBedFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="230"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-30"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="202"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-31"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bedWidth1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="258"
+						y="199"
+						width="28"
+						height="15"
+						key="textField-32"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{toiletFlg1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="sysVesselFlg"
+						x="97"
+						y="259"
+						width="467"
+						height="16"
+						key="textField-33"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{salesPoint2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="sysVesselFlg"
+						x="97"
+						y="303"
+						width="467"
+						height="14"
+						key="textField-54"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{salesPoint3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="370"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-55"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{yukataFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="398"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-56"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{pajamasFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="454"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-57"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{shampooRinseFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="426"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-58"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{washToolFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="482"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-59"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathrobeFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="510"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-60"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{showerBoothFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="538"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-61"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{modularFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="286"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-62"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{washletFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="342"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-63"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dryerFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="314"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-64"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathTowelFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="34"
+						y="275"
+						width="112"
+						height="14"
+						key="textField-65"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roomNm3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="34"
+						y="289"
+						width="56"
+						height="14"
+						key="textField-66"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{styleDivNm3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="118"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-67"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{areaUnitNm3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="90"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-68"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{area3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="146"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-69"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{extraBedFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="174"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-70"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{sofaBedFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="230"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-71"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="202"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-72"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bedWidth3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="258"
+						y="289"
+						width="28"
+						height="14"
+						key="textField-73"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{toiletFlg3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="370"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-75"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{yukataFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="398"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-76"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{pajamasFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="454"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-77"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{shampooRinseFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="426"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-78"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{washToolFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="482"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-79"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathrobeFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="510"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-80"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{showerBoothFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="538"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-81"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{modularFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="286"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-82"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{washletFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="342"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-83"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dryerFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="314"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-84"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathTowelFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="34"
+						y="230"
+						width="112"
+						height="14"
+						key="textField-85"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roomNm2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="34"
+						y="244"
+						width="56"
+						height="15"
+						key="textField-86"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{styleDivNm2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="118"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-87"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{areaUnitNm2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="90"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-88"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{area2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="146"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-89"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{extraBedFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="174"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-90"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{sofaBedFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="230"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-91"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bathFlg2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="202"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-92"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{bedWidth2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styVesselCon"
+						x="258"
+						y="244"
+						width="28"
+						height="15"
+						key="textField-93"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{toiletFlg2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="19"
+						y="185"
+						width="15"
+						height="45"
+						key="staticText-75"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[①]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="19"
+						y="275"
+						width="15"
+						height="42"
+						key="staticText-77"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[③]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="19"
+						y="230"
+						width="15"
+						height="45"
+						key="staticText-78"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[②]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="stymealtilte"
+						x="19"
+						y="317"
+						width="555"
+						height="16"
+						key="staticText-79"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SimSun" size="9" isBold="true" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[●食事箇所・食事内容（複数選択の場合利用条件等を明記してください）]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="19"
+						y="333"
+						width="141"
+						height="15"
+						key="staticText-80"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true"/>
+					</textElement>
+				<text><![CDATA[☆夕食箇所]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="160"
+						y="333"
+						width="294"
+						height="15"
+						key="staticText-81"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true"/>
+					</textElement>
+				<text><![CDATA[食事内容]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="454"
+						y="333"
+						width="120"
+						height="15"
+						key="staticText-82"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true"/>
+					</textElement>
+				<text><![CDATA[条件]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="348"
+						width="61"
+						height="14"
+						key="textField-95"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="348"
+						width="154"
+						height="14"
+						key="textField-96"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styitem"
+						x="454"
+						y="348"
+						width="120"
+						height="126"
+						key="textField-97"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dinnerItem}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="404"
+						width="141"
+						height="14"
+						key="textField-98"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="404"
+						width="252"
+						height="14"
+						key="textField-99"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="418"
+						width="141"
+						height="14"
+						key="textField-100"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="418"
+						width="252"
+						height="14"
+						key="textField-101"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="432"
+						width="141"
+						height="14"
+						key="textField-102"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="432"
+						width="252"
+						height="14"
+						key="textField-103"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="446"
+						width="141"
+						height="14"
+						key="textField-104"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="446"
+						width="252"
+						height="14"
+						key="textField-105"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="348"
+						width="80"
+						height="14"
+						key="textField-106"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitD1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="348"
+						width="98"
+						height="14"
+						key="textField-107"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentD1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="460"
+						width="141"
+						height="14"
+						key="textField-109"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD9}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="348"
+						width="42"
+						height="14"
+						key="textField-110"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styplace2"
+						x="19"
+						y="362"
+						width="61"
+						height="14"
+						key="textField-111"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="362"
+						width="154"
+						height="14"
+						key="textField-112"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="362"
+						width="80"
+						height="14"
+						key="textField-113"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitD2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="362"
+						width="98"
+						height="14"
+						key="textField-114"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentD2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="362"
+						width="42"
+						height="14"
+						key="textField-115"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="376"
+						width="61"
+						height="14"
+						key="textField-116"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="376"
+						width="154"
+						height="14"
+						key="textField-117"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="376"
+						width="80"
+						height="14"
+						key="textField-118"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitD3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="376"
+						width="98"
+						height="14"
+						key="textField-119"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentD3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="376"
+						width="42"
+						height="14"
+						key="textField-120"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="390"
+						width="61"
+						height="14"
+						key="textField-121"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceD4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="390"
+						width="154"
+						height="14"
+						key="textField-122"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgD4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="390"
+						width="80"
+						height="14"
+						key="textField-123"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitD4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="390"
+						width="98"
+						height="14"
+						key="textField-124"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentD4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="390"
+						width="42"
+						height="14"
+						key="textField-125"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="474"
+						width="555"
+						height="16"
+						key="textField-126"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SimSun" size="9" isBold="true" isUnderline="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["※バイキングの場合⇒制限【"+$F{dinnerVkLitFlg}+"】ありの場合は入込人員"+$F{dinnerVkNum}+"以上のみバイキング"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="stymealtilte"
+						x="19"
+						y="490"
+						width="555"
+						height="16"
+						key="staticText-83"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[当企画商品での提供料理内容（特徴）]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="506"
+						width="555"
+						height="28"
+						key="textField-127"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dinnerFeature}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="stymealtilte"
+						x="19"
+						y="770"
+						width="555"
+						height="16"
+						key="staticText-89"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[☆昼食箇所]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="786"
+						width="555"
+						height="16"
+						key="textField-161"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceA1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="stymealtilte"
+						x="19"
+						y="534"
+						width="555"
+						height="16"
+						key="staticText-90"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SimSun" size="9" isBold="true" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[●食事箇所・食事内容（複数選択の場合利用条件等を明記してください）]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="19"
+						y="550"
+						width="141"
+						height="16"
+						key="staticText-91"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true"/>
+					</textElement>
+				<text><![CDATA[☆朝食箇所]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="160"
+						y="550"
+						width="294"
+						height="16"
+						key="staticText-92"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true"/>
+					</textElement>
+				<text><![CDATA[食事内容]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="454"
+						y="550"
+						width="120"
+						height="16"
+						key="staticText-93"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true"/>
+					</textElement>
+				<text><![CDATA[条件]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styitem"
+						x="454"
+						y="566"
+						width="120"
+						height="144"
+						key="textField-164"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{breakfastItem}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="710"
+						width="555"
+						height="16"
+						key="textField-193"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SimSun" size="9" isBold="true" isUnderline="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["※バイキングの場合⇒制限【"+$F{breakfastVkLitFlg}+"】ありの場合は入込人員"+$F{breakfastVkNumber}+"以上のみバイキング"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="stymealtilte"
+						x="19"
+						y="726"
+						width="555"
+						height="16"
+						key="staticText-94"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SimSun" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[当企画商品での提供料理内容（特徴）]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="742"
+						width="555"
+						height="28"
+						key="textField-194"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{breakfastFeature}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="566"
+						y="199"
+						width="8"
+						height="15"
+						key="staticText-96"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="566"
+						y="244"
+						width="8"
+						height="15"
+						key="staticText-97"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="566"
+						y="289"
+						width="8"
+						height="14"
+						key="staticText-98"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styvesselVConTitle"
+						x="19"
+						y="115"
+						width="323"
+						height="14"
+						key="staticText-99"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[☆提供客室の種別・客室内の備品等]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styvesselVConTitle"
+						x="342"
+						y="115"
+						width="232"
+						height="14"
+						key="textField-195"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["  ［○有り ×無し］"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="446"
+						width="42"
+						height="14"
+						key="textField-197"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="432"
+						width="42"
+						height="14"
+						key="textField-198"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="418"
+						width="42"
+						height="14"
+						key="textField-199"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="404"
+						width="42"
+						height="14"
+						key="textField-200"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumD5}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="460"
+						width="294"
+						height="14"
+						key="staticText-100"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="566"
+						width="154"
+						height="16"
+						key="textField-201"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="582"
+						width="154"
+						height="16"
+						key="textField-202"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="598"
+						width="154"
+						height="16"
+						key="textField-203"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="614"
+						width="154"
+						height="16"
+						key="textField-204"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="630"
+						width="252"
+						height="16"
+						key="textField-205"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="646"
+						width="252"
+						height="16"
+						key="textField-206"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="662"
+						width="252"
+						height="16"
+						key="textField-207"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						mode="Opaque"
+						x="160"
+						y="678"
+						width="252"
+						height="16"
+						key="textField-208"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{foodFlgM8}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="stymealCon"
+						x="160"
+						y="694"
+						width="294"
+						height="16"
+						key="staticText-101"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="678"
+						width="42"
+						height="16"
+						key="textField-209"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="662"
+						width="42"
+						height="16"
+						key="textField-210"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="646"
+						width="42"
+						height="16"
+						key="textField-211"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="630"
+						width="42"
+						height="16"
+						key="textField-212"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="614"
+						width="42"
+						height="16"
+						key="textField-213"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="598"
+						width="42"
+						height="16"
+						key="textField-214"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="582"
+						width="42"
+						height="16"
+						key="textField-215"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="412"
+						y="566"
+						width="42"
+						height="16"
+						key="textField-216"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealNumM1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="566"
+						width="98"
+						height="16"
+						key="textField-217"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentM1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="582"
+						width="98"
+						height="16"
+						key="textField-218"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentM2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="598"
+						width="98"
+						height="16"
+						key="textField-219"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentM3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="314"
+						y="614"
+						width="98"
+						height="16"
+						key="textField-220"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealContentM4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="694"
+						width="141"
+						height="16"
+						key="textField-221"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM9}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="678"
+						width="141"
+						height="16"
+						key="textField-222"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="662"
+						width="141"
+						height="16"
+						key="textField-223"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="646"
+						width="141"
+						height="16"
+						key="textField-224"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="630"
+						width="141"
+						height="16"
+						key="textField-225"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="614"
+						width="80"
+						height="16"
+						key="textField-226"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitM4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="614"
+						width="61"
+						height="16"
+						key="textField-227"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="598"
+						width="61"
+						height="16"
+						key="textField-228"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="598"
+						width="80"
+						height="16"
+						key="textField-229"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitM3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="styplace2"
+						x="19"
+						y="582"
+						width="61"
+						height="16"
+						key="textField-230"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="582"
+						width="80"
+						height="16"
+						key="textField-231"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitM2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="19"
+						y="566"
+						width="61"
+						height="16"
+						key="textField-232"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mealPlaceM1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="80"
+						y="566"
+						width="80"
+						height="16"
+						key="textField-233"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{personNumLitM1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="styHeadT"
+						x="19"
+						y="50"
+						width="50"
+						height="17"
+						key="staticText-102"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+				<text><![CDATA[商品名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styHeadT"
+						x="19"
+						y="67"
+						width="50"
+						height="17"
+						key="staticText-103"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+				<text><![CDATA[施設名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styHeadT"
+						x="408"
+						y="50"
+						width="84"
+						height="17"
+						key="staticText-104"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+				<text><![CDATA[企画通番]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styHeadT"
+						x="408"
+						y="67"
+						width="84"
+						height="17"
+						key="staticText-105"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+				<text><![CDATA[施設コード]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="146"
+						y="185"
+						width="428"
+						height="14"
+						key="textField-234"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roomInfor1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="146"
+						y="230"
+						width="428"
+						height="14"
+						key="textField-235"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roomInfor2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="stymealCon"
+						x="146"
+						y="275"
+						width="428"
+						height="14"
+						key="textField-236"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SimSun"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roomInfor3}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="188"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-106"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ソ
+フ
+ァ
+|]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="524"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-107"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[シ
+ャ
+ワ
+|]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselContitle"
+						x="300"
+						y="130"
+						width="14"
+						height="55"
+						key="staticText-108"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font isBold="false"/>
+					</textElement>
+				<text><![CDATA[ウ
+ォ
+シ
+ュ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="564"
+						y="214"
+						width="10"
+						height="16"
+						key="staticText-109"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="ＭＳ ゴシック"/>
+					</textElement>
+				<text><![CDATA[]]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="34"
+						y="214"
+						width="63"
+						height="16"
+						key="staticText-110"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="ＭＳ ゴシック"/>
+					</textElement>
+				<text><![CDATA[ｾｰﾙｽﾎﾟｲﾝﾄ[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="34"
+						y="259"
+						width="63"
+						height="16"
+						key="staticText-111"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="ＭＳ ゴシック"/>
+					</textElement>
+				<text><![CDATA[ｾｰﾙｽﾎﾟｲﾝﾄ[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="34"
+						y="303"
+						width="63"
+						height="14"
+						key="staticText-112"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="ＭＳ ゴシック"/>
+					</textElement>
+				<text><![CDATA[ｾｰﾙｽﾎﾟｲﾝﾄ[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="564"
+						y="259"
+						width="10"
+						height="16"
+						key="staticText-113"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="ＭＳ ゴシック"/>
+					</textElement>
+				<text><![CDATA[]]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="styVesselCon"
+						x="564"
+						y="303"
+						width="10"
+						height="14"
+						key="staticText-114"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="ＭＳ ゴシック"/>
+					</textElement>
+				<text><![CDATA[]]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

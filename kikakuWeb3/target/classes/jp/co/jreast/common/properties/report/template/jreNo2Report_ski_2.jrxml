@@ -1,0 +1,2158 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="jreNo2Report_ski_2.jrxml"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="594"
+		 pageHeight="822"
+		 columnWidth="594"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="No1"
+		isDefault="false"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+	/>
+	<style 
+		name="dy"
+		isDefault="true"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+	/>
+
+
+	<field name="byu2ChildHalfFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu2ChildHalfFlg]]></fieldDescription>
+	</field>
+	<field name="byu2Meal" class="java.lang.String">
+		<fieldDescription><![CDATA[byu2Meal]]></fieldDescription>
+	</field>
+	<field name="byu3CheckInFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu3CheckInFlg]]></fieldDescription>
+	</field>
+	<field name="byu4ReturnFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu4ReturnFlg]]></fieldDescription>
+	</field>
+	<field name="byu5FreeBathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu5FreeBathFlg]]></fieldDescription>
+	</field>
+	<field name="byu5CheckIn" class="java.lang.String">
+		<fieldDescription><![CDATA[byu5CheckIn]]></fieldDescription>
+	</field>
+	<field name="byu5CheckOut" class="java.lang.String">
+		<fieldDescription><![CDATA[byu5CheckOut]]></fieldDescription>
+	</field>
+	<field name="byu5TowelA" class="java.lang.String">
+		<fieldDescription><![CDATA[byu5TowelA]]></fieldDescription>
+	</field>
+	<field name="byu5TowelCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[byu5TowelCharge]]></fieldDescription>
+	</field>
+	<field name="byu5TowelB" class="java.lang.String">
+		<fieldDescription><![CDATA[byu5TowelB]]></fieldDescription>
+	</field>
+	<field name="byu6FamilyFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu6FamilyFlg]]></fieldDescription>
+	</field>
+	<field name="byu62DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu62DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu7LadysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu7LadysFlg]]></fieldDescription>
+	</field>
+	<field name="byu72DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu72DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu7Content" class="java.lang.String">
+		<fieldDescription><![CDATA[byu7Content]]></fieldDescription>
+	</field>
+	<field name="byu6Content" class="java.lang.String">
+		<fieldDescription><![CDATA[byu6Content]]></fieldDescription>
+	</field>
+	<field name="byu8CoupleFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu8CoupleFlg]]></fieldDescription>
+	</field>
+	<field name="byu82DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu82DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu8Content" class="java.lang.String">
+		<fieldDescription><![CDATA[byu8Content]]></fieldDescription>
+	</field>
+	<field name="byu9GroupFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu9GroupFlg]]></fieldDescription>
+	</field>
+	<field name="byu92DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu92DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu9Num" class="java.lang.String">
+		<fieldDescription><![CDATA[byu9Num]]></fieldDescription>
+	</field>
+	<field name="byu9Content" class="java.lang.String">
+		<fieldDescription><![CDATA[byu9Content]]></fieldDescription>
+	</field>
+	<field name="byu10FreeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu10FreeFlg]]></fieldDescription>
+	</field>
+	<field name="byu102DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu102DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu10Content" class="java.lang.String">
+		<fieldDescription><![CDATA[byu10Content]]></fieldDescription>
+	</field>
+	<field name="byu11DiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu11DiscountFlg]]></fieldDescription>
+	</field>
+	<field name="byu112DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu112DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu11Content" class="java.lang.String">
+		<fieldDescription><![CDATA[byu11Content]]></fieldDescription>
+	</field>
+	<field name="byu12TicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu12TicketFlg]]></fieldDescription>
+	</field>
+	<field name="byu12Charge" class="java.lang.String">
+		<fieldDescription><![CDATA[byu12Charge]]></fieldDescription>
+	</field>
+	<field name="byu122DaysFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu122DaysFlg]]></fieldDescription>
+	</field>
+	<field name="byu12UsePlace" class="java.lang.String">
+		<fieldDescription><![CDATA[byu12UsePlace]]></fieldDescription>
+	</field>
+	<field name="byu13OtherContent" class="java.lang.String">
+		<fieldDescription><![CDATA[byu13OtherContent]]></fieldDescription>
+	</field>
+	<field name="byu14StayFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14StayFlg]]></fieldDescription>
+	</field>
+	<field name="byu14Change" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14Change]]></fieldDescription>
+	</field>
+	<field name="byu14ChargeAdultA" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14ChargeAdultA]]></fieldDescription>
+	</field>
+	<field name="byu14ChargeChildA" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14ChargeChildA]]></fieldDescription>
+	</field>
+	<field name="byu14ChargeAdultB" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14ChargeAdultB]]></fieldDescription>
+	</field>
+	<field name="byu14ChargeChildB" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14ChargeChildB]]></fieldDescription>
+	</field>
+	<field name="byu14ChargeAdultC" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14ChargeAdultC]]></fieldDescription>
+	</field>
+	<field name="byu14ChargeChildC" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14ChargeChildC]]></fieldDescription>
+	</field>
+	<field name="byu14OtherContent" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14OtherContent]]></fieldDescription>
+	</field>
+	<field name="byu14UsePlace" class="java.lang.String">
+		<fieldDescription><![CDATA[byu14UsePlace]]></fieldDescription>
+	</field>
+	<field name="specialRecoItem" class="java.lang.String">
+		<fieldDescription><![CDATA[specialRecoItem]]></fieldDescription>
+	</field>
+	<field name="goodsNm" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsNm]]></fieldDescription>
+	</field>
+	<field name="planNoEJp" class="java.lang.String">
+		<fieldDescription><![CDATA[planNoEJp]]></fieldDescription>
+	</field>
+	<field name="facilityNm" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityNm]]></fieldDescription>
+	</field>
+	<field name="facilityCd" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityCd]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<field name="byu1CheckIn" class="java.lang.String">
+		<fieldDescription><![CDATA[byu1CheckIn]]></fieldDescription>
+	</field>
+	<field name="byu1CheckInNormal" class="java.lang.String">
+		<fieldDescription><![CDATA[byu1CheckInNormal]]></fieldDescription>
+	</field>
+	<field name="byu1CheckOut" class="java.lang.String">
+		<fieldDescription><![CDATA[byu1CheckOut]]></fieldDescription>
+	</field>
+	<field name="byu1CheckOutNormal" class="java.lang.String">
+		<fieldDescription><![CDATA[byu1CheckOutNormal]]></fieldDescription>
+	</field>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="804"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="No1"
+						x="9"
+						y="32"
+						width="75"
+						height="16"
+						key="staticText-1"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isBold="true" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[商品名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="9"
+						y="151"
+						width="35"
+						height="24"
+						key="staticText-35"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="true" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="dy"
+						x="9"
+						y="7"
+						width="580"
+						height="20"
+						key="textField-155"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="12" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["びゅう  " +$F{year}+ "年度《JR東日本》びゅう商品企画回答書【NO2-2】(宿泊スキー用)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="84"
+						y="32"
+						width="274"
+						height="16"
+						key="textField-158"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{goodsNm}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="9"
+						y="48"
+						width="75"
+						height="16"
+						key="staticText-139"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isBold="true" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[施設名]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="dy"
+						x="84"
+						y="48"
+						width="274"
+						height="16"
+						key="textField-160"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{facilityNm}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="44"
+						y="151"
+						width="35"
+						height="24"
+						key="staticText-140"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="7" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[2泊目以降の有無]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="151"
+						width="295"
+						height="24"
+						key="staticText-142"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[内容(ご提供いただけるサービス内容を詳しくお書き下さい)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="9"
+						y="137"
+						width="369"
+						height="14"
+						key="staticText-166"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isBold="true" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[別途料金が必要となる場合は、必ずこの用紙にて明示してください。]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="151"
+						width="215"
+						height="24"
+						key="staticText-167"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[特典内容]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="175"
+						width="35"
+						height="36"
+						key="textField-176"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu2ChildHalfFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="175"
+						width="35"
+						height="36"
+						key="textField-177"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="211"
+						width="35"
+						height="36"
+						key="textField-180"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="211"
+						width="35"
+						height="36"
+						key="textField-181"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="175"
+						width="215"
+						height="36"
+						key="staticText-168"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[子供半額]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="9"
+						y="69"
+						width="580"
+						height="14"
+						key="staticText-222"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[No２-１に引き続き太枠に利用可能な□欄と○欄を■また●に塗りつぶし、詳細をご記入ください。]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="9"
+						y="88"
+						width="218"
+						height="14"
+						key="staticText-223"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" isBold="true" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[チェックイン・アウト時刻]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="227"
+						y="88"
+						width="362"
+						height="14"
+						key="staticText-224"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[ ※早めのチェックイン・遅めのチェックアウト特典]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="128"
+						y="102"
+						width="50"
+						height="14"
+						key="textField-258"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu1CheckIn}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="9"
+						y="102"
+						width="119"
+						height="14"
+						key="staticText-225"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(びゅう特典)チェックイン＝ ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="283"
+						y="102"
+						width="24"
+						height="14"
+						key="staticText-226"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[ ←]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="178"
+						y="102"
+						width="55"
+						height="14"
+						key="staticText-228"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[、アウト＝]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="233"
+						y="102"
+						width="50"
+						height="14"
+						key="textField-259"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu1CheckOut}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="426"
+						y="102"
+						width="50"
+						height="14"
+						key="textField-260"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu1CheckInNormal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="307"
+						y="102"
+						width="119"
+						height="14"
+						key="staticText-229"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(通常は)チェックイン＝ ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="476"
+						y="102"
+						width="55"
+						height="14"
+						key="staticText-230"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[、アウト＝]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="531"
+						y="102"
+						width="58"
+						height="14"
+						key="textField-261"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu1CheckOutNormal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="9"
+						y="123"
+						width="580"
+						height="14"
+						key="staticText-231"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ ゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isPdfEmbedded ="false" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[「びゅう特典」]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="378"
+						y="137"
+						width="211"
+						height="14"
+						key="staticText-232"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(曜日限定・期間限定の提供はご遠慮ください。)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="79"
+						y="211"
+						width="215"
+						height="36"
+						key="textField-262"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu3CheckInFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="175"
+						width="295"
+						height="12"
+						key="staticText-233"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[【回答書No１】と対応しています。２名１室は大小同額となります。]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="187"
+						width="57"
+						height="12"
+						key="staticText-234"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[食事内容(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="351"
+						y="187"
+						width="190"
+						height="24"
+						key="textField-263"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu2Meal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="541"
+						y="187"
+						width="48"
+						height="24"
+						key="staticText-235"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[
+))]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="199"
+						width="57"
+						height="12"
+						key="staticText-236"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="211"
+						width="295"
+						height="36"
+						key="staticText-237"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[１部屋単位となります。(税込)「お一人様○○円」の扱いはできません。
+※「原則として８：００以降のチェックイン」とパンフに明記します。
+※お客さまの現地払いとなります。]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="247"
+						width="35"
+						height="36"
+						key="textField-264"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="247"
+						width="35"
+						height="36"
+						key="textField-265"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="79"
+						y="247"
+						width="215"
+						height="36"
+						key="textField-266"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu4ReturnFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="247"
+						width="295"
+						height="36"
+						key="staticText-238"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[１部屋単価となります。(税込)「お一人様○○円」の扱いはできません。
+※お客さまの現地払いとなります。]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="283"
+						width="35"
+						height="36"
+						key="textField-267"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu5FreeBathFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="283"
+						width="35"
+						height="36"
+						key="textField-268"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="294"
+						y="283"
+						width="295"
+						height="12"
+						key="textField-270"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu5CheckIn}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="294"
+						y="295"
+						width="295"
+						height="12"
+						key="textField-271"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu5CheckOut}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="294"
+						y="307"
+						width="160"
+						height="12"
+						key="textField-272"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu5TowelA}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="454"
+						y="307"
+						width="32"
+						height="12"
+						key="textField-273"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu5TowelCharge}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="486"
+						y="307"
+						width="103"
+						height="12"
+						key="textField-274"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu5TowelB}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="319"
+						width="295"
+						height="12"
+						key="staticText-240"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[家族連れのお客様限定。チェックイン時お客様に申告し頂きます。]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="319"
+						width="35"
+						height="36"
+						key="textField-283"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu6FamilyFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="319"
+						width="35"
+						height="36"
+						key="textField-284"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu62DaysFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="331"
+						width="7"
+						height="24"
+						key="staticText-241"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="301"
+						y="331"
+						width="272"
+						height="24"
+						key="textField-285"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu6Content}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="573"
+						y="331"
+						width="16"
+						height="24"
+						key="staticText-242"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="355"
+						width="295"
+						height="12"
+						key="staticText-243"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[女性のみのグループ限定。チェックイン時お客様に申告して頂きます。]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="355"
+						width="35"
+						height="36"
+						key="textField-287"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu7LadysFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="355"
+						width="35"
+						height="36"
+						key="textField-288"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu72DaysFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="367"
+						width="7"
+						height="24"
+						key="staticText-244"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="301"
+						y="367"
+						width="272"
+						height="24"
+						key="textField-289"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu7Content}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="573"
+						y="367"
+						width="16"
+						height="24"
+						key="staticText-245"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="294"
+						y="391"
+						width="295"
+						height="12"
+						key="staticText-246"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[男女ペア２名１室利用。チェックイン時お客様に申告して頂きます。]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="391"
+						width="35"
+						height="36"
+						key="textField-291"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu8CoupleFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="391"
+						width="35"
+						height="36"
+						key="textField-292"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu82DaysFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="403"
+						width="7"
+						height="24"
+						key="staticText-247"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="301"
+						y="403"
+						width="272"
+						height="24"
+						key="textField-293"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu8Content}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="573"
+						y="403"
+						width="16"
+						height="24"
+						key="staticText-248"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="427"
+						width="35"
+						height="36"
+						key="textField-295"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu9GroupFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="427"
+						width="35"
+						height="36"
+						key="textField-296"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu92DaysFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="439"
+						width="7"
+						height="24"
+						key="staticText-250"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="301"
+						y="439"
+						width="272"
+						height="24"
+						key="textField-297"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu9Content}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="573"
+						y="439"
+						width="16"
+						height="24"
+						key="staticText-251"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="dy"
+						x="301"
+						y="427"
+						width="25"
+						height="12"
+						key="textField-298"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu9Num}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="427"
+						width="7"
+						height="12"
+						key="staticText-252"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="326"
+						y="427"
+						width="263"
+						height="12"
+						key="staticText-253"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)名以上１室利用。チェックイン時お客様に申告して頂きます。]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="463"
+						width="35"
+						height="36"
+						key="textField-300"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu10FreeFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="463"
+						width="35"
+						height="36"
+						key="textField-301"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu102DaysFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="294"
+						y="463"
+						width="295"
+						height="36"
+						key="textField-302"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu10Content}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="499"
+						width="35"
+						height="36"
+						key="textField-304"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu11DiscountFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="499"
+						width="35"
+						height="36"
+						key="textField-305"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu112DaysFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="294"
+						y="499"
+						width="295"
+						height="36"
+						key="textField-306"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu11Content}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="535"
+						width="35"
+						height="36"
+						key="textField-308"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu12TicketFlg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="535"
+						width="35"
+						height="36"
+						key="textField-309"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu122DaysFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="283"
+						width="215"
+						height="36"
+						key="staticText-254"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[チェックイン前及びチェックアウト後の無料入浴OK]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="319"
+						width="215"
+						height="36"
+						key="staticText-255"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[ファミリーサービス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="355"
+						width="215"
+						height="36"
+						key="staticText-256"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[レディースサービス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="391"
+						width="215"
+						height="36"
+						key="staticText-257"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[カップルサービス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="427"
+						width="215"
+						height="36"
+						key="staticText-258"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[グループサービス]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="463"
+						width="215"
+						height="36"
+						key="staticText-259"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[館内有料施設の利用「無料」サービス
+※別途添付でも結構です。]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="499"
+						width="215"
+						height="36"
+						key="staticText-260"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[館内有料施設の利用「割引」サービス
+※別途添付でも結構です。]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="535"
+						width="215"
+						height="36"
+						key="staticText-261"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[ゲレンデレストランで使える食事券付き]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="535"
+						width="7"
+						height="18"
+						key="staticText-262"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="dy"
+						x="301"
+						y="535"
+						width="30"
+						height="18"
+						key="textField-310"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu12Charge}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="331"
+						y="535"
+						width="258"
+						height="18"
+						key="staticText-263"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円相当 １泊につき１枚]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="294"
+						y="553"
+						width="47"
+						height="18"
+						key="staticText-264"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[利用箇所(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="341"
+						y="553"
+						width="232"
+						height="18"
+						key="textField-311"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu12UsePlace}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="573"
+						y="553"
+						width="16"
+						height="18"
+						key="staticText-265"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="571"
+						width="35"
+						height="36"
+						key="textField-312"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="44"
+						y="571"
+						width="35"
+						height="36"
+						key="textField-313"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="No1"
+						x="79"
+						y="571"
+						width="215"
+						height="36"
+						key="staticText-266"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isItalic="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[その他]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="294"
+						y="571"
+						width="295"
+						height="36"
+						key="textField-314"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu13OtherContent}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="9"
+						y="613"
+						width="580"
+						height="14"
+						key="staticText-267"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ ゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isPdfEmbedded ="false" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[新規特典（リフト券が宿泊代金に含まれる施設のみ該当します）]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="dy"
+						x="9"
+						y="627"
+						width="35"
+						height="12"
+						key="textField-315"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14StayFlg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="44"
+						y="627"
+						width="346"
+						height="12"
+						key="staticText-268"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[ゆっくり滞在サービス(スキーしないお客さま対象) *リフト券を他のものに変更可！]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="390"
+						y="627"
+						width="50"
+						height="12"
+						key="staticText-269"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[ 変更方法(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="440"
+						y="627"
+						width="140"
+						height="12"
+						key="textField-316"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="7" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14Change}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="580"
+						y="627"
+						width="9"
+						height="12"
+						key="staticText-270"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="639"
+						width="35"
+						height="12"
+						key="textField-317"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="44"
+						y="639"
+						width="166"
+						height="12"
+						key="staticText-271"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[館内利用券に変更可 １泊につき おとな(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="210"
+						y="639"
+						width="32"
+						height="12"
+						key="textField-318"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14ChargeAdultA}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="242"
+						y="639"
+						width="78"
+						height="12"
+						key="staticText-272"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円分 ・ こども(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="320"
+						y="639"
+						width="32"
+						height="12"
+						key="textField-319"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14ChargeChildA}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="352"
+						y="639"
+						width="237"
+						height="12"
+						key="staticText-273"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円分相当]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="651"
+						width="35"
+						height="12"
+						key="textField-320"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="44"
+						y="651"
+						width="166"
+						height="12"
+						key="staticText-274"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[スクール券に変更可 １泊につき おとな(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="210"
+						y="651"
+						width="32"
+						height="12"
+						key="textField-321"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14ChargeAdultB}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="242"
+						y="651"
+						width="78"
+						height="12"
+						key="staticText-275"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円分 ・ こども(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="320"
+						y="651"
+						width="32"
+						height="12"
+						key="textField-322"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14ChargeChildB}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="352"
+						y="651"
+						width="237"
+						height="12"
+						key="staticText-276"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円分相当]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="663"
+						width="35"
+						height="12"
+						key="textField-323"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="44"
+						y="663"
+						width="166"
+						height="12"
+						key="staticText-277"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[レンタル券に変更可 １泊につき おとな(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="210"
+						y="663"
+						width="32"
+						height="12"
+						key="textField-324"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14ChargeAdultC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="242"
+						y="663"
+						width="78"
+						height="12"
+						key="staticText-278"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円分 ・ こども(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="320"
+						y="663"
+						width="32"
+						height="12"
+						key="textField-325"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14ChargeChildC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="352"
+						y="663"
+						width="237"
+						height="12"
+						key="staticText-279"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false" isPdfEmbedded ="false"/>
+					</textElement>
+				<text><![CDATA[)円分相当]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="9"
+						y="675"
+						width="35"
+						height="12"
+						key="textField-326"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="44"
+						y="675"
+						width="40"
+						height="12"
+						key="staticText-280"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[ その他(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="84"
+						y="675"
+						width="459"
+						height="12"
+						key="textField-327"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14OtherContent}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="543"
+						y="675"
+						width="46"
+						height="12"
+						key="staticText-281"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="9"
+						y="687"
+						width="85"
+						height="12"
+						key="staticText-282"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[※利用可能施設等(]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="94"
+						y="687"
+						width="449"
+						height="12"
+						key="textField-328"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{byu14UsePlace}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="543"
+						y="687"
+						width="46"
+						height="12"
+						key="staticText-283"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="dy"
+						x="9"
+						y="699"
+						width="580"
+						height="12"
+						key="staticText-284"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[  *別紙添付でも結構です]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="9"
+						y="715"
+						width="580"
+						height="14"
+						key="staticText-285"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ ゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[その他・通信欄]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="729"
+						width="580"
+						height="65"
+						key="textField-329"/>
+					<box topBorder="2Point" topBorderColor="#000000" leftBorder="2Point" leftBorderColor="#000000" rightBorder="2Point" rightBorderColor="#000000" bottomBorder="2Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="ＭＳ ゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="8" isBold="false" isPdfEmbedded ="false" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{specialRecoItem}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="358"
+						y="32"
+						width="79"
+						height="16"
+						key="staticText-286"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ ゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isBold="true" isPdfEmbedded ="false" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[企画通番]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="437"
+						y="32"
+						width="152"
+						height="16"
+						key="textField-330"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="ＭＳ ゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="9" isPdfEmbedded ="false" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{planNoEJp}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="dy"
+						x="358"
+						y="48"
+						width="79"
+						height="16"
+						key="textField-331"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["施設コード"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="No1"
+						x="437"
+						y="48"
+						width="152"
+						height="16"
+						key="textField-332"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" isPdfEmbedded ="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{facilityCd}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap 
+          PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+          "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="no1Common">
+    <typeAlias alias="AnsSearchData" type="jp.co.jreast.common.data.AnsSearchData" />
+    <typeAlias alias="PlanAnsData" type="jp.co.jreast.common.data.PlanAnsData" />
+    <typeAlias alias="No1AckInfoData"  type="jp.co.jreast.common.data.no1data.No1AckInfoData" />
+    <typeAlias alias="No1ChargeCalendarData"  type="jp.co.jreast.common.data.no1data.No1ChargeCalendarData" />
+    <typeAlias alias="No1ChargeTblData"  type="jp.co.jreast.common.data.no1data.No1ChargeTblData" />
+    <typeAlias alias="MemoData" type="jp.co.jreast.common.data.MemoData"/>
+    <typeAlias alias="No1PlanNoData" type="jp.co.jreast.common.data.no1data.No1PlanNoData"/>
+    <typeAlias alias="No1ChargeWeekData" type="jp.co.jreast.common.data.no1data.No1ChargeWeekData"/>
+    
+    <!-- 課題NO18：カレンダー設定（平日・休日・休前日）追加対応　2009/12/02 add by s31109 -->
+    <typeAlias alias="No1ChargeDayData" type="jp.co.jreast.common.data.no1data.No1ChargeDayData"/>
+    
+    <typeAlias alias="No1ChargeInfoData" type="jp.co.jreast.common.data.no1data.No1ChargeInfoData"/>
+    <typeAlias alias="No1InitData"  type="jp.co.jreast.common.data.no1data.No1InitData" />
+    <typeAlias alias="SendCmtData" type="jp.co.jreast.ur00400.data.SendCmtData" />
+    <typeAlias alias="No1PlanAnsBean"  type="jp.co.jreast.common.data.no1data.No1PlanAnsBean" />
+    <typeAlias alias="No1TermDateData"  type="jp.co.jreast.common.data.no1data.No1TermDateData" />
+    <typeAlias alias="No1PatternData"  type="jp.co.jreast.common.data.no1data.No1PatternData" />
+
+    <resultMap id="No1AckInfoData_Init" class="No1AckInfoData">
+         <result property="userDiv" column="USER_DIV" javaType="integer" jdbcType="smallint" />
+         <result property="sequence" column="SEQUENCE" javaType="integer" jdbcType="smallint" />
+         <result property="tantousya" column="TANTOUSYA" javaType="string" jdbcType="varchar" />
+         <result property="responsibler" column="RESPONSIBLER" javaType="string" jdbcType="varchar" />
+         <result property="ackDate" column="ACK_DATE" javaType="date" jdbcType="datetime" />
+    </resultMap>
+
+    <resultMap id="No1ChargeTblData_Init" class="No1ChargeTblData">
+         <result property="chargeSequence" column="CHARGE_SEQUENCE" javaType="string" jdbcType="smallint" />
+         <result property="pattern" column="PATTERN" javaType="string" jdbcType="char" />
+         <result property="manKind" column="MAN_KIND" javaType="integer" jdbcType="smallint" />
+         <result property="capaPattern" column="CAPA_PATTERN" javaType="integer" jdbcType="smallint" />
+         <result property="amount" column="AMOUNT" javaType="integer" jdbcType="int" />
+    </resultMap>
+
+    <resultMap id="No1ChargeTblData_Init_Hanbai" class="No1ChargeTblData">
+         <result property="chargeSequence" column="CHARGE_SEQUENCE" javaType="string" jdbcType="smallint" />
+         <result property="pattern" column="PATTERN" javaType="string" jdbcType="char" />
+         <result property="manKind" column="MAN_KIND" javaType="integer" jdbcType="smallint" />
+         <result property="capaPattern" column="CAPA_PATTERN" javaType="integer" jdbcType="smallint" />
+         <result property="amount" column="AMOUNT" javaType="integer" jdbcType="int" />
+         <result property="amountHanbai" column="AMOUNT_HANBAI" javaType="integer" jdbcType="int" />
+    </resultMap>
+
+    <resultMap id="PlanAnsData_Init" class="PlanAnsData">
+         <result property="planAnsNo" column="PLAN_ANS_NO" javaType="long" jdbcType="bigint" />
+         <result property="careerNo" column="CAREER_NO" javaType="integer" jdbcType="smallint" />
+         <result property="kindFlg" column="KIND_FLG" javaType="string" jdbcType="char" />
+         <result property="branchCd" column="BRANCH_CD" javaType="string" jdbcType="char" />
+         <result property="year" column="YEAR" javaType="string" jdbcType="char" />
+         <result property="seasonDiv" column="SEASON_DIV" javaType="string" jdbcType="char" />
+         <result property="no1CareerNo" column="NO1_CAREER_NO" javaType="integer" jdbcType="smallint" />
+         <result property="no1Status" column="NO1_STATUS" javaType="integer" jdbcType="smallint" />
+         <result property="sendDiv" column="SEND_DIV" javaType="integer" jdbcType="smallint" />
+         <result property="ansSendAddr" column="ANS_SEND_ADDR" javaType="string" jdbcType="varchar" />
+         <result property="goodsNm" column="GOODS_NM" javaType="string" jdbcType="varchar" />
+         <result property="status" column="STATUS" javaType="integer" jdbcType="smallint" />
+         <result property="facilityCd" column="FACILITY_CD" javaType="string" jdbcType="char" />
+         <result property="facilityNm" column="FACILITY_NM" javaType="string" jdbcType="varchar" />
+         <result property="facilityNmKana" column="FACILITY_NM_KANA" javaType="string" jdbcType="varchar" />
+         <result property="planNoEJp" column="PLAN_NO_E_JP" javaType="string" jdbcType="char" />
+         <result property="planNo6Off" column="PLAN_NO_6_OFF" javaType="string" jdbcType="char" />
+         <result property="senderNm" column="SENDER_NM" javaType="string" jdbcType="varchar" />
+         <result property="senderTel" column="SENDER_TEL" javaType="string" jdbcType="varchar" />
+         <result property="senderFax" column="SENDER_FAX" javaType="string" jdbcType="varchar" />
+         <result property="stockDiv" column="STOCK_DIV" javaType="integer" jdbcType="smallint" />
+         <result property="fmCostRelateDiv" column="FM_COST_RELATE_DIV" javaType="integer" jdbcType="smallint" />
+    </resultMap>
+
+    <resultMap id="No1ChargeInfoData_Init" class="No1ChargeInfoData">
+         <result property="planAnsNo" column="PLAN_ANS_NO" javaType="long" jdbcType="bigint" />
+         <result property="careerNo" column="CAREER_NO" javaType="integer" jdbcType="smallint" />
+         <result property="chargeSequence" column="CHARGE_SEQUENCE" javaType="integer" jdbcType="smallint" />
+         <result property="planNo" column="PLAN_NO" javaType="string" jdbcType="char" />
+         <result property="branchNo" column="BRANCH_NO" javaType="string" jdbcType="char" />
+         <result property="stockNo" column="STOCK_NO" javaType="string" jdbcType="char" />
+         <result property="contentDiv" column="CONTENT_DIV" javaType="string" jdbcType="char" />
+         <result property="courseNmKana" column="COURSE_NM_KANA" javaType="string" jdbcType="varchar" />
+         <result property="courseNmKanji" column="COURSE_NM_KANJI" javaType="string" jdbcType="varchar" />
+         <result property="contentExplain1Kana" column="CONTENT_EXPLAIN1_KANA" javaType="string" jdbcType="varchar" />
+         <result property="contentExplain1Kanji" column="CONTENT_EXPLAIN1_KANJI" javaType="string" jdbcType="varchar" />
+         <result property="contentExplain2Kana" column="CONTENT_EXPLAIN2_KANA" javaType="string" jdbcType="varchar" />
+         <result property="contentExplain2Kanji" column="CONTENT_EXPLAIN2_KANJI" javaType="string" jdbcType="varchar" />
+    </resultMap>
+    
+    <resultMap id="No1TermDateData" class="No1TermDateData">
+         <result property="termFromYmd" column="TERM_FROM_YMD" javaType="string" jdbcType="char" />
+         <result property="termEndYmd" column="TERM_END_YMD" javaType="string" jdbcType="char" />         
+    </resultMap>
+    
+    <resultMap id="No1PatternData" class="No1PatternData">
+         <result property="pattern" column="PATTERN" javaType="string" jdbcType="char" />              
+    </resultMap>
+
+    <sql id="No1AckInfoData">
+        SELECT
+            TANTOUSYA,
+            RESPONSIBLER,
+            ACK_DATE,
+            USER_DIV,
+            SEQUENCE
+        FROM
+            A_NO1_ACK_INFO
+        WHERE
+            PLAN_ANS_NO=#ansSearchData.planAnsNo#
+            <isNotNull property="ansSearchData.careerNo">
+            <![CDATA[
+            AND CAREER_NO <= #ansSearchData.careerNo#
+                ]]>
+            </isNotNull>
+    </sql>
+
+    <sql id="init.no1careerno">
+        (SELECT
+            NO1_CAREER_NO
+         FROM
+            A_PLAN_ANS
+         WHERE
+            PLAN_ANS_NO=#ansSearchData.planAnsNo#
+         <isEmpty prepend="AND" property="ansSearchData.careerNo">
+             NEW_FLG=1
+         </isEmpty>
+         <isNotEmpty prepend="AND" property="ansSearchData.careerNo">
+            CAREER_NO = #ansSearchData.careerNo#
+         </isNotEmpty>
+         )
+    </sql>
+
+    <sql id="No1AckInfo.insert">
+        INSERT INTO
+            A_NO1_ACK_INFO
+            (
+                PLAN_ANS_NO ,
+                CAREER_NO ,
+                USER_DIV ,
+                SEQUENCE ,
+                TANTOUSYA ,
+                RESPONSIBLER ,
+                ACK_DATE
+            )
+    </sql>
+
+    <sql id="No1AckInfo.selectfrom">
+        FROM
+                A_NO1_ACK_INFO
+            WHERE
+                PLAN_ANS_NO = #planAnsNo#
+            AND
+                CAREER_NO = #careerNo:smallint# - 1
+            AND
+                USER_DIV = #userDiv#
+    </sql>
+
+<!-- 課題NO25：在庫タイプ入力部追加対応(STOCK_TYPE,OTHER_PLAN_NAM追加)　2010/1/20 add by s32267 -->
+    <sql id="no1JrStockData">
+        SELECT
+            STOCK_DIV,
+            BUILDING,
+            ROOM_TYPE,
+            VIEW_CD,
+            VIEW_NM,
+            FLOOR_ASSIGN,
+            BUILD_KIND,
+            CAPACITY_FROM,
+            CAPACITY_TO,
+            ROOM_QUAN,
+            STOCK_TYPE,
+        	OTHER_PLAN_NAM
+        FROM
+            A_NO1_JR_STOCK
+        WHERE
+            PLAN_ANS_NO=#ansSearchData.planAnsNo#
+        AND
+            CAREER_NO = <include refid="init.no1careerno"/>
+    </sql>
+
+    <sql id="DBToDBCondition">
+        WHERE
+            PLAN_ANS_NO = #planAnsNo#
+        AND
+            CAREER_NO = (
+                        SELECT
+                            CASE
+                                WHEN MAX(CAREER_NO) IS NULL
+                                THEN 0
+                                WHEN MAX(CAREER_NO) IS NOT NULL
+                                THEN MAX(CAREER_NO)
+                            END AS CAREER_NO
+                        FROM
+    </sql>
+
+    <sql id="DBToDBConditionChargeCalendar">
+                            A_NO1_CHARGE_CALENDAR
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+    
+    
+
+    <sql id="DBToDBConditionChargeWeek">
+                            A_NO1_CHARGE_WEEK
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+    
+    <!-- 課題NO18：カレンダー設定（平日・休日・休前日）追加対応　2009/12/02 add by s31109 -->
+    <sql id="DBToDBConditionChargeDay">
+                            A_NO1_CHARGE_DAY
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="DBToDBConditionLogding">
+                            A_NO1_LODGING
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="DBToDBConditionJrStock">
+                            A_NO1_JR_STOCK
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="DBToDBConditionChargeTbl">
+                            A_NO1_CHARGE_TBL
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="DBToDBConditionTraffic">
+                            A_NO1_TRAFFIC
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="DBToDBConditionGolf">
+                            A_NO1_GOLF
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+    <sql id="DBToDBConditionLift">
+                            A_NO1_LIFT
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="DBToDBConditionTravel">
+                            A_NO1_TRAVEL
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+    <sql id="DBToDBConditionChangeDtl">
+                            A_NO1_CHARGE_DTL
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+    <sql id="DBToDBConditionChargeInfo">
+                            A_NO1_CHARGE_INFO
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+    <sql id="DBToDBConditionChargeInfoPickNo">
+                            A_NO1_CHARGE_INFO
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo# AND
+                            CAREER_NO != #careerNo#
+                        )
+    </sql>
+    <sql id="DBToDBConditionNo5Traffic">
+                            A_NO5_TRAFFIC
+                        WHERE
+                            PLAN_ANS_NO = #planAnsNo#
+                        )
+    </sql>
+
+    <sql id="No1PlanAnsData">
+        PLAN_ANS_NO ,
+        CAREER_NO ,
+        FACILITY_CD ,
+        BRANCH_CD ,
+        [YEAR] ,
+        SEASON_DIV ,
+        SEND_DIV ,
+        STATUS ,
+        NO1_STATUS ,
+        NO2_STATUS ,
+        NO3_STATUS ,
+        NO4_STATUS ,
+        NO5_STATUS ,
+        UPDATE_YMD ,
+        [TIMESTAMP] ,
+        DEL_FLG ,
+        NEW_FLG ,
+        FACILITY_NM ,
+        FACILITY_NM_KANA ,
+        GOODS_NM ,
+        STOCK_DIV ,
+        PLAN_NO_E_JP ,
+        PLAN_NO_6_OFF ,
+        ANS_SEND_ADDR ,
+        SEND_YMD ,
+        SENDER_NM ,
+        SENDER_TEL ,
+        SENDER_FAX,
+        NO1_CAREER_NO ,
+        NO2_CAREER_NO ,
+        NO3_CAREER_NO ,
+        NO4_CAREER_NO ,
+        NO5_CAREER_NO ,
+        FM_COST_RELATE_DIV ,
+        FM_STOCK_RELATE_DIV ,
+        KIND_FLG ,
+        SEND_STATUS ,
+        USER_ID ,
+        USER_NM
+    </sql>
+
+<!-- 課題NO25：在庫タイプ入力部追加対応(STOCK_TYPE,OTHER_PLAN_NAM追加)　2010/1/20 add by s32267 -->
+    <sql id="No1JrStockField">
+        STOCK_DIV,
+        ROOM_TYPE,
+        BUILDING,
+        VIEW_CD,
+        VIEW_NM,
+        CAPACITY_FROM,
+        CAPACITY_TO,
+        ROOM_QUAN,
+        BUILD_KIND,
+        FLOOR_ASSIGN,
+        STOCK_TYPE,
+        OTHER_PLAN_NAM
+    </sql>
+
+    <sql id="No1ChargeWeekField">
+        WEEK_DAY,
+        PATTERN
+    </sql>
+    
+    <!-- 課題NO18：カレンダー設定（平日・休日・休前日）追加対応　2009/12/02 add by s31109 -->
+    <sql id="No1ChargeDayField">
+        WEEKDAY_HOLIDAY,
+        PATTERN
+    </sql>
+
+    <sql id="No1ChargeTblField">
+        CHARGE_SEQUENCE,
+        PATTERN,
+        MAN_KIND,
+        CAPA_PATTERN,
+        AMOUNT
+    </sql>
+<!-- 2010/4/16 販売額追加（承認時） 加藤-->    
+    <sql id="No1ChargeTblFieldAdmit">
+        CHARGE_SEQUENCE,
+        PATTERN,
+        MAN_KIND,
+        CAPA_PATTERN,
+        AMOUNT,
+        AMOUNT_HANBAI        
+    </sql>
+<!-- 2010/4/16 販売額追加（登録時） 加藤-->
+    <sql id="No1ChargeTblFieldHanbai">
+        CHARGE_SEQUENCE,
+        PATTERN,
+        MAN_KIND,
+        CAPA_PATTERN,
+	<isNotNull property="amount">
+		AMOUNT
+	</isNotNull>               
+	<isNotNull property="amountHanbai">
+		<isNotNull property="amount">
+			,
+		</isNotNull>    
+		AMOUNT_HANBAI
+	</isNotNull>
+    </sql>
+
+    <sql id="No1ChargeCalendarField">
+        DATE,
+        PATTERN
+    </sql>
+    
+    <select id="No1TermDate_List" resultMap="No1TermDateData" parameterClass="No1InitData">
+        SELECT 
+            MIN([DATE]) AS TERM_FROM_YMD, 
+            MAX([DATE]) AS TERM_END_YMD 
+        FROM 
+            A_NO1_CHARGE_CALENDAR 
+        WHERE 
+            PLAN_ANS_NO  = #ansSearchData.planAnsNo# 
+            AND CAREER_NO= <include refid="init.no1careerno"/> 
+    </select>
+    
+    <select id="No1Pattern_List" resultMap="No1PatternData" parameterClass="No1InitData">
+        SELECT DISTINCT 
+            PATTERN 
+        FROM 
+            A_NO1_CHARGE_CALENDAR 
+        WHERE 
+            PLAN_ANS_NO  = #ansSearchData.planAnsNo# 
+            AND CAREER_NO= <include refid="init.no1careerno"/>
+        UNION 
+        SELECT DISTINCT 
+            PATTERN 
+        FROM 
+            A_NO1_CHARGE_WEEK 
+        WHERE 
+            PLAN_ANS_NO  = #ansSearchData.planAnsNo# 
+            AND CAREER_NO= <include refid="init.no1careerno"/>
+    </select>
+
+    <select id="planAnsData_List" resultMap="PlanAnsData_Init" parameterClass="No1InitData">
+        SELECT
+            GOODS_NM,
+            SEND_DIV,
+            NO1_CAREER_NO,
+            ANS_SEND_ADDR,
+            FACILITY_CD,
+            FACILITY_NM,
+            FACILITY_NM_KANA,
+            SENDER_NM,
+            PLAN_ANS_NO,
+            STATUS,
+            CAREER_NO,
+            KIND_FLG,
+            BRANCH_CD,
+            YEAR,
+            SEASON_DIV,
+            NO1_STATUS,
+            PLAN_NO_E_JP,
+            PLAN_NO_6_OFF,
+            SENDER_TEL,
+            SENDER_FAX,
+            STOCK_DIV,
+            FM_COST_RELATE_DIV
+        FROM
+            A_PLAN_ANS
+        WHERE
+            PLAN_ANS_NO = #ansSearchData.planAnsNo#
+        <isEmpty prepend="AND" property="ansSearchData.careerNo">
+            NEW_FLG = 1
+        </isEmpty>
+        <isNotEmpty prepend="AND" property="ansSearchData.careerNo">
+            CAREER_NO = #ansSearchData.careerNo#
+        </isNotEmpty>
+    </select>
+
+	<select id="no1ChargeInfoData_List" resultMap="No1ChargeInfoData_Init" parameterClass="No1InitData">
+        SELECT TOP 6
+            PLAN_ANS_NO,
+			CAREER_NO,
+			CHARGE_SEQUENCE,
+			PLAN_NO,
+			BRANCH_NO,
+			STOCK_NO,
+			COURSE_NM_KANA,
+			COURSE_NM_KANJI,
+			CONTENT_DIV,
+			CONTENT_EXPLAIN1_KANA,
+			CONTENT_EXPLAIN1_KANJI,
+			CONTENT_EXPLAIN2_KANA,
+			CONTENT_EXPLAIN2_KANJI
+        FROM
+            A_NO1_CHARGE_INFO
+        WHERE
+            PLAN_ANS_NO = #ansSearchData.planAnsNo#
+        AND
+            CAREER_NO = <include refid="init.no1careerno"/>
+    </select>
+    <select id="no1AckInfoData_JR_List" resultMap="No1AckInfoData_Init" parameterClass="No1InitData">
+        <include refid="No1AckInfoData"/>
+        AND USER_DIV=1
+    </select>
+
+    <select id="no1AckInfoData_Hotel_List" resultMap="No1AckInfoData_Init" parameterClass="No1InitData">
+        <include refid="No1AckInfoData"/>
+        AND USER_DIV=2
+    </select>
+
+    <select id="no1ChargeTblData_List" resultMap="No1ChargeTblData_Init" parameterClass="No1InitData">
+        SELECT
+            CHARGE_SEQUENCE,
+            PATTERN,
+            MAN_KIND,
+            CAPA_PATTERN,
+            AMOUNT
+        FROM
+            A_NO1_CHARGE_TBL
+        WHERE
+            PLAN_ANS_NO=#ansSearchData.planAnsNo#
+        AND
+            CAREER_NO = <include refid="init.no1careerno"/>
+    </select>
+
+    <insert id="No1PlanAnsInsertS" parameterClass="No1PlanAnsBean">
+        INSERT INTO A_PLAN_ANS (
+            <include refid="No1PlanAnsData"/>
+        )
+        SELECT
+            PLAN_ANS_NO ,
+            #careerNo:smallint# as CAREER_NO,
+            FACILITY_CD ,
+            BRANCH_CD ,
+            [YEAR] ,
+            SEASON_DIV ,
+            SEND_DIV ,
+            <isNotEqual property="delFlg" compareValue="1">
+            <isNull property="status">
+            STATUS ,
+            NO1_STATUS ,
+            </isNull>
+
+            <isNotNull property="status">
+            #status#,
+            #status#,
+            </isNotNull>
+            NO2_STATUS ,
+            NO3_STATUS ,
+            NO4_STATUS ,
+            NO5_STATUS ,
+            </isNotEqual>
+            <isEqual property="delFlg" compareValue="1">
+            '40' AS STATUS ,
+            '40' AS NO1_STATUS ,
+            '40' AS NO2_STATUS ,
+            '40' AS NO3_STATUS ,
+            '40' AS NO4_STATUS ,
+            '40' AS NO5_STATUS ,
+            </isEqual>
+			convert(char(8),getDate(),112),
+            getDate(),
+            #delFlg:char# as DEL_FLG ,
+            '1' AS NEW_FLG ,
+            FACILITY_NM ,
+            FACILITY_NM_KANA ,
+            GOODS_NM ,
+            <isEqual property="createGoodsFlg" compareValue="1">
+            #stockDiv#,
+            </isEqual>
+            <isNotEqual property="createGoodsFlg" compareValue="1">
+            STOCK_DIV ,
+            </isNotEqual>
+            <isNull property="planNoEJp">
+                PLAN_NO_E_JP ,
+            </isNull>
+            <isNotNull property="planNoEJp">
+                #planNoEJp# as PLAN_NO_E_JP ,
+            </isNotNull>
+            <isNull property="planNo6Off">
+                PLAN_NO_6_OFF ,
+            </isNull>
+            <isNotNull property="planNo6Off">
+                #planNo6Off# as PLAN_NO_6_OFF ,
+            </isNotNull>
+            ANS_SEND_ADDR ,
+            SEND_YMD ,
+
+            <isNotNull property="senderNm">
+                #senderNm# as SENDER_NM ,
+            </isNotNull>
+            <isNull property="senderNm">
+                SENDER_NM ,
+            </isNull>
+            
+            <isNotNull property="senderTel">
+                #senderTel# as SENDER_TEL ,
+            </isNotNull>
+            <isNull property="senderTel">
+                SENDER_TEL ,
+            </isNull>
+
+            <isNotNull property="senderFax">
+                #senderFax# as SENDER_FAX ,
+            </isNotNull>
+            <isNull property="senderFax">
+                SENDER_FAX ,
+            </isNull>
+                        
+            <isEqual property="jrAdimtFlg" compareValue="1">
+            #careerNo#,
+            </isEqual>
+            <isNotEqual property="jrAdimtFlg" compareValue="1">
+                <isEqual property="planNoPickUpFlg" compareValue="1">
+                #careerNo#,
+                </isEqual>
+                <isNotEqual property="planNoPickUpFlg" compareValue="1">
+                NO1_CAREER_NO ,
+                </isNotEqual>
+            </isNotEqual>
+            NO2_CAREER_NO ,
+            NO3_CAREER_NO ,
+            NO4_CAREER_NO ,
+            NO5_CAREER_NO ,
+            <isNotNull property="fmCostRelateDiv">
+                #fmCostRelateDiv# ,
+            </isNotNull>
+            <isNull property="fmCostRelateDiv">
+                FM_COST_RELATE_DIV ,
+            </isNull>
+            FM_STOCK_RELATE_DIV ,
+            KIND_FLG ,
+            SEND_STATUS ,
+            #userId:varchar#,
+            #userNm:varchar#
+        FROM
+            A_PLAN_ANS
+        WHERE
+            PLAN_ANS_NO = #planAnsNo#
+        AND
+            CAREER_NO = #careerNo# - 1
+    </insert>
+    
+    <insert id="No1PlanAnsInsert" parameterClass="PlanAnsData">
+        INSERT INTO A_PLAN_ANS (
+            <include refid="No1PlanAnsData"/>
+        )
+        SELECT
+            PLAN_ANS_NO ,
+            #careerNo:smallint# ,
+            FACILITY_CD ,
+            BRANCH_CD ,
+            [YEAR] ,
+            SEASON_DIV ,
+            SEND_DIV ,
+            <isNull property="status">
+                STATUS ,
+            </isNull>
+            <isNotNull property="status">
+                #status:smallint# ,
+            </isNotNull>
+            <isNull property="no1Status">
+                NO1_STATUS ,
+            </isNull>
+            <isNotNull property="no1Status">
+                #no1Status:smallint#,
+            </isNotNull>
+            NO2_STATUS ,
+            NO3_STATUS ,
+            NO4_STATUS ,
+            NO5_STATUS ,
+            convert(char(8),getDate(),112),
+            getDate() ,
+            '0' as DEL_FLG,
+            '1' as NEW_FLG,
+            <isNull property="facilityNm">
+                FACILITY_NM ,
+            </isNull>
+            <isNotNull property="facilityNm">
+                #facilityNm:varchar#,
+            </isNotNull>
+            <isNull property="facilityNmKana">
+                FACILITY_NM_KANA ,
+            </isNull>
+            <isNotNull property="facilityNmKana">
+                #facilityNmKana:varchar#,
+            </isNotNull>
+            #goodsNm# ,
+            <isNotNull property="stockDiv">
+            #stockDiv#,
+            </isNotNull>
+            <isNull property="stockDiv">
+            STOCK_DIV ,
+            </isNull>
+            PLAN_NO_E_JP ,
+            PLAN_NO_6_OFF ,
+            <isNull property="ansSendAddr">
+                ANS_SEND_ADDR ,
+            </isNull>
+            <isNotNull property="ansSendAddr">
+                #ansSendAddr# ,
+            </isNotNull>
+            SEND_YMD ,
+            <isNull property="senderNm">
+                SENDER_NM ,
+            </isNull>
+            <isNotNull property="senderNm">
+                #senderNm# ,
+            </isNotNull>
+            <isNull property="senderTel">
+                SENDER_TEL ,
+            </isNull>
+            <isNotNull property="senderTel">
+                #senderTel# ,
+            </isNotNull>
+             <isNull property="senderFax">
+                SENDER_FAX ,
+            </isNull>
+            <isNotNull property="senderFax">
+                #senderFax# ,
+            </isNotNull>
+            <isNull property="no1CareerNo">
+                NO1_CAREER_NO ,
+            </isNull>
+            <isNotNull property="no1CareerNo">
+                #no1CareerNo:smallint# ,
+            </isNotNull>
+            <isNull property="no2CareerNo">
+                NO2_CAREER_NO ,
+            </isNull>
+            <isNotNull property="no2CareerNo">
+                 #no2CareerNo#,
+            </isNotNull>
+            <isNull property="no3CareerNo">
+                NO3_CAREER_NO ,
+            </isNull>
+            <isNotNull property="no3CareerNo">
+                #no3CareerNo#,
+            </isNotNull>
+            <isNull property="no4CareerNo">
+                NO4_CAREER_NO ,
+            </isNull>
+            <isNotNull property="no4CareerNo">
+                #no4CareerNo#,
+            </isNotNull>
+            <isNull property="no5CareerNo">
+                NO5_CAREER_NO ,
+            </isNull>
+            <isNotNull property="no5CareerNo">
+                #no5CareerNo#,
+            </isNotNull>
+            FM_COST_RELATE_DIV ,
+            FM_STOCK_RELATE_DIV ,
+            KIND_FLG ,
+            SEND_STATUS ,
+            #userId:varchar#,
+            #userNm:varchar#
+        FROM
+            A_PLAN_ANS
+        WHERE
+            PLAN_ANS_NO = #planAnsNo#
+        AND
+            CAREER_NO = #careerNo:smallint# - 1
+    </insert>
+    
+    <insert id="No1AckInfoDataCopy" parameterClass="No1AckInfoData">
+        <include refid="No1AckInfo.insert"/>
+            SELECT
+                PLAN_ANS_NO ,
+                #careerNo# ,
+                USER_DIV ,
+                SEQUENCE ,
+                TANTOUSYA ,
+                RESPONSIBLER ,
+                ACK_DATE
+        <include refid="No1AckInfo.selectfrom"/>
+    </insert>
+    
+    <insert id="planAnsInsertInit" parameterClass="PlanAnsData">
+        INSERT INTO A_PLAN_ANS (
+            <include refid="No1PlanAnsData"/>
+        )
+        SELECT
+            PLAN_ANS_NO ,
+            #careerNo:smallint# ,
+            FACILITY_CD ,
+            BRANCH_CD ,
+            [YEAR] ,
+            SEASON_DIV ,
+            SEND_DIV ,
+            10 AS STATUS ,
+            10 AS NO1_STATUS,
+            NO2_STATUS ,
+            NO3_STATUS ,
+            NO4_STATUS ,
+            NO5_STATUS ,
+            UPDATE_YMD ,
+            getDate() ,
+            DEL_FLG ,
+            '1' AS NEW_FLG ,
+            FACILITY_NM ,
+            FACILITY_NM_KANA ,
+            GOODS_NM ,
+            STOCK_DIV ,
+            PLAN_NO_E_JP ,
+            PLAN_NO_6_OFF ,
+            ANS_SEND_ADDR ,
+            SEND_YMD ,
+            SENDER_NM ,
+            SENDER_TEL ,
+            SENDER_FAX,
+            NO1_CAREER_NO ,
+            NO2_CAREER_NO ,
+            NO3_CAREER_NO ,
+            NO4_CAREER_NO ,
+            NO5_CAREER_NO ,
+            FM_COST_RELATE_DIV ,
+            FM_STOCK_RELATE_DIV ,
+            KIND_FLG ,
+            SEND_STATUS ,
+            #userId#,
+            #userNm#
+        FROM
+            A_PLAN_ANS
+        WHERE
+            PLAN_ANS_NO = #planAnsNo#
+        AND
+            CAREER_NO = #careerNo:smallint# - 1
+    </insert>
+
+    <insert id="No1ChargeInfoInsert" parameterClass="No1ChargeInfoData">
+        INSERT INTO A_NO1_CHARGE_INFO (
+            PLAN_ANS_NO,
+            CAREER_NO,
+            CHARGE_SEQUENCE,
+            PLAN_NO,
+            BRANCH_NO,
+            STOCK_NO,
+            COURSE_NM_KANA,
+            COURSE_NM_KANJI,
+            CONTENT_DIV,
+            CONTENT_EXPLAIN1_KANA,
+            CONTENT_EXPLAIN1_KANJI,
+            CONTENT_EXPLAIN2_KANA,
+            CONTENT_EXPLAIN2_KANJI
+        )
+        VALUES (
+            #planAnsNo#,
+            #careerNo#,
+            #chargeSequence#,
+            #planNo:char#,
+            #branchNo:char#,
+            #stockNo:char#,
+            #courseNmKana:varchar#,
+            #courseNmKanji:varchar#,
+            #contentDiv:char#,
+            #contentExplain1Kana:varchar#,
+            #contentExplain1Kanji:varchar#,
+            #contentExplain2Kana:varchar#,
+            #contentExplain2Kanji:varchar#
+        )
+    </insert>
+
+    <insert id="No1ChargeTblInsert" parameterClass="No1ChargeTblData">
+        INSERT INTO
+            A_NO1_CHARGE_TBL
+            (
+                PLAN_ANS_NO ,
+                CAREER_NO ,
+                <include refid="No1ChargeTblFieldHanbai"/>
+            )
+            VALUES
+            (
+                #planAnsNo# ,
+                #careerNo# ,
+                #chargeSequence#,
+                #pattern# ,
+                #manKind# ,
+                #capaPattern# ,
+
+            <isNotNull property="amount">
+				#amount#
+            </isNotNull>                
+            <isNotNull property="amountHanbai">
+            	<isNotNull property="amount">
+					,
+         	   </isNotNull>    
+				#amountHanbai#
+            </isNotNull>
+            )
+
+    </insert>
+
+    <insert id="No1ChargeCalendarDBInsert" parameterClass="AnsSearchData">
+        INSERT INTO A_NO1_CHARGE_CALENDAR
+        SELECT
+            PLAN_ANS_NO,
+            #careerNo:smallint#,
+            <include refid="No1ChargeCalendarField"/>
+        FROM
+            A_NO1_CHARGE_CALENDAR
+        <include refid="DBToDBCondition"/>
+        <include refid="DBToDBConditionChargeCalendar"/>
+    </insert>
+    
+    <insert id="No1ChargeWeekDBInsert" parameterClass="AnsSearchData">
+        INSERT INTO A_NO1_CHARGE_WEEK
+        SELECT
+            PLAN_ANS_NO,
+            #careerNo:smallint#,
+            <include refid="No1ChargeWeekField"/>
+        FROM
+            A_NO1_CHARGE_WEEK
+        <include refid="DBToDBCondition"/>
+        <include refid="DBToDBConditionChargeWeek"/>
+    </insert>
+    
+    <!-- 課題NO18：カレンダー設定（平日・休日・休前日）追加対応　2009/12/02 add by s31109 -->
+    <insert id="No1ChargeDayDBInsert" parameterClass="AnsSearchData">
+        INSERT INTO A_NO1_CHARGE_DAY
+        SELECT
+            PLAN_ANS_NO,
+            #careerNo:smallint#,
+            <include refid="No1ChargeDayField"/>
+        FROM
+            A_NO1_CHARGE_DAY
+        <include refid="DBToDBCondition"/>
+        <include refid="DBToDBConditionChargeDay"/>
+    </insert>
+
+    <insert id="No1ChargeWeekInsert" parameterClass="No1ChargeWeekData">
+        INSERT A_NO1_CHARGE_WEEK (
+            PLAN_ANS_NO,
+            CAREER_NO,
+            <include refid="No1ChargeWeekField"/>
+        )
+        VALUES (
+            #planAnsNo#,
+            #careerNo#,
+            #weekDay#,
+            #pattern:char#
+        )
+    </insert>
+    
+    <insert id="No1ChargeDayInsert" parameterClass="No1ChargeDayData">
+        INSERT A_NO1_CHARGE_DAY (
+            PLAN_ANS_NO,
+            CAREER_NO,
+            <include refid="No1ChargeDayField"/>
+        )
+        VALUES (
+            #planAnsNo#,
+            #careerNo#,
+            #weekDay_Holiday#,
+            #pattern:char#
+        )
+    </insert>
+
+    <insert id="No1ChargeCalendarInsert" parameterClass="No1ChargeCalendarData">
+        INSERT A_NO1_CHARGE_CALENDAR (
+            PLAN_ANS_NO,
+            CAREER_NO,
+            <include refid="No1ChargeCalendarField"/>
+        )
+        VALUES (
+            #planAnsNo#,
+            #careerNo#,
+            #date#,
+            #pattern#
+        )
+    </insert>
+
+    <insert id="No1AckInfoDataInsert" parameterClass="No1AckInfoData">
+        <include refid="No1AckInfo.insert"/>
+            SELECT
+                #planAnsNo# as PLAN_ANS_NO ,
+                #careerNo# as CAREER_NO ,
+                #userDiv# as USER_DIV ,
+                (COUNT(SEQUENCE)) + 1 as SEQUENCE,
+                #tantousya:varchar# as TANTOUSYA ,
+                #responsibler:varchar# as RESPONSIBLER ,
+                <isNotNull property="ackDate">
+                    #ackDate# as ACK_DATE
+                </isNotNull>
+                <isNull property="ackDate">
+                    getDate() as ACK_DATE
+                </isNull>
+        <include refid="No1AckInfo.selectfrom"/>
+    </insert>
+
+    <insert id="No1AckInfoDataInsertFaxSave" parameterClass="No1AckInfoData">
+            INSERT INTO
+            A_NO1_ACK_INFO
+            (
+                PLAN_ANS_NO ,
+                CAREER_NO ,
+                USER_DIV ,
+                SEQUENCE ,
+                TANTOUSYA ,
+                RESPONSIBLER ,
+                ACK_DATE
+            )
+            SELECT
+                #planAnsNo# as PLAN_ANS_NO ,
+                #careerNo# as CAREER_NO ,
+                #userDiv# as USER_DIV ,
+                (COUNT(SEQUENCE)) + 1 as SEQUENCE,
+                #tantousya:varchar# as TANTOUSYA ,
+                #responsibler:varchar# as RESPONSIBLER ,
+                <isNotNull property="ackDate">
+                    #ackDate# as ACK_DATE
+                </isNotNull>
+                <isNull property="ackDate">
+                    null
+                </isNull>
+	        FROM
+	                A_NO1_ACK_INFO
+	            WHERE
+	                PLAN_ANS_NO = #planAnsNo#
+	            AND
+	                CAREER_NO = #careerNo:smallint# - 1
+	            AND
+	                USER_DIV = #userDiv#
+    </insert>
+    <insert id="MemoTblInsert" parameterClass="MemoData">
+        INSERT INTO A_MEMO (
+            PLAN_ANS_NO ,
+            CAREER_NO ,
+            USER_DIV ,
+            SEQUENCE ,
+            MEMO ,
+            MEMO_RECORDER ,
+            MEMO_UPDATE_YMD ,
+            UPDATE_ANS_NO
+        )
+        VALUES(
+            #planAnsNo# ,
+            #careerNo:smallint# ,
+            #userDiv# ,
+            1 ,
+            #memo:varchar# ,
+            #memoRecorder:varchar# ,
+            convert(char(8),getDate(),112) ,
+            '1'
+        )
+    </insert>
+
+    <insert id="SendCmtInsert" parameterClass="SendCmtData">
+        INSERT INTO
+            B_FAX_STATUS
+            (
+                PLAN_ANS_NO,
+                CMT_TMPL,
+               
+                FAX_NO,
+                TANTOUSYA,
+                PLAN_ANS_FILE_PATH,
+                PLAN_FILE_PATH
+            )
+            VALUES
+            (
+                #planAnsNo#,
+                #cmtTmpl:varchar#,
+               
+                #ansSendAddr:varchar#,
+                #tantousya:varchar#,
+                #planAnsFilePath:varchar#,
+                #planFilePath:varchar#
+            )
+    </insert>
+
+    <insert id="No1ChargeInfoDBInsert" parameterClass="AnsSearchData">
+        INSERT INTO A_NO1_CHARGE_INFO
+        (
+            PLAN_ANS_NO,
+            CAREER_NO,
+            CHARGE_SEQUENCE,
+            PLAN_NO,
+            BRANCH_NO,
+            STOCK_NO,
+            COURSE_NM_KANA,
+            COURSE_NM_KANJI,
+            CONTENT_DIV,
+            CONTENT_EXPLAIN1_KANA,
+            CONTENT_EXPLAIN1_KANJI,
+            CONTENT_EXPLAIN2_KANA,
+            CONTENT_EXPLAIN2_KANJI
+        )
+            SELECT
+                PLAN_ANS_NO,
+                #careerNo:smallint#,
+    			CHARGE_SEQUENCE,
+    			PLAN_NO,
+    			BRANCH_NO,
+    			STOCK_NO,
+    			COURSE_NM_KANA,
+    			COURSE_NM_KANJI,
+    			CONTENT_DIV,
+    			CONTENT_EXPLAIN1_KANA,
+    			CONTENT_EXPLAIN1_KANJI,
+    			CONTENT_EXPLAIN2_KANA,
+    			CONTENT_EXPLAIN2_KANJI
+            FROM
+                A_NO1_CHARGE_INFO
+        <include refid="DBToDBCondition"/>
+        <include refid="DBToDBConditionChargeInfo"/>
+    </insert>
+
+    <insert id="No1ChargeTblDBInsert" parameterClass="AnsSearchData">
+        INSERT INTO A_NO1_CHARGE_TBL
+        SELECT
+            PLAN_ANS_NO,
+            #careerNo:smallint#,
+            <include refid="No1ChargeTblFieldAdmit"/>
+        FROM
+            A_NO1_CHARGE_TBL
+        <include refid="DBToDBCondition"/>
+        <include refid="DBToDBConditionChargeTbl"/>
+    </insert>
+
+    <insert id="No1ChargeInfoPickNoInsert" parameterClass="No1ChargeInfoData">
+        INSERT INTO A_NO1_CHARGE_INFO
+        SELECT
+            PLAN_ANS_NO,
+            #careerNo#,
+			#chargeSequence#,
+			#planNo:char#,
+			BRANCH_NO,
+			STOCK_NO,
+			COURSE_NM_KANA,
+			COURSE_NM_KANJI,
+			CONTENT_DIV,
+			CONTENT_EXPLAIN1_KANA,
+			CONTENT_EXPLAIN1_KANJI,
+			CONTENT_EXPLAIN2_KANA,
+			CONTENT_EXPLAIN2_KANJI
+        FROM
+            A_NO1_CHARGE_INFO
+        <include refid="DBToDBCondition"/>
+        <include refid="DBToDBConditionChargeInfoPickNo"/>
+        AND CHARGE_SEQUENCE = #chargeSequence#
+    </insert>
+    
+    <insert id="PlanNoInsert" parameterClass="No1PlanNoData">
+        INSERT INTO A_PLAN_NO (
+            KIND_FLG ,
+            FACILITY_CD ,
+            BRANCH_CD ,
+            YEAR_NO ,
+            SEASON_DIV ,
+            PLAN_NO ,
+            PLAN_ANS_NO
+        )
+        VALUES (
+            #kind:char# ,
+            #facilityCd:char# ,
+            #branchCd:char# ,
+            #yearNo:char# ,
+            #seasonDiv:char# ,
+            #planNo:char# ,
+            #planAnsNo:bigint#
+        )
+    </insert>
+    
+    <sql id="FaclityCd300">
+    	<isNotEqual property="facilityCd1" compareValue="000000">
+	            <isEqual property="facilityCd2" compareValue="000000">
+	            	AND ( B.FACILITY_CD = #facilityCd1#)
+	            </isEqual>
+            	 <isNotEqual property="facilityCd2" compareValue="000000">
+            	<![CDATA[
+                AND ( B.FACILITY_CD >= #facilityCd1#) 
+                AND ( B.FACILITY_CD <= #facilityCd2#)
+           		]]>
+            	</isNotEqual>
+            </isNotEqual>
+            <isNotEqual property="facilityCd2" compareValue="000000">
+            	<isEqual property="facilityCd1" compareValue="000000">
+            	<![CDATA[
+                AND ( B.FACILITY_CD = #facilityCd2#)
+            	]]>
+            	</isEqual>
+            
+            </isNotEqual>
+    </sql>
+    <sql id="FaclityCd400500">
+    		<isNotEqual property="facilityCd1"  compareValue="000000">
+	            <isEqual property="facilityCd2" prepend="AND" compareValue="000000">
+	            	( A.FACILITY_CD = #facilityCd1#)
+	            </isEqual>
+            	 <isNotEqual property="facilityCd2" prepend="AND" compareValue="000000">
+            	<![CDATA[
+                ( A.FACILITY_CD >= #facilityCd1#) 
+                AND ( A.FACILITY_CD <= #facilityCd2#)
+           		]]>
+            	</isNotEqual>
+            </isNotEqual>
+            <isNotEqual property="facilityCd2" compareValue="000000">
+            	<isEqual property="facilityCd1" prepend="AND" compareValue="000000">
+            	<![CDATA[
+                ( A.FACILITY_CD = #facilityCd2#)
+            	]]>
+            	</isEqual>
+            
+            </isNotEqual>
+    </sql>
+	
+	<!-- 2010/4/16 販売額追加（画面初期表示時） 加藤-->   
+	<select id="no1ChargeTblData_List_Hanbai" resultMap="No1ChargeTblData_Init_Hanbai" parameterClass="No1InitData">
+        SELECT
+            CHARGE_SEQUENCE,
+            PATTERN,
+            MAN_KIND,
+            CAPA_PATTERN,
+            AMOUNT,
+            AMOUNT_HANBAI
+        FROM
+            A_NO1_CHARGE_TBL
+        WHERE
+            PLAN_ANS_NO=#ansSearchData.planAnsNo#
+        AND
+            CAREER_NO = <include refid="init.no1careerno"/>
+    </select> 
+ </sqlMap>

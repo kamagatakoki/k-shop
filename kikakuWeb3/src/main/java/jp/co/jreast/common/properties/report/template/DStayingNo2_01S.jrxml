@@ -1,0 +1,2480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DStayingNo2_01S.jrxml" pageWidth="595" pageHeight="820" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.2100000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="389"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="text8R" hAlign="Right" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="8" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="stymealtilte" hAlign="Left" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="9" isBold="true" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="styVesselContitle" hAlign="Center" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="9" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="text8L" hAlign="Left" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="8" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="stymealCon" hAlign="Left" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="8" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="No1" fontName="ＭＳ ゴシック" fontSize="9" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H"/>
+	<style name="dy" isDefault="true" fontName="ＭＳ ゴシック" fontSize="9" isBold="true" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H"/>
+	<style name="static8L" hAlign="Left" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="8" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="text9R" hAlign="Right" vAlign="Middle" fontName="ＭＳ ゴシック" fontSize="9" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<field name="checkInBeforeKeep" class="java.lang.String">
+		<fieldDescription><![CDATA[checkInBeforeKeep]]></fieldDescription>
+	</field>
+	<field name="checkInBeforeKeepCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[checkInBeforeKeepCharge]]></fieldDescription>
+	</field>
+	<field name="checkInAfterKeep" class="java.lang.String">
+		<fieldDescription><![CDATA[checkInAfterKeep]]></fieldDescription>
+	</field>
+	<field name="checkInAfterKeepCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[checkInAfterKeepCharge]]></fieldDescription>
+	</field>
+	<field name="rcFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[rcFlg]]></fieldDescription>
+	</field>
+	<field name="childFreeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[childFreeFlg]]></fieldDescription>
+	</field>
+	<field name="childFreeAgeFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[childFreeAgeFrom]]></fieldDescription>
+	</field>
+	<field name="childFreeAgeTo" class="java.lang.String">
+		<fieldDescription><![CDATA[childFreeAgeTo]]></fieldDescription>
+	</field>
+	<field name="childPayAgeFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[childPayAgeFrom]]></fieldDescription>
+	</field>
+	<field name="childPayAgeTo" class="java.lang.String">
+		<fieldDescription><![CDATA[childPayAgeTo]]></fieldDescription>
+	</field>
+	<field name="childFees" class="java.lang.String">
+		<fieldDescription><![CDATA[childFees]]></fieldDescription>
+	</field>
+	<field name="childFeesVk" class="java.lang.String">
+		<fieldDescription><![CDATA[childFeesVk]]></fieldDescription>
+	</field>
+	<field name="childVkFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkFlg]]></fieldDescription>
+	</field>
+	<field name="childVkFreeAgeFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkFreeAgeFrom]]></fieldDescription>
+	</field>
+	<field name="childVkFreeAgeTo" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkFreeAgeTo]]></fieldDescription>
+	</field>
+	<field name="childVkPayAgeFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkPayAgeFrom]]></fieldDescription>
+	</field>
+	<field name="childVkPayAgeTo" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkPayAgeTo]]></fieldDescription>
+	</field>
+	<field name="childVkChargeDinner" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkChargeDinner]]></fieldDescription>
+	</field>
+	<field name="childVkChargeBreakfast" class="java.lang.String">
+		<fieldDescription><![CDATA[childVkChargeBreakfast]]></fieldDescription>
+	</field>
+	<field name="goodsNm" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsNm]]></fieldDescription>
+	</field>
+	<field name="planNoEJp" class="java.lang.String">
+		<fieldDescription><![CDATA[planNoEJp]]></fieldDescription>
+	</field>
+	<field name="facilityNm" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityNm]]></fieldDescription>
+	</field>
+	<field name="facilityCd" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityCd]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<field name="personNumLitM1" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM1]]></fieldDescription>
+	</field>
+	<field name="foodFlgD5" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD5]]></fieldDescription>
+	</field>
+	<field name="personNumLitM2" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM2]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD3]]></fieldDescription>
+	</field>
+	<field name="mealNumD4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD4]]></fieldDescription>
+	</field>
+	<field name="mealNumD6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD6]]></fieldDescription>
+	</field>
+	<field name="mealNumM3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM3]]></fieldDescription>
+	</field>
+	<field name="mealNumD2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD2]]></fieldDescription>
+	</field>
+	<field name="foodFlgD3" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD3]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM2]]></fieldDescription>
+	</field>
+	<field name="personNumLitM4" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM4]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD6]]></fieldDescription>
+	</field>
+	<field name="foodFlgD2" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD2]]></fieldDescription>
+	</field>
+	<field name="mealNumM1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM1]]></fieldDescription>
+	</field>
+	<field name="mealCondDinnerSelect" class="java.lang.String">
+		<fieldDescription><![CDATA[mealCondDinnerSelect]]></fieldDescription>
+	</field>
+	<field name="mealNumM4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM4]]></fieldDescription>
+	</field>
+	<field name="personNumLitD4" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD4]]></fieldDescription>
+	</field>
+	<field name="mealPlaceA1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceA1]]></fieldDescription>
+	</field>
+	<field name="foodFlgM2" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM2]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD5]]></fieldDescription>
+	</field>
+	<field name="mealNumD5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD5]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM5]]></fieldDescription>
+	</field>
+	<field name="mealNumD1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD1]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM3]]></fieldDescription>
+	</field>
+	<field name="personNumLitM3" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitM3]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD2]]></fieldDescription>
+	</field>
+	<field name="mealNumM7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM7]]></fieldDescription>
+	</field>
+	<field name="foodFlgD1" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD1]]></fieldDescription>
+	</field>
+	<field name="foodFlgM6" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM6]]></fieldDescription>
+	</field>
+	<field name="mealNumM5" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM5]]></fieldDescription>
+	</field>
+	<field name="foodFlgM8" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM8]]></fieldDescription>
+	</field>
+	<field name="personNumLitD1" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD1]]></fieldDescription>
+	</field>
+	<field name="dinnerVkLitFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerVkLitFlg]]></fieldDescription>
+	</field>
+	<field name="dinnerVkNum" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerVkNum]]></fieldDescription>
+	</field>
+	<field name="mealNumD8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD8]]></fieldDescription>
+	</field>
+	<field name="mealCondBreakFastPlace" class="java.lang.String">
+		<fieldDescription><![CDATA[mealCondBreakFastPlace]]></fieldDescription>
+	</field>
+	<field name="mealNumD7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD7]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM1]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM7]]></fieldDescription>
+	</field>
+	<field name="foodFlgD7" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD7]]></fieldDescription>
+	</field>
+	<field name="mealNumD3" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumD3]]></fieldDescription>
+	</field>
+	<field name="mealCondBreakFastSelect" class="java.lang.String">
+		<fieldDescription><![CDATA[mealCondBreakFastSelect]]></fieldDescription>
+	</field>
+	<field name="foodFlgD6" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD6]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM4]]></fieldDescription>
+	</field>
+	<field name="personNumLitD2" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD2]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD8]]></fieldDescription>
+	</field>
+	<field name="foodFlgD4" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD4]]></fieldDescription>
+	</field>
+	<field name="dinnerItem" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerItem]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD1" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD1]]></fieldDescription>
+	</field>
+	<field name="personNumLitD3" class="java.lang.String">
+		<fieldDescription><![CDATA[personNumLitD3]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM8]]></fieldDescription>
+	</field>
+	<field name="dinnerFeature" class="java.lang.String">
+		<fieldDescription><![CDATA[dinnerFeature]]></fieldDescription>
+	</field>
+	<field name="foodFlgM3" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM3]]></fieldDescription>
+	</field>
+	<field name="breakfastFeature" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastFeature]]></fieldDescription>
+	</field>
+	<field name="foodFlgM1" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM1]]></fieldDescription>
+	</field>
+	<field name="foodFlgM7" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM7]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD7" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD7]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM9" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM9]]></fieldDescription>
+	</field>
+	<field name="mealNumM8" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM8]]></fieldDescription>
+	</field>
+	<field name="mealCondDinnerPlace" class="java.lang.String">
+		<fieldDescription><![CDATA[mealCondDinnerPlace]]></fieldDescription>
+	</field>
+	<field name="mealNumM2" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM2]]></fieldDescription>
+	</field>
+	<field name="mealNumM6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealNumM6]]></fieldDescription>
+	</field>
+	<field name="breakfastVkLitFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastVkLitFlg]]></fieldDescription>
+	</field>
+	<field name="breakfastVkNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastVkNumber]]></fieldDescription>
+	</field>
+	<field name="mealCondDinnerContent" class="java.lang.String">
+		<fieldDescription><![CDATA[mealCondDinnerContent]]></fieldDescription>
+	</field>
+	<field name="foodFlgD8" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgD8]]></fieldDescription>
+	</field>
+	<field name="mealPlaceM6" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceM6]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD9" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD9]]></fieldDescription>
+	</field>
+	<field name="mealPlaceD4" class="java.lang.String">
+		<fieldDescription><![CDATA[mealPlaceD4]]></fieldDescription>
+	</field>
+	<field name="foodFlgM5" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM5]]></fieldDescription>
+	</field>
+	<field name="mealCondBreakFastContent" class="java.lang.String">
+		<fieldDescription><![CDATA[mealCondBreakFastContent]]></fieldDescription>
+	</field>
+	<field name="foodFlgM4" class="java.lang.String">
+		<fieldDescription><![CDATA[foodFlgM4]]></fieldDescription>
+	</field>
+	<field name="breakfastItem" class="java.lang.String">
+		<fieldDescription><![CDATA[breakfastItem]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="820" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-1" x="10" y="10" width="579" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["びゅう  " +$F{year} + "年度《JR東日本》びゅう商品企画回答書【NO2-1】（宿泊スキー用）"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-5" x="10" y="91" width="380" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[〔太枠に利用可能な□欄と○欄を■また●に塗りつぶし、詳細をご記入ください。〕]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-215" style="No1" x="10" y="41" width="73" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[商品名]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-247" style="dy" x="356" y="64" width="77" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["施設コード"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-248" style="No1" x="83" y="41" width="273" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{goodsNm}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-249" style="No1" x="433" y="64" width="156" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{facilityCd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="10" y="64" width="73" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[施設名]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-250" style="dy" x="83" y="64" width="273" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityNm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-217" x="10" y="106" width="579" height="14"/>
+				<box>
+					<topPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="9" isBold="true" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[料金に関する確認事項]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-218" style="dy" x="10" y="120" width="15" height="70"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[①]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-219" style="dy" x="25" y="120" width="564" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[「びゅう」商品で宿泊されるお客様については、荷物保管料・暖房料・リネン料等の　現地徴収は一切行いません]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-220" style="dy" x="25" y="134" width="564" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[ ※「チェックイン時間前およびチェックアウト時間後の荷物保管料」は原則として無料でお願いいたしますが、特段の事情があり]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-221" style="dy" x="25" y="162" width="117" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[ チェックイン前]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-222" style="dy" x="142" y="162" width="63" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[預かり場所]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-253" style="dy" x="205" y="162" width="201" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{checkInBeforeKeep}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-223" style="dy" x="406" y="162" width="63" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[預かり料金]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-254" style="dy" x="469" y="162" width="35" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{checkInBeforeKeepCharge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-224" style="dy" x="504" y="162" width="85" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[円（税込）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-225" style="dy" x="25" y="176" width="117" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[ チェックアウト後]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-226" style="dy" x="142" y="176" width="63" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[預かり場所]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-255" style="dy" x="205" y="176" width="201" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{checkInAfterKeep}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-227" style="dy" x="406" y="176" width="63" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[預かり料金]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-256" style="dy" x="469" y="176" width="35" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{checkInAfterKeepCharge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-228" style="dy" x="504" y="176" width="85" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[円（税込）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-229" style="dy" x="10" y="190" width="15" height="16"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[②]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-257" style="dy" x="25" y="190" width="564" height="16"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rcFlg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-230" style="dy" x="10" y="206" width="15" height="16"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[③]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-258" style="dy" x="25" y="206" width="564" height="16"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA["幼児施設使用料　注１）６歳までの未就学児童が幼児代金扱いとなります。  注２）％での表記はできません。"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-231" style="dy" x="10" y="222" width="95" height="42"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[・幼児
+（食事・寝具なし
+／現地払い]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-259" style="dy" x="105" y="222" width="25" height="42"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childFreeFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-260" style="dy" x="163" y="222" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childFreeAgeFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-232" style="dy" x="130" y="222" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[無料【]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-233" style="dy" x="205" y="222" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才 ～]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-261" style="dy" x="238" y="222" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childFreeAgeTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-234" style="dy" x="280" y="222" width="309" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才】]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-262" style="dy" x="163" y="236" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childPayAgeFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-235" style="dy" x="130" y="236" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[有料【]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-236" style="dy" x="205" y="236" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才 ～]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-263" style="dy" x="238" y="236" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childPayAgeTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-237" style="dy" x="280" y="236" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才】 ⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-264" style="dy" x="322" y="236" width="35" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childFees}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-238" style="dy" x="357" y="236" width="232" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[円（税込）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-265" style="dy" x="130" y="250" width="459" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childFeesVk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-239" style="dy" x="10" y="264" width="95" height="28"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[・幼児バイキング会場
+入場料金／現地払い]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-266" style="dy" x="105" y="264" width="25" height="28"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-267" style="dy" x="163" y="264" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkFreeAgeFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-240" style="dy" x="130" y="264" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[無料【]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-241" style="dy" x="205" y="264" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才 ～]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-268" style="dy" x="238" y="264" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkFreeAgeTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-242" style="dy" x="280" y="264" width="309" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才】]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-269" style="dy" x="163" y="278" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkPayAgeFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-243" style="dy" x="130" y="278" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[有料【]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-244" style="dy" x="205" y="278" width="33" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才 ～]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-270" style="dy" x="238" y="278" width="42" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkPayAgeTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-245" style="dy" x="280" y="278" width="70" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[才】 ⇒ 夕食 ＠]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-271" style="dy" x="350" y="278" width="35" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkChargeDinner}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-246" style="dy" x="385" y="278" width="61" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[円　朝食 ＠]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-272" style="dy" x="446" y="278" width="35" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{childVkChargeBreakfast}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-247" style="dy" x="481" y="278" width="108" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-336" style="dy" x="10" y="796" width="579" height="16"/>
+				<box>
+					<topPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[引き続き【回答書No２－２のご記入をお願いいたします。】]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-338" x="356" y="41" width="77" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="9" isBold="true" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[企画通番]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-341" x="433" y="41" width="156" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planNoEJp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-340" style="dy" x="25" y="148" width="564" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"/>
+				</textElement>
+				<text><![CDATA[ 有料となる場合は、預かり場所と料金を下記に明記してください。]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-233" style="text8L" x="71" y="597" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitM1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-99" style="text8L" mode="Opaque" x="151" y="421" width="395" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="553" y="681" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-100" style="text8L" x="151" y="469" width="294" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-231" style="text8L" x="71" y="609" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitM2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-116" style="text8L" x="10" y="397" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-125" style="text8R" x="415" y="409" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-199" style="text8R" x="560" y="433" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-214" style="text8R" x="422" y="621" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-115" style="text8R" x="415" y="385" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-117" style="text8L" x="151" y="397" width="250" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-92" style="styVesselContitle" x="151" y="537" width="294" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[食事内容]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-230" style="text8L" x="10" y="609" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-226" style="text8L" x="71" y="633" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitM4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-100" style="text8L" x="10" y="433" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="408" y="609" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-112" style="text8L" x="151" y="385" width="250" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-81" style="styVesselContitle" x="151" y="313" width="294" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[食事内容]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-216" style="text8R" x="422" y="597" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-96" style="text8L" x="325" y="325" width="120" height="48"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealCondDinnerSelect}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-213" style="text8R" x="422" y="633" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-91" style="styVesselContitle" x="10" y="537" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[☆朝食箇所]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-123" style="text8L" x="71" y="409" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitD4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-161" style="text8L" x="10" y="762" width="580" height="24"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceA1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-202" style="text8L" x="151" y="609" width="257" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-98" style="text8L" x="10" y="421" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-143" x="445" y="469" width="145" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-200" style="text8R" x="560" y="421" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-225" style="text8L" x="10" y="645" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="408" y="621" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="401" y="373" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-110" style="text8R" x="415" y="373" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-228" style="text8L" x="10" y="621" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-229" style="text8L" x="71" y="621" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitM3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-83" style="stymealtilte" x="10" y="492" width="580" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[当企画商品での提供料理内容（特徴）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-111" style="text8L" x="10" y="385" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-210" style="text8R" x="567" y="669" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-96" style="text8L" x="151" y="373" width="250" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-206" style="text8L" mode="Opaque" x="151" y="657" width="402" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="styVesselContitle" x="445" y="313" width="145" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[条件]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-212" style="text8R" x="567" y="645" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="546" y="445" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-208" style="text8L" mode="Opaque" x="151" y="681" width="402" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-106" style="text8L" x="71" y="373" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitD1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-126" style="text8L" x="10" y="481" width="580" height="11"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" isUnderline="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["※バイキング実施条件【"+$F{dinnerVkLitFlg}+"】ありの場合→入込人員"+$F{dinnerVkNum}+"名以上のみバイキング"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-197" style="text8R" x="560" y="457" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-95" style="text8L" x="10" y="549" width="141" height="48"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealCondBreakFastPlace}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="401" y="385" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-198" style="text8R" x="560" y="445" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-232" style="text8L" x="10" y="597" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-223" style="text8L" x="10" y="669" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM7}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-89" style="stymealtilte" x="10" y="750" width="580" height="12"/>
+				<box>
+					<topPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[☆昼食箇所・食事内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="553" y="645" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-103" style="text8L" mode="Opaque" x="151" y="445" width="395" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-120" style="text8R" x="415" y="397" width="30" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumD3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-96" style="text8L" x="325" y="549" width="120" height="48"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealCondBreakFastSelect}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-101" style="text8L" mode="Opaque" x="151" y="433" width="395" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-80" style="styVesselContitle" x="10" y="313" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[☆夕食箇所]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-227" style="text8L" x="10" y="633" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-113" style="text8L" x="71" y="385" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitD2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-79" style="stymealtilte" x="10" y="302" width="580" height="11"/>
+				<box>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[●食事箇所・食事内容（複数選択の場合利用条件等を明記してください）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-104" style="text8L" x="10" y="457" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-122" style="text8L" x="151" y="409" width="250" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-97" style="text8L" x="445" y="325" width="145" height="96"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" isItalic="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dinnerItem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="401" y="409" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-95" style="text8L" x="10" y="373" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-118" style="text8L" x="71" y="397" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personNumLitD3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="401" y="397" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="553" y="657" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-222" style="text8L" x="10" y="681" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-127" style="text8L" x="10" y="504" width="580" height="25"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dinnerFeature}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-203" style="text8L" x="151" y="621" width="257" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="553" y="669" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-93" style="styVesselContitle" x="445" y="537" width="145" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[条件]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-194" style="text8L" x="10" y="728" width="580" height="22"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{breakfastFeature}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-90" style="stymealtilte" x="10" y="529" width="580" height="8"/>
+				<box>
+					<topPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-201" style="text8L" x="151" y="597" width="257" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="546" y="457" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="546" y="433" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="408" y="597" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-207" style="text8L" mode="Opaque" x="151" y="669" width="402" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-102" style="text8L" x="10" y="445" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-221" style="text8L" x="10" y="693" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM9}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-209" style="text8R" x="567" y="681" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-95" style="text8L" x="10" y="325" width="141" height="48"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealCondDinnerPlace}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-215" style="text8R" x="422" y="609" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-211" style="text8R" x="567" y="657" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealNumM6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-193" style="text8L" x="10" y="705" width="580" height="11"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" isUnderline="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["※バイキング実施条件【"+$F{breakfastVkLitFlg}+"】ありの場合→入込人員"+$F{breakfastVkNumber}+"名以上のみバイキング"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-96" style="text8L" x="151" y="325" width="174" height="48"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealCondDinnerContent}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="408" y="633" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-94" style="stymealtilte" x="10" y="716" width="580" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[当企画商品での提供料理内容（特徴）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-101" style="stymealCon" x="151" y="693" width="294" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-143" x="445" y="693" width="145" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-105" style="text8L" mode="Opaque" x="151" y="457" width="395" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgD8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-224" style="text8L" x="10" y="657" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceM6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-109" style="text8L" x="10" y="469" width="141" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD9}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-121" style="text8L" x="10" y="409" width="61" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealPlaceD4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-82" style="text8L" x="546" y="421" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-205" style="text8L" mode="Opaque" x="151" y="645" width="402" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM5}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-96" style="text8L" x="151" y="549" width="174" height="48"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mealCondBreakFastContent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-204" style="text8L" x="151" y="633" width="257" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ＭＳ ゴシック" size="7" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foodFlgM4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-164" style="text8L" x="445" y="549" width="145" height="96"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="ＭＳ ゴシック" size="8" isBold="false" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{breakfastItem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

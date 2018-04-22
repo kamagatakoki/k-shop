@@ -1,0 +1,3109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jreNo5Report_2" pageWidth="581" pageHeight="817" columnWidth="581" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1423"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="SF12_B_C" hAlign="Center" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="12" isBold="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF11_B" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="11" isBold="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF11" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="11" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF10_B" vAlign="Middle" fontName="ＭＳ Ｐゴシック" isBold="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9_C" hAlign="Center" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="9" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="9" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF8" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="8" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF11_B_C" hAlign="Center" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="11" isBold="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF8_C" hAlign="Center" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="8" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF10" vAlign="Middle" fontName="ＭＳ Ｐゴシック" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9_B_C" hAlign="Center" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="9" isBold="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9_B_I" hAlign="Center" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="9" isBold="true" isItalic="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9_B" vAlign="Middle" fontName="ＭＳ Ｐゴシック" fontSize="9" isBold="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF8_T" vAlign="Top" fontName="ＭＳ Ｐゴシック" fontSize="8" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF10_T" vAlign="Top" fontName="ＭＳ Ｐゴシック" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9_T" vAlign="Top" fontName="ＭＳ Ｐゴシック" fontSize="9" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="SF9_B_I_BO" vAlign="Bottom" fontName="ＭＳ Ｐゴシック" fontSize="9" isBold="true" isItalic="true" pdfFontName="C:\WINDOWS\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<parameter name="images" class="java.util.Map" isForPrompting="false"/>
+	<field name="bathBD1BK1BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Colour" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Colour]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1ColourCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1ColourCmt]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1ColourOther" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1ColourOther]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Disinfect" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Disinfect]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Effect" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Effect]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1NaturalSpa" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1NaturalSpa]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1NaturalSpaOther" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1NaturalSpaOther]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1OtherSpringCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1OtherSpringCmt]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Pour" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Pour]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1PourStatusCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1PourStatusCmt]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1RcircleKind" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1RcircleKind]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Row5" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Row5]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Row6" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Row6]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1SelfSpring" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1SelfSpring]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1SelfSpringOther" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1SelfSpringOther]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1ShareSpringNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1ShareSpringNm]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1SpaFlow" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1SpaFlow]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1SpaQuality" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1SpaQuality]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1SpaTemp" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1SpaTemp]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1Warming" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1Warming]]></fieldDescription>
+	</field>
+	<field name="bathBD1BK1WaterControl" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD1BK1WaterControl]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2FemaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2FemaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2FemaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2FemaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2FemaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2FemaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2FemaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2FemaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2MaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2MaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2MaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2MaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2MaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2MaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2Row3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2Row3]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2Row4" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2Row4]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK2ShiftFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK2ShiftFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3MaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3MaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3MaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3MaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3MaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3MaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK3Row2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK3Row2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4FemaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4FemaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4FemaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4FemaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4FemaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4FemaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4FemaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4FemaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK4Row2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK4Row2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5FemaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5FemaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5FemaleTime3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5FemaleTime3]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5MaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5MaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5MaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5MaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5MaleTime3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5MaleTime3]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5Row2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5Row2]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK5Row3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK5Row3]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK6BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK6BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK6FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK6FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK6MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK6MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD2BK6MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD2BK6MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2FemaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2FemaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2FemaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2FemaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2FemaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2FemaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2FemaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2FemaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2MaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2MaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2MaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2MaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2MaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2MaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2Row3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2Row3]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2Row4" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2Row4]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK2ShiftFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK2ShiftFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3MaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3MaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3MaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3MaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3MaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3MaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK3Row2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK3Row2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4FemaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4FemaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4FemaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4FemaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4FemaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4FemaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4FemaleTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4FemaleTimeDiv]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK4Row2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK4Row2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5FemaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5FemaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5FemaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5FemaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5FemaleTime3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5FemaleTime3]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5MaleSiteNm" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5MaleSiteNm]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5MaleTime1" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5MaleTime1]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5MaleTime2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5MaleTime2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5MaleTime3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5MaleTime3]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5Row2" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5Row2]]></fieldDescription>
+	</field>
+	<field name="bathBD3BK5Row3" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD3BK5Row3]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK2BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK2BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK2FemaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK2FemaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK2MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK2MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK3BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK3BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK3MaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK3MaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK4BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK4BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK4FemaleSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK4FemaleSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD4BK5BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD4BK5BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD5BK7BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD5BK7BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD5BK7RentalPay" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD5BK7RentalPay]]></fieldDescription>
+	</field>
+	<field name="bathBD5BK7RentalPayFree" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD5BK7RentalPayFree]]></fieldDescription>
+	</field>
+	<field name="bathBD5BK7RentalReserve" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD5BK7RentalReserve]]></fieldDescription>
+	</field>
+	<field name="bathBD5BK7RentalSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD5BK7RentalSiteNum]]></fieldDescription>
+	</field>
+	<field name="bathBD6BK7BathFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD6BK7BathFlg]]></fieldDescription>
+	</field>
+	<field name="bathBD6BK7RentalPay" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD6BK7RentalPay]]></fieldDescription>
+	</field>
+	<field name="bathBD6BK7RentalPayFree" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD6BK7RentalPayFree]]></fieldDescription>
+	</field>
+	<field name="bathBD6BK7RentalReserve" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD6BK7RentalReserve]]></fieldDescription>
+	</field>
+	<field name="bathBD6BK7RentalSiteNum" class="java.lang.String">
+		<fieldDescription><![CDATA[bathBD6BK7RentalSiteNum]]></fieldDescription>
+	</field>
+	<field name="faciChildFreeAge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciChildFreeAge]]></fieldDescription>
+	</field>
+	<field name="faciChildFreeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciChildFreeFlg]]></fieldDescription>
+	</field>
+	<field name="faciChildMemo" class="java.lang.String">
+		<fieldDescription><![CDATA[faciChildMemo]]></fieldDescription>
+	</field>
+	<field name="faciChildPayAge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciChildPayAge]]></fieldDescription>
+	</field>
+	<field name="faciConvEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciConvEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciFacilityNum" class="java.lang.String">
+		<fieldDescription><![CDATA[faciFacilityNum]]></fieldDescription>
+	</field>
+	<field name="faciFitEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciFitEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciFitnessCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciFitnessCharge]]></fieldDescription>
+	</field>
+	<field name="faciGameEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciGameEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciKaraCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciKaraCharge]]></fieldDescription>
+	</field>
+	<field name="faciKaraEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciKaraEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciNewsEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciNewsEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciNewspaperService" class="java.lang.String">
+		<fieldDescription><![CDATA[faciNewspaperService]]></fieldDescription>
+	</field>
+	<field name="faciParkAvailableNum" class="java.lang.String">
+		<fieldDescription><![CDATA[faciParkAvailableNum]]></fieldDescription>
+	</field>
+	<field name="faciParkFreeEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciParkFreeEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciParkPayAvailableNum" class="java.lang.String">
+		<fieldDescription><![CDATA[faciParkPayAvailableNum]]></fieldDescription>
+	</field>
+	<field name="faciParkPayEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciParkPayEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciPoolInEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciPoolInEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciPoolIndoorCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciPoolIndoorCharge]]></fieldDescription>
+	</field>
+	<field name="faciPoolIndoorPeriodTime" class="java.lang.String">
+		<fieldDescription><![CDATA[faciPoolIndoorPeriodTime]]></fieldDescription>
+	</field>
+	<field name="faciPoolOutEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciPoolOutEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciPoolOutsideCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciPoolOutsideCharge]]></fieldDescription>
+	</field>
+	<field name="faciPoolOutsidePeriodTime" class="java.lang.String">
+		<fieldDescription><![CDATA[faciPoolOutsidePeriodTime]]></fieldDescription>
+	</field>
+	<field name="faciTableTennisCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciTableTennisCharge]]></fieldDescription>
+	</field>
+	<field name="faciTableTennisEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciTableTennisEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciTennisCharge" class="java.lang.String">
+		<fieldDescription><![CDATA[faciTennisCharge]]></fieldDescription>
+	</field>
+	<field name="faciTennisEquipmentFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[faciTennisEquipmentFlg]]></fieldDescription>
+	</field>
+	<field name="faciWalktime" class="java.lang.String">
+		<fieldDescription><![CDATA[faciWalktime]]></fieldDescription>
+	</field>
+	<field name="femaleOnly" class="java.lang.String">
+		<fieldDescription><![CDATA[femaleOnly]]></fieldDescription>
+	</field>
+	<field name="generalBuildingOthersCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[generalBuildingOthersCmt]]></fieldDescription>
+	</field>
+	<field name="generalBuildingTimeRange" class="java.lang.String">
+		<fieldDescription><![CDATA[generalBuildingTimeRange]]></fieldDescription>
+	</field>
+	<field name="generalBuildingYearsFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalBuildingYearsFlg]]></fieldDescription>
+	</field>
+	<field name="generalCustomerDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[generalCustomerDiv]]></fieldDescription>
+	</field>
+	<field name="generalCustomerFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalCustomerFlg]]></fieldDescription>
+	</field>
+	<field name="generalElevatorFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalElevatorFlg]]></fieldDescription>
+	</field>
+	<field name="generalEngAllDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[generalEngAllDiv]]></fieldDescription>
+	</field>
+	<field name="generalEngFrontFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalEngFrontFlg]]></fieldDescription>
+	</field>
+	<field name="generalEngTimeDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[generalEngTimeDiv]]></fieldDescription>
+	</field>
+	<field name="generalEngTimeDivRange" class="java.lang.String">
+		<fieldDescription><![CDATA[generalEngTimeDivRange]]></fieldDescription>
+	</field>
+	<field name="generalMassagerFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalMassagerFlg]]></fieldDescription>
+	</field>
+	<field name="generalMassagerLocation" class="java.lang.String">
+		<fieldDescription><![CDATA[generalMassagerLocation]]></fieldDescription>
+	</field>
+	<field name="generalMassagerNum" class="java.lang.String">
+		<fieldDescription><![CDATA[generalMassagerNum]]></fieldDescription>
+	</field>
+	<field name="generalMassagerPayAmt" class="java.lang.String">
+		<fieldDescription><![CDATA[generalMassagerPayAmt]]></fieldDescription>
+	</field>
+	<field name="generalMemo" class="java.lang.String">
+		<fieldDescription><![CDATA[generalMemo]]></fieldDescription>
+	</field>
+	<field name="generalRoomGuideDogFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalRoomGuideDogFlg]]></fieldDescription>
+	</field>
+	<field name="generalRoomNum" class="java.lang.String">
+		<fieldDescription><![CDATA[generalRoomNum]]></fieldDescription>
+	</field>
+	<field name="generalRoomPetCond" class="java.lang.String">
+		<fieldDescription><![CDATA[generalRoomPetCond]]></fieldDescription>
+	</field>
+	<field name="generalRoomPetFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalRoomPetFlg]]></fieldDescription>
+	</field>
+	<field name="generalSignLangAllDiv" class="java.lang.String">
+		<fieldDescription><![CDATA[generalSignLangAllDiv]]></fieldDescription>
+	</field>
+	<field name="generalSignLangFrontFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalSignLangFrontFlg]]></fieldDescription>
+	</field>
+	<field name="generalSignLangRange" class="java.lang.String">
+		<fieldDescription><![CDATA[generalSignLangRange]]></fieldDescription>
+	</field>
+	<field name="generalSignLangTime" class="java.lang.String">
+		<fieldDescription><![CDATA[generalSignLangTime]]></fieldDescription>
+	</field>
+	<field name="generalSuggestionCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[generalSuggestionCmt]]></fieldDescription>
+	</field>
+	<field name="generalTotalRoomFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalTotalRoomFlg]]></fieldDescription>
+	</field>
+	<field name="generalWheelchairFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[generalWheelchairFlg]]></fieldDescription>
+	</field>
+	<field name="generalWheelchairNum" class="java.lang.String">
+		<fieldDescription><![CDATA[generalWheelchairNum]]></fieldDescription>
+	</field>
+	<field name="headFacilityCd" class="java.lang.String">
+		<fieldDescription><![CDATA[headFacilityCd]]></fieldDescription>
+	</field>
+	<field name="headFacilityNm" class="java.lang.String">
+		<fieldDescription><![CDATA[headFacilityNm]]></fieldDescription>
+	</field>
+	<field name="headGoodsNm" class="java.lang.String">
+		<fieldDescription><![CDATA[headGoodsNm]]></fieldDescription>
+	</field>
+	<field name="headPlanNo" class="java.lang.String">
+		<fieldDescription><![CDATA[headPlanNo]]></fieldDescription>
+	</field>
+	<field name="headSalePoint" class="java.lang.String">
+		<fieldDescription><![CDATA[headSalePoint]]></fieldDescription>
+	</field>
+	<field name="headTitlePage2" class="java.lang.String">
+		<fieldDescription><![CDATA[headTitlePage2]]></fieldDescription>
+	</field>
+	<field name="trafficAccessTime" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficAccessTime]]></fieldDescription>
+	</field>
+	<field name="trafficContactFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficContactFlg]]></fieldDescription>
+	</field>
+	<field name="trafficHighway" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficHighway]]></fieldDescription>
+	</field>
+	<field name="trafficMeetTime" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMeetTime]]></fieldDescription>
+	</field>
+	<field name="trafficMeetTimeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMeetTimeFlg]]></fieldDescription>
+	</field>
+	<field name="trafficMsBus" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsBus]]></fieldDescription>
+	</field>
+	<field name="trafficMsBusFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsBusFlg]]></fieldDescription>
+	</field>
+	<field name="trafficMsDiv1" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsDiv1]]></fieldDescription>
+	</field>
+	<field name="trafficMsDiv2" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsDiv2]]></fieldDescription>
+	</field>
+	<field name="trafficMsDiv3" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsDiv3]]></fieldDescription>
+	</field>
+	<field name="trafficMsDiv4" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsDiv4]]></fieldDescription>
+	</field>
+	<field name="trafficMsFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsFlg]]></fieldDescription>
+	</field>
+	<field name="trafficMsStation" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsStation]]></fieldDescription>
+	</field>
+	<field name="trafficMsStationFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsStationFlg]]></fieldDescription>
+	</field>
+	<field name="trafficNearestStation" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficNearestStation]]></fieldDescription>
+	</field>
+	<field name="trafficNoReserveFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficNoReserveFlg]]></fieldDescription>
+	</field>
+	<field name="trafficOthersCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficOthersCmt]]></fieldDescription>
+	</field>
+	<field name="trafficReserveCmt" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficReserveCmt]]></fieldDescription>
+	</field>
+	<field name="trafficReserveFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficReserveFlg]]></fieldDescription>
+	</field>
+	<field name="trafficRow1" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficRow1]]></fieldDescription>
+	</field>
+	<field name="trafficRow2" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficRow2]]></fieldDescription>
+	</field>
+	<field name="trafficSendTime" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficSendTime]]></fieldDescription>
+	</field>
+	<field name="trafficSendTimeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficSendTimeFlg]]></fieldDescription>
+	</field>
+	<field name="trafficShuttleBusFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficShuttleBusFlg]]></fieldDescription>
+	</field>
+	<field name="trafficShuttleBusStation" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficShuttleBusStation]]></fieldDescription>
+	</field>
+	<field name="trafficTaxiFee" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficTaxiFee]]></fieldDescription>
+	</field>
+	<field name="trafficTaxiFeeTime" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficTaxiFeeTime]]></fieldDescription>
+	</field>
+	<field name="trafficTaxiTime" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficTaxiTime]]></fieldDescription>
+	</field>
+	<field name="trafficToStationWalktime" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficToStationWalktime]]></fieldDescription>
+	</field>
+	<field name="trafficMsStationBlock" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsStationBlock]]></fieldDescription>
+	</field>
+	<field name="trafficMsBusBlock" class="java.lang.String">
+		<fieldDescription><![CDATA[trafficMsBusBlock]]></fieldDescription>
+	</field>
+	<field name="trafficBusAccessIc" class="java.lang.String"/>
+	<field name="useJr" class="java.lang.String"/>
+	<field name="useSiTeTu" class="java.lang.String"/>
+	<field name="condition1" class="java.lang.String"/>
+	<field name="condition2" class="java.lang.String"/>
+	<field name="exitInfo" class="java.lang.String"/>
+	<field name="headUpYmd" class="java.lang.String"/>
+	<field name="trafficShuttleBusService" class="java.lang.String"/>
+	<field name="trafficDirectionDistanceTarget" class="java.lang.String"/>
+	<field name="trafficGeneralRoadway" class="java.lang.String"/>
+	<field name="trafficAutoRoadway" class="java.lang.String"/>
+	<field name="faciBathCondition" class="java.lang.String"/>
+	<field name="faciBathCharge" class="java.lang.String"/>
+	<field name="faciNearStoreNm" class="java.lang.String"/>
+	<field name="faciStoreBeginEnd" class="java.lang.String"/>
+	<field name="faciParkNote" class="java.lang.String"/>
+	<field name="faciNetNote" class="java.lang.String"/>
+	<field name="faciTrouserPressNote" class="java.lang.String"/>
+	<field name="faciTrouserPressEquipmentFlg" class="java.lang.String"/>
+	<field name="faciNearConvEquipmentFlg" class="java.lang.String"/>
+	<field name="faciNetEquipmentFlg" class="java.lang.String"/>
+	<field name="faciSuicaEquipmentFlg" class="java.lang.String"/>
+	<field name="faciBathChargeEquipmentFlg" class="java.lang.String"/>
+	<field name="trafficRow3" class="java.lang.String"/>
+	<field name="faciSuicaRow1" class="java.lang.String"/>
+	<field name="faciSuicaRow2" class="java.lang.String"/>
+	<field name="faciSuicaRow3" class="java.lang.String"/>
+	<field name="trafficRow7" class="java.lang.String"/>
+	<field name="faciSuicaRow4" class="java.lang.String"/>
+	<field name="trafficRow4" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="817" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-1" style="SF12_B_C" x="7" y="7" width="574" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{headTitlePage2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" style="SF11" x="7" y="72" width="574" height="13"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[ＮＯ５-１に引き続き太枠に利用可能な□欄と○欄を■また●に塗りつぶし、詳細をご記入ください。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-2" style="SF11_B" mode="Opaque" x="7" y="88" width="574" height="14" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[■各種設備情報]]></text>
+			</staticText>
+			<image>
+				<reportElement key="image-1" x="12" y="105" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark10.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-2" x="12" y="129" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark11.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-3" x="12" y="153" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark12.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-4" x="12" y="177" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark13.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-5" x="12" y="201" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark14.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-6" x="12" y="225" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark15.gif")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-3" style="SF9_C" x="7" y="302" width="90" height="48"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[乳幼児料金                   （食事・寝具なし）
+（税込・現地払い）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-4" style="SF9_B_C" mode="Opaque" x="7" y="350" width="140" height="13" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[項　目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" style="SF9" x="7" y="363" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[客層別おすすめ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-6" style="SF9" x="7" y="375" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[自動マッサージ機がある]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-7" style="SF9" x="7" y="387" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[車椅子常備]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-8" style="SF9" x="7" y="399" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[エレベーター]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-9" style="SF9" x="7" y="423" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[部屋まで盲導犬]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" style="SF9" x="7" y="411" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[部屋までペット]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" style="SF9" x="7" y="435" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[手話の出来るフロント係]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-12" style="SF9" x="7" y="447" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[英語の出来るフロント係]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-13" style="SF9" x="7" y="459" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[築年数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-14" style="SF9" x="7" y="471" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[総客室数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-15" style="SF9_B_C" mode="Opaque" x="7" y="485" width="574" height="13" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[貴館への交通手段及び送迎情報]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" style="SF9_B_I" x="7" y="498" width="574" height="13"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[●最寄からの交通機関および送迎　　]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-6" style="SF9" x="170" y="526" width="407" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficRow2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-17" style="SF9_C" x="11" y="642" width="14" height="60"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[①]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-7" style="SF9" x="25" y="642" width="106" height="30"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficMsStationBlock}+"）駅より"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-8" style="SF9" x="25" y="672" width="106" height="30"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficMsBusBlock}+"）バス停より"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-9" style="SF9" x="145" y="642" width="96" height="15"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficMsDiv1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-10" style="SF9" x="145" y="672" width="96" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficMsDiv3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-12" style="SF9" x="145" y="657" width="96" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficMsDiv2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-13" style="SF9" x="255" y="666" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficShuttleBusFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-14" style="SF9" x="255" y="690" width="210" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficOthersCmt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-19" style="SF9_C" x="471" y="642" width="14" height="60"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[④]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-15" style="SF9" x="485" y="642" width="92" height="15"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficReserveFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-16" style="SF9" x="485" y="657" width="92" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficReserveCmt}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-17" style="SF9" x="485" y="672" width="92" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficContactFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-18" style="SF9" x="485" y="687" width="92" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficNoReserveFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-20" style="SF9" x="170" y="538" width="407" height="12"/>
+				<box>
+					<pen lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficRow3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-21" style="SF9_B_I" x="11" y="626" width="272" height="13"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficMsFlg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-20" style="SF9_B_I" x="283" y="626" width="294" height="13"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[※送迎は2名様から承る場合のみ表記します。　]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-22" style="SF9_T" x="7" y="723" width="574" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{generalMemo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-21" style="SF8" x="37" y="102" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[カラオケＢＯＸ（バー・クラブ除く）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-22" style="SF8" x="37" y="150" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[貴館専用テニスコート有り]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-23" style="SF8" x="37" y="126" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ゲームコーナー有り]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" style="SF8" x="37" y="174" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[卓球台有り]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-25" style="SF8" x="37" y="222" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[プール有り
+（屋内）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" style="SF8" x="37" y="198" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[プール有り
+（屋外）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-23" style="SF8" x="117" y="102" width="170" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciKaraCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-24" style="SF8" x="117" y="150" width="170" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciTennisCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-25" style="SF8" x="117" y="174" width="170" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciTableTennisCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-26" style="SF8" x="117" y="222" width="170" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciPoolIndoorCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-27" style="SF8" x="117" y="126" width="170" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciFacilityNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-28" style="SF8" x="117" y="198" width="170" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciPoolOutsideCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-29" style="SF9" x="117" y="302" width="156" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciChildFreeAge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-30" style="SF9" x="117" y="314" width="156" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciChildPayAge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-31" style="SF9" x="117" y="326" width="464" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciChildMemo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-27" style="SF9_B" x="117" y="338" width="464" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[【注意】税込価格を記入してください。]]></text>
+			</staticText>
+			<image>
+				<reportElement key="image-7" x="290" y="105" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark16.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-8" x="290" y="129" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark17.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-9" x="290" y="153" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark18.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-10" x="290" y="177" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark19.gif")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-28" style="SF8" x="317" y="102" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[フィットネス
+施設有り]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" style="SF8" x="317" y="150" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[駐車場
+（無料）有り]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" style="SF8" x="317" y="126" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[部屋に新聞サービス有り]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-31" style="SF8" x="317" y="174" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[駐車場
+（有料）有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-32" style="SF8" x="395" y="102" width="186" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciFitnessCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-33" style="SF8" x="395" y="126" width="186" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciNewspaperService}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-34" style="SF8" x="395" y="150" width="186" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciParkAvailableNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-35" style="SF8" x="395" y="174" width="186" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciParkPayAvailableNum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-32" style="SF8_C" x="317" y="198" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[館内にコンビニ有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-36" style="SF8" x="395" y="222" width="186" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciWalktime}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="frame-12" style="SF9_B_C" mode="Opaque" x="147" y="350" width="22" height="13" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement key="staticText-35" style="SF9_B_C" mode="Opaque" x="169" y="350" width="412" height="13" backcolor="#CCCCCC"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[詳細をご記入ください。]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-37" style="SF9" x="169" y="363" width="396" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalCustomerDiv}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-38" style="SF9" x="169" y="411" width="332" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalRoomPetCond}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-39" style="SF9" x="169" y="387" width="412" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalWheelchairNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-40" style="SF9" x="399" y="375" width="182" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalMassagerPayAmt}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-41" style="SF9" x="169" y="459" width="263" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalBuildingTimeRange}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-42" style="SF9" x="169" y="471" width="412" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalRoomNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-43" style="SF9" x="169" y="435" width="116" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalSignLangAllDiv}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-44" style="SF9" x="169" y="447" width="116" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalEngAllDiv}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-45" style="SF9" x="285" y="435" width="100" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalSignLangTime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-46" style="SF9" x="170" y="514" width="407" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficRow1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-47" style="SF11_B" x="456" y="752" width="125" height="30"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["弊社記入欄"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-48" style="SF11" x="7" y="767" width="449" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["（注）変更がございましたら至急弊社各仕入担当者宛にご連絡ください。"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-49" style="SF9_B_I_BO" x="11" y="514" width="45" height="44"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{useJr}+" JR"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-51" style="SF9" x="193" y="562" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficHighway}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-36" style="SF9_C" x="131" y="642" width="14" height="60"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[②]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-52" style="SF8" x="117" y="210" width="170" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciPoolOutsidePeriodTime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-53" style="SF8" x="117" y="234" width="170" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciPoolIndoorPeriodTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-37" style="SF9" x="565" y="363" width="16" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-54" style="SF9" x="169" y="375" width="52" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalMassagerNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-55" style="SF9" x="221" y="375" width="178" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalMassagerLocation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-56" style="SF9" x="432" y="459" width="124" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalBuildingOthersCmt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-38" style="SF9" x="556" y="459" width="25" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-57" style="SF9" x="375" y="562" width="202" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficBusAccessIc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-42" style="SF9" x="501" y="411" width="80" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-46" style="SF9_B" x="7" y="709" width="574" height="14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[備考]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-59" style="SF9" x="335" y="666" width="108" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficShuttleBusStation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-47" style="SF9" x="443" y="666" width="28" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[駅発）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-48" style="SF9" x="465" y="690" width="6" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-60" style="SF8_C" x="97" y="102" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciKaraEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-61" style="SF8_C" x="97" y="126" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciGameEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-62" style="SF8_C" x="97" y="150" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciTennisEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-63" style="SF8_C" x="97" y="174" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciTableTennisEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-64" style="SF8_C" x="97" y="198" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciPoolOutEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-65" style="SF8_C" x="97" y="222" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciPoolInEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-66" style="SF8_C" x="375" y="150" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciParkFreeEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-67" style="SF8_C" x="375" y="126" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciNewsEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-68" style="SF8_C" x="375" y="102" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciFitEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-69" style="SF8_C" x="375" y="174" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciParkPayEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-70" style="SF8_C" x="375" y="198" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciConvEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-71" style="SF8_C" x="97" y="302" width="20" height="48"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{faciChildFreeFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-72" style="SF8_C" x="147" y="363" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalCustomerFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-73" style="SF8_C" x="147" y="375" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalMassagerFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-74" style="SF8_C" x="147" y="387" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalWheelchairFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-75" style="SF8_C" x="147" y="399" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalElevatorFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-76" style="SF8_C" x="147" y="411" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalRoomPetFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-77" style="SF8_C" x="147" y="447" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalEngFrontFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-78" style="SF8_C" x="147" y="435" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalSignLangFrontFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-79" style="SF8_C" x="147" y="423" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalRoomGuideDogFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-80" style="SF8_C" x="147" y="459" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalBuildingYearsFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-81" style="SF8_C" x="147" y="471" width="22" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalTotalRoomFlg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-49" style="SF9" x="169" y="399" width="412" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-50" style="SF9" x="169" y="423" width="412" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-82" style="SF9" x="385" y="435" width="196" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalSignLangRange}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-83" style="SF9" x="285" y="447" width="100" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalEngTimeDiv}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-84" style="SF9" x="385" y="447" width="196" height="12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{generalEngTimeDivRange}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-85" style="SF9" x="255" y="642" width="216" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficMeetTime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-86" style="SF9" x="255" y="654" width="216" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficSendTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-51" style="SF11_B" x="7" y="752" width="449" height="15"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[上記内容は平成　　　年　　　月　　　日現在です。【対応責任者　　　　　　　　　印 】　　　]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-52" style="SF11_B" x="289" y="786" width="290" height="16"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[担当]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-54" style="SF11_B" x="7" y="27" width="50" height="14"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[商品名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-55" style="SF11_B" x="7" y="41" width="50" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[施設名]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-87" style="SF9" x="57" y="27" width="319" height="14"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{headGoodsNm}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-88" style="SF9" x="57" y="41" width="319" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{headFacilityNm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-56" style="SF9_C" x="170" y="562" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[④車]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-57" style="SF9_C" x="333" y="562" width="42" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[高速]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" style="SF10_B" x="376" y="27" width="84" height="14"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[企画通番　]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-89" style="SF11_B" x="460" y="27" width="121" height="14"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{headPlanNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-90" style="SF11_B" x="460" y="41" width="121" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{headFacilityCd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-59" style="SF10_B" x="376" y="41" width="84" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[施設コード]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-91" style="SF9_B_I_BO" x="56" y="514" width="114" height="88"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficNearestStation}+ "）駅より"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-92" style="SF9_B_I_BO" x="11" y="558" width="45" height="44"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{useSiTeTu}+" 私鉄"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-60" style="SF9_B_I" x="7" y="511" width="2" height="194"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-61" style="SF9_B_I" x="7" y="705" width="574" height="3"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[●最寄からの交通機関および送迎　　]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-62" style="SF9_B_I" x="579" y="511" width="2" height="194"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-63" style="SF9_C" x="241" y="642" width="14" height="60"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[③]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-93" style="SF9" x="273" y="302" width="308" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{condition1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-94" style="SF9" x="273" y="314" width="308" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{condition2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-95" style="SF9" x="61" y="602" width="104" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{exitInfo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-64" style="SF9_C" x="11" y="602" width="50" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[出口情報等(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-65" style="SF8" x="37" y="246" width="60" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ズボンプレッサー有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-96" style="SF8_C" x="97" y="246" width="20" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciTrouserPressEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-97" style="SF8" x="117" y="246" width="170" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciTrouserPressNote}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-66" style="SF8" x="317" y="246" width="58" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Suica利用可能施設有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-98" style="SF8_C" x="375" y="246" width="20" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciSuicaEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-99" style="SF8" x="395" y="246" width="186" height="8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciSuicaRow1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-67" style="SF8" x="37" y="278" width="60" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[インターネット接続有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-100" style="SF8_C" x="97" y="278" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciNetEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-101" style="SF8" x="117" y="278" width="170" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciNetNote}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-68" style="SF8" x="317" y="278" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[入浴料 別料金有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-102" style="SF8_C" x="375" y="278" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciBathChargeEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-104" style="SF9" x="145" y="687" width="96" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficMsDiv4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-69" style="SF9" x="465" y="678" width="6" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-106" style="SF9" x="255" y="678" width="210" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficShuttleBusService}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-70" style="SF9_C" x="170" y="574" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-107" style="SF9" x="193" y="574" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficAutoRoadway}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-71" style="SF9_C" x="333" y="574" width="244" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[自動車道]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-72" style="SF9_C" x="170" y="586" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-110" style="SF9" x="193" y="586" width="140" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficGeneralRoadway}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-73" style="SF9_C" x="333" y="586" width="244" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[道路]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-74" style="SF9_C" x="170" y="598" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-113" style="SF9" x="193" y="598" width="384" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficRow7}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-76" style="SF9_C" x="170" y="610" width="23" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-116" style="SF9" x="193" y="610" width="384" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{trafficDirectionDistanceTarget}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="image-11" x="12" y="252" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark22.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-12" x="12" y="281" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark24.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-13" x="290" y="252" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark23.gif")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-77" style="SF8" x="317" y="222" width="58" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[最寄にコンビニ有り]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-120" style="SF8_C" x="375" y="222" width="20" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciNearConvEquipmentFlg}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="image-15" x="290" y="201" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark20.gif")]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="image-16" x="290" y="281" width="20" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{images}.get("mark25.gif")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText-82" style="SF10_B" x="376" y="55" width="84" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[更新日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-121" style="SF8_C" x="460" y="55" width="121" height="14"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{headUpYmd}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-122" style="SF8" x="395" y="186" width="186" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciParkNote}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-123" style="SF8" x="395" y="198" width="186" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciStoreBeginEnd}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-124" style="SF8" x="395" y="234" width="186" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciNearStoreNm}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-125" style="SF8" x="395" y="278" width="186" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{faciBathCharge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-126" style="SF8" x="395" y="290" width="186" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciBathCondition}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-127" style="SF8" x="395" y="254" width="178" height="8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciSuicaRow2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-128" style="SF8" x="395" y="262" width="186" height="8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciSuicaRow3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-129" style="SF8" x="395" y="270" width="186" height="8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faciSuicaRow4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-130" style="SF9" x="170" y="550" width="407" height="12"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trafficRow4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-83" style="SF9" x="573" y="254" width="8" height="8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-84" style="SF9_C" x="165" y="602" width="5" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<frame>
+				<reportElement key="frame-1" style="SF8" x="7" y="102" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-2" style="SF8" x="7" y="126" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-3" style="SF8" x="7" y="150" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-4" style="SF8" x="7" y="174" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-5" style="SF8" x="7" y="198" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-6" style="SF8" x="7" y="222" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-15" style="SF8" x="7" y="246" width="30" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-17" style="SF8" x="7" y="278" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-7" style="SF8" x="287" y="102" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-8" style="SF8" x="287" y="126" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-9" style="SF8" x="287" y="150" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-10" style="SF8" x="287" y="174" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-14" style="SF8" x="287" y="198" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-13" style="SF8" x="287" y="222" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<image>
+					<reportElement key="image-14" x="3" y="3" width="20" height="20"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA[$P{images}.get("mark21.gif")]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement key="frame-16" style="SF8" x="287" y="246" width="30" height="32"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement key="frame-18" style="SF8" x="287" y="278" width="30" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

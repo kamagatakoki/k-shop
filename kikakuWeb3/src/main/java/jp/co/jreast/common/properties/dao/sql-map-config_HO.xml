@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMapConfig 
+          PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" 
+          "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+    <properties resource="jp/co/jreast/common/properties/database/database.properties" />
+
+    <settings
+        cacheModelsEnabled="true"
+        enhancementEnabled="true"
+        maxSessions="64"
+        maxTransactions="8"
+        maxRequests="128" />
+	<!--    --> 
+    <transactionManager type="JDBC">
+        <dataSource type="JNDI">
+            <property name="DataSource" value="java:comp/env/jdbc/KKWDS" />           
+        </dataSource>
+    </transactionManager> 
+    <!-- 一般的なデータソース  
+        <transactionManager type="JDBC">
+            <dataSource type="SIMPLE">
+            <property value="${driver}" name="JDBC.Driver" />
+            <property value="${url}" name="JDBC.ConnectionURL" />
+            <property value="${username}" name="JDBC.Username" />
+            <property value="${password}" name="JDBC.Password" />
+            <property value="15" name="Pool.MaximumActiveConnections" />
+            <property value="15" name="Pool.MaximumIdleConnections" />
+            <property value="1000" name="Pool.MaximumWait" />
+            </dataSource>
+        </transactionManager> -->
+      
+      <sqlMap resource="jp/co/jreast/common/properties/sql/constants.xml"/>
+      <sqlMap resource="jp/co/jreast/common/properties/sql/common.xml"/>
+      <sqlMap resource="jp/co/jreast/common/properties/sql/no1Common.xml"/>
+      <sqlMap resource="jp/co/jreast/ur00100/properties/sql/ur00100.xml"/>
+      <sqlMap resource="jp/co/jreast/ur00200/properties/sql/ur00200.xml"/>
+      <sqlMap resource="jp/co/jreast/ur00300/properties/sql/ur00300.xml"/>
+      <sqlMap resource="jp/co/jreast/ur00400/properties/sql/ur00400.xml"/>
+      <sqlMap resource="jp/co/jreast/ur00500/properties/sql/ur00500.xml"/>
+      <sqlMap resource="jp/co/jreast/ur02000/properties/sql/ur02000.xml"/>     
+      <sqlMap resource="jp/co/jreast/ur02003/properties/sql/ur02003.xml"/>    
+      <sqlMap resource="jp/co/jreast/ur02004/properties/sql/ur02004.xml"/>     
+      <sqlMap resource="jp/co/jreast/ur01010/properties/sql/ur01010.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01011/properties/sql/ur01011.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01012/properties/sql/ur01012.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01013/properties/sql/ur01013.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01020/properties/sql/ur01020.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01020/properties/sql/ur01020copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur02001/properties/sql/ur02001.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01030/properties/sql/ur01030.xml"/>
+      <sqlMap resource="jp/co/jreast/ur02002/properties/sql/ur02002.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01050/properties/sql/ur01050_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01050/properties/sql/ur01050_Insert.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01060/properties/sql/ur01060.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01014/properties/sql/ur01014.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01040/properties/sql/ur01040.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01040/properties/sql/ur01040copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01041/properties/sql/ur01041.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01041/properties/sql/ur01041copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01042/properties/sql/ur01042.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01042/properties/sql/ur01042copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur04000/properties/sql/ur04000.xml"/>
+      <sqlMap resource="jp/co/jreast/ur04010/properties/sql/ur04010.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01021/properties/sql/ur01021copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01021/properties/sql/ur01021.xml"/>
+     <!-- add by kimu 宿泊ホテル追加  -->
+      <sqlMap resource="jp/co/jreast/ur01022/properties/sql/ur01022copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01022/properties/sql/ur01022.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01001/properties/sql/ur01001.xml"/>
+     <!-- スキーNo2 kimu add -->
+      <sqlMap resource="jp/co/jreast/ur01023/properties/sql/ur01023copy.xml"/>
+      <sqlMap resource="jp/co/jreast/ur01023/properties/sql/ur01023.xml"/>
+      <!-- 年度・シーズン・支社変更機能追加 2009/11/27 add by s31109 -->
+      <sqlMap resource="jp/co/jreast/ur02005/properties/sql/ur02005.xml"/>
+      <!-- end -->
+      <!-- 施設付帯情報一覧機能追加 2009/12/04 s30873 -->
+      <sqlMap resource="jp/co/jreast/ur05000/properties/sql/ur05000.xml"/>
+      <!-- end -->
+      <!-- 施設付帯情報詳細画面機能追加 2009/12/08 s30873 -->
+	  <sqlMap resource="jp/co/jreast/ur05030/properties/sql/ur05030_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/ur05030/properties/sql/ur05030_Insert.xml"/>
+      <!-- 施設付帯情報詳細画面機能追加(スキー) 2010/05/06 s32423 -->
+   	  <sqlMap resource="jp/co/jreast/ur05032/properties/sql/ur05032.xml"/>
+      <!-- end -->
+      <!-- 施設付帯情報詳細画面機能追加(スキー) 2010/05/06 s32427 -->
+   	  <sqlMap resource="jp/co/jreast/ur05052/properties/sql/ur05052_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/ur05052/properties/sql/ur05052_Insert.xml"/>
+      <!-- end -->
+      <sqlMap resource="jp/co/jreast/ur05050/properties/sql/ur05050_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/ur05050/properties/sql/ur05050_Insert.xml"/>
+      <!-- end -->
+      <!-- 状態変更機能追加 2009/12/10 add by s31109 -->
+      <sqlMap resource="jp/co/jreast/ur06000/properties/sql/ur06000.xml"/>
+      <!-- end -->
+      <!-- 施設参照機能追加 2009/12/25 s30873 -->
+      <sqlMap resource="jp/co/jreast/ur02007/properties/sql/ur02007.xml"/>
+      <!-- end -->
+      <!-- 施設コピー用 2009/01/04 s30873 -->
+      <sqlMap resource="jp/co/jreast/ur05100/properties/sql/ur05100.xml"/>
+      <!-- end -->
+      <!-- 施設情報設定機能追加 2010/01/08 s30873 -->
+      <sqlMap resource="jp/co/jreast/ur02006/properties/sql/ur02006.xml"/>
+      <!-- end -->
+      <!-- 施設付帯情報詳細画面(ホテル用) 2010/01/28 s30873 -->
+	  <sqlMap resource="jp/co/jreast/ur05031/properties/sql/ur05031_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/ur05031/properties/sql/ur05031_Insert.xml"/>
+      <!-- end -->
+      <sqlMap resource="jp/co/jreast/ur08000/properties/sql/ur08000.xml"/>
+      
+      <!-- DR画面用 -->
+      <sqlMap resource="jp/co/jreast/common/properties/sql/d_common.xml"/>
+      <sqlMap resource="jp/co/jreast/common/properties/sql/d_no1Common.xml"/>
+      <sqlMap resource="jp/co/jreast/common/properties/sql/d_no2Common.xml"/>
+      <sqlMap resource="jp/co/jreast/common/properties/sql/d_facilityCommon.xml"/>
+      <!--
+      <sqlMap resource="jp/co/jreast/dr01050/properties/sql/dr01050_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01050/properties/sql/dr01050_Insert.xml"/>
+   	  -->
+      <sqlMap resource="jp/co/jreast/dr01001/properties/sql/dr01001.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01010/properties/sql/dr01010.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01011/properties/sql/dr01011.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01012/properties/sql/dr01012.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01013/properties/sql/dr01013.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01014/properties/sql/dr01014.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01020/properties/sql/dr01020.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01020/properties/sql/dr01020copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01021/properties/sql/dr01021.xml"/>
+	  <sqlMap resource="jp/co/jreast/dr01021/properties/sql/dr01021copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01022/properties/sql/dr01022.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01022/properties/sql/dr01022copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01023/properties/sql/dr01023.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01023/properties/sql/dr01023copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01040/properties/sql/dr01040.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01040/properties/sql/dr01040copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01041/properties/sql/dr01041.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01041/properties/sql/dr01041copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01042/properties/sql/dr01042.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01042/properties/sql/dr01042copy.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01060/properties/sql/dr01060.xml"/>
+      <sqlMap resource="jp/co/jreast/dr02008/properties/sql/dr02008.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05030/properties/sql/dr05030_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05030/properties/sql/dr05030_Insert.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05032/properties/sql/dr05032.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05050/properties/sql/dr05050_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05050/properties/sql/dr05050_Insert.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05052/properties/sql/dr05052_Init.xml"/>
+      <sqlMap resource="jp/co/jreast/dr05052/properties/sql/dr05052_Insert.xml"/>
+      <!-- DR050xxに処理を移動する予定↓↓↓ -->
+      <sqlMap resource="jp/co/jreast/dr01030/properties/sql/dr01030.xml"/>
+      <sqlMap resource="jp/co/jreast/dr01050/properties/sql/dr01050_Insert.xml"/> 
+      <!-- WebAPI用 -->
+      <sqlMap resource="jp/co/jreast/webapi/properties/sql/webapi.xml"/>
+</sqlMapConfig>

@@ -1,0 +1,2270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DLiftNo2_02" pageWidth="594" pageHeight="830" columnWidth="594" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="10"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="No1" fontName="ＭＳ ゴシック" fontSize="9" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H"/>
+	<style name="dy" isDefault="true" fontName="ＭＳ ゴシック" fontSize="9" isBold="true" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" pdfEncoding="Identity-H"/>
+	<field name="anytimeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[anytimeFlg]]></fieldDescription>
+	</field>
+	<field name="bathFacilityName" class="java.lang.String">
+		<fieldDescription><![CDATA[bathFacilityName]]></fieldDescription>
+	</field>
+	<field name="bathTicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTicketFlg]]></fieldDescription>
+	</field>
+	<field name="bathTicketOpentime1H" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTicketOpentime1H]]></fieldDescription>
+	</field>
+	<field name="bathTicketOpentime1M" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTicketOpentime1M]]></fieldDescription>
+	</field>
+	<field name="bathTicketOpentime2H" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTicketOpentime2H]]></fieldDescription>
+	</field>
+	<field name="bathTicketOpentime2M" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTicketOpentime2M]]></fieldDescription>
+	</field>
+	<field name="bathTicketPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[bathTicketPrice]]></fieldDescription>
+	</field>
+	<field name="boardSchoolAdultDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[boardSchoolAdultDiscount]]></fieldDescription>
+	</field>
+	<field name="boardSchoolAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[boardSchoolAdultPrice]]></fieldDescription>
+	</field>
+	<field name="boardSchoolChildDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[boardSchoolChildDiscount]]></fieldDescription>
+	</field>
+	<field name="boardSchoolChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[boardSchoolChildPrice]]></fieldDescription>
+	</field>
+	<field name="boardSchoolDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[boardSchoolDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="boardWearAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[boardWearAdultPrice]]></fieldDescription>
+	</field>
+	<field name="boardWearAdutlDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[boardWearAdutlDiscount]]></fieldDescription>
+	</field>
+	<field name="boardWearChildDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[boardWearChildDiscount]]></fieldDescription>
+	</field>
+	<field name="boardWearChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[boardWearChildPrice]]></fieldDescription>
+	</field>
+	<field name="boardWearDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[boardWearDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="boardWearStockFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[boardWearStockFlg]]></fieldDescription>
+	</field>
+	<field name="bookingDay" class="java.lang.String">
+		<fieldDescription><![CDATA[bookingDay]]></fieldDescription>
+	</field>
+	<field name="bookingFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[bookingFlg]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="drinkBar" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkBar]]></fieldDescription>
+	</field>
+	<field name="drinkEffectContent" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkEffectContent]]></fieldDescription>
+	</field>
+	<field name="drinkTicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkTicketFlg]]></fieldDescription>
+	</field>
+	<field name="drinkTicketOpentime1H" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkTicketOpentime1H]]></fieldDescription>
+	</field>
+	<field name="drinkTicketOpentime1M" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkTicketOpentime1M]]></fieldDescription>
+	</field>
+	<field name="drinkTicketOpentime2H" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkTicketOpentime2H]]></fieldDescription>
+	</field>
+	<field name="drinkTicketOpentime2M" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkTicketOpentime2M]]></fieldDescription>
+	</field>
+	<field name="drinkTicketPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[drinkTicketPrice]]></fieldDescription>
+	</field>
+	<field name="facilityCd" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityCd]]></fieldDescription>
+	</field>
+	<field name="facilityDirectlyCornerFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityDirectlyCornerFlg]]></fieldDescription>
+	</field>
+	<field name="foodOpentime1H" class="java.lang.String">
+		<fieldDescription><![CDATA[foodOpentime1H]]></fieldDescription>
+	</field>
+	<field name="foodOpentime1M" class="java.lang.String">
+		<fieldDescription><![CDATA[foodOpentime1M]]></fieldDescription>
+	</field>
+	<field name="foodOpentime2H" class="java.lang.String">
+		<fieldDescription><![CDATA[foodOpentime2H]]></fieldDescription>
+	</field>
+	<field name="foodOpentime2M" class="java.lang.String">
+		<fieldDescription><![CDATA[foodOpentime2M]]></fieldDescription>
+	</field>
+	<field name="foodTicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[foodTicketFlg]]></fieldDescription>
+	</field>
+	<field name="foodTicketPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[foodTicketPrice]]></fieldDescription>
+	</field>
+	<field name="gondoalEffectedFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[gondoalEffectedFlg]]></fieldDescription>
+	</field>
+	<field name="goodName" class="java.lang.String">
+		<fieldDescription><![CDATA[goodName]]></fieldDescription>
+	</field>
+	<field name="liftKind" class="java.lang.String">
+		<fieldDescription><![CDATA[liftKind]]></fieldDescription>
+	</field>
+	<field name="liftKindContent" class="java.lang.String">
+		<fieldDescription><![CDATA[liftKindContent]]></fieldDescription>
+	</field>
+	<field name="liftNightOpentime1H" class="java.lang.String">
+		<fieldDescription><![CDATA[liftNightOpentime1H]]></fieldDescription>
+	</field>
+	<field name="liftNightOpentime1M" class="java.lang.String">
+		<fieldDescription><![CDATA[liftNightOpentime1M]]></fieldDescription>
+	</field>
+	<field name="liftNightOpentime2H" class="java.lang.String">
+		<fieldDescription><![CDATA[liftNightOpentime2H]]></fieldDescription>
+	</field>
+	<field name="liftNightOpentime2M" class="java.lang.String">
+		<fieldDescription><![CDATA[liftNightOpentime2M]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeHoliday1H" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeHoliday1H]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeHoliday1M" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeHoliday1M]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeHoliday2H" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeHoliday2H]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeHoliday2M" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeHoliday2M]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeOrdinary1H" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeOrdinary1H]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeOrdinary1M" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeOrdinary1M]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeOrdinary2H" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeOrdinary2H]]></fieldDescription>
+	</field>
+	<field name="liftOpentimeOrdinary2M" class="java.lang.String">
+		<fieldDescription><![CDATA[liftOpentimeOrdinary2M]]></fieldDescription>
+	</field>
+	<field name="liftTicketExchangeFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[liftTicketExchangeFlg]]></fieldDescription>
+	</field>
+	<field name="liftTicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[liftTicketFlg]]></fieldDescription>
+	</field>
+	<field name="liftTicketPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[liftTicketPrice]]></fieldDescription>
+	</field>
+	<field name="limitedRestarurantContent" class="java.lang.String">
+		<fieldDescription><![CDATA[limitedRestarurantContent]]></fieldDescription>
+	</field>
+	<field name="limitedRestaurantFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[limitedRestaurantFlg]]></fieldDescription>
+	</field>
+	<field name="line1Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[line1Flg]]></fieldDescription>
+	</field>
+	<field name="line1Name" class="java.lang.String">
+		<fieldDescription><![CDATA[line1Name]]></fieldDescription>
+	</field>
+	<field name="line1StationName" class="java.lang.String">
+		<fieldDescription><![CDATA[line1StationName]]></fieldDescription>
+	</field>
+	<field name="line2Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[line2Flg]]></fieldDescription>
+	</field>
+	<field name="line2Name" class="java.lang.String">
+		<fieldDescription><![CDATA[line2Name]]></fieldDescription>
+	</field>
+	<field name="line2StationeName" class="java.lang.String">
+		<fieldDescription><![CDATA[line2StationeName]]></fieldDescription>
+	</field>
+	<field name="line3Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[line3Flg]]></fieldDescription>
+	</field>
+	<field name="line3Name" class="java.lang.String">
+		<fieldDescription><![CDATA[line3Name]]></fieldDescription>
+	</field>
+	<field name="line3Station" class="java.lang.String">
+		<fieldDescription><![CDATA[line3Station]]></fieldDescription>
+	</field>
+	<field name="localBusNeedTime" class="java.lang.String">
+		<fieldDescription><![CDATA[localBusNeedTime]]></fieldDescription>
+	</field>
+	<field name="localBusStation" class="java.lang.String">
+		<fieldDescription><![CDATA[localBusStation]]></fieldDescription>
+	</field>
+	<field name="localBusStop" class="java.lang.String">
+		<fieldDescription><![CDATA[localBusStop]]></fieldDescription>
+	</field>
+	<field name="localOnBus" class="java.lang.String">
+		<fieldDescription><![CDATA[localOnBus]]></fieldDescription>
+	</field>
+	<field name="localOnFoot" class="java.lang.String">
+		<fieldDescription><![CDATA[localOnFoot]]></fieldDescription>
+	</field>
+	<field name="localOneWayPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[localOneWayPrice]]></fieldDescription>
+	</field>
+	<field name="localTo" class="java.lang.String">
+		<fieldDescription><![CDATA[localTo]]></fieldDescription>
+	</field>
+	<field name="morningSlidingOpentime1H" class="java.lang.String">
+		<fieldDescription><![CDATA[morningSlidingOpentime1H]]></fieldDescription>
+	</field>
+	<field name="morningSlidingOpentime1M" class="java.lang.String">
+		<fieldDescription><![CDATA[morningSlidingOpentime1M]]></fieldDescription>
+	</field>
+	<field name="morningSlidingOpentime2H" class="java.lang.String">
+		<fieldDescription><![CDATA[morningSlidingOpentime2H]]></fieldDescription>
+	</field>
+	<field name="morningSlidingOpentime2M" class="java.lang.String">
+		<fieldDescription><![CDATA[morningSlidingOpentime2M]]></fieldDescription>
+	</field>
+	<field name="nightEffectedFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[nightEffectedFlg]]></fieldDescription>
+	</field>
+	<field name="noteHandContent" class="java.lang.String">
+		<fieldDescription><![CDATA[noteHandContent]]></fieldDescription>
+	</field>
+	<field name="noteHandFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[noteHandFlg]]></fieldDescription>
+	</field>
+	<field name="other1TicketContent" class="java.lang.String">
+		<fieldDescription><![CDATA[other1TicketContent]]></fieldDescription>
+	</field>
+	<field name="other1TicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[other1TicketFlg]]></fieldDescription>
+	</field>
+	<field name="other1TicketPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[other1TicketPrice]]></fieldDescription>
+	</field>
+	<field name="other2TicketContent" class="java.lang.String">
+		<fieldDescription><![CDATA[other2TicketContent]]></fieldDescription>
+	</field>
+	<field name="other2TicketFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[other2TicketFlg]]></fieldDescription>
+	</field>
+	<field name="other2TicketPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[other2TicketPrice]]></fieldDescription>
+	</field>
+	<field name="otherApp1Content" class="java.lang.String">
+		<fieldDescription><![CDATA[otherApp1Content]]></fieldDescription>
+	</field>
+	<field name="otherApp1Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[otherApp1Flg]]></fieldDescription>
+	</field>
+	<field name="otherEffectedFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[otherEffectedFlg]]></fieldDescription>
+	</field>
+	<field name="otherRentalShopFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[otherRentalShopFlg]]></fieldDescription>
+	</field>
+	<field name="pickupbusFeature" class="java.lang.String">
+		<fieldDescription><![CDATA[pickupbusFeature]]></fieldDescription>
+	</field>
+	<field name="pickupbusOpentime1H" class="java.lang.String">
+		<fieldDescription><![CDATA[pickupbusOpentime1H]]></fieldDescription>
+	</field>
+	<field name="pickupbusOpentime1M" class="java.lang.String">
+		<fieldDescription><![CDATA[pickupbusOpentime1M]]></fieldDescription>
+	</field>
+	<field name="pickupbusOpentime2H" class="java.lang.String">
+		<fieldDescription><![CDATA[pickupbusOpentime2H]]></fieldDescription>
+	</field>
+	<field name="pickupbusOpentime2M" class="java.lang.String">
+		<fieldDescription><![CDATA[pickupbusOpentime2M]]></fieldDescription>
+	</field>
+	<field name="pickupbusStop" class="java.lang.String">
+		<fieldDescription><![CDATA[pickupbusStop]]></fieldDescription>
+	</field>
+	<field name="ropwayEffectedFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[ropwayEffectedFlg]]></fieldDescription>
+	</field>
+	<field name="schoolAppPlace" class="java.lang.String">
+		<fieldDescription><![CDATA[schoolAppPlace]]></fieldDescription>
+	</field>
+	<field name="schoolHalfdayContent" class="java.lang.String">
+		<fieldDescription><![CDATA[schoolHalfdayContent]]></fieldDescription>
+	</field>
+	<field name="schoolOtherAppContent" class="java.lang.String">
+		<fieldDescription><![CDATA[schoolOtherAppContent]]></fieldDescription>
+	</field>
+	<field name="schoolOtherAppFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[schoolOtherAppFlg]]></fieldDescription>
+	</field>
+	<field name="schoolViewCardShowFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[schoolViewCardShowFlg]]></fieldDescription>
+	</field>
+	<field name="skiCarvingAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiCarvingAdultPrice]]></fieldDescription>
+	</field>
+	<field name="skiCarvingAdutlDiscoutn" class="java.lang.String">
+		<fieldDescription><![CDATA[skiCarvingAdutlDiscoutn]]></fieldDescription>
+	</field>
+	<field name="skiCarvingChildDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[skiCarvingChildDiscount]]></fieldDescription>
+	</field>
+	<field name="skiCarvingChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiCarvingChildPrice]]></fieldDescription>
+	</field>
+	<field name="skiCarvingDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiCarvingDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="skiCarvingStockFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiCarvingStockFlg]]></fieldDescription>
+	</field>
+	<field name="skiNormalAdultDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[skiNormalAdultDiscount]]></fieldDescription>
+	</field>
+	<field name="skiNormalAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiNormalAdultPrice]]></fieldDescription>
+	</field>
+	<field name="skiNormalChildDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[skiNormalChildDiscount]]></fieldDescription>
+	</field>
+	<field name="skiNormalChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiNormalChildPrice]]></fieldDescription>
+	</field>
+	<field name="skiNormalDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiNormalDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="skiNormalStockFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiNormalStockFlg]]></fieldDescription>
+	</field>
+	<field name="skiSchoolAdultDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[skiSchoolAdultDiscount]]></fieldDescription>
+	</field>
+	<field name="skiSchoolAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiSchoolAdultPrice]]></fieldDescription>
+	</field>
+	<field name="skiSchoolChildDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[skiSchoolChildDiscount]]></fieldDescription>
+	</field>
+	<field name="skiSchoolChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiSchoolChildPrice]]></fieldDescription>
+	</field>
+	<field name="skiSchoolDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiSchoolDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="skiWearAdultDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[skiWearAdultDiscount]]></fieldDescription>
+	</field>
+	<field name="skiWearAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiWearAdultPrice]]></fieldDescription>
+	</field>
+	<field name="skiWearChildDiscont" class="java.lang.String">
+		<fieldDescription><![CDATA[skiWearChildDiscont]]></fieldDescription>
+	</field>
+	<field name="skiWearChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[skiWearChildPrice]]></fieldDescription>
+	</field>
+	<field name="skiWearDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiWearDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="skiWearStockFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[skiWearStockFlg]]></fieldDescription>
+	</field>
+	<field name="snowboardAdultDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[snowboardAdultDiscount]]></fieldDescription>
+	</field>
+	<field name="snowboardAdultPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[snowboardAdultPrice]]></fieldDescription>
+	</field>
+	<field name="snowboardChildDiscount" class="java.lang.String">
+		<fieldDescription><![CDATA[snowboardChildDiscount]]></fieldDescription>
+	</field>
+	<field name="snowboardChildPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[snowboardChildPrice]]></fieldDescription>
+	</field>
+	<field name="snowboardDiscountFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[snowboardDiscountFlg]]></fieldDescription>
+	</field>
+	<field name="snowboardStockFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[snowboardStockFlg]]></fieldDescription>
+	</field>
+	<field name="specifiedMenuContent" class="java.lang.String">
+		<fieldDescription><![CDATA[specifiedMenuContent]]></fieldDescription>
+	</field>
+	<field name="specifiedMenuFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[specifiedMenuFlg]]></fieldDescription>
+	</field>
+	<field name="stockNo" class="java.lang.String">
+		<fieldDescription><![CDATA[stockNo]]></fieldDescription>
+	</field>
+	<field name="stopToSkiOnFoot" class="java.lang.String">
+		<fieldDescription><![CDATA[stopToSkiOnFoot]]></fieldDescription>
+	</field>
+	<field name="targetShop1Name" class="java.lang.String">
+		<fieldDescription><![CDATA[targetShop1Name]]></fieldDescription>
+	</field>
+	<field name="targetShop1Tel" class="java.lang.String">
+		<fieldDescription><![CDATA[targetShop1Tel]]></fieldDescription>
+	</field>
+	<field name="targetShop2Name" class="java.lang.String">
+		<fieldDescription><![CDATA[targetShop2Name]]></fieldDescription>
+	</field>
+	<field name="targetShop2Tel" class="java.lang.String">
+		<fieldDescription><![CDATA[targetShop2Tel]]></fieldDescription>
+	</field>
+	<field name="ticketEffectedContent" class="java.lang.String">
+		<fieldDescription><![CDATA[ticketEffectedContent]]></fieldDescription>
+	</field>
+	<field name="unlimitedRestarurantFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[unlimitedRestarurantFlg]]></fieldDescription>
+	</field>
+	<field name="useShuttleBusContent" class="java.lang.String">
+		<fieldDescription><![CDATA[useShuttleBusContent]]></fieldDescription>
+	</field>
+	<field name="useShuttleBusFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[useShuttleBusFlg]]></fieldDescription>
+	</field>
+	<field name="viewCardShowFlg" class="java.lang.String">
+		<fieldDescription><![CDATA[viewCardShowFlg]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<field name="facilityNm" class="java.lang.String"/>
+	<field name="rentSkiPriceMemo" class="java.lang.String"/>
+	<field name="schoolPriceMemo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="764" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" style="No1" x="16" y="62" width="71" height="21"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[商品名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-35" style="No1" x="16" y="130" width="30" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[割引
+あり]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-155" style="dy" x="16" y="34" width="563" height="22"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["びゅう  " +$F{year}+ "年度《JR東日本》びゅう商品企画回答書【NO2-2】船車（リフト用）"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-156" style="dy" x="360" y="62" width="75" height="21"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["施設コード"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-158" style="No1" x="87" y="62" width="273" height="21"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{goodName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-159" style="No1" x="435" y="62" width="144" height="21"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{facilityCd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-139" style="No1" x="16" y="83" width="71" height="21"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[施設名]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-160" style="dy" x="87" y="83" width="273" height="21"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityNm}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-162" style="dy" x="360" y="83" width="75" height="21"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["在庫番号"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-163" style="No1" x="435" y="83" width="144" height="21"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stockNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-141" style="No1" x="153" y="130" width="174" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[割引内容（全て消費税込）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-142" style="No1" x="327" y="130" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[申込方法]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-149" style="No1" x="153" y="153" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-174" style="No1" x="206" y="153" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiNormalAdultPrice}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-175" style="No1" x="327" y="153" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["【お申し出場所】 "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-150" style="No1" x="46" y="199" width="107" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[スキー（カービング）
+３点セット レンタル]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-166" style="No1" x="19" y="109" width="560" height="21"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[★当商品をお求めのお客さまへの付帯特典  ※レンタルの在庫等に制限がある場合は備考欄にご記入ください。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-167" style="No1" x="46" y="130" width="107" height="23"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[種類]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-176" style="No1" x="16" y="153" width="30" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{skiNormalDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-180" style="No1" x="16" y="199" width="30" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{skiCarvingDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-184" style="No1" x="16" y="245" width="30" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{snowboardDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-188" style="No1" x="16" y="291" width="30" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{skiWearDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-192" style="No1" x="16" y="337" width="30" height="70"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{boardWearDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-196" style="No1" x="16" y="407" width="30" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{skiSchoolDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-200" style="No1" x="16" y="453" width="30" height="72"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{boardSchoolDiscountFlg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-168" style="No1" x="46" y="153" width="107" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[スキー（ノーマル）
+３点セット レンタル]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-169" style="No1" x="46" y="245" width="107" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[スノーボード
+２点セット レンタル]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-170" style="No1" x="46" y="291" width="107" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[スキーウェアレンタル]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-171" style="No1" x="46" y="337" width="107" height="70"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ボードウェアレンタル]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-172" style="No1" x="46" y="407" width="107" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[スキースクール]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-173" style="No1" x="46" y="453" width="107" height="72"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ボードスクール]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-174" style="No1" x="247" y="153" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-204" style="No1" x="274" y="153" width="42" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiNormalAdultDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-175" style="No1" x="316" y="153" width="11" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-176" style="No1" x="153" y="176" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-205" style="No1" x="206" y="176" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiNormalChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-177" style="No1" x="247" y="176" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-206" style="No1" x="274" y="176" width="42" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiNormalChildDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-178" style="No1" x="316" y="176" width="11" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-179" style="No1" x="153" y="199" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-207" style="No1" x="206" y="199" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiCarvingAdultPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-180" style="No1" x="247" y="199" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-208" style="No1" x="274" y="199" width="42" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiCarvingAdutlDiscoutn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-181" style="No1" x="316" y="199" width="11" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-182" style="No1" x="153" y="222" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-209" style="No1" x="206" y="222" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiCarvingChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-183" style="No1" x="247" y="222" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-210" style="No1" x="274" y="222" width="42" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiCarvingChildDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-184" style="No1" x="316" y="222" width="11" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-185" style="No1" x="153" y="245" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-211" style="No1" x="206" y="245" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{snowboardAdultPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-186" style="No1" x="247" y="245" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-212" style="No1" x="274" y="245" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{snowboardAdultDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-187" style="No1" x="316" y="245" width="11" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-188" style="No1" x="153" y="268" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-213" style="No1" x="206" y="268" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{snowboardChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-189" style="No1" x="247" y="268" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-214" style="No1" x="274" y="268" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{snowboardChildDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-190" style="No1" x="315" y="268" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-191" style="No1" x="153" y="291" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-215" style="No1" x="206" y="291" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiWearAdultPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-192" style="No1" x="247" y="291" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-216" style="No1" x="274" y="291" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiWearAdultDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-193" style="No1" x="315" y="291" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-194" style="No1" x="153" y="314" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-217" style="No1" x="206" y="314" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiWearChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-195" style="No1" x="247" y="314" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-218" style="No1" x="274" y="314" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiWearChildDiscont}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-196" style="No1" x="315" y="314" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-197" style="No1" x="153" y="337" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-220" style="No1" x="206" y="337" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardWearAdultPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-198" style="No1" x="247" y="337" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-221" style="No1" x="274" y="337" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardWearAdutlDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-199" style="No1" x="315" y="337" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-200" style="No1" x="153" y="360" width="53" height="47"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども１日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-222" style="No1" x="206" y="360" width="41" height="47"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardWearChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-201" style="No1" x="247" y="360" width="27" height="47"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-223" style="No1" x="274" y="360" width="41" height="47"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardWearChildDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-202" style="No1" x="315" y="360" width="12" height="47"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-203" style="No1" x="153" y="407" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな半日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-224" style="No1" x="206" y="407" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiSchoolAdultPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-204" style="No1" x="247" y="407" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-225" style="No1" x="274" y="407" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiSchoolAdultDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-205" style="No1" x="315" y="407" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-206" style="No1" x="153" y="430" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども半日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-226" style="No1" x="206" y="430" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiSchoolChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-207" style="No1" x="247" y="430" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-227" style="No1" x="274" y="430" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skiSchoolChildDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-208" style="No1" x="315" y="430" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-209" style="No1" x="153" y="453" width="53" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[おとな半日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-228" style="No1" x="206" y="453" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardSchoolAdultPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-210" style="No1" x="247" y="453" width="27" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-229" style="No1" x="274" y="453" width="41" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardSchoolAdultDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-211" style="No1" x="315" y="453" width="12" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-212" style="No1" x="153" y="476" width="53" height="49"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[こども半日]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-230" style="No1" x="206" y="476" width="41" height="49"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardSchoolChildPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-213" style="No1" x="247" y="476" width="27" height="49"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円⇒]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-231" style="No1" x="274" y="476" width="41" height="49"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{boardSchoolChildDiscount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-214" style="No1" x="315" y="476" width="12" height="49"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[円]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-232" style="No1" x="327" y="176" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{liftTicketExchangeFlg}+" リフト券引換所"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-233" style="No1" x="327" y="199" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{facilityDirectlyCornerFlg}+" 貴施設直営のレンタルコーナー"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-234" style="No1" x="327" y="222" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{otherRentalShopFlg}+" 上記以外のレンタルショップ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-235" style="No1" x="327" y="245" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["　→対象店名と電話番号をご記入ください。"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-237" style="No1" x="327" y="291" width="33" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["店名("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-238" style="No1" x="327" y="314" width="252" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["【お申し出方法】"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-239" style="No1" x="327" y="337" width="252" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{viewCardShowFlg}+" 最終行程表（購入明細書）を提示"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-240" style="No1" x="327" y="357" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{otherApp1Flg}+"その他"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-241" style="No1" x="327" y="453" width="252" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{schoolViewCardShowFlg}+" 最終行程表（購入明細書）を提示"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-244" style="No1" x="327" y="430" width="95" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["【お申し出方法】"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-215" style="No1" x="16" y="537" width="405" height="35"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[※スクールの「半日」の時間帯を具体的にご記入ください
+（例：午前の部 10:00～12:00、午後の部 13:30～15:30）]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-245" style="No1" x="16" y="572" width="563" height="46"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{schoolHalfdayContent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-246" style="No1" x="394" y="357" width="171" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{otherApp1Content}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="565" y="357" width="14" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-217" style="No1" x="565" y="473" width="14" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-247" style="No1" x="394" y="473" width="171" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{schoolOtherAppContent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-248" style="No1" x="327" y="473" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" "+$F{schoolOtherAppFlg}+"その他"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-249" style="No1" x="422" y="407" width="143" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{schoolAppPlace}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-218" style="No1" x="565" y="407" width="14" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-250" style="No1" x="327" y="407" width="95" height="23"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["【お申し出場所】("]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-219" style="No1" x="565" y="430" width="14" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-220" style="No1" x="565" y="291" width="14" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-251" style="No1" x="454" y="291" width="30" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[")Tel("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-252" style="No1" x="360" y="291" width="94" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{targetShop2Name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-253" style="No1" x="484" y="291" width="81" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{targetShop2Tel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-254" style="No1" x="327" y="268" width="33" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["店名("]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-221" style="No1" x="565" y="268" width="14" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-255" style="No1" x="454" y="268" width="30" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[")Tel("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-256" style="No1" x="360" y="268" width="94" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{targetShop1Name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-257" style="No1" x="484" y="268" width="81" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{targetShop1Tel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-246" style="No1" x="394" y="383" width="171" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rentSkiPriceMemo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="565" y="383" width="14" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-246" style="No1" x="394" y="499" width="171" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{schoolPriceMemo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="565" y="499" width="14" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="382" y="383" width="12" height="24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="327" y="383" width="55" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[備　考]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="327" y="395" width="55" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[【30文字】]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="327" y="499" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[備　考]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="327" y="512" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[【30文字】]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="382" y="499" width="12" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="327" y="370" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[【20文字】]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="382" y="357" width="12" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="382" y="473" width="12" height="26"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-216" style="No1" x="327" y="486" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[【20文字】]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

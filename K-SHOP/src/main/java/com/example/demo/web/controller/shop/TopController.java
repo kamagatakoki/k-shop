@@ -3,8 +3,10 @@ package com.example.demo.web.controller.shop;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +31,9 @@ import jp.co.intage.framework.dao.IDao;
 public class TopController {
 
 	@Autowired
+	MessageSource messageSource;
+
+	@Autowired
 	GoodsService goodsService;
 
 	@Autowired
@@ -44,6 +49,8 @@ public class TopController {
 	 */
 	@GetMapping(path = "/")
 	ModelAndView list(ModelAndView modelAndView) throws SQLException {
+
+		System.out.println(messageSource.getMessage("typeMismatch", null, Locale.getDefault()));
 
 		//		System.out.println(Greet.greet());
 		//		DaoManagerDelegate.init("dao.xml");

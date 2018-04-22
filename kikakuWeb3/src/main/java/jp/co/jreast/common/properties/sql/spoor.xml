@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap 
+          PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+          "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="common">
+
+       <typeAlias alias="SqlParamter" type="jp.co.jreast.common.spoor.SqlParamter" />
+
+       <select id="commonSelect" resultClass="java.util.Map" parameterClass="SqlParamter">
+        SELECT
+        	<isEmpty property="fields">
+        		*
+        	</isEmpty>
+	        <iterate property="fields" conjunction=",">
+			    <![CDATA[#fields[]#]]>
+	        </iterate>
+        FROM
+           $tableName$
+	       <isNotEmpty property="conString">
+	    WHERE #conString#
+	       </isNotEmpty>
+    </select>
+
+</sqlMap>

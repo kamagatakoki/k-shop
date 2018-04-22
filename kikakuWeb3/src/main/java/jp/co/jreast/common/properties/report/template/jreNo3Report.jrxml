@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="jreNo3Report"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="822"
+		 columnWidth="595"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="F12BC"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="12"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="F11BL"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="11"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="F9L"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="F11L"
+		isDefault="false"
+		hAlign="Left"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="11"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="F11BC"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="11"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="F9BC"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		isBold="true"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+	<style 
+		name="F9C"
+		isDefault="false"
+		hAlign="Center"
+		vAlign="Middle"
+		fontName="ＭＳ ゴシック"
+		fontSize="9"
+		isBold="false"
+		pdfFontName="C:\Windows\Fonts\msmincho.ttc,1"
+		pdfEncoding="Identity-H"
+		isPdfEmbedded="true"
+	/>
+
+	<parameter name="subreports" isForPrompting="false" class="java.util.Map"/>
+
+	<field name="s11Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s11Flg]]></fieldDescription>
+	</field>
+	<field name="s11Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s11Nayou]]></fieldDescription>
+	</field>
+	<field name="s12Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s12Flg]]></fieldDescription>
+	</field>
+	<field name="s13Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s13Flg]]></fieldDescription>
+	</field>
+	<field name="s14Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s14Flg]]></fieldDescription>
+	</field>
+	<field name="s15Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s15Flg]]></fieldDescription>
+	</field>
+	<field name="s16Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s16Flg]]></fieldDescription>
+	</field>
+	<field name="s16Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s16Nayou]]></fieldDescription>
+	</field>
+	<field name="s17Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s17Flg]]></fieldDescription>
+	</field>
+	<field name="s17NayouDown" class="java.lang.String">
+		<fieldDescription><![CDATA[s17NayouDown]]></fieldDescription>
+	</field>
+	<field name="s17NayouUp" class="java.lang.String">
+		<fieldDescription><![CDATA[s17NayouUp]]></fieldDescription>
+	</field>
+	<field name="s18Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s18Flg]]></fieldDescription>
+	</field>
+	<field name="s18Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s18Nayou]]></fieldDescription>
+	</field>
+	<field name="s19Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s19Flg]]></fieldDescription>
+	</field>
+	<field name="s19Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s19Nayou]]></fieldDescription>
+	</field>
+	<field name="s1Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s1Flg]]></fieldDescription>
+	</field>
+	<field name="s2Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s2Flg]]></fieldDescription>
+	</field>
+	<field name="s2Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s2Nayou]]></fieldDescription>
+	</field>
+	<field name="s3Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s3Flg]]></fieldDescription>
+	</field>
+	<field name="s3Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s3Nayou]]></fieldDescription>
+	</field>
+	<field name="s4Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s4Flg]]></fieldDescription>
+	</field>
+	<field name="s4Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s4Nayou]]></fieldDescription>
+	</field>
+	<field name="s5Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s5Flg]]></fieldDescription>
+	</field>
+	<field name="s6Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s6Flg]]></fieldDescription>
+	</field>
+	<field name="s6Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s6Nayou]]></fieldDescription>
+	</field>
+	<field name="s7Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s7Flg]]></fieldDescription>
+	</field>
+	<field name="s7Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s7Nayou]]></fieldDescription>
+	</field>
+	<field name="s8Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s8Flg]]></fieldDescription>
+	</field>
+	<field name="s8Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s8Nayou]]></fieldDescription>
+	</field>
+	<field name="s9Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s9Flg]]></fieldDescription>
+	</field>
+	<field name="s9NayouL" class="java.lang.String">
+		<fieldDescription><![CDATA[s9NayouL]]></fieldDescription>
+	</field>
+	<field name="s9NayouR" class="java.lang.String">
+		<fieldDescription><![CDATA[s9NayouR]]></fieldDescription>
+	</field>
+	<field name="s10Nayou" class="java.lang.String">
+		<fieldDescription><![CDATA[s10Nayou]]></fieldDescription>
+	</field>
+	<field name="s10Flg" class="java.lang.String">
+		<fieldDescription><![CDATA[s10Flg]]></fieldDescription>
+	</field>
+	<field name="facilityCd" class="java.lang.String">
+		<fieldDescription><![CDATA[facilityCd]]></fieldDescription>
+	</field>
+	<field name="facilityName" class="java.lang.String"/>
+	<field name="planNoEjp" class="java.lang.String"/>
+	<field name="goodName" class="java.lang.String"/>
+	<field name="year" class="java.lang.String"/>
+	<field name="list" class="java.util.List"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="822"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="334"
+						width="351"
+						height="19"
+						key="textField-27"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s10Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="296"
+						width="351"
+						height="19"
+						key="textField-22"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s8Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F12BC"
+						x="16"
+						y="33"
+						width="560"
+						height="24"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["びゅう  " +$F{year} + "年度《JR東日本》びゅう商品企画回答書【NO3】（宿泊用）"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F11BL"
+						x="16"
+						y="60"
+						width="52"
+						height="19"
+						key="staticText-3"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ Ｐゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="10" isBold="true"/>
+					</textElement>
+				<text><![CDATA[商品名]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="68"
+						y="60"
+						width="329"
+						height="19"
+						key="textField-2"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{goodName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="16"
+						y="79"
+						width="52"
+						height="19"
+						key="staticText-4"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ Ｐゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="10" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[施設名]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="68"
+						y="79"
+						width="329"
+						height="19"
+						key="textField-3"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{facilityName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="397"
+						y="79"
+						width="80"
+						height="19"
+						key="staticText-5"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ Ｐゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="10" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[施設コード]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="397"
+						y="60"
+						width="80"
+						height="19"
+						key="staticText-6"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ＭＳ Ｐゴシック" pdfFontName="C:\Windows\Fonts\msmincho.ttc,1" size="10" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Identity-H"/>
+					</textElement>
+				<text><![CDATA[企画通番]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="477"
+						y="60"
+						width="100"
+						height="19"
+						key="textField-4"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="ＭＳ Ｐゴシック" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{planNoEjp}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="477"
+						y="79"
+						width="100"
+						height="19"
+						key="textField-5"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="ＭＳ Ｐゴシック" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{facilityCd}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F11L"
+						x="16"
+						y="98"
+						width="561"
+						height="22"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<text><![CDATA[太枠に利用可能な□欄と○欄を■また●に塗りつぶし、詳細をご記入ください。]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F11BC"
+						x="16"
+						y="120"
+						width="561"
+						height="22"
+						key="staticText-8"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="Thin" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[当企画商品での特典・限定ｻｰﾋﾞｽ等]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9BC"
+						x="16"
+						y="142"
+						width="28"
+						height="21"
+						key="staticText-9"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9BC"
+						x="44"
+						y="142"
+						width="182"
+						height="21"
+						key="staticText-10"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[特典・限定ｻｰﾋﾞｽ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9BC"
+						x="226"
+						y="142"
+						width="157"
+						height="21"
+						key="staticText-11"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[内容]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9BC"
+						x="383"
+						y="142"
+						width="194"
+						height="21"
+						key="staticText-12"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[特記事項]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="163"
+						width="28"
+						height="19"
+						key="textField-6"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s1Flg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="182"
+						width="28"
+						height="19"
+						key="textField-10"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s2Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="226"
+						y="163"
+						width="351"
+						height="19"
+						key="staticText-13"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="163"
+						width="182"
+						height="19"
+						key="staticText-14"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[夕食時お酒又はジュース一本付き]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="182"
+						width="182"
+						height="19"
+						key="staticText-15"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[喫茶券]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="182"
+						width="351"
+						height="19"
+						key="textField-11"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s2Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="201"
+						width="28"
+						height="19"
+						key="textField-12"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s3Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="201"
+						width="182"
+						height="19"
+						key="staticText-16"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[ウェルカムドリンク]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="201"
+						width="351"
+						height="19"
+						key="textField-13"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s3Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="220"
+						width="28"
+						height="19"
+						key="textField-14"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s4Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="220"
+						width="182"
+						height="19"
+						key="staticText-17"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[お部屋での新聞サービス]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="220"
+						width="351"
+						height="19"
+						key="textField-15"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s4Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="239"
+						width="28"
+						height="19"
+						key="textField-16"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s5Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="239"
+						width="182"
+						height="19"
+						key="staticText-18"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[お一人様に浴衣２枚（大人のみ）]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="226"
+						y="239"
+						width="351"
+						height="19"
+						key="staticText-19"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="258"
+						width="28"
+						height="19"
+						key="textField-17"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s6Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="258"
+						width="182"
+						height="19"
+						key="staticText-20"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[お土産プレゼント]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="258"
+						width="351"
+						height="19"
+						key="textField-18"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s6Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="277"
+						width="28"
+						height="19"
+						key="textField-19"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s7Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="277"
+						width="182"
+						height="19"
+						key="staticText-21"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[室内冷蔵庫50％引き]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="277"
+						width="157"
+						height="19"
+						key="textField-20"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s7Nayou}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="383"
+						y="277"
+						width="194"
+						height="19"
+						key="staticText-22"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="296"
+						width="28"
+						height="19"
+						key="textField-21"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s8Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="296"
+						width="182"
+						height="19"
+						key="staticText-23"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[レディース特典]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="315"
+						width="28"
+						height="19"
+						key="textField-23"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s9Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="315"
+						width="182"
+						height="19"
+						key="staticText-24"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[カラオケBOX割引]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="226"
+						y="315"
+						width="157"
+						height="19"
+						key="textField-24"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s9NayouL}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="383"
+						y="315"
+						width="194"
+						height="19"
+						key="textField-25"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s9NayouR}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="334"
+						width="28"
+						height="19"
+						key="textField-26"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s10Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="334"
+						width="182"
+						height="19"
+						key="staticText-25"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[シルバー向チョッピリプレゼント]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="353"
+						width="28"
+						height="19"
+						key="textField-28"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s11Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="353"
+						width="182"
+						height="19"
+						key="staticText-26"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[夜食フルーツ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="353"
+						width="351"
+						height="19"
+						key="textField-29"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s11Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="372"
+						width="28"
+						height="19"
+						key="textField-30"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s12Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="372"
+						width="182"
+						height="19"
+						key="staticText-27"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[夜食おにぎり]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="226"
+						y="372"
+						width="351"
+						height="19"
+						key="staticText-28"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="391"
+						width="28"
+						height="19"
+						key="textField-31"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s13Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="391"
+						width="182"
+						height="19"
+						key="staticText-29"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[禁煙ルーム(MS)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="410"
+						width="28"
+						height="19"
+						key="textField-33"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s14Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="410"
+						width="182"
+						height="19"
+						key="staticText-30"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[レディースルーム(MS)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="226"
+						y="410"
+						width="351"
+						height="19"
+						key="staticText-31"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[メッセージ入力によりレディースルームの指定が出来る（確約）]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="226"
+						y="391"
+						width="351"
+						height="19"
+						key="staticText-32"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[メッセージ入力により禁煙ルームの指定が出来る（確約）]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="429"
+						width="28"
+						height="19"
+						key="textField-34"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s15Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="429"
+						width="182"
+						height="19"
+						key="staticText-33"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[レディースルーム(TEL)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="226"
+						y="429"
+						width="351"
+						height="19"
+						key="staticText-34"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[電話リクエストによりレディースルームの指定が出来る（即回答）]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="448"
+						width="28"
+						height="19"
+						key="textField-35"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s16Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="448"
+						width="182"
+						height="19"
+						key="staticText-35"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[ブランチ変更]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="448"
+						width="351"
+						height="19"
+						key="textField-36"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s16Nayou}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="467"
+						width="28"
+						height="38"
+						key="textField-37"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s17Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="467"
+						width="182"
+						height="38"
+						key="staticText-36"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[朝食券をバー等の飲み物に変更できる]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="467"
+						width="351"
+						height="19"
+						key="textField-38"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s17NayouUp}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="486"
+						width="351"
+						height="19"
+						key="textField-39"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s17NayouDown}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="505"
+						width="351"
+						height="19"
+						key="textField-40"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s18Nayou}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="505"
+						width="182"
+						height="19"
+						key="staticText-37"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[アーリーチェックイン]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="505"
+						width="28"
+						height="19"
+						key="textField-41"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s18Flg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9C"
+						x="16"
+						y="524"
+						width="28"
+						height="19"
+						key="textField-42"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s19Flg}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="F9L"
+						x="44"
+						y="524"
+						width="182"
+						height="19"
+						key="staticText-38"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[レイトチェックアウト]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="F9L"
+						x="226"
+						y="524"
+						width="351"
+						height="19"
+						key="textField-43"/>
+					<box topBorder="Thin" topBorderColor="#000000" leftBorder="Thin" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{s19Nayou}]]></textFieldExpression>
+				</textField>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="16"
+						y="543"
+						width="561"
+						height="244"
+						key="subreport-1"/>
+					<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($F{list})]]></dataSourceExpression>
+					<subreportExpression  class="java.io.InputStream"><![CDATA[$P{subreports}.get("No3.subreport.special.jasper")]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="169"
+						y="600"
+						width="0"
+						height="0"
+						key="subreport-2"/>
+				</subreport>
+				<staticText>
+					<reportElement
+						x="16"
+						y="787"
+						width="561"
+						height="2"
+						key="staticText-39"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Static text]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <properties resource="jp/co/jreast/common/properties/database/database.properties" />
+
+	<typeAliases>
+    	<typeAlias alias="BasicMstOutData" type="jp.co.jreast.common.data.BasicMstData" />
+    </typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+			    <property name="data_source" value="java:comp/env/jdbc/oracle1" />
+			</dataSource>
+
+			<!-- 一般的なデータソース
+			<transactionManager type="JDBC" />
+		    <dataSource type="POOLED">
+		    <property value="oracle.jdbc.driver.OracleDriver" name="driver" />
+		    <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url" />
+		    <property value="ora_test" name="username" />
+		    <property value="ora_test" name="password" />
+		    <property value="15" name="Pool.MaximumActiveConnections" />
+		    <property value="15" name="Pool.MaximumIdleConnections" />
+		    <property value="1000" name="Pool.MaximumWait" />
+		    </dataSource> -->
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="jp/co/jreast/common/properties/sql/constants.xml"/>
+	</mappers>
+</configuration>

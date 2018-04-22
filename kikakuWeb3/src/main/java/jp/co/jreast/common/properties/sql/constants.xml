@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="constants">
+
+    <resultMap id="BasicMstResultData" type="BasicMstOutData">
+        <result property="divCode" column="DIVISION_CD" javaType="string" jdbcType="CHAR" />
+        <result property="basicCode1" column="BASIS_CD1" javaType="string" jdbcType="VARCHAR" />
+        <result property="basicCode2" column="BASIS_CD2" javaType="string" jdbcType="VARCHAR" />
+        <result property="basicName1" column="BASIS_NM1" javaType="string" jdbcType="VARCHAR" />
+    </resultMap>
+
+	<!-- BASIS_CD1 の設定値が文字列のものを指定 -->
+	<sql id="inCharacterCodeDivisions">
+		IN ('0011', '0012', '0029', '0030', '0031', '0032', '0035', '0036', '0037', '0061')
+	</sql>
+
+	<select id="SelectAll" resultMap="BasicMstResultData">
+		SELECT
+			DIVISION_CD,
+            BASIS_CD1,
+            BASIS_CD2,
+            BASIS_NM1
+        FROM
+        	M_BASIS
+	</select>
+
+	<!-- BASIS_CD1 の設定値が数値の区分を取得 -->
+    <select id="BasicMstSearch" resultMap="BasicMstResultData">
+        SELECT
+            DIVISION_CD,
+            BASIS_CD1,
+            Convert(int,BASIS_CD1) AS INT_CD1,
+            BASIS_CD2,
+            BASIS_NM1
+        FROM
+            M_BASIS
+        WHERE
+        	DIVISION_CD NOT <include refid="inCharacterCodeDivisions"/>
+        ORDER BY
+            DIVISION_CD,ORDER_NO,INT_CD1
+    </select>
+
+	<!-- BASIS_CD1 の設定値が文字列の区分を取得 -->
+    <select id="BasicMstSearch2" resultMap="BasicMstResultData">
+        SELECT
+            DIVISION_CD,
+            BASIS_CD1,
+            BASIS_CD2,
+            BASIS_NM1
+        FROM
+            M_BASIS
+        WHERE
+        	DIVISION_CD <include refid="inCharacterCodeDivisions"/>
+        ORDER BY
+            DIVISION_CD,ORDER_NO,BASIS_CD1
+    </select>
+
+	<select id="d_fetchMBasisByDivisionCd" resultMap="BasicMstResultData" parameterType="String">
+		SELECT
+			DIVISION_CD,
+			BASIS_CD1,
+			BASIS_CD2,
+			BASIS_NM1
+		FROM
+			M_BASIS
+		WHERE
+			DIVISION_CD = #divisionCd#
+		ORDER BY
+			BASIS_CD2, ORDER_NO, BASIS_CD1
+	</select>
+
+</mapper>

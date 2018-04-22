@@ -5,6 +5,12 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+	<display-name>kikakuWeb3</display-name>
+    <context-param>
+        <param-name>DaoPath</param-name>
+        <param-value>jp/co/jreast/common/properties/dao/mybatis-config.xml</param-value>
+    </context-param>
+
 	<listener>
 		<listener-class>jp.co.jreast.common.listener.JreListener</listener-class>
 	</listener>
